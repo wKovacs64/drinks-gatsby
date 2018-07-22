@@ -3,16 +3,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import { injectGlobal } from 'emotion';
 import Header from './Header';
-
-injectGlobal`
-  html,
-  body,
-  #___gatsby {
-    height: 100%;
-  }
-`;
 
 const Layout = ({ children /* , data */ }) => (
   <StaticQuery
