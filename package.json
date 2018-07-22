@@ -21,6 +21,8 @@
     "format": "prettier --write \"**/*.{js,json,md}\"",
     "lint": "eslint .",
     "precommit": "lint-staged",
+    "preserve": "yarn build",
+    "serve": "gatsby serve",
     "test": "yarn lint"
   },
   "lint-staged": {
