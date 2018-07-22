@@ -11,5 +11,18 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography.js',
       },
     },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Drinks',
+        short_name: 'Drinks',
+        start_url: '/',
+        background_color: '#f4f4f4',
+        theme_color: '#137752',
+        display: 'standalone',
+        icon: 'src/images/icon.png', // This path is relative to the root of the site.
+      },
+    },
+    'gatsby-plugin-offline',
   ],
 };
