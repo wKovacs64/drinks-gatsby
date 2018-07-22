@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import Header from './Header';
+import Header from './header';
 
 const Layout = ({ children /* , data */ }) => (
   <StaticQuery
