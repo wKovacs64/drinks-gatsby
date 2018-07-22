@@ -3,7 +3,6 @@
 // This file was copied from .cache/html.js and modified as follows:
 //
 // - Added lang="en" attribute on the html element
-// - Added className="h-100" to html, body, and ___gatsby elements
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -11,7 +10,7 @@ import PropTypes from 'prop-types';
 export default class HTML extends React.Component {
   render() {
     return (
-      <html lang="en" className="h-100" {...this.props.htmlAttributes}>
+      <html lang="en" {...this.props.htmlAttributes}>
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
@@ -21,10 +20,9 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
         </head>
-        <body className="h-100" {...this.props.bodyAttributes}>
+        <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
           <div
-            className="h-100"
             key="body"
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}

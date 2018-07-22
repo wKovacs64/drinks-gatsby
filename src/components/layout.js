@@ -1,4 +1,3 @@
-import 'tachyons/css/tachyons.css';
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
@@ -25,9 +24,9 @@ const Layout = ({ children /* , data */ }) => (
             { name: 'keywords', content: 'drinks, cocktails, alcohol' },
           ]}
         />
-        <div className="min-h-100 f4 sans-serif black-70 bg-near-white">
+        <div>
           <Header siteTitle={siteMetadata.title} />
-          <div className="pa4">{children}</div>
+          <div>{children}</div>
         </div>
       </Fragment>
     )}
