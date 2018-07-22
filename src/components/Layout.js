@@ -17,7 +17,7 @@ injectGlobal`
 const Layout = ({ children /* , data */ }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      {
         site {
           siteMetadata {
             title
