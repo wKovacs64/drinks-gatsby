@@ -3,9 +3,8 @@ import Layout from '../components/Layout';
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <h1 className="fw4 ma0">Title here</h1>
+    <p>Content here</p>
   </Layout>
 );
 
