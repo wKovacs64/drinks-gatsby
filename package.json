@@ -38,6 +38,7 @@
   },
   "private": true,
   "dependencies": {
+    "dotenv": "6.0.0",
     "emotion": "9.2.6",
     "emotion-server": "9.2.6",
     "gatsby": "next",
@@ -47,6 +48,8 @@
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-typography": "next",
+    "gatsby-source-contentful": "next",
+    "gatsby-transformer-remark": "next",
     "prop-types": "15.6.2",
     "react": "16.4.1",
     "react-dom": "16.4.1",

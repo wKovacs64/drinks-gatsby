@@ -1,3 +1,5 @@
+const contentfulConfig = require('./src/utils/contentful');
+
 module.exports = {
   siteMetadata: {
     title: 'Drinks',
@@ -12,6 +14,11 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography.js',
       },
     },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: contentfulConfig,
+    },
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
