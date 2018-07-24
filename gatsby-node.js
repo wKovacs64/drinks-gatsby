@@ -3,5 +3,23 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const path = require('path');
 
-// You can delete this file if you're not using it
+module.exports.createPages = async ({ graphql, actions: { createPage } }) =>
+  (await graphql(`
+    {
+      allContentfulDrink {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `)).data.allContentfulDrink.edges.forEach(({ node: { slug } }) => {
+    createPage({
+      path: slug,
+      component: path.resolve('./src/templates/drink-page.js'),
+      context: { slug },
+    });
+  });

@@ -10,6 +10,7 @@ module.exports = {
     'react/destructuring-assignment': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-one-expression-per-line': 'off',
+    'react/no-danger': 'off',
     'no-unused-expressions': ['error', { allowTaggedTemplates: true }],
   },
 };
