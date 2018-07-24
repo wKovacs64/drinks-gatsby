@@ -1,10 +1,15 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { injectGlobal } from 'react-emotion';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from './header';
 
-const Layout = ({ children /* , data */ }) => (
+injectGlobal`
+  html { background-color: #f4f4f4; }
+`;
+
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       {
@@ -35,7 +40,6 @@ const Layout = ({ children /* , data */ }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  // data: PropTypes.shape.isRequired,
 };
 
 export default Layout;
