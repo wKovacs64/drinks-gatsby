@@ -7,7 +7,7 @@ const IndexPage = ({ data: { allDrinks } }) => (
   <Layout>
     <p>Total drinks: {allDrinks.totalCount}</p>
     {allDrinks.drinks.map(({ drink }) => (
-      <Link key={drink.slug} to={`/${drink.slug}`}>
+      <Link key={drink.slug} to={drink.slug}>
         {drink.title}
         {drink.calories && ` (${drink.calories})`}
       </Link>
