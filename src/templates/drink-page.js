@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import Layout from '../components/layout';
 
 const DrinkPage = ({ data: { drink } }) => (
   <Layout>
     <h2>{drink.title}</h2>
-    {drink.image && <p>Image URL: {drink.image.file.url}</p>}
+    {drink.image && <Img fixed={drink.image.fixed} />}
     <p>
       Ingredients:{' '}
       {drink.ingredients.map(ingredient => <span>{ingredient} </span>)}
@@ -28,8 +29,11 @@ export const query = graphql`
     drink: contentfulDrink(slug: { eq: $slug }) {
       title
       image {
-        file {
-          url
+        fixed {
+          ...GatsbyContentfulFixed_withWebp
+        }
+        fluid {
+          ...GatsbyContentfulFluid_withWebp
         }
       }
       ingredients
@@ -49,9 +53,8 @@ DrinkPage.propTypes = {
     drink: PropTypes.shape({
       title: PropTypes.string.isRequired,
       image: PropTypes.shape({
-        file: PropTypes.shape({
-          url: PropTypes.string.isRequired,
-        }).isRequired,
+        fixed: PropTypes.shape(),
+        fluid: PropTypes.shape(),
       }),
       ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
       calories: PropTypes.number,
