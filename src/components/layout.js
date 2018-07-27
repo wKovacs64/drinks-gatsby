@@ -1,12 +1,19 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { injectGlobal } from 'react-emotion';
+import { injectGlobal, css } from 'react-emotion';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from './header';
 
 injectGlobal`
-  html { background-color: #f4f4f4; }
+  html {
+    background-color: #f4f4f4;
+  }
+  html,
+  body,
+  #___gatsby {
+    min-height: 100vh;
+  }
 `;
 
 const Layout = ({ children }) => (
@@ -29,7 +36,11 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'drinks, cocktails, alcohol' },
           ]}
         />
-        <div>
+        <div
+          className={css`
+            min-height: 100vh;
+          `}
+        >
           <Header siteTitle={siteMetadata.title} />
           <div>{children}</div>
         </div>
