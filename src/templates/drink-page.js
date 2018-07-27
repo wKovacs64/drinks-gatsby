@@ -10,7 +10,9 @@ const DrinkPage = ({ data: { drink } }) => (
     {drink.image && <Img fixed={drink.image.fixed} />}
     <p>
       Ingredients:{' '}
-      {drink.ingredients.map(ingredient => <span>{ingredient} </span>)}
+      {drink.ingredients.map(ingredient => (
+        <span key={ingredient}>{ingredient} </span>
+      ))}
     </p>
     {drink.calories && <p>Calories: {drink.calories}</p>}
     {drink.notes && (
@@ -20,7 +22,9 @@ const DrinkPage = ({ data: { drink } }) => (
         }}
       />
     )}
-    {drink.tags && <p>Tags: {drink.tags.map(tag => <span>{tag} </span>)}</p>}
+    {drink.tags && (
+      <p>Tags: {drink.tags.map(tag => <span key={tag}>{tag} </span>)}</p>
+    )}
   </Layout>
 );
 
