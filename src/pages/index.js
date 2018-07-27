@@ -48,13 +48,13 @@ IndexPage.propTypes = {
       totalCount: PropTypes.number.isRequired,
       drinks: PropTypes.arrayOf(
         PropTypes.shape({
-          title: PropTypes.string.isRequired,
-          slug: PropTypes.string.isRequired,
+          title: PropTypes.string,
+          slug: PropTypes.string,
           image: PropTypes.shape({
             fixed: PropTypes.shape(),
             fluid: PropTypes.shape(),
           }),
-          ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
+          ingredients: PropTypes.arrayOf(PropTypes.string),
           calories: PropTypes.number,
           tags: PropTypes.arrayOf(PropTypes.string),
         }),
