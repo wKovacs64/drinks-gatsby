@@ -7,15 +7,25 @@ const Footer = () => (
     className={css`
       background-color: #111111;
       color: #eeeeee;
-      padding: ${rhythm(1)};
+      padding-top: ${rhythm(1)};
+      padding-right: ${rhythm(1)};
+      padding-left: ${rhythm(1)};
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
     `}
   >
-    <span>Built with ♥ using: Gatsby, Contentful, and Emotion</span>
+    <span
+      className={css`
+        margin-bottom: ${rhythm(1)};
+      `}
+    >
+      Built with ♥ using: Gatsby, Contentful, and Emotion
+    </span>
     <span
       className={css`
         color: #111111;
+        margin-bottom: ${rhythm(1)};
 
         &:hover {
           color: #eeeeee;
