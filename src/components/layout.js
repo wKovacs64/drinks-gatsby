@@ -7,7 +7,8 @@ import Header from './header';
 
 injectGlobal`
   html {
-    background-color: #f4f4f4;
+    background-color: #242424;
+    overflow-y: auto;
   }
   html,
   body,
