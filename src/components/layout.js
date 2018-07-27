@@ -40,6 +40,8 @@ const Layout = ({ children }) => (
         />
         <div
           className={css`
+            display: grid;
+            grid: auto 1fr auto / 1fr;
             min-height: 100vh;
           `}
         >
