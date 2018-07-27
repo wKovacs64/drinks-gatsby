@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import { injectGlobal, css } from 'react-emotion';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from './header';
+import Footer from './footer';
 
 injectGlobal`
   html {
@@ -44,6 +45,7 @@ const Layout = ({ children }) => (
         >
           <Header siteTitle={siteMetadata.title} />
           <main>{children}</main>
+          <Footer />
         </div>
       </Fragment>
     )}
