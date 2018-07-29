@@ -28,8 +28,12 @@ const DrinkSummary = ({ className, drink }) => (
   >
     <article
       className={css`
-        display: flex;
         background-color: #eeeeee;
+        display: flex;
+        flex-direction: column;
+        ${mq.md(css`
+          flex-direction: row;
+        `)};
       `}
     >
       <figure
@@ -56,9 +60,12 @@ const DrinkSummary = ({ className, drink }) => (
         >
           <h2
             className={css`
-              margin-top: 0;
+              margin: 0;
               font-weight: 300;
-              font-size: 2.25rem;
+              font-size: 1.5rem;
+              ${mq.lg(css`
+                font-size: 2.25rem;
+              `)};
             `}
           >
             {drink.title}
@@ -70,19 +77,39 @@ const DrinkSummary = ({ className, drink }) => (
           >
             <ul
               className={css`
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                padding-left: 2rem;
+                ${mq.lg(css`
+                  padding-left: 4rem;
+                `)};
+                font-weight: 300;
                 font-size: 1.25rem;
+                ${mq.lg(css`
+                  font-size: 1.5rem;
+                `)};
               `}
             >
               {drink.ingredients.map(ingredient => (
-                <li key={ingredient}>{ingredient}</li>
+                <li
+                  key={ingredient}
+                  className={css`
+                    margin-bottom: 0.5rem;
+                  `}
+                >
+                  {ingredient}
+                </li>
               ))}
             </ul>
           </div>
           <div
             className={css`
               text-align: right;
-              font-size: 1.5rem;
               font-weight: 300;
+              font-size: 1rem;
+              ${mq.lg(css`
+                font-size: 1.25rem;
+              `)};
             `}
           >
             {drink.calories ? <span>{drink.calories} cal</span> : ''}
