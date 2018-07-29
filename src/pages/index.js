@@ -3,26 +3,14 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
+import Container from '../components/container';
 import Glass from '../components/glass';
 import DrinkSummary from '../components/drink-summary';
 import mq from '../utils/mq';
 
 const IndexPage = ({ data: { allDrinks } }) => (
   <Layout>
-    <div
-      className={css`
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        ${mq.xl(css`
-          align-items: center;
-        `)};
-        padding: 1rem 0;
-        ${mq.lg(css`
-          padding: 2rem;
-        `)};
-      `}
-    >
+    <Container>
       {allDrinks.drinks.map(({ drink }, index) => (
         <Link
           to={drink.slug}
@@ -51,7 +39,7 @@ const IndexPage = ({ data: { allDrinks } }) => (
           </Glass>
         </Link>
       ))}
-    </div>
+    </Container>
   </Layout>
 );
 
