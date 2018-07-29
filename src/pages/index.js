@@ -13,17 +13,6 @@ const IndexPage = ({ data: { allDrinks } }) => (
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        &:after {
-          content: '';
-          position: absolute;
-          z-index: -1;
-          top: 0;
-          bottom: 0;
-          left: 50%;
-          border-left: 4px solid #d09e45;
-          transform: translate(-50%);
-        }
       `}
     >
       {allDrinks.drinks.map(({ drink }) => (
