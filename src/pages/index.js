@@ -70,7 +70,6 @@ export const query = graphql`
           }
           ingredients
           calories
-          tags
         }
       }
     }
@@ -90,7 +89,6 @@ IndexPage.propTypes = {
           }),
           ingredients: PropTypes.arrayOf(PropTypes.string),
           calories: PropTypes.number,
-          tags: PropTypes.arrayOf(PropTypes.string),
         }),
       ).isRequired,
     }).isRequired,
