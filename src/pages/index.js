@@ -9,7 +9,7 @@ const IndexPage = ({ data: { allDrinks } }) => (
   <Layout>
     <div
       className={css`
-        padding-top: 3rem;
+        padding: 2rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -25,7 +25,7 @@ const IndexPage = ({ data: { allDrinks } }) => (
             border-width: 4px;
             border-style: double;
             text-decoration: none;
-            margin-bottom: 3rem;
+            margin: 2rem 0;
 
             &:hover,
             &:focus {
