@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
+import Glass from '../components/glass';
 import DrinkSummary from '../components/drink-summary';
 import mq from '../utils/mq';
 
@@ -23,20 +24,32 @@ const IndexPage = ({ data: { allDrinks } }) => (
       `}
     >
       {allDrinks.drinks.map(({ drink }, index) => (
-        <DrinkSummary
-          className={css`
-            margin: 1rem 0;
-            ${mq.lg(css`
-              margin: 2rem 0;
-            `)};
-            ${mq.xl(css`
-              width: 70rem;
-            `)};
-          `}
-          drink={drink}
+        <Link
+          to={drink.slug}
           key={drink.slug}
-          reverseRowLayout={index % 2 === 1}
-        />
+          className={css`
+            text-decoration: none;
+          `}
+        >
+          <Glass
+            className={css`
+              margin: 1rem 0;
+              ${mq.lg(css`
+                margin: 2rem 0;
+              `)};
+              ${mq.xl(css`
+                width: 70rem;
+              `)};
+
+              &:hover,
+              &:focus {
+                border-color: #a62304;
+              }
+            `}
+          >
+            <DrinkSummary drink={drink} reverseRowLayout={index % 2 === 1} />
+          </Glass>
+        </Link>
       ))}
     </div>
   </Layout>
