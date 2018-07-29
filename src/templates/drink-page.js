@@ -23,7 +23,12 @@ const DrinkPage = ({ data: { drink } }) => (
       />
     )}
     {drink.tags && (
-      <p>Tags: {drink.tags.map(tag => <span key={tag}>{tag} </span>)}</p>
+      <p>
+        Tags:{' '}
+        {drink.tags.map(tag => (
+          <span key={tag}>{tag} </span>
+        ))}
+      </p>
     )}
   </Layout>
 );
