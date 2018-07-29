@@ -9,7 +9,6 @@ const Header = ({ siteTitle }) => (
     className={css`
       background-color: #111111;
       padding: 1rem;
-
       ${mq.md(css`
         padding: 2rem;
       `)};

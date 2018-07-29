@@ -10,11 +10,10 @@ const IndexPage = ({ data: { allDrinks } }) => (
   <Layout>
     <div
       className={css`
-        padding: 1rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        padding: 1rem 0;
         ${mq.lg(css`
           padding: 2rem 0;
         `)};
@@ -31,14 +30,14 @@ const IndexPage = ({ data: { allDrinks } }) => (
             border-style: double;
             text-decoration: none;
             margin: 1rem 0;
+            ${mq.lg(css`
+              margin: 2rem 0;
+            `)};
 
             &:hover,
             &:focus {
               border-color: #a62304;
             }
-            ${mq.lg(css`
-              margin: 2rem 0;
-            `)};
           `}
         >
           <article

@@ -8,7 +8,6 @@ const Footer = () => (
       background-color: #111111;
       color: #eeeeee;
       padding: 1rem;
-
       ${mq.md(css`
         padding: 2rem;
       `)};
