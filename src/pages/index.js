@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
+import DrinkSummary from '../components/drink-summary';
 import mq from '../utils/mq';
 
 const IndexPage = ({ data: { allDrinks } }) => (
@@ -20,93 +20,15 @@ const IndexPage = ({ data: { allDrinks } }) => (
       `}
     >
       {allDrinks.drinks.map(({ drink }) => (
-        <Link
-          key={drink.slug}
-          to={drink.slug}
+        <DrinkSummary
           className={css`
-            color: #6d372a;
-            border-color: #d09e45;
-            border-width: 4px;
-            border-style: double;
-            text-decoration: none;
             margin: 1rem 0;
             ${mq.lg(css`
               margin: 2rem 0;
             `)};
-
-            &:hover,
-            &:focus {
-              border-color: #a62304;
-            }
           `}
-        >
-          <article
-            className={css`
-              display: flex;
-              background-color: #eeeeee;
-              width: 100vw;
-              max-width: 1024px;
-            `}
-          >
-            <figure
-              className={css`
-                flex: 1;
-                margin: 0;
-              `}
-            >
-              {drink.image ? <Img fluid={drink.image.fluid} /> : null}
-            </figure>
-            <section
-              className={css`
-                flex: 1;
-                display: flex;
-              `}
-            >
-              <div
-                className={css`
-                  flex: 1;
-                  padding: 2rem;
-                  display: flex;
-                  flex-direction: column;
-                `}
-              >
-                <h2
-                  className={css`
-                    margin-top: 0;
-                    font-weight: 300;
-                    font-size: 2.25rem;
-                  `}
-                >
-                  {drink.title}
-                </h2>
-                <div
-                  className={css`
-                    flex: 1;
-                  `}
-                >
-                  <ul
-                    className={css`
-                      font-size: 1.25rem;
-                    `}
-                  >
-                    {drink.ingredients.map(ingredient => (
-                      <li key={ingredient}>{ingredient}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div
-                  className={css`
-                    text-align: right;
-                    font-size: 1.5rem;
-                    font-weight: 300;
-                  `}
-                >
-                  {drink.calories ? <span>{drink.calories} cal</span> : ''}
-                </div>
-              </div>
-            </section>
-          </article>
-        </Link>
+          drink={drink}
+        />
       ))}
     </div>
   </Layout>
