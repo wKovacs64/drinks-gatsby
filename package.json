@@ -49,6 +49,7 @@
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-sharp": "next",
+    "gatsby-remark-external-links": "0.0.4",
     "gatsby-source-contentful": "next",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
