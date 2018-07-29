@@ -83,7 +83,6 @@ const DrinkSummary = ({ className, drink }) => (
                 ${mq.lg(css`
                   padding-left: 4rem;
                 `)};
-                font-weight: 300;
                 font-size: 1.25rem;
                 ${mq.lg(css`
                   font-size: 1.5rem;
@@ -105,7 +104,6 @@ const DrinkSummary = ({ className, drink }) => (
           <div
             className={css`
               text-align: right;
-              font-weight: 300;
               font-size: 1rem;
               ${mq.lg(css`
                 font-size: 1.25rem;
