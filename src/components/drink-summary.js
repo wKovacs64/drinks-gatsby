@@ -7,7 +7,6 @@ import mq from '../utils/mq';
 
 const DrinkSummary = ({ className, drink }) => (
   <Link
-    key={drink.slug}
     to={drink.slug}
     className={css`
       ${className};

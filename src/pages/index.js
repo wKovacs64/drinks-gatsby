@@ -34,6 +34,7 @@ const IndexPage = ({ data: { allDrinks } }) => (
             `)};
           `}
           drink={drink}
+          key={drink.slug}
         />
       ))}
     </div>
