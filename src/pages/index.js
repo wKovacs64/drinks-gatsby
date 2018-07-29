@@ -21,18 +21,15 @@ const IndexPage = ({ data: { allDrinks } }) => (
           to={drink.slug}
           className={css`
             color: #6d372a;
-            border: 4px solid #d09e45;
+            border-color: #d09e45;
+            border-width: 4px;
+            border-style: double;
             text-decoration: none;
             margin-bottom: 3rem;
 
-            -moz-osx-font-smoothing: grayscale;
-            backface-visibility: hidden;
-            transform: translateZ(0);
-            transition: transform 0.25s ease-out;
-
             &:hover,
             &:focus {
-              transform: scale(1.025);
+              border-color: #a62304;
             }
           `}
         >
