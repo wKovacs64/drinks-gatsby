@@ -7,10 +7,7 @@ const DrinkDetails = ({ className, drink }) => (
   <section
     className={css`
       background-color: #eeeeee;
-      padding: 0 2rem 2rem 2rem;
-      ${mq.md(css`
-        padding: 2rem;
-      `)};
+      padding: 2rem;
       font-size: 1rem;
       ${mq.lg(css`
         font-size: 1.25rem;

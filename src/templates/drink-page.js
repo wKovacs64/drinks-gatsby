@@ -43,7 +43,7 @@ const DrinkPage = ({ data: { drink } }) => (
           `)};
         `}
       >
-        <DrinkSummary drink={drink} />
+        <DrinkSummary drink={drink} stacked />
         <DrinkDetails drink={drink} />
       </Glass>
     </Container>
