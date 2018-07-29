@@ -2,28 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { css } from 'react-emotion';
-import { rhythm } from '../utils/typography';
 
 const Header = ({ siteTitle }) => (
   <header
     className={css`
       background-color: #111111;
-      padding: ${rhythm(1)};
+      padding: 2rem;
     `}
   >
     <h1
       className={css`
-        margin-bottom: 0;
+        font-weight: 300;
+        margin: 0;
       `}
     >
       <Link
         to="/"
         className={css`
           color: #eeeeee;
+          text-decoration: none;
 
           &:hover {
             color: #aaaaaa;
-            text-decoration: none;
           }
         `}
       >

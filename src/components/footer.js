@@ -1,15 +1,14 @@
 import React from 'react';
 import { css } from 'react-emotion';
-import { rhythm } from '../utils/typography';
 
 const Footer = () => (
   <footer
     className={css`
       background-color: #111111;
       color: #eeeeee;
-      padding-top: ${rhythm(1)};
-      padding-right: ${rhythm(1)};
-      padding-left: ${rhythm(1)};
+      padding-top: 2rem;
+      padding-right: 2rem;
+      padding-left: 2rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -17,7 +16,7 @@ const Footer = () => (
   >
     <span
       className={css`
-        margin-bottom: ${rhythm(1)};
+        margin-bottom: 2rem;
       `}
     >
       Built with ♥ using: Gatsby, Contentful, and Emotion
@@ -25,7 +24,7 @@ const Footer = () => (
     <span
       className={css`
         color: #111111;
-        margin-bottom: ${rhythm(1)};
+        margin-bottom: 2rem;
 
         &:hover {
           color: #eeeeee;

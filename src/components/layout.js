@@ -1,3 +1,5 @@
+import 'normalize.css';
+import 'typeface-source-sans-pro';
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
@@ -7,14 +9,22 @@ import Header from './header';
 import Footer from './footer';
 
 injectGlobal`
-  html {
-    background-color: #242424;
-    overflow-y: auto;
+  @font-face {
+    font-family: 'Source Sans Pro';
+    src: local('Source Sans Pro');
   }
   html,
   body,
   #___gatsby {
     min-height: 100vh;
+  }
+  html {
+    background-color: #242424;
+  }
+  body {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+      'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto,
+      'segoe ui', arial, sans-serif;
   }
 `;
 
