@@ -22,7 +22,7 @@ const IndexPage = ({ data: { allDrinks } }) => (
         `)};
       `}
     >
-      {allDrinks.drinks.map(({ drink }) => (
+      {allDrinks.drinks.map(({ drink }, index) => (
         <DrinkSummary
           className={css`
             margin: 1rem 0;
@@ -35,6 +35,7 @@ const IndexPage = ({ data: { allDrinks } }) => (
           `}
           drink={drink}
           key={drink.slug}
+          reverseRowLayout={index % 2 === 1}
         />
       ))}
     </div>

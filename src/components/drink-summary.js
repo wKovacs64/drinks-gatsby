@@ -5,7 +5,7 @@ import { css } from 'react-emotion';
 import Img from 'gatsby-image';
 import mq from '../utils/mq';
 
-const DrinkSummary = ({ className, drink }) => (
+const DrinkSummary = ({ className, drink, reverseRowLayout }) => (
   <Link
     to={drink.slug}
     className={css`
@@ -31,7 +31,7 @@ const DrinkSummary = ({ className, drink }) => (
         display: flex;
         flex-direction: column;
         ${mq.md(css`
-          flex-direction: row;
+          flex-direction: ${reverseRowLayout ? 'row-reverse' : 'row'};
         `)};
       `}
     >
@@ -129,10 +129,12 @@ DrinkSummary.propTypes = {
     calories: PropTypes.number,
     tags: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
+  reverseRowLayout: PropTypes.bool,
 };
 
 DrinkSummary.defaultProps = {
   className: '',
+  reverseRowLayout: false,
 };
 
 export default DrinkSummary;
