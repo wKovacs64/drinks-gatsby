@@ -9,7 +9,6 @@ const IndexPage = ({ data: { allDrinks } }) => (
   <Layout>
     <div
       className={css`
-        height: 100%;
         padding-top: 3rem;
         display: flex;
         flex-direction: column;
