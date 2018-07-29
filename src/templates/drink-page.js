@@ -1,35 +1,52 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { css } from 'react-emotion';
 import Layout from '../components/layout';
+import Container from '../components/container';
+import Glass from '../components/glass';
+import DrinkSummary from '../components/drink-summary';
+import DrinkDetails from '../components/drink-details';
+import mq from '../utils/mq';
 
 const DrinkPage = ({ data: { drink } }) => (
   <Layout>
-    <h2>{drink.title}</h2>
-    {drink.image && <Img fixed={drink.image.fixed} />}
-    <p>
-      Ingredients:{' '}
-      {drink.ingredients.map(ingredient => (
-        <span key={ingredient}>{ingredient} </span>
-      ))}
-    </p>
-    {drink.calories && <p>Calories: {drink.calories}</p>}
-    {drink.notes && (
-      <p
-        dangerouslySetInnerHTML={{
-          __html: drink.notes.childMarkdownRemark.html,
-        }}
-      />
-    )}
-    {drink.tags && (
-      <p>
-        Tags:{' '}
-        {drink.tags.map(tag => (
-          <span key={tag}>{tag} </span>
-        ))}
-      </p>
-    )}
+    <Helmet
+      title={drink.title}
+      meta={[
+        { name: 'description', content: drink.title },
+        {
+          name: 'keywords',
+          content: ['drink', 'cocktail', ...drink.tags].join(', '),
+        },
+      ]}
+    />
+    <Container
+      className={css`
+        height: 100%;
+        justify-content: center;
+        padding: 0;
+        ${mq.lg(css`
+          padding: 0;
+        `)};
+      `}
+    >
+      <Glass
+        className={css`
+          ${mq.lg(css`
+            border-width: 4px 0;
+          `)};
+          ${mq.xl(css`
+            border-width: 4px;
+            width: 70rem;
+          `)};
+        `}
+      >
+        <DrinkSummary drink={drink} />
+        <DrinkDetails drink={drink} />
+      </Glass>
+    </Container>
   </Layout>
 );
 
@@ -38,9 +55,6 @@ export const query = graphql`
     drink: contentfulDrink(slug: { eq: $slug }) {
       title
       image {
-        fixed {
-          ...GatsbyContentfulFixed_withWebp
-        }
         fluid {
           ...GatsbyContentfulFluid_withWebp
         }
@@ -60,20 +74,19 @@ export const query = graphql`
 DrinkPage.propTypes = {
   data: PropTypes.shape({
     drink: PropTypes.shape({
-      title: PropTypes.string.isRequired,
+      title: PropTypes.string,
       image: PropTypes.shape({
-        fixed: PropTypes.shape(),
         fluid: PropTypes.shape(),
       }),
-      ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
+      ingredients: PropTypes.arrayOf(PropTypes.string),
       calories: PropTypes.number,
       notes: PropTypes.shape({
         childMarkdownRemark: PropTypes.shape({
-          html: PropTypes.string.isRequired,
+          html: PropTypes.string,
         }).isRequired,
       }),
       tags: PropTypes.arrayOf(PropTypes.string),
-    }).isRequired,
+    }),
   }).isRequired,
 };
 
