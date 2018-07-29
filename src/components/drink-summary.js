@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { css } from 'react-emotion';
 import Img from 'gatsby-image';
+import mq from '../utils/mq';
 
 const DrinkSummary = ({ className, drink }) => (
   <Link
@@ -12,7 +13,10 @@ const DrinkSummary = ({ className, drink }) => (
       ${className};
       color: #6d372a;
       border-color: #d09e45;
-      border-width: 4px;
+      border-width: 4px 0;
+      ${mq.lg(css`
+        border-width: 4px;
+      `)};
       border-style: double;
       text-decoration: none;
 
@@ -26,8 +30,6 @@ const DrinkSummary = ({ className, drink }) => (
       className={css`
         display: flex;
         background-color: #eeeeee;
-        width: 100vw;
-        max-width: 1024px;
       `}
     >
       <figure

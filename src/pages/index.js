@@ -12,10 +12,13 @@ const IndexPage = ({ data: { allDrinks } }) => (
       className={css`
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        ${mq.xl(css`
+          align-items: center;
+        `)};
         padding: 1rem 0;
         ${mq.lg(css`
-          padding: 2rem 0;
+          padding: 2rem;
         `)};
       `}
     >
@@ -25,6 +28,9 @@ const IndexPage = ({ data: { allDrinks } }) => (
             margin: 1rem 0;
             ${mq.lg(css`
               margin: 2rem 0;
+            `)};
+            ${mq.xl(css`
+              width: 70rem;
             `)};
           `}
           drink={drink}
