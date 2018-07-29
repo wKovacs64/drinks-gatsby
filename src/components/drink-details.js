@@ -47,6 +47,17 @@ const DrinkDetails = ({ className, drink }) => (
           font-size: 0.875rem;
         `)};
       }
+      a {
+        color: currentColor;
+        text-decoration: none;
+        border-bottom: 1px solid #d09e45;
+        box-shadow: inset 0 -2px 0 0 #d09e45;
+
+        &:hover {
+          border-color: #a62304;
+          box-shadow: inset 0 -2px 0 0 #a62304;
+        }
+      }
       ${className};
     `}
   >
