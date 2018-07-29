@@ -4,15 +4,20 @@ import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
+import mq from '../utils/mq';
 
 const IndexPage = ({ data: { allDrinks } }) => (
   <Layout>
     <div
       className={css`
-        padding: 2rem 0;
+        padding: 1rem 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        ${mq.lg(css`
+          padding: 2rem 0;
+        `)};
       `}
     >
       {allDrinks.drinks.map(({ drink }) => (
@@ -25,12 +30,15 @@ const IndexPage = ({ data: { allDrinks } }) => (
             border-width: 4px;
             border-style: double;
             text-decoration: none;
-            margin: 2rem 0;
+            margin: 1rem 0;
 
             &:hover,
             &:focus {
               border-color: #a62304;
             }
+            ${mq.lg(css`
+              margin: 2rem 0;
+            `)};
           `}
         >
           <article
