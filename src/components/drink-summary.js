@@ -4,7 +4,7 @@ import { css } from 'react-emotion';
 import Img from 'gatsby-image';
 import mq from '../utils/mq';
 
-const DrinkSummary = ({ className, drink, reverseRowLayout }) => (
+const DrinkSummary = ({ className, drink, reverseRowLayout, stacked }) => (
   <section
     className={css`
       background-color: #eeeeee;
@@ -33,7 +33,7 @@ const DrinkSummary = ({ className, drink, reverseRowLayout }) => (
       <div
         className={css`
           flex: 1;
-          padding: 2rem;
+          padding: ${stacked ? '2rem 2rem 0 2rem' : '2rem'};
           display: flex;
           flex-direction: column;
         `}
@@ -112,11 +112,13 @@ DrinkSummary.propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
   reverseRowLayout: PropTypes.bool,
+  stacked: PropTypes.bool,
 };
 
 DrinkSummary.defaultProps = {
   className: '',
   reverseRowLayout: false,
+  stacked: false,
 };
 
 export default DrinkSummary;
