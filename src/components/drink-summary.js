@@ -34,6 +34,7 @@ const DrinkSummary = ({ className, drink, reverseRowLayout, stacked }) => (
           className={css`
             flex: 1;
             margin: 0;
+            ${!drink.image && `background-color: #1a1a17`};
           `}
         >
           <Img
