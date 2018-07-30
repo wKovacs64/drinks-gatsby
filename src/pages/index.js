@@ -28,6 +28,7 @@ const IndexPage = ({ data: { allDrinks } }) => (
               ${mq.xl(css`
                 width: 70rem;
               `)};
+              transition: border-color 0.3s ease;
 
               &:hover,
               &:focus {
