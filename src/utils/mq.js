@@ -22,17 +22,3 @@ const mq = Object.keys(breakpoints).reduce((accumulator, label) => {
 }, {});
 
 export default mq;
-
-/*
-// Usage:
-
-const paragraph = css`
-  font-size: 12px;
-  ${mq.medium(css`
-    font-size: 14px;
-  `)};
-  ${mq.large(css`
-    font-size: 16px;
-  `)};
-`;
-*/
