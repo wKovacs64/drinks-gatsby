@@ -46,7 +46,7 @@ const IndexPage = ({ data: { allDrinks } }) => (
 
 export const query = graphql`
   query {
-    allDrinks: allContentfulDrink(sort: { fields: [createdAt], order: DESC }) {
+    allDrinks: allContentfulDrink(sort: { fields: [createdAt], order: ASC }) {
       totalCount
       drinks: edges {
         drink: node {
