@@ -23,11 +23,12 @@ const Header = ({ siteTitle }) => (
       <Link
         to="/"
         className={css`
-          color: #eeeeee;
+          color: #cccccc;
           text-decoration: none;
+          transition: color 0.3s ease;
 
           &:hover {
-            color: #aaaaaa;
+            color: #f4f4f4;
           }
         `}
       >
