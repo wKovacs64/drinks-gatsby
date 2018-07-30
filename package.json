@@ -51,6 +51,7 @@
     "gatsby-plugin-sharp": "next",
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-source-contentful": "next",
+    "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
     "normalize.css": "8.0.0",
