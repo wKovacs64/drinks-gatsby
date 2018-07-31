@@ -10,6 +10,10 @@ const Tag = ({ children }) => (
       min-width: 4rem;
       padding: 0.5rem;
       border-radius: 0.25rem;
+      font-weight: 400;
+      ${mq.lg(css`
+        font-weight: 300;
+      `)};
       color: #d09e45;
       background-color: #6d372a;
       transition: color 0.3s ease, background-color 0.3s ease;
