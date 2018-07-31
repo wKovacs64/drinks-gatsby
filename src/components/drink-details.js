@@ -11,10 +11,7 @@ const DrinkDetails = ({ className, drink }) => (
     className={css`
       background-color: #eeeeee;
       padding: 2rem;
-      font-size: 1rem;
-      ${mq.lg(css`
-        font-size: 1.25rem;
-      `)};
+      font-size: 1.25rem;
       ${className};
     `}
   >
