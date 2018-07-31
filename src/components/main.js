@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { css } from 'react-emotion';
 import mq from '../utils/mq';
 
-const Container = ({ className, children }) => (
-  <div
+const Main = ({ className, children }) => (
+  <main
     className={css`
       display: flex;
       flex-direction: column;
@@ -20,17 +20,17 @@ const Container = ({ className, children }) => (
     `}
   >
     {children}
-  </div>
+  </main>
 );
 
-Container.propTypes = {
+Main.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
 };
 
-Container.defaultProps = {
+Main.defaultProps = {
   children: null,
   className: '',
 };
 
-export default Container;
+export default Main;

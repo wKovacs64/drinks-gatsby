@@ -57,7 +57,7 @@ const Layout = ({ children }) => (
           `}
         >
           <Header siteTitle={siteMetadata.title} />
-          <main>{children}</main>
+          {children}
           <Footer />
         </div>
       </Fragment>

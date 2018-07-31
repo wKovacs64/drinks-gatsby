@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
-import Container from '../components/container';
+import Main from '../components/main';
 import Glass from '../components/glass';
 import DrinkSummary from '../components/drink-summary';
 import DrinkDetails from '../components/drink-details';
@@ -22,7 +22,7 @@ const DrinkPage = ({ data: { drink } }) => (
         },
       ]}
     />
-    <Container
+    <Main
       className={css`
         height: 100%;
         justify-content: center;
@@ -46,7 +46,7 @@ const DrinkPage = ({ data: { drink } }) => (
         <DrinkSummary drink={drink} stacked />
         <DrinkDetails drink={drink} />
       </Glass>
-    </Container>
+    </Main>
   </Layout>
 );
 
