@@ -34,14 +34,10 @@ const Footer = () => (
   >
     <span>
       Built with{' '}
-      <span
-        className={css`
-          text-decoration: line-through;
-        `}
-      >
-        ♥
+      <span role="img" aria-label="booze">
+        🥃
       </span>{' '}
-      🥃 using{' '}
+      using{' '}
       <FooterLink href="https://gatsbyjs.org" rel="noopener noreferrer">
         Gatsby
       </FooterLink>
