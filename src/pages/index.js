@@ -16,14 +16,16 @@ const IndexPage = ({ data: { allDrinks } }) => (
           to={drink.slug}
           key={drink.slug}
           className={css`
+            margin: 1rem 0;
+            ${mq.xl(css`
+              margin: 2rem 0;
+            `)};
             text-decoration: none;
           `}
         >
           <Glass
             className={css`
-              margin: 1rem 0;
               ${mq.xl(css`
-                margin: 2rem 0;
                 width: 70rem;
               `)};
               transition: border-color 0.3s ease;
