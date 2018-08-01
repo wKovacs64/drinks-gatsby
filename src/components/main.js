@@ -14,6 +14,9 @@ const Main = ({ className, children }) => (
       `)};
       padding: 1rem 0;
       ${mq.lg(css`
+        padding: 1rem 2rem;
+      `)};
+      ${mq.xl(css`
         padding: 2rem;
       `)};
       ${className};
