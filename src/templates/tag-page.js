@@ -15,23 +15,17 @@ const TagPage = ({
   },
 }) => (
   <Layout>
-    <Main
-      className={css`
-        height: 100%;
-        justify-content: center;
-        padding: 0;
-        ${mq.lg(css`
-          padding: 0;
-        `)};
-      `}
-    >
+    <Main>
       <div
         className={css`
           display: none;
-          ${mq.xl(css`
+          ${mq.lg(css`
             display: block;
             color: #eeeeee;
-            margin: 2rem 0 0 0;
+            margin: 1rem 0;
+          `)};
+          ${mq.xl(css`
+            margin: 0;
             width: 70rem;
           `)};
         `}
