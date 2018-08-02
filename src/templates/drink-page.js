@@ -1,27 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { Link, graphql } from 'gatsby';
-import styled, { css } from 'react-emotion';
+import { graphql } from 'gatsby';
+import { css } from 'react-emotion';
 import Layout from '../components/layout';
 import Main from '../components/main';
+import NavLink from '../components/nav-link';
 import Glass from '../components/glass';
 import DrinkSummary from '../components/drink-summary';
 import DrinkDetails from '../components/drink-details';
 import mq from '../utils/mq';
-
-const NavLink = styled(Link)`
-  padding-bottom: 0.25rem;
-  color: currentColor;
-  text-decoration: none;
-  transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    color: #f4f4f4;
-    border-color: #f4f4f4;
-    box-shadow: inset 0 -2px 0 0 #f4f4f4;
-  }
-`;
 
 const DrinkPage = ({ data: { drink } }) => (
   <Layout>
