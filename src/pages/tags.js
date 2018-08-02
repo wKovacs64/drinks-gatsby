@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import { css } from 'react-emotion';
-import union from 'lodash.union';
 import Layout from '../components/layout';
 import Main from '../components/main';
 import Tag from '../components/tag';
@@ -10,7 +9,7 @@ import mq from '../utils/mq';
 
 const TagsPage = ({
   data: {
-    allDrinks: { drinks },
+    allDrinks: { allTags },
   },
 }) => (
   <Layout>
@@ -19,12 +18,7 @@ const TagsPage = ({
         align-items: center;
       `}
     >
-      {union(
-        drinks
-          .map(({ drink: { tags } }) => tags)
-          .reduce((allTags, tags) => [...allTags, ...tags], [])
-          .sort(),
-      ).map(tag => (
+      {allTags.map(({ tag }) => (
         <Link
           to={`tags/${tag}`}
           key={tag}
@@ -59,10 +53,8 @@ const TagsPage = ({
 export const query = graphql`
   query {
     allDrinks: allContentfulDrink {
-      drinks: edges {
-        drink: node {
-          tags
-        }
+      allTags: group(field: tags) {
+        tag: fieldValue
       }
     }
   }
@@ -71,11 +63,9 @@ export const query = graphql`
 TagsPage.propTypes = {
   data: PropTypes.shape({
     allDrinks: PropTypes.shape({
-      drinks: PropTypes.arrayOf(
+      allTags: PropTypes.arrayOf(
         PropTypes.shape({
-          drink: PropTypes.shape({
-            tags: PropTypes.arrayOf(PropTypes.string),
-          }),
+          tag: PropTypes.string,
         }),
       ),
     }),
