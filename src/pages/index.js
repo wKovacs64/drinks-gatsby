@@ -47,7 +47,6 @@ const IndexPage = ({ data: { allDrinks } }) => (
 export const query = graphql`
   query {
     allDrinks: allContentfulDrink(sort: { fields: [createdAt], order: ASC }) {
-      totalCount
       drinks: edges {
         drink: node {
           title
@@ -68,7 +67,6 @@ export const query = graphql`
 IndexPage.propTypes = {
   data: PropTypes.shape({
     allDrinks: PropTypes.shape({
-      totalCount: PropTypes.number.isRequired,
       drinks: PropTypes.arrayOf(
         PropTypes.shape({
           title: PropTypes.string,
@@ -79,8 +77,8 @@ IndexPage.propTypes = {
           ingredients: PropTypes.arrayOf(PropTypes.string),
           calories: PropTypes.number,
         }),
-      ).isRequired,
-    }).isRequired,
+      ),
+    }),
   }).isRequired,
 };
 
