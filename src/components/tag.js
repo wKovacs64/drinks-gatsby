@@ -3,13 +3,18 @@ import PropTypes from 'prop-types';
 import { css } from 'react-emotion';
 import mq from '../utils/mq';
 
-const Tag = ({ children }) => (
+const Tag = ({ children, className }) => (
   <div
     className={css`
-      text-align: center;
       min-width: 4rem;
       padding: 0.5rem;
       border-radius: 0.25rem;
+      text-align: center;
+      text-transform: lowercase;
+      font-size: 0.875rem;
+      ${mq.lg(css`
+        font-size: 1rem;
+      `)};
       font-weight: 400;
       ${mq.lg(css`
         font-weight: 300;
@@ -22,28 +27,21 @@ const Tag = ({ children }) => (
         color: #6d372a;
         background-color: #d09e45;
       }
+      ${className};
     `}
   >
-    <span
-      className={css`
-        text-transform: lowercase;
-        font-size: 0.875rem;
-        ${mq.lg(css`
-          font-size: 1rem;
-        `)};
-      `}
-    >
-      {children}
-    </span>
+    {children}
   </div>
 );
 
 Tag.propTypes = {
   children: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Tag.defaultProps = {
   children: '',
+  className: '',
 };
 
 export default Tag;
