@@ -5,7 +5,7 @@
  */
 const path = require('path');
 
-module.exports.createPages = async ({ graphql, actions: { createPage } }) =>
+module.exports.createPages = async ({ graphql, actions: { createPage } }) => {
   (await graphql(`
     {
       allContentfulDrink {
@@ -23,3 +23,20 @@ module.exports.createPages = async ({ graphql, actions: { createPage } }) =>
       context: { slug },
     });
   });
+
+  (await graphql(`
+    {
+      allContentfulDrink {
+        group(field: tags) {
+          fieldValue
+        }
+      }
+    }
+  `)).data.allContentfulDrink.group.forEach(({ fieldValue: tag }) => {
+    createPage({
+      path: `/tags/${tag}`,
+      component: path.resolve('./src/templates/tag-page.js'),
+      context: { tag },
+    });
+  });
+};
