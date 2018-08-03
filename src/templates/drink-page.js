@@ -23,23 +23,16 @@ const DrinkPage = ({ data: { drink } }) => (
         },
       ]}
     />
-    <Main
-      className={css`
-        height: 100%;
-        justify-content: center;
-        padding: 0;
-        ${mq.lg(css`
-          padding: 0;
-        `)};
-      `}
-    >
+    <Main>
       <div
         className={css`
-          display: none;
+          color: #eeeeee;
+          margin: 1rem;
+          ${mq.md(css`
+            margin: 1rem 2rem;
+          `)};
           ${mq.xl(css`
-            display: block;
-            color: #eeeeee;
-            margin: 2rem 0;
+            margin: 0;
             width: 70rem;
           `)};
         `}
@@ -54,26 +47,33 @@ const DrinkPage = ({ data: { drink } }) => (
         </span>
         {drink.title}
       </div>
-      <Glass
+      <div
         className={css`
-          ${mq.lg(css`
-            margin: 2rem 0;
-          `)};
           ${mq.xl(css`
-            margin: 0 0 4rem 0;
-          `)};
-          ${mq.lg(css`
-            border-width: 4px 0;
-          `)};
-          ${mq.xl(css`
-            border-width: 4px;
             width: 70rem;
           `)};
         `}
       >
-        <DrinkSummary drink={drink} stacked />
-        <DrinkDetails drink={drink} />
-      </Glass>
+        <Glass
+          className={css`
+            ${mq.md(css`
+              margin: 1rem 0;
+            `)};
+            ${mq.xl(css`
+              margin: 2rem 0;
+            `)};
+            ${mq.lg(css`
+              border-width: 4px 0;
+            `)};
+            ${mq.xl(css`
+              border-width: 4px;
+            `)};
+          `}
+        >
+          <DrinkSummary drink={drink} stacked />
+          <DrinkDetails drink={drink} />
+        </Glass>
+      </div>
     </Main>
   </Layout>
 );

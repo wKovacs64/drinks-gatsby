@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { css } from 'react-emotion';
 import Layout from '../components/layout';
 import Main from '../components/main';
 import DrinkList from '../components/drink-list';
+import mq from '../utils/mq';
 
 const IndexPage = ({
   data: {
@@ -12,7 +14,35 @@ const IndexPage = ({
 }) => (
   <Layout>
     <Main>
-      <DrinkList drinks={drinks} />
+      <div
+        className={css`
+          color: #eeeeee;
+          margin: 1rem;
+          ${mq.md(css`
+            margin: 1rem 2rem;
+          `)};
+          ${mq.xl(css`
+            margin: 0;
+            width: 70rem;
+          `)};
+        `}
+      >
+        All Drinks
+      </div>
+      <DrinkList
+        className={css`
+          ${mq.md(css`
+            margin: 1rem 0;
+          `)};
+          ${mq.xl(css`
+            margin: 2rem 0;
+          `)};
+          ${mq.xl(css`
+            width: 70rem;
+          `)};
+        `}
+        drinks={drinks}
+      />
     </Main>
   </Layout>
 );

@@ -18,11 +18,10 @@ const TagPage = ({
     <Main>
       <div
         className={css`
-          display: none;
-          ${mq.lg(css`
-            display: block;
-            color: #eeeeee;
-            margin: 1rem 0;
+          color: #eeeeee;
+          margin: 1rem;
+          ${mq.md(css`
+            margin: 1rem 2rem;
           `)};
           ${mq.xl(css`
             margin: 0;
@@ -48,7 +47,20 @@ const TagPage = ({
         </span>
         {tag}
       </div>
-      <DrinkList drinks={drinks} />
+      <DrinkList
+        className={css`
+          ${mq.md(css`
+            margin: 1rem 0;
+          `)};
+          ${mq.xl(css`
+            margin: 2rem 0;
+          `)};
+          ${mq.xl(css`
+            width: 70rem;
+          `)};
+        `}
+        drinks={drinks}
+      />
     </Main>
   </Layout>
 );

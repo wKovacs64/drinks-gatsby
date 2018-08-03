@@ -17,6 +17,10 @@ const TagsPage = ({
     <Main
       className={css`
         align-items: center;
+        padding: 1rem 0;
+        ${mq.md(css`
+          padding: 2rem 0;
+        `)};
       `}
     >
       {allTags.map(({ tag }) => (
@@ -25,7 +29,7 @@ const TagsPage = ({
           key={tag}
           className={css`
             margin: 1rem 0;
-            ${mq.xl(css`
+            ${mq.md(css`
               margin: 2rem 0;
             `)};
             text-decoration: none;

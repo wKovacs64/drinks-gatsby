@@ -12,9 +12,8 @@ const Main = ({ className, children }) => (
       ${mq.xl(css`
         align-items: center;
       `)};
-      padding: 1rem 0;
-      ${mq.lg(css`
-        padding: 1rem 2rem;
+      ${mq.md(css`
+        padding: 1rem 0;
       `)};
       ${mq.xl(css`
         padding: 2rem;
