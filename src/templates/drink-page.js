@@ -27,7 +27,7 @@ const DrinkPage = ({ data: { drink } }) => (
     />
     <Main>
       <Nav>
-        <NavLink to="../">All Drinks</NavLink>
+        <NavLink to="/">All Drinks</NavLink>
         <NavDivider />
         {drink.title}
       </Nav>

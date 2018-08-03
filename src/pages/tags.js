@@ -25,7 +25,7 @@ const TagsPage = ({
     >
       {allTags.map(({ tag }) => (
         <Link
-          to={`tags/${kebabCase(tag)}`}
+          to={`/tags/${kebabCase(tag)}`}
           key={tag}
           className={css`
             margin: 1rem 0;

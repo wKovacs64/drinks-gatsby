@@ -31,7 +31,7 @@ const DrinkDetails = ({ className, drink }) => (
       >
         {drink.tags.map(tag => (
           <Link
-            to={`tags/${kebabCase(tag)}`}
+            to={`/tags/${kebabCase(tag)}`}
             key={tag}
             className={css`
               text-decoration: none;
