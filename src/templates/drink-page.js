@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
 import Main from '../components/main';
+import Nav from '../components/nav';
 import NavLink from '../components/nav-link';
 import Glass from '../components/glass';
 import DrinkSummary from '../components/drink-summary';
@@ -24,19 +25,7 @@ const DrinkPage = ({ data: { drink } }) => (
       ]}
     />
     <Main>
-      <div
-        className={css`
-          color: #eeeeee;
-          margin: 1rem;
-          ${mq.md(css`
-            margin: 1rem 2rem;
-          `)};
-          ${mq.xl(css`
-            margin: 0;
-            width: 70rem;
-          `)};
-        `}
-      >
+      <Nav>
         <NavLink to="../">All Drinks</NavLink>
         <span
           className={css`
@@ -46,7 +35,7 @@ const DrinkPage = ({ data: { drink } }) => (
           ⇒
         </span>
         {drink.title}
-      </div>
+      </Nav>
       <div
         className={css`
           ${mq.xl(css`

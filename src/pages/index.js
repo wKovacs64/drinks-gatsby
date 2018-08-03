@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
 import Main from '../components/main';
+import Nav from '../components/nav';
 import DrinkList from '../components/drink-list';
 import mq from '../utils/mq';
 
@@ -14,21 +15,7 @@ const IndexPage = ({
 }) => (
   <Layout>
     <Main>
-      <div
-        className={css`
-          color: #eeeeee;
-          margin: 1rem;
-          ${mq.md(css`
-            margin: 1rem 2rem;
-          `)};
-          ${mq.xl(css`
-            margin: 0;
-            width: 70rem;
-          `)};
-        `}
-      >
-        All Drinks
-      </div>
+      <Nav>All Drinks</Nav>
       <DrinkList
         className={css`
           ${mq.md(css`
