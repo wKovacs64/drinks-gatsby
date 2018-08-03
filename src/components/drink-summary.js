@@ -24,7 +24,7 @@ const DrinkSummary = ({ className, drink, reverseRowLayout, stacked }) => (
           background-color: #eeeeee;
           display: flex;
           flex-direction: column;
-          ${mq.md(css`
+          ${mq.sm(css`
             flex-direction: ${reverseRowLayout ? 'row-reverse' : 'row'};
           `)};
           ${className};
