@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { css } from 'react-emotion';
+import kebabCase from 'lodash.kebabcase';
 import Notes from './notes';
 import Tag from './tag';
 import mq from '../utils/mq';
@@ -30,7 +31,7 @@ const DrinkDetails = ({ className, drink }) => (
       >
         {drink.tags.map(tag => (
           <Link
-            to={`tags/${tag}`}
+            to={`tags/${kebabCase(tag)}`}
             key={tag}
             className={css`
               text-decoration: none;

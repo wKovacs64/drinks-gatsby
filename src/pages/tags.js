@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import { css } from 'react-emotion';
+import kebabCase from 'lodash.kebabcase';
 import Layout from '../components/layout';
 import Main from '../components/main';
 import Tag from '../components/tag';
@@ -20,7 +21,7 @@ const TagsPage = ({
     >
       {allTags.map(({ tag }) => (
         <Link
-          to={`tags/${tag}`}
+          to={`tags/${kebabCase(tag)}`}
           key={tag}
           className={css`
             margin: 1rem 0;

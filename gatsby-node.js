@@ -4,6 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require('path');
+const kebabCase = require('lodash.kebabcase');
 
 module.exports.createPages = async ({ graphql, actions: { createPage } }) => {
   (await graphql(`
@@ -34,7 +35,7 @@ module.exports.createPages = async ({ graphql, actions: { createPage } }) => {
     }
   `)).data.allContentfulDrink.group.forEach(({ fieldValue: tag }) => {
     createPage({
-      path: `/tags/${tag}`,
+      path: `/tags/${kebabCase(tag)}`,
       component: path.resolve('./src/templates/tag-page.js'),
       context: { tag },
     });
