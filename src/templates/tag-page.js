@@ -5,6 +5,7 @@ import { css } from 'react-emotion';
 import Layout from '../components/layout';
 import Main from '../components/main';
 import Nav from '../components/nav';
+import NavDivider from '../components/nav-divider';
 import NavLink from '../components/nav-link';
 import DrinkList from '../components/drink-list';
 import mq from '../utils/mq';
@@ -19,21 +20,9 @@ const TagPage = ({
     <Main>
       <Nav>
         <NavLink to="/">All Drinks</NavLink>
-        <span
-          className={css`
-            margin: 0 1rem;
-          `}
-        >
-          ⇒
-        </span>
+        <NavDivider />
         <NavLink to="/tags">Tags</NavLink>
-        <span
-          className={css`
-            margin: 0 1rem;
-          `}
-        >
-          ⇒
-        </span>
+        <NavDivider />
         {tag}
       </Nav>
       <DrinkList

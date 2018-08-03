@@ -6,6 +6,7 @@ import { css } from 'react-emotion';
 import Layout from '../components/layout';
 import Main from '../components/main';
 import Nav from '../components/nav';
+import NavDivider from '../components/nav-divider';
 import NavLink from '../components/nav-link';
 import Glass from '../components/glass';
 import DrinkSummary from '../components/drink-summary';
@@ -27,13 +28,7 @@ const DrinkPage = ({ data: { drink } }) => (
     <Main>
       <Nav>
         <NavLink to="../">All Drinks</NavLink>
-        <span
-          className={css`
-            margin: 0 1rem;
-          `}
-        >
-          ⇒
-        </span>
+        <NavDivider />
         {drink.title}
       </Nav>
       <div
