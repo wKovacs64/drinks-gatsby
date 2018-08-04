@@ -21,6 +21,7 @@ const DrinkSummary = ({ className, drink, stacked }) => (
     render={({ file: { defaultImage } }) => (
       <section
         className={css`
+          height: 100%;
           background-color: #eeeeee;
           display: flex;
           flex-direction: column;

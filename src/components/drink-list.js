@@ -32,6 +32,7 @@ const DrinkList = ({ className, drinks }) => (
       >
         <Glass
           className={css`
+            height: 100%;
             transition: border-color 0.3s ease;
 
             &:hover,
