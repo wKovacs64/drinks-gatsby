@@ -7,8 +7,6 @@ const Main = ({ className, children }) => (
   <main
     className={css`
       /* border: 1px solid magenta; */
-      display: block;
-      box-sizing: border-box;
       flex: 1;
       align-self: center;
       ${mq.sm(css`
