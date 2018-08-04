@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
-import Main from '../components/main';
 import Nav from '../components/nav';
 import NavDivider from '../components/nav-divider';
 import NavLink from '../components/nav-link';
@@ -25,40 +24,23 @@ const DrinkPage = ({ data: { drink } }) => (
         },
       ]}
     />
-    <Main>
-      <Nav>
-        <NavLink to="/">All Drinks</NavLink>
-        <NavDivider />
-        {drink.title}
-      </Nav>
-      <div
+    <Nav>
+      <NavLink to="/">All Drinks</NavLink>
+      <NavDivider />
+      {drink.title}
+    </Nav>
+    <Glass>
+      <DrinkSummary
         className={css`
-          ${mq.xl(css`
-            width: 70rem;
+          ${mq.lg(css`
+            flex-direction: row;
           `)};
         `}
-      >
-        <Glass
-          className={css`
-            ${mq.md(css`
-              margin: 1rem 0;
-            `)};
-            ${mq.xl(css`
-              margin: 2rem 0;
-            `)};
-            ${mq.lg(css`
-              border-width: 4px 0;
-            `)};
-            ${mq.xl(css`
-              border-width: 4px;
-            `)};
-          `}
-        >
-          <DrinkSummary drink={drink} stacked />
-          <DrinkDetails drink={drink} />
-        </Glass>
-      </div>
-    </Main>
+        drink={drink}
+        stacked
+      />
+      <DrinkDetails drink={drink} />
+    </Glass>
   </Layout>
 );
 

@@ -61,6 +61,10 @@ const DrinkSummary = ({ className, drink, stacked }) => (
                 letter-spacing: 0.1em;
                 font-weight: 400;
                 font-size: 1.5rem;
+                ${stacked &&
+                  mq.xl(css`
+                    font-size: 2.25rem;
+                  `)};
               `}
             >
               {drink.title}
@@ -76,6 +80,10 @@ const DrinkSummary = ({ className, drink, stacked }) => (
                   margin-bottom: 2rem;
                   padding-left: 2rem;
                   font-size: 1.25rem;
+                  ${stacked &&
+                    mq.xl(css`
+                      font-size: 1.5rem;
+                    `)};
                 `}
               >
                 {drink.ingredients.map(ingredient => (
@@ -94,9 +102,10 @@ const DrinkSummary = ({ className, drink, stacked }) => (
               className={css`
                 text-align: right;
                 font-size: 1rem;
-                ${mq.lg(css`
-                  font-size: 1.25rem;
-                `)};
+                ${stacked &&
+                  mq.xl(css`
+                    font-size: 1.25rem;
+                  `)};
               `}
             >
               {drink.calories ? <span>{drink.calories} cal</span> : ''}

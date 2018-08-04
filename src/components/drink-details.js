@@ -22,7 +22,7 @@ const DrinkDetails = ({ className, drink }) => (
         className={css`
           display: flex;
           flex-wrap: wrap;
-          ${mq.sm(css`
+          ${mq.lg(css`
             justify-content: flex-end;
           `)};
           border-top: 1px dotted #cccccc;
@@ -38,7 +38,7 @@ const DrinkDetails = ({ className, drink }) => (
               margin-top: 1rem;
               margin-left: 0;
               margin-right: 1rem;
-              ${mq.sm(css`
+              ${mq.lg(css`
                 margin-left: 1rem;
                 margin-right: 0;
               `)};
