@@ -8,8 +8,8 @@ const Main = ({ className, children }) => (
     className={css`
       /* border: 1px solid magenta; */
       flex: 1;
-      align-self: center;
       ${mq.sm(css`
+        align-self: center;
         padding: 0 0 2rem;
         width: 26rem;
       `)};
