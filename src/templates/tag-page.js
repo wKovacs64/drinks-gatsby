@@ -3,45 +3,28 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
-import Main from '../components/main';
 import Nav from '../components/nav';
 import NavDivider from '../components/nav-divider';
 import NavLink from '../components/nav-link';
 import DrinkList from '../components/drink-list';
-import mq from '../utils/mq';
 
 const TagPage = ({ pageContext: { tag }, data }) => (
   <Layout>
-    <Main>
-      <Nav>
-        <NavLink to="/">All Drinks</NavLink>
-        <NavDivider />
-        <NavLink to="/tags">Tags</NavLink>
-        <NavDivider />
-        {tag}
-        <span
-          className={css`
-            margin-left: 0.5rem;
-          `}
-        >
-          ( {data.allDrinks.totalCount} )
-        </span>
-      </Nav>
-      <DrinkList
+    <Nav>
+      <NavLink to="/">All Drinks</NavLink>
+      <NavDivider />
+      <NavLink to="/tags">Tags</NavLink>
+      <NavDivider />
+      {tag}
+      <span
         className={css`
-          ${mq.md(css`
-            margin: 1rem 0;
-          `)};
-          ${mq.xl(css`
-            margin: 2rem 0;
-          `)};
-          ${mq.xl(css`
-            width: 70rem;
-          `)};
+          margin-left: 0.5rem;
         `}
-        drinks={data.allDrinks.drinks}
-      />
-    </Main>
+      >
+        ( {data.allDrinks.totalCount} )
+      </span>
+    </Nav>
+    <DrinkList drinks={data.allDrinks.drinks} />
   </Layout>
 );
 
