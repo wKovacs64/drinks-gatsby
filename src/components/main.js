@@ -6,7 +6,6 @@ import mq from '../utils/mq';
 const Main = ({ className, children }) => (
   <main
     className={css`
-      /* border: 1px solid magenta; */
       flex: 1;
       ${mq.sm(css`
         align-self: center;
