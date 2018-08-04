@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
-import Main from '../components/main';
 import Nav from '../components/nav';
 import DrinkList from '../components/drink-list';
 import mq from '../utils/mq';
@@ -14,23 +13,21 @@ const IndexPage = ({
   },
 }) => (
   <Layout>
-    <Main>
-      <Nav>All Drinks</Nav>
-      <DrinkList
-        className={css`
-          ${mq.md(css`
-            margin: 1rem 0;
-          `)};
-          ${mq.xl(css`
-            margin: 2rem 0;
-          `)};
-          ${mq.xl(css`
-            width: 70rem;
-          `)};
-        `}
-        drinks={drinks}
-      />
-    </Main>
+    <Nav>All Drinks</Nav>
+    <DrinkList
+      className={css`
+        /* ${mq.md(css`
+          margin: 1rem 0;
+        `)};
+        ${mq.xl(css`
+          margin: 2rem 0;
+        `)};
+        ${mq.xl(css`
+          width: 70rem;
+        `)}; */
+      `}
+      drinks={drinks}
+    />
   </Layout>
 );
 

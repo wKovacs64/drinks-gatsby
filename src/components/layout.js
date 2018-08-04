@@ -6,6 +6,7 @@ import Helmet from 'react-helmet';
 import { injectGlobal, css } from 'react-emotion';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from './header';
+import Main from './main';
 import Footer from './footer';
 
 injectGlobal`
@@ -51,13 +52,13 @@ const Layout = ({ children }) => (
         />
         <div
           className={css`
-            display: grid;
-            grid: auto 1fr auto / 1fr;
+            display: flex;
+            flex-direction: column;
             min-height: 100vh;
           `}
         >
           <Header siteTitle={siteMetadata.title} />
-          {children}
+          <Main>{children}</Main>
           <Footer />
         </div>
       </Fragment>

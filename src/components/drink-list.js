@@ -9,20 +9,35 @@ import mq from '../utils/mq';
 const DrinkList = ({ className, drinks }) => (
   <div
     className={css`
+      /* border: 2px solid red; */
       display: grid;
-      grid-template-columns: 1fr;
-      grid-gap: 2rem;
+      grid-gap: 1rem;
+      ${mq.sm(css`
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        grid-gap: 2rem;
+        /* justify-items: center; */
+      `)};
+      /* ${mq.sm(css`
+        max-width: 28rem;
+      `)}; */
+      /* ${mq.lg(css`
+        max-width: 36rem;
+      `)}; */
       ${mq.xl(css`
-        grid-gap: 4rem;
+        grid-gap: 2rem;
+        justify-self: center;
+        /* width: 90rem; */
       `)};
       ${className};
     `}
   >
-    {drinks.map(({ drink }, index) => (
+    {drinks.map(({ drink }) => (
       <Link
         to={`/${drink.slug}`}
         key={drink.slug}
         className={css`
+          /* height: 100%; */
+          /* width: 26rem; */
           text-decoration: none;
         `}
       >
@@ -36,7 +51,7 @@ const DrinkList = ({ className, drinks }) => (
             }
           `}
         >
-          <DrinkSummary drink={drink} reverseRowLayout={index % 2 === 1} />
+          <DrinkSummary drink={drink} />
         </Glass>
       </Link>
     ))}

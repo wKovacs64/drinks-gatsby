@@ -6,17 +6,31 @@ import mq from '../utils/mq';
 const Main = ({ className, children }) => (
   <main
     className={css`
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      ${mq.xl(css`
-        align-items: center;
+      /* border: 1px solid magenta; */
+      display: block;
+      box-sizing: border-box;
+      flex: 1;
+      width: 100vw;
+      ${mq.sm(css`
+        align-self: center;
+        padding-bottom: 2rem;
+        width: 26rem;
       `)};
-      ${mq.md(css`
-        padding: 1rem 0;
+      /* ${mq.md(css`
+        width: 26rem;
+      `)}; */
+      ${mq.lg(css`
+        /* align-self: stretch; */
+        padding: 0 2rem 2rem;
+        /* width: unset; */
+        width: 100%;
+        max-width: 60rem;
       `)};
       ${mq.xl(css`
-        padding: 2rem;
+        align-self: center;
+        /* width: 90rem; */
+        /* width: 100%; */
+        max-width: 80rem;
       `)};
       ${className};
     `}

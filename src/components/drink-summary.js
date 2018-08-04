@@ -5,7 +5,7 @@ import { css } from 'react-emotion';
 import Img from 'gatsby-image';
 import mq from '../utils/mq';
 
-const DrinkSummary = ({ className, drink, reverseRowLayout, stacked }) => (
+const DrinkSummary = ({ className, drink, stacked }) => (
   <StaticQuery
     query={graphql`
       {
@@ -22,11 +22,9 @@ const DrinkSummary = ({ className, drink, reverseRowLayout, stacked }) => (
       <section
         className={css`
           background-color: #eeeeee;
+          /* height: 100%; */
           display: flex;
           flex-direction: column;
-          ${mq.sm(css`
-            flex-direction: ${reverseRowLayout ? 'row-reverse' : 'row'};
-          `)};
           ${className};
         `}
       >
@@ -63,9 +61,9 @@ const DrinkSummary = ({ className, drink, reverseRowLayout, stacked }) => (
                 letter-spacing: 0.1em;
                 font-weight: 400;
                 font-size: 1.5rem;
-                ${mq.lg(css`
+                /* ${mq.lg(css`
                   font-size: 2.25rem;
-                `)};
+                `)}; */
               `}
             >
               {drink.title}
@@ -80,13 +78,13 @@ const DrinkSummary = ({ className, drink, reverseRowLayout, stacked }) => (
                   margin-top: 2rem;
                   margin-bottom: 2rem;
                   padding-left: 2rem;
-                  ${mq.lg(css`
+                  /* ${mq.lg(css`
                     padding-left: 4rem;
-                  `)};
+                  `)}; */
                   font-size: 1.25rem;
-                  ${mq.lg(css`
+                  /* ${mq.lg(css`
                     font-size: 1.5rem;
-                  `)};
+                  `)}; */
                 `}
               >
                 {drink.ingredients.map(ingredient => (
@@ -131,13 +129,11 @@ DrinkSummary.propTypes = {
     calories: PropTypes.number,
     tags: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
-  reverseRowLayout: PropTypes.bool,
   stacked: PropTypes.bool,
 };
 
 DrinkSummary.defaultProps = {
   className: '',
-  reverseRowLayout: false,
   stacked: false,
 };
 

@@ -7,14 +7,17 @@ const Nav = ({ children, className }) => (
   <nav
     className={css`
       color: #eeeeee;
-      margin: 1rem;
-      ${mq.md(css`
-        margin: 1rem 2rem;
+      /* border: 1px solid magenta; */
+      padding: 1rem;
+      ${mq.sm(css`
+        padding: 2rem 0;
       `)};
-      ${mq.xl(css`
-        margin: 0;
-        width: 70rem;
-      `)};
+      /* ${mq.md(css`
+        padding: 2rem;
+      `)}; */
+      /* ${mq.xl(css`
+        padding: 2rem 0;
+      `)}; */
       ${className};
     `}
   >
