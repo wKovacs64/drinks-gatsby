@@ -13,7 +13,8 @@ const DrinkList = ({ className, drinks }) => (
       grid-gap: 1rem;
       ${mq.sm(css`
         grid-gap: 2rem;
-      `)} ${mq.lg(css`
+      `)};
+      ${mq.lg(css`
         grid-template-columns: repeat(2, 1fr);
       `)};
       ${mq.xl(css`
