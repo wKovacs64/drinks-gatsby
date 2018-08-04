@@ -12,12 +12,12 @@ const DrinkList = ({ className, drinks }) => (
       display: grid;
       grid-gap: 1rem;
       ${mq.sm(css`
-        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
         grid-gap: 2rem;
+      `)} ${mq.lg(css`
+        grid-template-columns: repeat(2, 1fr);
       `)};
       ${mq.xl(css`
-        grid-gap: 2rem;
-        justify-self: center;
+        grid-template-columns: repeat(3, 1fr);
       `)};
       ${className};
     `}
