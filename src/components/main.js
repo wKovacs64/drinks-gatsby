@@ -10,26 +10,17 @@ const Main = ({ className, children }) => (
       display: block;
       box-sizing: border-box;
       flex: 1;
-      width: 100vw;
+      align-self: center;
       ${mq.sm(css`
-        align-self: center;
-        padding-bottom: 2rem;
+        padding: 0 0 2rem;
         width: 26rem;
       `)};
-      /* ${mq.md(css`
-        width: 26rem;
-      `)}; */
       ${mq.lg(css`
-        /* align-self: stretch; */
         padding: 0 2rem 2rem;
-        /* width: unset; */
         width: 100%;
         max-width: 60rem;
       `)};
       ${mq.xl(css`
-        align-self: center;
-        /* width: 90rem; */
-        /* width: 100%; */
         max-width: 80rem;
       `)};
       ${className};

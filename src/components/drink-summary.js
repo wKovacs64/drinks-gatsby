@@ -22,7 +22,6 @@ const DrinkSummary = ({ className, drink, stacked }) => (
       <section
         className={css`
           background-color: #eeeeee;
-          /* height: 100%; */
           display: flex;
           flex-direction: column;
           ${className};
@@ -61,9 +60,6 @@ const DrinkSummary = ({ className, drink, stacked }) => (
                 letter-spacing: 0.1em;
                 font-weight: 400;
                 font-size: 1.5rem;
-                /* ${mq.lg(css`
-                  font-size: 2.25rem;
-                `)}; */
               `}
             >
               {drink.title}
@@ -78,13 +74,7 @@ const DrinkSummary = ({ className, drink, stacked }) => (
                   margin-top: 2rem;
                   margin-bottom: 2rem;
                   padding-left: 2rem;
-                  /* ${mq.lg(css`
-                    padding-left: 4rem;
-                  `)}; */
                   font-size: 1.25rem;
-                  /* ${mq.lg(css`
-                    font-size: 1.5rem;
-                  `)}; */
                 `}
               >
                 {drink.ingredients.map(ingredient => (

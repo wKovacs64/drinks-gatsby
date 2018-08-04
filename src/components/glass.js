@@ -11,15 +11,8 @@ const Glass = ({ children, className }) => (
       border-width: 4px 0;
       border-style: double;
       ${mq.sm(css`
-        /* margin: 0 auto; */
         border-width: 4px;
-        /* max-width: 28rem; */
       `)};
-      /* ${mq.md(css`
-        margin: unset;
-        max-width: unset;
-      `)}; */
-      /* height: 100%; */
       ${className};
     `}
   >

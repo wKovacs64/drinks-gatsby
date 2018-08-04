@@ -7,17 +7,10 @@ const Nav = ({ children, className }) => (
   <nav
     className={css`
       color: #eeeeee;
-      /* border: 1px solid magenta; */
       padding: 1rem;
       ${mq.sm(css`
         padding: 2rem 0;
       `)};
-      /* ${mq.md(css`
-        padding: 2rem;
-      `)}; */
-      /* ${mq.xl(css`
-        padding: 2rem 0;
-      `)}; */
       ${className};
     `}
   >
