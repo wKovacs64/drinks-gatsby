@@ -17,9 +17,9 @@ const TagsPage = ({
     <Main
       className={css`
         align-items: center;
-        padding: 1rem 0;
+        padding: 1rem;
         ${mq.md(css`
-          padding: 2rem 0;
+          padding: 2rem;
         `)};
       `}
     >
@@ -33,7 +33,6 @@ const TagsPage = ({
               margin: 2rem 0;
             `)};
             text-decoration: none;
-            max-width: 16rem;
           `}
         >
           <Tag
@@ -41,7 +40,7 @@ const TagsPage = ({
               font-weight: 300;
               font-size: 1.5rem;
               padding: 1rem;
-              ${mq.xl(css`
+              ${mq.lg(css`
                 font-size: 2.25rem;
                 padding: 1.5rem;
               `)};
