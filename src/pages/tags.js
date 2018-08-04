@@ -4,7 +4,9 @@ import { Link, graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import kebabCase from 'lodash.kebabcase';
 import Layout from '../components/layout';
-import Main from '../components/main';
+import Nav from '../components/nav';
+import NavLink from '../components/nav-link';
+import NavDivider from '../components/nav-divider';
 import Tag from '../components/tag';
 import mq from '../utils/mq';
 
@@ -14,12 +16,26 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <Main
+    <Nav>
+      <NavLink to="/">All Drinks</NavLink>
+      <NavDivider />
+      Tags
+    </Nav>
+    <div
       className={css`
-        align-items: center;
-        padding: 1rem;
-        ${mq.md(css`
-          padding: 2rem;
+        display: grid;
+        grid-gap: 1rem;
+        margin: 0 1rem 1rem;
+        ${mq.sm(css`
+          grid-gap: 2rem;
+          margin: 0;
+        `)};
+        ${mq.lg(css`
+          grid-gap: 2rem;
+          grid-template-columns: repeat(2, 1fr);
+        `)};
+        ${mq.xl(css`
+          grid-template-columns: repeat(3, 1fr);
         `)};
       `}
     >
@@ -28,10 +44,6 @@ const TagsPage = ({
           to={`/tags/${kebabCase(tag)}`}
           key={tag}
           className={css`
-            margin: 1rem 0;
-            ${mq.md(css`
-              margin: 2rem 0;
-            `)};
             text-decoration: none;
           `}
         >
@@ -50,7 +62,7 @@ const TagsPage = ({
           </Tag>
         </Link>
       ))}
-    </Main>
+    </div>
   </Layout>
 );
 
