@@ -10,12 +10,7 @@ import NavLink from '../components/nav-link';
 import DrinkList from '../components/drink-list';
 import mq from '../utils/mq';
 
-const TagPage = ({
-  pageContext: { tag },
-  data: {
-    allDrinks: { drinks },
-  },
-}) => (
+const TagPage = ({ pageContext: { tag }, data }) => (
   <Layout>
     <Main>
       <Nav>
@@ -24,6 +19,13 @@ const TagPage = ({
         <NavLink to="/tags">Tags</NavLink>
         <NavDivider />
         {tag}
+        <span
+          className={css`
+            margin-left: 0.5rem;
+          `}
+        >
+          ( {data.allDrinks.totalCount} )
+        </span>
       </Nav>
       <DrinkList
         className={css`
@@ -37,7 +39,7 @@ const TagPage = ({
             width: 70rem;
           `)};
         `}
-        drinks={drinks}
+        drinks={data.allDrinks.drinks}
       />
     </Main>
   </Layout>
@@ -49,6 +51,7 @@ export const query = graphql`
       sort: { fields: [createdAt], order: ASC }
       filter: { tags: { glob: $tag } }
     ) {
+      totalCount
       drinks: edges {
         drink: node {
           title
@@ -72,6 +75,7 @@ TagPage.propTypes = {
   }).isRequired,
   data: PropTypes.shape({
     allDrinks: PropTypes.shape({
+      totalCount: PropTypes.number,
       drinks: PropTypes.arrayOf(
         PropTypes.shape({
           title: PropTypes.string,
