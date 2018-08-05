@@ -6,6 +6,9 @@
 const path = require('path');
 const kebabCase = require('lodash.kebabcase');
 
+const drinkPage = path.resolve('./src/templates/drink-page.js');
+const tagPage = path.resolve('./src/templates/tag-page.js');
+
 module.exports.createPages = async ({ graphql, actions: { createPage } }) => {
   (await graphql(`
     {
@@ -20,7 +23,7 @@ module.exports.createPages = async ({ graphql, actions: { createPage } }) => {
   `)).data.allContentfulDrink.edges.forEach(({ node: { slug } }) => {
     createPage({
       path: slug,
-      component: path.resolve('./src/templates/drink-page.js'),
+      component: drinkPage,
       context: { slug },
     });
   });
@@ -36,7 +39,7 @@ module.exports.createPages = async ({ graphql, actions: { createPage } }) => {
   `)).data.allContentfulDrink.group.forEach(({ fieldValue: tag }) => {
     createPage({
       path: `/tags/${kebabCase(tag)}`,
-      component: path.resolve('./src/templates/tag-page.js'),
+      component: tagPage,
       context: { tag },
     });
   });
