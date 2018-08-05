@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { injectGlobal, css } from 'react-emotion';
 import { StaticQuery, graphql } from 'gatsby';
+import backgroundImage from '../images/background.jpg';
 import Header from './header';
 import Main from './main';
 import Footer from './footer';
@@ -101,6 +102,23 @@ const Layout = ({ children }) => (
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            position: relative;
+
+            &::after {
+              content: '';
+              background-image: url(${backgroundImage});
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-attachment: fixed;
+              background-position: center;
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              z-index: -1;
+              opacity: 0.25;
+            }
           `}
         >
           <Header siteTitle={siteMetadata.title} />
