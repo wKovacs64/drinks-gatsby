@@ -16,7 +16,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "clean": "rimraf public",
+    "clean": "rimraf .cache public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,json,md,yml}\"",
     "lint": "eslint .",
