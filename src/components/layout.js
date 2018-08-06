@@ -86,9 +86,23 @@ const Layout = ({ children }) => (
             title
           }
         }
+        file(relativePath: { eq: "background.jpg" }) {
+          childImageSharp {
+            fixed {
+              tempBackgroundImage: base64
+            }
+          }
+        }
       }
     `}
-    render={({ site: { siteMetadata } }) => (
+    render={({
+      site: { siteMetadata },
+      file: {
+        childImageSharp: {
+          fixed: { tempBackgroundImage },
+        },
+      },
+    }) => (
       <Fragment>
         <Helmet
           title={siteMetadata.title}
@@ -106,7 +120,8 @@ const Layout = ({ children }) => (
 
             &::after {
               content: '';
-              background-image: url(${backgroundImage});
+              background-image: url(${backgroundImage}),
+                url(${tempBackgroundImage});
               background-repeat: no-repeat;
               background-size: cover;
               background-attachment: fixed;
