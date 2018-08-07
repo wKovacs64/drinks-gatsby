@@ -1,6 +1,6 @@
 import 'normalize.css';
 import 'typeface-source-sans-pro';
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { injectGlobal, css } from 'react-emotion';
@@ -89,7 +89,11 @@ const Layout = ({ children }) => (
       }
     `}
     render={({ site: { siteMetadata } }) => (
-      <Fragment>
+      // TODO: This top-level element currently needs to be a throw-away div
+      // instead of a Fragment or anything with props due to several Gatsby bugs
+      // surrounding service workers (gatsby-plugin-offline), e.g. issues #5459
+      // and #6059
+      <div>
         <Helmet
           title={siteMetadata.title}
           meta={[
@@ -125,7 +129,7 @@ const Layout = ({ children }) => (
           <Main>{children}</Main>
           <Footer />
         </div>
-      </Fragment>
+      </div>
     )}
   />
 );
