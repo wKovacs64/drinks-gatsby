@@ -22,6 +22,7 @@ injectGlobal`
   }
   html {
     background-color: #242424;
+    overflow-y: scroll;
   }
   body {
     font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
