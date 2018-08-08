@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import orderBy from 'lodash.orderby';
 import Layout from '../components/layout';
 import Nav from '../components/nav';
 import DrinkList from '../components/drink-list';
@@ -12,13 +13,19 @@ const IndexPage = ({
 }) => (
   <Layout>
     <Nav>All Drinks</Nav>
-    <DrinkList drinks={drinks} />
+    <DrinkList
+      drinks={orderBy(
+        drinks,
+        ['drink.rank', 'drink.createdAt'],
+        ['desc', 'desc'],
+      )}
+    />
   </Layout>
 );
 
 export const query = graphql`
   query {
-    allDrinks: allContentfulDrink(sort: { fields: [createdAt], order: ASC }) {
+    allDrinks: allContentfulDrink {
       drinks: edges {
         drink: node {
           title
@@ -30,6 +37,8 @@ export const query = graphql`
           }
           ingredients
           calories
+          rank
+          createdAt
         }
       }
     }

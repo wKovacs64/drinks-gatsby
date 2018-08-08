@@ -55,6 +55,7 @@
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
     "lodash.kebabcase": "4.1.1",
+    "lodash.orderby": "4.6.0",
     "normalize.css": "8.0.0",
     "prop-types": "15.6.2",
     "react": "16.4.2",
