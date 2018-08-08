@@ -101,7 +101,9 @@ const Layout = ({ children }) => (
             { name: 'description', content: 'Drinks' },
             { name: 'keywords', content: 'drinks, cocktails, alcohol' },
           ]}
-        />
+        >
+          <html lang="en" />
+        </Helmet>
         <div
           className={css`
             display: flex;
