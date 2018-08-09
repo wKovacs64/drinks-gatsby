@@ -35,6 +35,9 @@ const Notes = ({ children }) => (
           box-shadow: inset 0 -2px 0 0 #a62304;
         }
       }
+      ul {
+        list-style-type: square;
+      }
     `}
     dangerouslySetInnerHTML={{
       __html: children,
