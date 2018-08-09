@@ -30,7 +30,7 @@ class Header extends Component {
 
   handleSearchTermKeydown = ({ keyCode }) => {
     if (keyCode === 27 /* ESC */) {
-      this.clearSearchTerm();
+      this.toggleSearch();
     }
   };
 
