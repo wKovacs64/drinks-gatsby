@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { css } from 'react-emotion';
@@ -79,13 +79,42 @@ class Header extends Component {
             </Link>
           </h1>
           {withSearch && (
-            <Fragment>
+            <div>
+              <input
+                id="search-input"
+                name="searchInput"
+                aria-label="Search"
+                type="text"
+                placeholder="Search"
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck={false}
+                value={searchTerm}
+                onChange={this.handleSearchTermChange}
+                onKeyDown={this.handleSearchTermKeydown}
+                className={css`
+                  color: #f4f4f4;
+                  background-color: transparent;
+                  border-width: 0 0 1px;
+                  padding: ${showSearch ? '0.5rem' : '0'} 0;
+                  width: ${showSearch ? '10rem' : '0'};
+                  transition: all 0.2s ease-in-out;
+                  ${mq.md(css`
+                    padding: 0.5rem 0;
+                    width: 12rem;
+                  `)};
+                `}
+              />
               <button
                 className={css`
+                  cursor: pointer;
                   color: #cccccc;
                   background-color: transparent;
                   border: none;
-                  cursor: pointer;
+                  padding: 0.5rem 0;
+                  margin-left: ${showSearch ? '0.5rem' : '0'};
+                  transition: margin-left 0.2s ease-in-out;
                   transition: color 0.3s ease;
 
                   &:hover {
@@ -105,35 +134,7 @@ class Header extends Component {
                   <FaSearch size={24} />
                 )}
               </button>
-              <input
-                id="search-input"
-                name="searchInput"
-                aria-label="Search"
-                type="text"
-                placeholder="Search"
-                autoComplete="off"
-                autoCorrect="off"
-                autoCapitalize="off"
-                spellCheck={false}
-                value={searchTerm}
-                onChange={this.handleSearchTermChange}
-                onKeyDown={this.handleSearchTermKeydown}
-                className={css`
-                  color: #f4f4f4;
-                  background-color: transparent;
-                  border-width: 0 0 1px;
-                  display: ${showSearch ? 'block' : 'none'};
-                  padding: 0.5rem;
-                  margin-top: 1rem;
-                  width: 100%;
-                  ${mq.md(css`
-                    display: block;
-                    margin: 0;
-                    width: 12rem;
-                  `)};
-                `}
-              />
-            </Fragment>
+            </div>
           )}
         </header>
       </IconContext.Provider>
