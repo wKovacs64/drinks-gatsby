@@ -24,7 +24,7 @@ const TagPage = ({ pageContext: { tag }, data }) => (
         ( {data.allDrinks.totalCount} )
       </span>
     </Nav>
-    <DrinkList drinks={data.allDrinks.drinks} />
+    <DrinkList drinks={data.allDrinks.drinks.map(({ drink }) => drink)} />
   </Layout>
 );
 
@@ -61,13 +61,15 @@ TagPage.propTypes = {
       totalCount: PropTypes.number,
       drinks: PropTypes.arrayOf(
         PropTypes.shape({
-          title: PropTypes.string,
-          slug: PropTypes.string,
-          image: PropTypes.shape({
-            fluid: PropTypes.shape(),
+          drink: PropTypes.shape({
+            title: PropTypes.string,
+            slug: PropTypes.string,
+            image: PropTypes.shape({
+              fluid: PropTypes.shape(),
+            }),
+            ingredients: PropTypes.arrayOf(PropTypes.string),
+            calories: PropTypes.number,
           }),
-          ingredients: PropTypes.arrayOf(PropTypes.string),
-          calories: PropTypes.number,
         }),
       ),
     }),

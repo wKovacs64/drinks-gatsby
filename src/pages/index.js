@@ -15,8 +15,8 @@ const IndexPage = ({
     <Nav>All Drinks</Nav>
     <DrinkList
       drinks={orderBy(
-        drinks,
-        ['drink.rank', 'drink.createdAt'],
+        drinks.map(({ drink }) => drink),
+        ['rank', 'createdAt'],
         ['desc', 'desc'],
       )}
     />
@@ -50,13 +50,15 @@ IndexPage.propTypes = {
     allDrinks: PropTypes.shape({
       drinks: PropTypes.arrayOf(
         PropTypes.shape({
-          title: PropTypes.string,
-          slug: PropTypes.string,
-          image: PropTypes.shape({
-            fluid: PropTypes.shape(),
+          drink: PropTypes.shape({
+            title: PropTypes.string,
+            slug: PropTypes.string,
+            image: PropTypes.shape({
+              fluid: PropTypes.shape(),
+            }),
+            ingredients: PropTypes.arrayOf(PropTypes.string),
+            calories: PropTypes.number,
           }),
-          ingredients: PropTypes.arrayOf(PropTypes.string),
-          calories: PropTypes.number,
         }),
       ),
     }),

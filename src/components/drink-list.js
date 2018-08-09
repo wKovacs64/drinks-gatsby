@@ -23,7 +23,7 @@ const DrinkList = ({ className, drinks }) => (
       ${className};
     `}
   >
-    {drinks.map(({ drink }) => (
+    {drinks.map(drink => (
       <Link
         to={`/${drink.slug}`}
         key={drink.slug}
