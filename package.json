@@ -56,12 +56,14 @@
     "gatsby-transformer-sharp": "next",
     "lodash.kebabcase": "4.1.1",
     "lodash.orderby": "4.6.0",
+    "match-sorter": "2.2.3",
     "normalize.css": "8.0.0",
     "prop-types": "15.6.2",
     "react": "16.4.2",
     "react-dom": "16.4.2",
     "react-emotion": "9.2.6",
     "react-helmet": "5.2.0",
+    "react-icons": "3.0.5",
     "typeface-source-sans-pro": "0.0.54"
   },
   "devDependencies": {

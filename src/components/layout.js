@@ -78,7 +78,7 @@ injectGlobal`
   }
 `;
 
-const Layout = ({ children }) => (
+const Layout = ({ children, onSearchTermChange, withSearch }) => (
   <StaticQuery
     query={graphql`
       {
@@ -128,7 +128,11 @@ const Layout = ({ children }) => (
             }
           `}
         >
-          <Header siteTitle={siteMetadata.title} />
+          <Header
+            siteTitle={siteMetadata.title}
+            onSearchTermChange={onSearchTermChange}
+            withSearch={withSearch}
+          />
           <Main>{children}</Main>
           <Footer />
         </div>
@@ -139,6 +143,13 @@ const Layout = ({ children }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  onSearchTermChange: PropTypes.func,
+  withSearch: PropTypes.bool,
+};
+
+Layout.defaultProps = {
+  onSearchTermChange: () => {},
+  withSearch: false,
 };
 
 export default Layout;
