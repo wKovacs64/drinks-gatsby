@@ -18,8 +18,10 @@ class Header extends Component {
     });
   };
 
-  toggleSearch = () =>
+  toggleSearch = () => {
     this.setState(({ showSearch }) => ({ showSearch: !showSearch }));
+    this.clearSearchTerm();
+  };
 
   handleSearchTermChange = ({ target: { value: searchTerm } }) => {
     this.setState(() => ({ searchTerm }));
