@@ -101,8 +101,7 @@ class Header extends Component {
                   width: ${showSearch ? '10rem' : '0'};
                   transition: all 0.2s ease-in-out;
                   ${mq.md(css`
-                    padding: 0.5rem 0;
-                    width: 12rem;
+                    width: ${showSearch ? '12rem' : '0'};
                   `)};
                 `}
               />
@@ -120,9 +119,6 @@ class Header extends Component {
                   &:hover {
                     color: #f4f4f4;
                   }
-                  ${mq.md(css`
-                    display: none;
-                  `)};
                 `}
                 aria-label="Toggle Search"
                 type="button"
