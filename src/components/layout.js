@@ -97,10 +97,7 @@ const Layout = ({ children, onSearchTermChange, withSearch }) => (
       <div>
         <Helmet
           title={siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Drinks' },
-            { name: 'keywords', content: 'drinks, cocktails, alcohol' },
-          ]}
+          meta={[{ name: 'description', content: 'Drinks' }]}
         >
           <html lang="en" />
         </Helmet>

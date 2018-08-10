@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
@@ -7,6 +8,10 @@ import mq from '../utils/mq';
 
 const NotFoundPage = () => (
   <Layout>
+    <Helmet
+      title="Broken Link"
+      meta={[{ name: 'description', content: 'No drinks found.' }]}
+    />
     <div
       className={css`
         color: #eeeeee;

@@ -16,13 +16,7 @@ const DrinkPage = ({ data: { drink } }) => (
   <Layout>
     <Helmet
       title={drink.title}
-      meta={[
-        { name: 'description', content: drink.title },
-        {
-          name: 'keywords',
-          content: ['drink', 'cocktail', ...drink.tags].join(', '),
-        },
-      ]}
+      meta={[{ name: 'description', content: `${drink.title} details` }]}
     />
     <Nav>
       <NavLink to="/">All Drinks</NavLink>

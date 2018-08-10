@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import orderBy from 'lodash.orderby';
+import startCase from 'lodash.startcase';
 import matchSorter, { rankings } from 'match-sorter';
 import Layout from '../components/layout';
 import Nav from '../components/nav';
@@ -42,6 +44,10 @@ class TagPage extends Component {
 
     return (
       <Layout withSearch onSearchTermChange={this.handleSearchTermChange}>
+        <Helmet
+          title={startCase(`${tag} drinks`)}
+          meta={[{ name: 'description', content: `Drinks using ${tag}` }]}
+        />
         <Nav>
           <NavLink to="/">All Drinks</NavLink>
           <NavDivider />

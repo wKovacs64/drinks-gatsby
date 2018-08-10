@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import kebabCase from 'lodash.kebabcase';
@@ -28,10 +29,15 @@ class TagsPage extends Component {
     } = this.props;
     const { searchTerm } = this.state;
 
-    const matchedTags = matchSorter(allTags.map(({ tag }) => tag), searchTerm);
+    const tags = allTags.map(({ tag }) => tag);
+    const matchedTags = matchSorter(tags, searchTerm);
 
     return (
       <Layout withSearch onSearchTermChange={this.handleSearchTermChange}>
+        <Helmet
+          title="Drink Tags"
+          meta={[{ name: 'description', content: `All drink tags` }]}
+        />
         <Nav>
           <NavLink to="/">All Drinks</NavLink>
           <NavDivider />
