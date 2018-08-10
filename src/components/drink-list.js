@@ -35,7 +35,6 @@ const DrinkList = ({ className, drinks }) => (
           className={css`
             height: 100%;
             transition: border-color 0.3s ease;
-
             &:hover,
             &:focus {
               border-color: #a62304;

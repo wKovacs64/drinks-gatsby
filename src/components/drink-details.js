@@ -22,11 +22,11 @@ const DrinkDetails = ({ className, drink }) => (
         className={css`
           display: flex;
           flex-wrap: wrap;
+          border-top: 1px dotted #cccccc;
+          padding-top: 1rem;
           ${mq.lg(css`
             justify-content: flex-end;
           `)};
-          border-top: 1px dotted #cccccc;
-          padding-top: 1rem;
         `}
       >
         {drink.tags.map(tag => (

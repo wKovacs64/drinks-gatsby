@@ -107,7 +107,6 @@ const Layout = ({ children, onSearchTermChange, withSearch }) => (
             flex-direction: column;
             min-height: 100vh;
             position: relative;
-
             &::after {
               content: '';
               background-image: url(${backgroundImage});

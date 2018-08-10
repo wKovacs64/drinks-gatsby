@@ -8,7 +8,6 @@ const FooterLink = styled.a`
   text-decoration: none;
   border-bottom: 1px solid #cccccc;
   transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-
   &:hover {
     color: #f4f4f4;
     border-color: #f4f4f4;

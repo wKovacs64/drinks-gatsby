@@ -6,7 +6,6 @@ export default styled(Link)`
   color: currentColor;
   text-decoration: none;
   transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-
   &:hover {
     color: #f4f4f4;
     border-color: #f4f4f4;
