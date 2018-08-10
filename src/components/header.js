@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { css } from 'react-emotion';
 import { IconContext } from 'react-icons';
-import { FaSearch, FaSearchMinus } from 'react-icons/fa';
+import { MdSearch, MdZoomOut } from 'react-icons/md';
 import mq from '../utils/mq';
 
 class Header extends Component {
@@ -50,9 +50,6 @@ class Header extends Component {
           className={css`
             background-color: #111111;
             padding: 1rem;
-            ${mq.md(css`
-              padding: 2rem;
-            `)};
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -63,7 +60,9 @@ class Header extends Component {
             className={css`
               font-weight: 300;
               margin: 0;
-              padding: 0.5rem 0;
+              ${mq.md(css`
+                padding: 1rem;
+              `)};
             `}
           >
             <Link
@@ -72,7 +71,6 @@ class Header extends Component {
                 color: #cccccc;
                 text-decoration: none;
                 transition: color 0.3s ease;
-
                 &:hover {
                   color: #f4f4f4;
                 }
@@ -100,10 +98,16 @@ class Header extends Component {
                   color: #f4f4f4;
                   background-color: transparent;
                   border-width: 0 0 1px;
-                  padding: ${showSearch ? '0.5rem' : '0'} 0;
-                  width: ${showSearch ? '10rem' : '0'};
-                  transition: all 0.2s ease-in-out;
+                  padding: 0 0 0.25rem 0;
+                  width: ${showSearch ? '40vw' : '0'};
+                  max-width: 10rem;
+                  transition: width 0.2s ease-in-out;
+                  ${mq.sm(css`
+                    width: ${showSearch ? '10rem' : '0'};
+                    max-width: unset;
+                  `)};
                   ${mq.md(css`
+                    padding: 0 0 0.5rem 0;
                     width: ${showSearch ? '12rem' : '0'};
                   `)};
                 `}
@@ -114,24 +118,19 @@ class Header extends Component {
                   color: #cccccc;
                   background-color: transparent;
                   border: none;
-                  padding: 0.5rem 0;
-                  margin-left: ${showSearch ? '0.5rem' : '0'};
-                  transition: margin-left 0.2s ease-in-out;
                   transition: color 0.3s ease;
-
                   &:hover {
                     color: #f4f4f4;
                   }
+                  ${mq.md(css`
+                    padding: 1rem;
+                  `)};
                 `}
                 aria-label="Toggle Search"
                 type="button"
                 onClick={this.toggleSearch}
               >
-                {showSearch ? (
-                  <FaSearchMinus size={24} />
-                ) : (
-                  <FaSearch size={24} />
-                )}
+                {showSearch ? <MdZoomOut size={32} /> : <MdSearch size={32} />}
               </button>
             </div>
           )}
