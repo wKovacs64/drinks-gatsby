@@ -63,6 +63,7 @@ class Header extends Component {
             className={css`
               font-weight: 300;
               margin: 0;
+              padding: 0.5rem 0;
             `}
           >
             <Link
