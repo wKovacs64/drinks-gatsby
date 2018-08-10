@@ -91,9 +91,8 @@ const Layout = ({ children, onSearchTermChange, withSearch }) => (
     `}
     render={({ site: { siteMetadata } }) => (
       // TODO: This top-level element currently needs to be a throw-away div
-      // instead of a Fragment or anything with props due to several Gatsby bugs
-      // surrounding service workers (gatsby-plugin-offline), e.g. issues #5459
-      // and #6059
+      // instead of a Fragment or anything with props due to Gatsby issue #6059
+      // surrounding the gatsby-plugin-offline service worker
       <div>
         <Helmet
           title={siteMetadata.title}
