@@ -24,13 +24,13 @@ class TagsPage extends Component {
   render() {
     const {
       data: {
-        allDrinks: { allTags },
+        allContentfulDrink: { group },
       },
     } = this.props;
     const { searchTerm } = this.state;
 
-    const tags = allTags.map(({ tag }) => tag);
-    const matchedTags = matchSorter(tags, searchTerm);
+    const tags = group.map(({ fieldValue }) => fieldValue);
+    const filteredTags = matchSorter(tags, searchTerm);
 
     return (
       <Layout withSearch onSearchTermChange={this.handleSearchTermChange}>
@@ -61,8 +61,8 @@ class TagsPage extends Component {
             `)};
           `}
         >
-          {matchedTags.length ? (
-            matchedTags.map(tag => (
+          {filteredTags.length ? (
+            filteredTags.map(tag => (
               <Link
                 to={`/tags/${kebabCase(tag)}`}
                 key={tag}
@@ -104,9 +104,9 @@ class TagsPage extends Component {
 
 export const query = graphql`
   query {
-    allDrinks: allContentfulDrink {
-      allTags: group(field: tags) {
-        tag: fieldValue
+    allContentfulDrink {
+      group(field: tags) {
+        fieldValue
       }
     }
   }
@@ -114,10 +114,10 @@ export const query = graphql`
 
 TagsPage.propTypes = {
   data: PropTypes.shape({
-    allDrinks: PropTypes.shape({
-      allTags: PropTypes.arrayOf(
+    allContentfulDrink: PropTypes.shape({
+      group: PropTypes.arrayOf(
         PropTypes.shape({
-          tag: PropTypes.string,
+          fieldValue: PropTypes.string,
         }),
       ),
     }),

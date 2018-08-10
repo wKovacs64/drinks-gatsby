@@ -29,18 +29,15 @@ class TagPage extends Component {
     } = this.props;
     const { searchTerm } = this.state;
 
-    const filteredDrinks = matchSorter(
-      data.allDrinks.drinks.map(({ drink }) => drink),
-      searchTerm,
-      {
-        keys: [
-          'title',
-          'ingredients',
-          'notes.childMarkdownRemark.rawMarkdownBody',
-        ],
-        threshold: rankings.CONTAINS,
-      },
-    );
+    const drinks = data.allContentfulDrink.edges.map(({ node }) => node);
+    const filteredDrinks = matchSorter(drinks, searchTerm, {
+      keys: [
+        'title',
+        'ingredients',
+        'notes.childMarkdownRemark.rawMarkdownBody',
+      ],
+      threshold: rankings.CONTAINS,
+    });
 
     return (
       <Layout withSearch onSearchTermChange={this.handleSearchTermChange}>
@@ -59,7 +56,7 @@ class TagPage extends Component {
               margin-left: 0.5rem;
             `}
           >
-            ( {data.allDrinks.totalCount} )
+            ( {data.allContentfulDrink.totalCount} )
           </span>
         </Nav>
         {filteredDrinks.length ? (
@@ -91,10 +88,10 @@ class TagPage extends Component {
 
 export const query = graphql`
   query($tag: String!) {
-    allDrinks: allContentfulDrink(filter: { tags: { glob: $tag } }) {
+    allContentfulDrink(filter: { tags: { glob: $tag } }) {
       totalCount
-      drinks: edges {
-        drink: node {
+      edges {
+        node {
           title
           slug
           image {
@@ -120,11 +117,11 @@ TagPage.propTypes = {
     tag: PropTypes.string,
   }).isRequired,
   data: PropTypes.shape({
-    allDrinks: PropTypes.shape({
+    allContentfulDrink: PropTypes.shape({
       totalCount: PropTypes.number,
-      drinks: PropTypes.arrayOf(
+      edges: PropTypes.arrayOf(
         PropTypes.shape({
-          drink: PropTypes.shape({
+          node: PropTypes.shape({
             title: PropTypes.string,
             slug: PropTypes.string,
             image: PropTypes.shape({

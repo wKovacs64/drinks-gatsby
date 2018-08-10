@@ -21,23 +21,20 @@ class IndexPage extends Component {
   render() {
     const {
       data: {
-        allDrinks: { drinks },
+        allContentfulDrink: { edges },
       },
     } = this.props;
     const { searchTerm } = this.state;
 
-    const filteredDrinks = matchSorter(
-      drinks.map(({ drink }) => drink),
-      searchTerm,
-      {
-        keys: [
-          'title',
-          'ingredients',
-          'notes.childMarkdownRemark.rawMarkdownBody',
-        ],
-        threshold: rankings.CONTAINS,
-      },
-    );
+    const drinks = edges.map(({ node }) => node);
+    const filteredDrinks = matchSorter(drinks, searchTerm, {
+      keys: [
+        'title',
+        'ingredients',
+        'notes.childMarkdownRemark.rawMarkdownBody',
+      ],
+      threshold: rankings.CONTAINS,
+    });
 
     return (
       <Layout withSearch onSearchTermChange={this.handleSearchTermChange}>
@@ -71,9 +68,9 @@ class IndexPage extends Component {
 
 export const query = graphql`
   query {
-    allDrinks: allContentfulDrink {
-      drinks: edges {
-        drink: node {
+    allContentfulDrink {
+      edges {
+        node {
           title
           slug
           image {
@@ -98,10 +95,10 @@ export const query = graphql`
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
-    allDrinks: PropTypes.shape({
-      drinks: PropTypes.arrayOf(
+    allContentfulDrink: PropTypes.shape({
+      edges: PropTypes.arrayOf(
         PropTypes.shape({
-          drink: PropTypes.shape({
+          node: PropTypes.shape({
             title: PropTypes.string,
             slug: PropTypes.string,
             image: PropTypes.shape({

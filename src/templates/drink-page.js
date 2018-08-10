@@ -12,7 +12,7 @@ import DrinkSummary from '../components/drink-summary';
 import DrinkDetails from '../components/drink-details';
 import mq from '../utils/mq';
 
-const DrinkPage = ({ data: { drink } }) => (
+const DrinkPage = ({ data: { contentfulDrink: drink } }) => (
   <Layout>
     <Helmet
       title={drink.title}
@@ -40,7 +40,7 @@ const DrinkPage = ({ data: { drink } }) => (
 
 export const query = graphql`
   query($slug: String!) {
-    drink: contentfulDrink(slug: { eq: $slug }) {
+    contentfulDrink(slug: { eq: $slug }) {
       title
       image {
         fluid {
@@ -61,7 +61,7 @@ export const query = graphql`
 
 DrinkPage.propTypes = {
   data: PropTypes.shape({
-    drink: PropTypes.shape({
+    contentfulDrink: PropTypes.shape({
       title: PropTypes.string,
       image: PropTypes.shape({
         fluid: PropTypes.shape(),
