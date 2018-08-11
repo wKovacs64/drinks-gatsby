@@ -84,7 +84,7 @@ class Header extends Component {
               <input
                 id="search-input"
                 name="searchInput"
-                aria-label="Search"
+                aria-label="Search Term"
                 type="text"
                 placeholder="Search"
                 autoComplete="off"
