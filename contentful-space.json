@@ -1,0 +1,299 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "redacted"
+          }
+        },
+        "id": "drink",
+        "type": "ContentType",
+        "createdAt": "2018-07-21T23:17:04.149Z",
+        "updatedAt": "2018-08-11T15:17:39.059Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "redacted"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "redacted"
+          }
+        },
+        "publishedCounter": 18,
+        "version": 36,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "redacted"
+          }
+        },
+        "publishedVersion": 35,
+        "firstPublishedAt": "2018-07-21T23:17:04.608Z",
+        "publishedAt": "2018-08-11T15:17:39.059Z"
+      },
+      "displayField": "title",
+      "name": "Drink",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "ingredients",
+          "name": "Ingredients",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": []
+          }
+        },
+        {
+          "id": "tags",
+          "name": "Tags",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": []
+          }
+        },
+        {
+          "id": "calories",
+          "name": "Calories",
+          "type": "Integer",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "notes",
+          "name": "Notes",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "rank",
+          "name": "Rank",
+          "type": "Integer",
+          "localized": false,
+          "required": true,
+          "validations": [],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "redacted",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 36,
+        "createdAt": "2018-07-21T23:17:04.840Z",
+        "createdBy": {
+          "sys": {
+            "id": "redacted",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-08-11T15:17:39.682Z",
+        "updatedBy": {
+          "sys": {
+            "id": "redacted",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "drink",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "The name of the drink"
+          },
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "slug",
+          "settings": {
+            "helpText": "Unique slug"
+          },
+          "widgetId": "slugEditor"
+        },
+        {
+          "fieldId": "ingredients",
+          "settings": {
+            "helpText": "Ingredients and measurements (e.g. 1 oz. bourbon)"
+          },
+          "widgetId": "listInput"
+        },
+        {
+          "fieldId": "tags",
+          "settings": {
+            "helpText": "Ingredient names are a good choice here (e.g. bourbon)"
+          },
+          "widgetId": "tagEditor"
+        },
+        {
+          "fieldId": "calories",
+          "widgetId": "numberEditor"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor"
+        },
+        {
+          "fieldId": "notes",
+          "settings": {
+            "helpText": "This field may contain a description, additional crafting instructions, variations, an origin story, etc."
+          },
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "rank",
+          "settings": {
+            "helpText": "Used to override the order in which drinks appear (higher numbers will be shown first) - enter 0 for unranked"
+          },
+          "widgetId": "numberEditor"
+        }
+      ]
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "redacted",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "redacted"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "redacted"
+          }
+        },
+        "createdAt": "2018-07-21T22:21:42Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "redacted"
+          }
+        },
+        "updatedAt": "2018-07-21T22:21:42Z"
+      }
+    }
+  ],
+  "roles": []
+}

@@ -1,7 +1,7 @@
 {
   "name": "drinks",
   "version": "0.1.0-dev.0",
-  "description": "Gatsby site to showcase favorite drinks",
+  "description": "Static site to showcase your favorite cocktails",
   "author": {
     "name": "Justin Hall",
     "email": "justin.r.hall@gmail.com"
