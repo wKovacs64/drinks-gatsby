@@ -19,7 +19,7 @@ const Footer = () => (
   <footer
     className={css`
       background-color: #111111;
-      color: #eeeeee;
+      color: #cccccc;
       padding: 1rem;
       font-size: 1rem;
       ${mq.sm(css`
