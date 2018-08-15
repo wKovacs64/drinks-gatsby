@@ -4855,7 +4855,7 @@ gatsby-cli@^2.0.0-beta.13:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-image@next:
+gatsby-image@2.0.0-beta.7:
   version "2.0.0-beta.7"
   resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.0-beta.7.tgz#da6723165861baf1f67bf5192323e846b32d64bb"
   dependencies:
@@ -4871,13 +4871,13 @@ gatsby-link@^2.0.0-beta.20:
     prop-types "^15.6.1"
     ric "^1.3.0"
 
-gatsby-plugin-emotion@next:
+gatsby-plugin-emotion@2.0.0-beta.3:
   version "2.0.0-beta.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-2.0.0-beta.3.tgz#bd261ea4dde61102a1b449609d44dd097ddd5219"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
 
-gatsby-plugin-manifest@next:
+gatsby-plugin-manifest@2.0.2-beta.5:
   version "2.0.2-beta.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.2-beta.5.tgz#2ec07dc8609de34fba31aee7819b580008f7482e"
   dependencies:
@@ -4885,7 +4885,7 @@ gatsby-plugin-manifest@next:
     bluebird "^3.5.0"
     sharp "^0.20.2"
 
-gatsby-plugin-netlify@next:
+gatsby-plugin-netlify@2.0.0-beta.6:
   version "2.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.0-beta.6.tgz#e446e95b9f29bbf8d707a957ff0ae7410afa47ce"
   dependencies:
@@ -4895,7 +4895,7 @@ gatsby-plugin-netlify@next:
     lodash "^4.17.4"
     webpack-assets-manifest "^1.0.0"
 
-gatsby-plugin-offline@next:
+gatsby-plugin-offline@2.0.0-beta.9:
   version "2.0.0-beta.9"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.0-beta.9.tgz#411d204d65d55e9c2194d8709628ed1a55382d8e"
   dependencies:
@@ -4917,13 +4917,13 @@ gatsby-plugin-page-creator@^2.0.0-beta.5:
     parse-filepath "^1.0.1"
     slash "^1.0.0"
 
-gatsby-plugin-react-helmet@next:
+gatsby-plugin-react-helmet@3.0.0-beta.4:
   version "3.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.0.0-beta.4.tgz#065bb67fec37e86db536c51d7a5006eee2ce89b9"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
 
-gatsby-plugin-sharp@^2.0.0-beta.7, gatsby-plugin-sharp@next:
+gatsby-plugin-sharp@2.0.0-beta.7, gatsby-plugin-sharp@^2.0.0-beta.7:
   version "2.0.0-beta.7"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.0-beta.7.tgz#3a185451ccde6c8a0badff82e449b42da162b6ad"
   dependencies:
@@ -4959,7 +4959,7 @@ gatsby-remark-external-links@0.0.4:
     unist-util-find "^1.0.1"
     unist-util-visit "^1.1.3"
 
-gatsby-source-contentful@next:
+gatsby-source-contentful@2.0.1-beta.15:
   version "2.0.1-beta.15"
   resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.1-beta.15.tgz#9e03e686262cc4b6b6a82b3cb4783e05bc5dd97e"
   dependencies:
@@ -4976,7 +4976,7 @@ gatsby-source-contentful@next:
     lodash "^4.17.4"
     qs "^6.4.0"
 
-gatsby-source-filesystem@next:
+gatsby-source-filesystem@2.0.1-beta.10:
   version "2.0.1-beta.10"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.1-beta.10.tgz#f357ac909bc97aea2a99e8cca9d6bd31da8bdc2b"
   dependencies:
@@ -4993,7 +4993,7 @@ gatsby-source-filesystem@next:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-transformer-remark@next:
+gatsby-transformer-remark@2.1.1-beta.6:
   version "2.1.1-beta.6"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.1.1-beta.6.tgz#1b4e1fce943d849f6fc44b9fc665c396ecaa9846"
   dependencies:
@@ -5017,7 +5017,7 @@ gatsby-transformer-remark@next:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.3.0"
 
-gatsby-transformer-sharp@next:
+gatsby-transformer-sharp@2.1.1-beta.6:
   version "2.1.1-beta.6"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.1.1-beta.6.tgz#011800ac19c646e6e2527c3cc0fde45ac4bb748a"
   dependencies:
@@ -5026,7 +5026,7 @@ gatsby-transformer-sharp@next:
     fs-extra "^4.0.2"
     probe-image-size "^4.0.0"
 
-gatsby@next:
+gatsby@2.0.0-beta.98:
   version "2.0.0-beta.98"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-beta.98.tgz#b9b4010cc14cbdfe8e0db09cbbc89af4a97013b9"
   dependencies:
