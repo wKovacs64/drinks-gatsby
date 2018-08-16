@@ -4952,9 +4952,9 @@ gatsby-plugin-react-helmet@3.0.0-beta.4:
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
 
-gatsby-plugin-sharp@2.0.0-beta.7, gatsby-plugin-sharp@^2.0.0-beta.7:
-  version "2.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.0-beta.7.tgz#3a185451ccde6c8a0badff82e449b42da162b6ad"
+gatsby-plugin-sharp@2.0.0-beta.9, gatsby-plugin-sharp@^2.0.0-beta.9:
+  version "2.0.0-beta.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.0-beta.9.tgz#2ac33084ea0ba417c531122c06d540eddfe1eaf8"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
     async "^2.1.2"
@@ -4988,9 +4988,9 @@ gatsby-remark-external-links@0.0.4:
     unist-util-find "^1.0.1"
     unist-util-visit "^1.1.3"
 
-gatsby-source-contentful@2.0.1-beta.16:
-  version "2.0.1-beta.16"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.1-beta.16.tgz#315ce51f57555dd5c4ae1c2efd1febdba7438988"
+gatsby-source-contentful@2.0.1-beta.18:
+  version "2.0.1-beta.18"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.1-beta.18.tgz#82c284fc984360326a5ca4ac5d4d869100963228"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
     axios "^0.18.0"
@@ -4999,7 +4999,7 @@ gatsby-source-contentful@2.0.1-beta.16:
     contentful "^6.1.0"
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
-    gatsby-plugin-sharp "^2.0.0-beta.7"
+    gatsby-plugin-sharp "^2.0.0-beta.9"
     is-online "^7.0.0"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.4"
@@ -5058,9 +5058,9 @@ gatsby-transformer-sharp@2.1.1-beta.7:
     probe-image-size "^4.0.0"
     sharp "^0.20.2"
 
-gatsby@2.0.0-beta.105:
-  version "2.0.0-beta.105"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-beta.105.tgz#fefd3a6be7741e97a315debd8600a9272e9faf99"
+gatsby@2.0.0-beta.106:
+  version "2.0.0-beta.106"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-beta.106.tgz#be232df7bcc37afb1ea0601b50fafdcef82a83a0"
   dependencies:
     "@babel/code-frame" "7.0.0-beta.52"
     "@babel/core" "7.0.0-beta.52"
