@@ -37,7 +37,10 @@ const DrinkSummary = ({ className, drink, stacked }) => (
         >
           <Img
             alt={drink.title}
-            fluid={drink.image ? drink.image.fluid : defaultImage.fluid}
+            fluid={{
+              ...(drink.image ? drink.image.fluid : defaultImage.fluid),
+              aspectRatio: 1,
+            }}
           />
         </figure>
         <div
