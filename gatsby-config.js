@@ -5,7 +5,19 @@ module.exports = {
     title: 'Drinks',
   },
   plugins: [
-    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        headers: {
+          '/*': [
+            "Content-Security-Policy: default-src 'self'; img-src data: https:; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; worker-src 'self'",
+            "Feature-Policy: geolocation 'none'; camera 'none'; microphone 'none'; speaker 'none'; payment 'none'; usb 'none'",
+            'Referrer-Policy: no-referrer-when-downgrade',
+            'Expect-CT: enforce, max-age=3600',
+          ],
+        },
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-emotion',
     {
