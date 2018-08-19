@@ -12,35 +12,46 @@ import DrinkSummary from '../components/drink-summary';
 import DrinkDetails from '../components/drink-details';
 import mq from '../utils/mq';
 
-const DrinkPage = ({ data: { contentfulDrink: drink } }) => (
-  <Layout>
-    <Helmet
-      title={drink.title}
-      meta={[
-        { name: 'description', content: drink.ingredients.join(', ') },
-        { property: 'og:image', content: `https:${drink.image.fixed.src}` },
-        { name: 'twitter:card', content: 'summary_large_image' },
-      ]}
-    />
-    <Nav>
-      <NavLink to="/">All Drinks</NavLink>
-      <NavDivider />
-      {drink.title}
-    </Nav>
-    <Glass>
-      <DrinkSummary
-        className={css`
-          ${mq.lg(css`
-            flex-direction: row;
-          `)};
-        `}
-        drink={drink}
-        stacked
+const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
+  const description = drink.ingredients.join(', ');
+  const socialImageUrl = `https:${drink.image.fixed.src}`;
+
+  return (
+    <Layout>
+      <Helmet
+        title={drink.title}
+        meta={[
+          { name: 'description', content: description },
+          { property: 'og:type', content: 'website' },
+          { property: 'og:title', content: drink.title },
+          { property: 'og:description', content: description },
+          { property: 'og:image', content: socialImageUrl },
+          { name: 'twitter:card', content: 'summary_large_image' },
+          { name: 'twitter:title', content: drink.title },
+          { name: 'twitter:description', content: description },
+          { name: 'twitter:image', content: socialImageUrl },
+        ]}
       />
-      <DrinkDetails drink={drink} />
-    </Glass>
-  </Layout>
-);
+      <Nav>
+        <NavLink to="/">All Drinks</NavLink>
+        <NavDivider />
+        {drink.title}
+      </Nav>
+      <Glass>
+        <DrinkSummary
+          className={css`
+            ${mq.lg(css`
+              flex-direction: row;
+            `)};
+          `}
+          drink={drink}
+          stacked
+        />
+        <DrinkDetails drink={drink} />
+      </Glass>
+    </Layout>
+  );
+};
 
 export const query = graphql`
   query($slug: String!) {
