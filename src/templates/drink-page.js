@@ -16,7 +16,7 @@ const DrinkPage = ({ data: { contentfulDrink: drink } }) => (
   <Layout>
     <Helmet
       title={drink.title}
-      meta={[{ name: 'description', content: `${drink.title} details` }]}
+      meta={[{ name: 'description', content: drink.ingredients.join(', ') }]}
     />
     <Nav>
       <NavLink to="/">All Drinks</NavLink>
