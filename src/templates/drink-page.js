@@ -26,10 +26,12 @@ const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
           { property: 'og:title', content: drink.title },
           { property: 'og:description', content: description },
           { property: 'og:image', content: socialImageUrl },
+          { property: 'og:image:alt', content: drink.title },
           { name: 'twitter:card', content: 'summary_large_image' },
           { name: 'twitter:title', content: drink.title },
           { name: 'twitter:description', content: description },
           { name: 'twitter:image', content: socialImageUrl },
+          { name: 'twitter:image:alt', content: drink.title },
         ]}
       />
       <Nav>
