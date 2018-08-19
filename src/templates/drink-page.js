@@ -16,7 +16,10 @@ const DrinkPage = ({ data: { contentfulDrink: drink } }) => (
   <Layout>
     <Helmet
       title={drink.title}
-      meta={[{ name: 'description', content: drink.ingredients.join(', ') }]}
+      meta={[
+        { name: 'description', content: drink.ingredients.join(', ') },
+        { name: 'og:image', content: `https:${drink.image.fixed.src}` },
+      ]}
     />
     <Nav>
       <NavLink to="/">All Drinks</NavLink>
@@ -46,6 +49,9 @@ export const query = graphql`
         fluid {
           ...GatsbyContentfulFluid_withWebp
         }
+        fixed(width: 1200, height: 630) {
+          src
+        }
       }
       ingredients
       calories
@@ -65,6 +71,9 @@ DrinkPage.propTypes = {
       title: PropTypes.string,
       image: PropTypes.shape({
         fluid: PropTypes.shape(),
+        fixed: PropTypes.shape({
+          src: PropTypes.string,
+        }),
       }),
       ingredients: PropTypes.arrayOf(PropTypes.string),
       calories: PropTypes.number,
