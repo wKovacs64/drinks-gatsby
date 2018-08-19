@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
 import orderBy from 'lodash.orderby';
@@ -21,6 +22,7 @@ class IndexPage extends Component {
   render() {
     const {
       data: {
+        site: { siteMetadata },
         allContentfulDrink: { edges },
       },
     } = this.props;
@@ -38,6 +40,12 @@ class IndexPage extends Component {
 
     return (
       <Layout withSearch onSearchTermChange={this.handleSearchTermChange}>
+        <Helmet
+          title={siteMetadata.title}
+          meta={[
+            { name: 'description', content: 'Showcase of favorite cocktails' },
+          ]}
+        />
         <Nav>All Drinks</Nav>
         {filteredDrinks.length ? (
           <DrinkList
@@ -68,6 +76,11 @@ class IndexPage extends Component {
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allContentfulDrink {
       edges {
         node {
@@ -95,6 +108,11 @@ export const query = graphql`
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string,
+      }),
+    }),
     allContentfulDrink: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({

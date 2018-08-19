@@ -94,10 +94,7 @@ const Layout = ({ children, onSearchTermChange, withSearch }) => (
       // instead of a Fragment or anything with props due to Gatsby issue #6059
       // surrounding the gatsby-plugin-offline service worker
       <div>
-        <Helmet
-          title={siteMetadata.title}
-          meta={[{ name: 'description', content: 'Drinks' }]}
-        >
+        <Helmet>
           <html lang="en" />
         </Helmet>
         <div
