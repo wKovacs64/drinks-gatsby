@@ -48,7 +48,7 @@ class TagPage extends Component {
         <Nav>
           <NavLink to="/">All Drinks</NavLink>
           <NavDivider />
-          <NavLink to="/tags">Tags</NavLink>
+          <NavLink to="/tags/">Tags</NavLink>
           <NavDivider />
           {tag}
           <span

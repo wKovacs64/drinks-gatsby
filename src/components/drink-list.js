@@ -25,7 +25,7 @@ const DrinkList = ({ className, drinks }) => (
   >
     {drinks.map(drink => (
       <Link
-        to={`/${drink.slug}`}
+        to={`/${drink.slug}/`}
         key={drink.slug}
         className={css`
           text-decoration: none;
