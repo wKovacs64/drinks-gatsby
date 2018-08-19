@@ -12,7 +12,7 @@ import DrinkSummary from '../components/drink-summary';
 import DrinkDetails from '../components/drink-details';
 import mq from '../utils/mq';
 
-const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
+const DrinkPage = ({ location, data: { contentfulDrink: drink } }) => {
   const description = drink.ingredients.join(', ');
   const socialImageUrl = `https:${drink.image.fixed.src}`;
 
@@ -22,6 +22,7 @@ const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
         title={drink.title}
         meta={[
           { name: 'description', content: description },
+          { property: 'og:url', content: location.href },
           { property: 'og:type', content: 'website' },
           { property: 'og:title', content: drink.title },
           { property: 'og:description', content: description },
@@ -80,6 +81,9 @@ export const query = graphql`
 `;
 
 DrinkPage.propTypes = {
+  location: PropTypes.shape({
+    href: PropTypes.string,
+  }).isRequired,
   data: PropTypes.shape({
     contentfulDrink: PropTypes.shape({
       title: PropTypes.string,
