@@ -19,6 +19,7 @@ const DrinkPage = ({ data: { contentfulDrink: drink } }) => (
       meta={[
         { name: 'description', content: drink.ingredients.join(', ') },
         { name: 'og:image', content: `https:${drink.image.fixed.src}` },
+        { name: 'twitter:card', content: 'summary_large_image' },
       ]}
     />
     <Nav>
