@@ -313,12 +313,6 @@
   dependencies:
     "@babel/helper-plugin-utils" "7.0.0-beta.52"
 
-"@babel/plugin-syntax-flow@7.0.0-beta.52":
-  version "7.0.0-beta.52"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-flow/-/plugin-syntax-flow-7.0.0-beta.52.tgz#8125c1de15b352cb71f6e22200f888a546772c8c"
-  dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-beta.52"
-
 "@babel/plugin-syntax-jsx@7.0.0-beta.52":
   version "7.0.0-beta.52"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.0.0-beta.52.tgz#ed57b2ca5ab5bcf931c419b111e8df0318f8f65e"
@@ -409,13 +403,6 @@
   dependencies:
     "@babel/helper-builder-binary-assignment-operator-visitor" "7.0.0-beta.52"
     "@babel/helper-plugin-utils" "7.0.0-beta.52"
-
-"@babel/plugin-transform-flow-strip-types@7.0.0-beta.52":
-  version "7.0.0-beta.52"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-flow-strip-types/-/plugin-transform-flow-strip-types-7.0.0-beta.52.tgz#321c1dd84ba44ee3429f995c7bf58cd0ababb714"
-  dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-beta.52"
-    "@babel/plugin-syntax-flow" "7.0.0-beta.52"
 
 "@babel/plugin-transform-for-of@7.0.0-beta.52":
   version "7.0.0-beta.52"
@@ -618,13 +605,6 @@
     invariant "^2.2.2"
     js-levenshtein "^1.1.3"
     semver "^5.3.0"
-
-"@babel/preset-flow@7.0.0-beta.52":
-  version "7.0.0-beta.52"
-  resolved "https://registry.yarnpkg.com/@babel/preset-flow/-/preset-flow-7.0.0-beta.52.tgz#da2a0f576dfbe78b920a2ac2c47831a89c526004"
-  dependencies:
-    "@babel/helper-plugin-utils" "7.0.0-beta.52"
-    "@babel/plugin-transform-flow-strip-types" "7.0.0-beta.52"
 
 "@babel/preset-react@7.0.0-beta.52":
   version "7.0.0-beta.52"
@@ -4876,9 +4856,9 @@ gatsby-cli@^2.0.0-beta.14:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-image@2.0.0-beta.8:
-  version "2.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.0-beta.8.tgz#6815def2cc962beeeba0e4e4e78645a80f551409"
+gatsby-image@2.0.0-beta.9:
+  version "2.0.0-beta.9"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.0-beta.9.tgz#a72264ab6202fe606f5a13d57187b060d2727ac2"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
     prop-types "^15.6.1"
@@ -4894,15 +4874,15 @@ gatsby-link@^2.0.0-beta.22:
     prop-types "^15.6.1"
     ric "^1.3.0"
 
-gatsby-plugin-emotion@2.0.0-beta.3:
-  version "2.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-2.0.0-beta.3.tgz#bd261ea4dde61102a1b449609d44dd097ddd5219"
+gatsby-plugin-emotion@2.0.0-beta.4:
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-2.0.0-beta.4.tgz#a33e387c4c7492962e39fed4031df751860fff2b"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
 
-gatsby-plugin-manifest@2.0.2-beta.6:
-  version "2.0.2-beta.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.2-beta.6.tgz#76320f5102f054d8cc305681071cefce5a808d1c"
+gatsby-plugin-manifest@2.0.2-beta.7:
+  version "2.0.2-beta.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.2-beta.7.tgz#cac8a9d6615718bf6d54486dcd819f59c147a51b"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
     bluebird "^3.5.0"
@@ -5016,9 +4996,9 @@ gatsby-source-filesystem@2.0.1-beta.10:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-transformer-remark@2.1.1-beta.7:
-  version "2.1.1-beta.7"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.1.1-beta.7.tgz#72d9f5f0b908867d5987f52c4df5004627dc62ad"
+gatsby-transformer-remark@2.1.1-beta.8:
+  version "2.1.1-beta.8"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.1.1-beta.8.tgz#f12eaecdfd01e31c0175969177488c1b7e5c372e"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
     bluebird "^3.5.0"
@@ -5052,9 +5032,9 @@ gatsby-transformer-sharp@2.1.1-beta.7:
     probe-image-size "^4.0.0"
     sharp "^0.20.2"
 
-gatsby@2.0.0-beta.111:
-  version "2.0.0-beta.111"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-beta.111.tgz#4d3881c44d7de706219ba0492ef65a194100efd2"
+gatsby@2.0.0-beta.112:
+  version "2.0.0-beta.112"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-beta.112.tgz#159dc14107bef67378aad13957a60bafb2a31645"
   dependencies:
     "@babel/code-frame" "7.0.0-beta.52"
     "@babel/core" "7.0.0-beta.52"
@@ -5064,7 +5044,6 @@ gatsby@2.0.0-beta.111:
     "@babel/plugin-transform-runtime" "7.0.0-beta.52"
     "@babel/polyfill" "7.0.0-beta.52"
     "@babel/preset-env" "7.0.0-beta.52"
-    "@babel/preset-flow" "7.0.0-beta.52"
     "@babel/preset-react" "7.0.0-beta.52"
     "@babel/runtime" "7.0.0-beta.52"
     "@babel/traverse" "7.0.0-beta.52"
