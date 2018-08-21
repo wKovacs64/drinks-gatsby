@@ -1,6 +1,6 @@
 import 'normalize.css';
 import 'typeface-source-sans-pro';
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { injectGlobal, css } from 'react-emotion';
@@ -90,10 +90,7 @@ const Layout = ({ children, onSearchTermChange, withSearch }) => (
       }
     `}
     render={({ site: { siteMetadata } }) => (
-      // TODO: This top-level element currently needs to be a throw-away div
-      // instead of a Fragment or anything with props due to Gatsby issue #6059
-      // surrounding the gatsby-plugin-offline service worker
-      <div>
+      <Fragment>
         <Helmet>
           <html lang="en" />
         </Helmet>
@@ -128,7 +125,7 @@ const Layout = ({ children, onSearchTermChange, withSearch }) => (
           <Main>{children}</Main>
           <Footer />
         </div>
-      </div>
+      </Fragment>
     )}
   />
 );

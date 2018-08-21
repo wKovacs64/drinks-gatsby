@@ -6,8 +6,6 @@ import Layout from '../components/layout';
 import BrokenGlass from '../components/broken-glass';
 import mq from '../utils/mq';
 
-// TODO: The 404 page will currently "loop" (refresh itself) if the
-// gatsby-plugin-offline service worker is enabled (see Gatsby issue #5459)
 const NotFoundPage = () => (
   <Layout>
     <Helmet
