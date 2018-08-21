@@ -43,7 +43,17 @@ class IndexPage extends Component {
         <Helmet
           title={siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Showcase of favorite cocktails' },
+            { name: 'description', content: siteMetadata.description },
+            { property: 'og:type', content: 'website' },
+            { property: 'og:title', content: siteMetadata.title },
+            { property: 'og:description', content: siteMetadata.description },
+            { property: 'og:image', content: siteMetadata.imageUrl },
+            { property: 'og:image:alt', content: siteMetadata.title },
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:title', content: siteMetadata.title },
+            { name: 'twitter:description', content: siteMetadata.description },
+            { name: 'twitter:image', content: siteMetadata.imageUrl },
+            { name: 'twitter:image:alt', content: siteMetadata.title },
           ]}
         />
         <Nav>All Drinks</Nav>
@@ -79,6 +89,8 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        description
+        imageUrl
       }
     }
     allContentfulDrink {
