@@ -17,10 +17,11 @@
    contentful space import --management-token <your-management-token> --space-id <your-space-id> --content-file contentful-space.json
    ```
 
-1. Copy the provided `.env.example` file to a new `.env` file and modify the
-   values with your Contentful information. If desired (e.g. for production
-   deployments), change the `CONTENTFUL_HOST` value to `cdn.contentful.com` to
-   only see published data.
+1. Copy the provided `.env.example` file to a new `.env` file and fill in the
+   values with your information.
+
+   _Tip: if desired (e.g. for production deployments), change the
+   `CONTENTFUL_HOST` value to `cdn.contentful.com` to only see published data._
 
 1. Deploy to [Netlify][netlify] (or [other][zeit-now] static content
    [host][surge.sh]):

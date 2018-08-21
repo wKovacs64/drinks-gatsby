@@ -1,8 +1,12 @@
 const contentfulConfig = require('./src/utils/contentful');
+const siteConfig = require('./src/utils/site');
 
 module.exports = {
   siteMetadata: {
-    title: 'Drinks',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    // this will be used for the og:image meta tag content value
+    imageUrl: siteConfig.imageUrl,
   },
   plugins: [
     {
@@ -42,8 +46,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Drinks',
-        short_name: 'Drinks',
+        name: siteConfig.title,
+        short_name: siteConfig.pwaShortName,
         start_url: '/',
         background_color: '#f4f4f4',
         theme_color: '#137752',
