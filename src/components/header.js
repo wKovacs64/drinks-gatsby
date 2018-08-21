@@ -105,8 +105,8 @@ class Header extends Component {
                     background-color: transparent;
                     border-width: 0 0 1px;
                     padding: 0 0 0.25rem 0;
-                    width: ${showSearch ? '40vw' : '0'};
-                    max-width: 10rem;
+                    width: ${showSearch ? '30vw' : '0'};
+                    max-width: 8rem;
                     transition: width 0.2s ease-in-out;
                     ${mq.sm(css`
                       width: ${showSearch ? '10rem' : '0'};
