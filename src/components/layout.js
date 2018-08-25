@@ -72,8 +72,7 @@ injectGlobal`
   input[type='password'],
   input[type='tel'],
   input[type='text'],
-  input[type='url'],
-  .border-box {
+  input[type='url'] {
     box-sizing: border-box;
   }
 `;
