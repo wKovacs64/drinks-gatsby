@@ -15,11 +15,6 @@ injectGlobal`
     font-family: 'Source Sans Pro';
     src: local('Source Sans Pro');
   }
-  html,
-  body,
-  #___gatsby {
-    min-height: 100vh;
-  }
   html {
     background-color: #242424;
     overflow-y: scroll;
