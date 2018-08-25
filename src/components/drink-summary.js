@@ -18,7 +18,8 @@ const DrinkSummary = ({ className, drink, stacked }) => (
         }
       }
     `}
-    render={({ file: { defaultImage } }) => (
+  >
+    {({ file: { defaultImage } }) => (
       <section
         className={css`
           height: 100%;
@@ -117,7 +118,7 @@ const DrinkSummary = ({ className, drink, stacked }) => (
         </div>
       </section>
     )}
-  />
+  </StaticQuery>
 );
 
 DrinkSummary.propTypes = {

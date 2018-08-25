@@ -89,7 +89,8 @@ const Layout = ({ children, onSearchTermChange, withSearch }) => (
         }
       }
     `}
-    render={({ site: { siteMetadata } }) => (
+  >
+    {({ site: { siteMetadata } }) => (
       <Fragment>
         <Helmet>
           <html lang="en" />
@@ -127,7 +128,7 @@ const Layout = ({ children, onSearchTermChange, withSearch }) => (
         </div>
       </Fragment>
     )}
-  />
+  </StaticQuery>
 );
 
 Layout.propTypes = {
