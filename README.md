@@ -6,6 +6,15 @@
 </div>
 <hr>
 
+## Technologies used:
+
+- [Gatsby][gatsby] (static site generator for [React][react], powered by
+  [GraphQL][graphql])
+- [Contentful][contentful] (headless CMS)
+- [Netlify][netlify] (hosting and continuous deployment)
+- [Emotion][emotion] (CSS-in-JS)
+- [CSS Grid Layout][grid]
+
 ## Run your own:
 
 1. Create a new space, content management token, and content delivery (access)
@@ -40,6 +49,11 @@
    URL to trigger a rebuild whenever you update content in Contentful for silky
    smooth continuous deployment.
 
+[gatsby]: https://www.gatsbyjs.org/
+[react]: https://reactjs.org/
+[graphql]: https://graphql.org/
+[emotion]: https://emotion.sh/
+[grid]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
 [contentful]: https://www.contentful.com/
 [contentful-cli]: https://github.com/contentful/contentful-cli
 [netlify]: https://www.netlify.com/
