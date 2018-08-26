@@ -79,6 +79,10 @@ const Layout = ({ children, onSearchTermChange, withSearch }) => (
         site {
           siteMetadata {
             title
+            buildInfo {
+              commit
+              version
+            }
           }
         }
       }
@@ -87,7 +91,11 @@ const Layout = ({ children, onSearchTermChange, withSearch }) => (
     {({ site: { siteMetadata } }) => (
       <Fragment>
         <Helmet>
-          <html lang="en" />
+          <html
+            lang="en"
+            data-commit={siteMetadata.buildInfo.commit}
+            data-version={siteMetadata.buildInfo.version}
+          />
         </Helmet>
         <div
           className={css`

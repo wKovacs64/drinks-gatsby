@@ -1,5 +1,6 @@
 const contentfulConfig = require('./src/utils/contentful');
 const siteConfig = require('./src/utils/site');
+const buildInfo = require('./src/utils/build-info');
 
 module.exports = {
   siteMetadata: {
@@ -7,6 +8,10 @@ module.exports = {
     description: siteConfig.description,
     // this will be used for the og:image meta tag content value
     imageUrl: siteConfig.imageUrl,
+    buildInfo: {
+      commit: buildInfo.commit,
+      version: buildInfo.version,
+    },
   },
   plugins: [
     {
