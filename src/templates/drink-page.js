@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
+import get from 'lodash.get';
 import Layout from '../components/layout';
 import Nav from '../components/nav';
 import NavDivider from '../components/nav-divider';
@@ -14,7 +15,8 @@ import mq from '../utils/mq';
 
 const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
   const description = drink.ingredients.join(', ');
-  const socialImageUrl = `https:${drink.image.fixed.src}`;
+  const socialImageUrlSrc = get('drink.image.fixed.src');
+  const socialImageUrl = socialImageUrlSrc && `https:${socialImageUrlSrc}`;
 
   return (
     <Layout>
@@ -25,14 +27,14 @@ const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
           { property: 'og:type', content: 'website' },
           { property: 'og:title', content: drink.title },
           { property: 'og:description', content: description },
-          { property: 'og:image', content: socialImageUrl },
-          { property: 'og:image:alt', content: drink.title },
+          socialImageUrl && { property: 'og:image', content: socialImageUrl },
+          socialImageUrl && { property: 'og:image:alt', content: drink.title },
           { name: 'twitter:card', content: 'summary_large_image' },
           { name: 'twitter:title', content: drink.title },
           { name: 'twitter:description', content: description },
-          { name: 'twitter:image', content: socialImageUrl },
-          { name: 'twitter:image:alt', content: drink.title },
-        ]}
+          socialImageUrl && { name: 'twitter:image', content: socialImageUrl },
+          socialImageUrl && { name: 'twitter:image:alt', content: drink.title },
+        ].filter(Boolean)}
       />
       <Nav>
         <NavLink to="/">All Drinks</NavLink>

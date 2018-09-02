@@ -55,6 +55,7 @@
     "gatsby-transformer-remark": "2.1.1-rc.1",
     "gatsby-transformer-sharp": "2.1.1-rc.2",
     "git-current-commit": "1.1.0",
+    "lodash.get": "4.4.2",
     "lodash.kebabcase": "4.1.1",
     "lodash.orderby": "4.6.0",
     "lodash.startcase": "4.4.0",
