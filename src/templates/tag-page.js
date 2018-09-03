@@ -38,6 +38,11 @@ class TagPage extends Component {
       ],
       threshold: rankings.CONTAINS,
     });
+    const sortedFilteredDrinks = orderBy(
+      filteredDrinks,
+      ['rank', 'createdAt'],
+      ['desc', 'desc'],
+    );
 
     return (
       <Layout withSearch onSearchTermChange={this.handleSearchTermChange}>
@@ -60,13 +65,7 @@ class TagPage extends Component {
           </span>
         </Nav>
         {filteredDrinks.length ? (
-          <DrinkList
-            drinks={orderBy(
-              filteredDrinks,
-              ['rank', 'createdAt'],
-              ['desc', 'desc'],
-            )}
-          />
+          <DrinkList drinks={sortedFilteredDrinks} />
         ) : (
           <span
             className={css`
