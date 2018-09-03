@@ -101,6 +101,8 @@ export const query = graphql`
           }
           ingredients
           calories
+          rank
+          createdAt
           notes {
             childMarkdownRemark {
               rawMarkdownBody
