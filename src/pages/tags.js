@@ -36,7 +36,7 @@ class TagsPage extends Component {
       <Layout withSearch onSearchTermChange={this.handleSearchTermChange}>
         <Helmet
           title="Drink Tags"
-          meta={[{ name: 'description', content: `All drink tags` }]}
+          meta={[{ name: 'description', content: 'All drink tags' }]}
         />
         <Nav>
           <NavLink to="/">All Drinks</NavLink>
