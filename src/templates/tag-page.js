@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
+import difference from 'lodash.difference';
+import get from 'lodash.get';
 import orderBy from 'lodash.orderby';
 import startCase from 'lodash.startcase';
-import matchSorter, { rankings } from 'match-sorter';
+import matchSorter from 'match-sorter';
 import Layout from '../components/layout';
 import Nav from '../components/nav';
 import NavDivider from '../components/nav-divider';
@@ -28,18 +30,25 @@ class TagPage extends Component {
       data,
     } = this.props;
     const { searchTerm } = this.state;
+    const containsSearchTerm = new RegExp(searchTerm, 'i');
 
     const drinks = data.allContentfulDrink.edges.map(({ node }) => node);
-    const filteredDrinks = matchSorter(drinks, searchTerm, {
-      keys: [
-        'title',
-        'ingredients',
-        'notes.childMarkdownRemark.rawMarkdownBody',
-      ],
-      threshold: rankings.CONTAINS,
+    const titleMatchedDrinks = matchSorter(drinks, searchTerm, {
+      keys: ['title'],
     });
-    const sortedFilteredDrinks = orderBy(
-      filteredDrinks,
+    const otherMatchedDrinks = orderBy(
+      difference(drinks, titleMatchedDrinks).filter(
+        drink =>
+          containsSearchTerm.test(
+            get(drink, 'notes.childMarkdownRemark.rawMarkdownBody'),
+          ) || containsSearchTerm.test(drink.ingredients),
+      ),
+      ['rank', 'createdAt'],
+      ['desc', 'desc'],
+    );
+    const filteredDrinks = [...titleMatchedDrinks, ...otherMatchedDrinks];
+    const sortedDrinks = orderBy(
+      drinks,
       ['rank', 'createdAt'],
       ['desc', 'desc'],
     );
@@ -65,7 +74,7 @@ class TagPage extends Component {
           </span>
         </Nav>
         {filteredDrinks.length ? (
-          <DrinkList drinks={sortedFilteredDrinks} />
+          <DrinkList drinks={searchTerm ? filteredDrinks : sortedDrinks} />
         ) : (
           <span
             className={css`
