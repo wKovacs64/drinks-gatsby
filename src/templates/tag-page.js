@@ -1,98 +1,38 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from 'react-emotion';
-import difference from 'lodash.difference';
-import get from 'lodash.get';
-import orderBy from 'lodash.orderby';
 import startCase from 'lodash.startcase';
-import matchSorter from 'match-sorter';
-import Layout from '../components/layout';
 import Nav from '../components/nav';
 import NavDivider from '../components/nav-divider';
 import NavLink from '../components/nav-link';
-import DrinkList from '../components/drink-list';
-import mq from '../utils/mq';
+import SearchableDrinksPage from '../components/searchable-drinks-page';
 
-class TagPage extends Component {
-  state = {
-    searchTerm: '',
-  };
-
-  handleSearchTermChange = searchTerm => {
-    this.setState(() => ({ searchTerm }));
-  };
-
-  render() {
-    const {
-      pageContext: { tag },
-      data,
-    } = this.props;
-    const { searchTerm } = this.state;
-    const containsSearchTerm = new RegExp(searchTerm, 'i');
-
-    const drinks = data.allContentfulDrink.edges.map(({ node }) => node);
-    const titleMatchedDrinks = matchSorter(drinks, searchTerm, {
-      keys: ['title'],
-    });
-    const otherMatchedDrinks = orderBy(
-      difference(drinks, titleMatchedDrinks).filter(
-        drink =>
-          containsSearchTerm.test(
-            get(drink, 'notes.childMarkdownRemark.rawMarkdownBody'),
-          ) || containsSearchTerm.test(drink.ingredients),
-      ),
-      ['rank', 'createdAt'],
-      ['desc', 'desc'],
-    );
-    const filteredDrinks = [...titleMatchedDrinks, ...otherMatchedDrinks];
-    const sortedDrinks = orderBy(
-      drinks,
-      ['rank', 'createdAt'],
-      ['desc', 'desc'],
-    );
-
-    return (
-      <Layout withSearch onSearchTermChange={this.handleSearchTermChange}>
-        <Helmet
-          title={startCase(`${tag} drinks`)}
-          meta={[{ name: 'description', content: `Drinks using ${tag}` }]}
-        />
-        <Nav>
-          <NavLink to="/">All Drinks</NavLink>
-          <NavDivider />
-          <NavLink to="/tags/">Tags</NavLink>
-          <NavDivider />
-          {tag}
-          <span
-            className={css`
-              margin-left: 0.5rem;
-            `}
-          >
-            ( {data.allContentfulDrink.totalCount} )
-          </span>
-        </Nav>
-        {filteredDrinks.length ? (
-          <DrinkList drinks={searchTerm ? filteredDrinks : sortedDrinks} />
-        ) : (
-          <span
-            className={css`
-              color: #eeeeee;
-              font-size: 1.25rem;
-              padding: 1rem;
-              ${mq.sm(css`
-                padding: 2rem 0;
-              `)};
-            `}
-          >
-            No drinks found.
-          </span>
-        )}
-      </Layout>
-    );
-  }
-}
+const TagPage = ({ pageContext: { tag }, data }) => (
+  <SearchableDrinksPage
+    drinks={data.allContentfulDrink.edges.map(({ node }) => node)}
+  >
+    <Helmet
+      title={startCase(`${tag} drinks`)}
+      meta={[{ name: 'description', content: `Drinks using ${tag}` }]}
+    />
+    <Nav>
+      <NavLink to="/">All Drinks</NavLink>
+      <NavDivider />
+      <NavLink to="/tags/">Tags</NavLink>
+      <NavDivider />
+      {tag}
+      <span
+        className={css`
+          margin-left: 0.5rem;
+        `}
+      >
+        ( {data.allContentfulDrink.totalCount} )
+      </span>
+    </Nav>
+  </SearchableDrinksPage>
+);
 
 export const query = graphql`
   query($tag: String!) {
