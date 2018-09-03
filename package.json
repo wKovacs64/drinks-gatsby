@@ -46,6 +46,7 @@
     "gatsby-plugin-emotion": "2.0.0-rc.1",
     "gatsby-plugin-manifest": "2.0.2-rc.1",
     "gatsby-plugin-netlify": "2.0.0-rc.1",
+    "gatsby-plugin-nprogress": "2.0.0-rc.1",
     "gatsby-plugin-offline": "2.0.0-rc.2",
     "gatsby-plugin-react-helmet": "3.0.0-rc.1",
     "gatsby-plugin-sharp": "2.0.0-rc.3",

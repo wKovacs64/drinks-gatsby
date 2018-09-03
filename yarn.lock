@@ -4939,6 +4939,13 @@ gatsby-plugin-netlify@2.0.0-rc.1:
     lodash "^4.17.4"
     webpack-assets-manifest "^1.0.0"
 
+gatsby-plugin-nprogress@2.0.0-rc.1:
+  version "2.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.0.0-rc.1.tgz#4b38c49443221462b9bbbc71e11d604657d31cdf"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    nprogress "^0.2.0"
+
 gatsby-plugin-offline@2.0.0-rc.2:
   version "2.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.0-rc.2.tgz#683231c4c85f1c95fa321f5fc6de329e2180ae1d"
@@ -7982,6 +7989,10 @@ npmlog@^4.0.1, npmlog@^4.0.2, npmlog@^4.1.2:
     console-control-strings "~1.1.0"
     gauge "~2.7.3"
     set-blocking "~2.0.0"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
 
 nth-check@^1.0.1, nth-check@~1.0.1:
   version "1.0.1"
