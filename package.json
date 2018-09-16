@@ -39,8 +39,8 @@
   "private": true,
   "dependencies": {
     "dotenv": "6.0.0",
-    "emotion": "9.2.8",
-    "emotion-server": "9.2.8",
+    "emotion": "9.2.9",
+    "emotion-server": "9.2.9",
     "gatsby": "2.0.0-rc.25",
     "gatsby-image": "2.0.0-rc.2",
     "gatsby-plugin-emotion": "2.0.0-rc.5",
@@ -66,7 +66,7 @@
     "prop-types": "15.6.2",
     "react": "16.5.1",
     "react-dom": "16.5.1",
-    "react-emotion": "9.2.8",
+    "react-emotion": "9.2.9",
     "react-helmet": "5.2.0",
     "react-icons": "3.0.5",
     "typeface-source-sans-pro": "0.0.54"
