@@ -4923,9 +4923,9 @@ gatsby-cli@^2.0.0-rc.5:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-image@2.0.0-rc.2:
-  version "2.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.0-rc.2.tgz#adea43d39e856d9db072f1de786b4d817e0d85f1"
+gatsby-image@2.0.0-rc.3:
+  version "2.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.0-rc.3.tgz#56a503fceb1e8c75bb8b456208f0095b367aa615"
   dependencies:
     "@babel/runtime" "^7.0.0"
     prop-types "^15.6.1"
@@ -4972,9 +4972,9 @@ gatsby-plugin-nprogress@2.0.0-rc.1:
     "@babel/runtime" "^7.0.0"
     nprogress "^0.2.0"
 
-gatsby-plugin-offline@2.0.0-rc.8:
-  version "2.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.0-rc.8.tgz#9b356b97a1c2d81eac80709f93a2702efa759a71"
+gatsby-plugin-offline@2.0.0-rc.9:
+  version "2.0.0-rc.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.0-rc.9.tgz#5ca059038031d0f4e4bafa7ff7afc6c3fb6de031"
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
