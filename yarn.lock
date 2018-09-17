@@ -4898,9 +4898,9 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
 
-gatsby-cli@^2.0.0-rc.5:
-  version "2.0.0-rc.5"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.0.0-rc.5.tgz#30d03b71d2fa710c772aa808b2e7b99c37a005d7"
+gatsby-cli@^2.0.0-rc.6:
+  version "2.0.0-rc.6"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.0.0-rc.6.tgz#91d8a2120aae8bcc7d67f58a803cf28757f390ee"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -4923,17 +4923,17 @@ gatsby-cli@^2.0.0-rc.5:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-image@2.0.0-rc.3:
-  version "2.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.0-rc.3.tgz#56a503fceb1e8c75bb8b456208f0095b367aa615"
+gatsby-image@2.0.0-rc.4:
+  version "2.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.0-rc.4.tgz#afea4d6264dba450edac8d06c17fdc182eeaeb81"
   dependencies:
     "@babel/runtime" "^7.0.0"
     prop-types "^15.6.1"
     react-testing-library "^4.1.7"
 
-gatsby-link@^2.0.0-rc.3:
-  version "2.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.0.0-rc.3.tgz#e6b3f3c29f1ce7db884e3e820c28cec0e790d95c"
+gatsby-link@^2.0.0-rc.4:
+  version "2.0.0-rc.4"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-2.0.0-rc.4.tgz#9db9da36db7e31efba09d5929a086a0a499989ac"
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@reach/router" "^1.1.1"
@@ -5105,9 +5105,9 @@ gatsby-transformer-sharp@2.1.1-rc.3:
     probe-image-size "^4.0.0"
     sharp "^0.20.2"
 
-gatsby@2.0.0-rc.25:
-  version "2.0.0-rc.25"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-rc.25.tgz#42d74b82fc859bb4d0a458613076d900089db1b9"
+gatsby@2.0.0-rc.28:
+  version "2.0.0-rc.28"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-rc.28.tgz#83262d688ae40de0daecf6afb39a0a0438a33a9d"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5160,8 +5160,8 @@ gatsby@2.0.0-rc.25:
     flat "^4.0.0"
     friendly-errors-webpack-plugin "^1.6.1"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.0.0-rc.5"
-    gatsby-link "^2.0.0-rc.3"
+    gatsby-cli "^2.0.0-rc.6"
+    gatsby-link "^2.0.0-rc.4"
     gatsby-plugin-page-creator "^2.0.0-rc.5"
     gatsby-react-router-scroll "^2.0.0-rc.2"
     glob "^7.1.1"
