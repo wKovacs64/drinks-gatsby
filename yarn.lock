@@ -5663,10 +5663,10 @@ gatsby-cli@^2.4.2:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-image@2.0.11:
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.11.tgz#d261fd891a5541e6f7c9cbc7c118977909740a13"
-  integrity sha512-UATAsxZIZ7bxwDzp2CP/04ChkDhazCNS89QLW9QcLeYAeLOn/eW7bDuY1Jkhpj+a9pPGQd2gr9Pun7eqL3n5AQ==
+gatsby-image@2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.12.tgz#44604d6318b9e14fe7c71a4c19251b833b3aac5a"
+  integrity sha512-yQicyWmwodYdcyY83TMvQpOr7Hg/xxERhatkO+oGvDTcuzcPxlz2I15CTlbFtsCnixM1T2FMR/vatuYGsdCX8w==
   dependencies:
     "@babel/runtime" "^7.0.0"
     prop-types "^15.6.1"
