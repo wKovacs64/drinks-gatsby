@@ -1126,6 +1126,13 @@
     text-table "^0.2.0"
     webpack-log "^1.1.2"
 
+"@wkovacs64/normalize.css@8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@wkovacs64/normalize.css/-/normalize.css-8.0.0.tgz#d01052dfe04078f35ae50d4ddce7385857f9b3d7"
+  integrity sha512-KOW4PIthpwJF8ozUiJwhC1kO0qlfo77nuPhgd8ZSSF4EdfStjVWLli5sWrl9s88/56lgmO2jcSuEYED4HnzmdA==
+  dependencies:
+    normalize.css "8.0.0"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

@@ -37,6 +37,7 @@
   },
   "private": true,
   "dependencies": {
+    "@wkovacs64/normalize.css": "8.0.0",
     "dotenv": "6.0.0",
     "emotion": "9.2.10",
     "emotion-server": "9.2.10",
@@ -61,7 +62,6 @@
     "lodash.orderby": "4.6.0",
     "lodash.startcase": "4.4.0",
     "match-sorter": "2.3.0",
-    "normalize.css": "8.0.0",
     "prop-types": "15.6.2",
     "react": "16.5.2",
     "react-dom": "16.5.2",
