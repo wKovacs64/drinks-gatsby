@@ -19,15 +19,18 @@ const FooterLink = styled.a`
 const Footer = () => (
   <footer
     className={css`
+      display: grid;
+      grid-gap: 2rem;
+      align-items: center;
+      justify-items: center;
       background-color: #111111;
       color: #cccccc;
       padding: 1rem;
       font-size: 1rem;
       ${mq.sm(css`
         font-size: 1.25rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        grid-template-columns: repeat(2, minmax(max-content, 1fr));
+        justify-items: stretch;
       `)};
       ${mq.md(css`
         padding: 2rem;
@@ -54,15 +57,14 @@ const Footer = () => (
     </span>
     <a
       className={css`
-        display: none;
+        color: currentColor;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        &:hover {
+          color: #f4f4f4;
+        }
         ${mq.sm(css`
-          display: unset;
-          color: currentColor;
-          text-decoration: none;
-          transition: color 0.3s ease;
-          &:hover {
-            color: #f4f4f4;
-          }
+          justify-self: end;
         `)};
       `}
       href="https://github.com/wKovacs64/drinks"
