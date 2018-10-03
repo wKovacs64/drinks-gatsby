@@ -43,7 +43,7 @@ const Footer = () => (
         🥃
       </span>{' '}
       using{' '}
-      <FooterLink href="https://gatsbyjs.org" rel="noopener noreferrer">
+      <FooterLink href="https://www.gatsbyjs.org/" rel="noopener noreferrer">
         Gatsby
       </FooterLink>
       ,{' '}
