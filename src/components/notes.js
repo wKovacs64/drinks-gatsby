@@ -37,6 +37,9 @@ const Notes = ({ children }) => (
       ul {
         list-style-type: square;
       }
+      ul li {
+        margin: 1.25rem 0;
+      }
     `}
     dangerouslySetInnerHTML={{
       __html: children,
