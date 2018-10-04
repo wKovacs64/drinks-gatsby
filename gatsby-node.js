@@ -22,7 +22,7 @@ module.exports.createPages = async ({ graphql, actions: { createPage } }) => {
     }
   `)).data.allContentfulDrink.edges.forEach(({ node: { slug } }) => {
     createPage({
-      path: slug,
+      path: `${slug}/`,
       component: drinkPage,
       context: { slug },
     });
@@ -38,7 +38,7 @@ module.exports.createPages = async ({ graphql, actions: { createPage } }) => {
     }
   `)).data.allContentfulDrink.group.forEach(({ fieldValue: tag }) => {
     createPage({
-      path: `/tags/${kebabCase(tag)}`,
+      path: `/tags/${kebabCase(tag)}/`,
       component: tagPage,
       context: { tag },
     });
