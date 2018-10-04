@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 1.1.1 _(2018-10-04)_
+
+- Updated page generation process to append trailing slashes to the page path
+  ([e4261db4][e4261db4])
+
 ## Version 1.1.0 _(2018-10-03)_
 
 - Added vertical spacing around list items in drink notes ([#10][#10])
@@ -20,3 +25,5 @@
 
 [#10]: https://github.com/wKovacs64/drinks/pull/10
 [#11]: https://github.com/wKovacs64/drinks/pull/11
+[e4261db4]:
+  https://github.com/wKovacs64/drinks/commit/e4261db4998a9215b5f2e7e245b4933807c11aef
