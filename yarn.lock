@@ -5653,10 +5653,10 @@ gatsby-cli@^2.4.3:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-image@2.0.13:
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.13.tgz#bac15fceeac699aab27e821c97ea9f64084e2cd1"
-  integrity sha512-TDyYfhSZ9gXu8pDdmZZ5ml2zY2kIwPelrHzCXwfAIWbgr6zd4HnYSLPuZCgXUjbstwNsHTS9VAhvmrfUOBs/QQ==
+gatsby-image@2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.14.tgz#d3ad81888f970f3b7d2a0564ffab6e4f59756686"
+  integrity sha512-EeqjvCj/pe3UsvUoBzJptxEo9ilJ2uWbwpvW5PtjJufCh6XNjXSwVKq9F0lt1BgOCSz7K94HhOSU1Zn/STNMEQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     prop-types "^15.6.1"
@@ -5852,10 +5852,10 @@ gatsby-transformer-sharp@2.1.3:
     probe-image-size "^4.0.0"
     sharp "^0.20.2"
 
-gatsby@2.0.21:
-  version "2.0.21"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.21.tgz#c182ad534f5f6cc19cc1dbf0ac6c267b39e42652"
-  integrity sha512-Wh8AsbzqrmQhI+VwZxRESN9/qtrwtSF8OIQZ1l14ydcH2vGcjsWws11Nbe15BITYfoT9cqVMxMVR8iDeR+6yPA==
+gatsby@2.0.22:
+  version "2.0.22"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.22.tgz#bbce1efd2993705be91b2c06ace1bb1d2183976a"
+  integrity sha512-EySP701DiZqpqyWZyaWaeYrK4oAzx3lYSo/j3L7ja+uTjQ216L5gDr5QKXviJqP1MOg6Sh1TguflnbJk7EgHdg==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
