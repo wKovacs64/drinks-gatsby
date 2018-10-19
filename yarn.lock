@@ -5802,10 +5802,10 @@ gatsby-source-contentful@2.0.4:
     lodash "^4.17.10"
     qs "^6.4.0"
 
-gatsby-source-filesystem@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.4.tgz#001dd154470bfb1b11eb0e18ed95dfb3f55ed8c2"
-  integrity sha512-mSE73rNHpXw1K8XH0E70D2bwrk1aNhYYNrvOzUFaZUQzme1r2B/cPOI7NVhLu4AhvcNp4CwqK8KTT5Am7qEyJQ==
+gatsby-source-filesystem@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.5.tgz#dddeab249313eba7dc93533f0f81d9fe160a726a"
+  integrity sha512-7nKud0epK01J0l+6ybv5TWv0rClmP8C9dF8UmaoPDO5yx+V2bski33G08AJ/loGTALCUYNtoTmDSEANj03N/qQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     better-queue "^3.8.7"
@@ -5857,10 +5857,10 @@ gatsby-transformer-sharp@2.1.4:
     probe-image-size "^4.0.0"
     sharp "^0.20.2"
 
-gatsby@2.0.26:
-  version "2.0.26"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.26.tgz#3665011297bb0a0c403271359eefc180921ef4cb"
-  integrity sha512-tGXMTNaxEnr7QhwJcDpwUcvHclDG69jer2oH9XAwUUHFknudqpBQDf+1Cok0XHV5WrmRTcnKB9rVxBaOKqi57g==
+gatsby@2.0.27:
+  version "2.0.27"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.27.tgz#93ce6b984a4cdcb4fb236c490058fe14ac3f97f6"
+  integrity sha512-KgOEMImxarNP1vl0ITXmVUeDh9ZOmy4DzS2Ok8UlvknfpVnQY61e9ggey+LJbQ7EIJNOFmvida5lO+sUuGPl6Q==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
