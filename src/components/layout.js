@@ -52,6 +52,9 @@ const Layout = ({ children, onSearchTermChange, withSearch }) => (
             data-version={siteMetadata.buildInfo.version}
           />
         </Helmet>
+        <noscript>
+          <style>{'.js { display: none; }'}</style>
+        </noscript>
         <div
           className={css`
             display: flex;
