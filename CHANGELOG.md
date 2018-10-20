@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 1.1.2 _(2018-10-20)_
+
+- Fixed a "flash of empty content" issue related to `<noscript>` ([#12][#12])
+
 ## Version 1.1.1 _(2018-10-04)_
 
 - Updated page generation process to append trailing slashes to the page path
@@ -27,3 +31,4 @@
 [#11]: https://github.com/wKovacs64/drinks/pull/11
 [e4261db4]:
   https://github.com/wKovacs64/drinks/commit/e4261db4998a9215b5f2e7e245b4933807c11aef
+[#12]: https://github.com/wKovacs64/drinks/pull/12
