@@ -24,17 +24,6 @@
     "serve": "gatsby serve",
     "test": "yarn lint"
   },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{json,md,yml}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
   "private": true,
   "dependencies": {
     "@wkovacs64/normalize.css": "8.0.0",
