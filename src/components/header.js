@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { css } from 'react-emotion';
@@ -11,6 +11,8 @@ class Header extends Component {
     searchTerm: '',
     showSearch: false,
   };
+
+  searchInput = createRef();
 
   clearSearchTerm = () => {
     this.setState({ searchTerm: '' }, () => {
@@ -30,6 +32,7 @@ class Header extends Component {
 
   handleSearchTermKeydown = ({ keyCode }) => {
     if (keyCode === 27 /* ESC */) {
+      this.searchInput.current.blur();
       this.toggleSearch();
     }
   };
@@ -91,6 +94,7 @@ class Header extends Component {
                 autoCorrect="off"
                 autoCapitalize="off"
                 spellCheck={false}
+                ref={this.searchInput}
                 value={searchTerm}
                 onChange={this.handleSearchTermChange}
                 onKeyDown={this.handleSearchTermKeydown}
