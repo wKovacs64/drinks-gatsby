@@ -5708,6 +5708,15 @@ fs-extra@^5.0.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-7.0.0.tgz#8cc3f47ce07ef7b3593a11b9fb245f7e34c041d6"
+  integrity sha512-EglNDLRpmaTWiD/qraZn6HREAEAHJcJOmxNEYwq6xeMKnVMAy3GUcFB+wXt2C6k4CNvB/mP1y/U3dzvKKj5OtQ==
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
 fs-minipass@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
@@ -5867,15 +5876,16 @@ gatsby-plugin-react-helmet@3.0.1:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-sharp@2.0.9, gatsby-plugin-sharp@^2.0.9:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.9.tgz#c0970226b7175534d6cd9287974bfe0bbab51ab8"
-  integrity sha512-NMCLLoP8k9nmmbkD3wFZMkcBv/IZZW+N7vF/hRxZythwNLJl+so3vumW53q4pEluO1wtMEXLlTwTPz2iJ1Qkaw==
+gatsby-plugin-sharp@2.0.10, gatsby-plugin-sharp@^2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.10.tgz#5ce703a1d9bc8f70a84a940914404566e747d6f2"
+  integrity sha512-pUzV/unNX2IFSNlz9u3a/uDevcJMCcril9So7bY+kZrQIb5RbDd2vnZiMebzv7RxfKVa/tpIbPbrZcEaVWVvvQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
     bluebird "^3.5.0"
     fs-exists-cached "^1.0.0"
+    fs-extra "^7.0.0"
     imagemin "^6.0.0"
     imagemin-mozjpeg "^7.0.0"
     imagemin-pngquant "^6.0.0"
@@ -5907,10 +5917,10 @@ gatsby-remark-external-links@0.0.4:
     unist-util-find "^1.0.1"
     unist-util-visit "^1.1.3"
 
-gatsby-source-contentful@2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.7.tgz#f71a651f5c495dcb5b3551f18072a5c46c13b53e"
-  integrity sha512-MAZ57Ip3ffsmp7FRus3o3cZdSjfPogRdFQSPEERdoo0y0IIWCzNSbFc5S/35PiQCNq1rUv7sKQkjwC0W1xVIHw==
+gatsby-source-contentful@2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.8.tgz#1b83ed39288b3b6fa1b0123af17dfdc77048bbad"
+  integrity sha512-qBJmvLPc9lyUBsCr0P3NNX6ZVAENDyFuroTxItasQoILUppujzW4zpT9JfUJu74HAXm8DRIaYQtYiOBqPKaswg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -5919,7 +5929,7 @@ gatsby-source-contentful@2.0.7:
     contentful "^6.1.0"
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
-    gatsby-plugin-sharp "^2.0.9"
+    gatsby-plugin-sharp "^2.0.10"
     is-online "^7.0.0"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.10"
