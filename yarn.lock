@@ -5990,10 +5990,10 @@ gatsby-transformer-sharp@2.1.7:
     probe-image-size "^4.0.0"
     sharp "^0.21.0"
 
-gatsby@2.0.33:
-  version "2.0.33"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.33.tgz#498b001abfe31e240f4c8607977dddfb668fc2c9"
-  integrity sha512-fjIlkQx2NYZEj2+wM5qoX6m+wGmksk4g2E0IxmrLFnjuDK79A+5tXOhf48cLdaVZeI4GEI9weAFo/XQ1rAg5OQ==
+gatsby@2.0.34:
+  version "2.0.34"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.34.tgz#25b537639a1809a48230e6bf1244d6588299825b"
+  integrity sha512-thXsvrD9HCVZux41emq/THRj9kV3h9j+qk9mgNJeA0MpGsZwrdjULFz7lzoOH4xliPAsPyvWsj9mg3dLdNj0ug==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -6060,7 +6060,7 @@ gatsby@2.0.33:
     jest-worker "^23.2.0"
     joi "12.x.x"
     json-loader "^0.5.7"
-    json-stringify-safe "^5.0.1"
+    json-stream-stringify "^2.0.1"
     kebab-hash "^0.1.2"
     lodash "^4.17.10"
     md5 "^2.2.1"
@@ -8030,6 +8030,11 @@ json-stable-stringify@^1.0.0:
   integrity sha1-mnWdOcXy/1A/1TAGRu1EX4jE+a8=
   dependencies:
     jsonify "~0.0.0"
+
+json-stream-stringify@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/json-stream-stringify/-/json-stream-stringify-2.0.1.tgz#8bc0e65ff94567d9010e14c27c043a951cb14939"
+  integrity sha512-5XymtJXPmzRWZ1UdLQQQXbjHV/E7NAanSClikEqORbkZKOYLSYLNHqRuooyju9W90kJUzknFhX2xvWn4cHluHQ==
 
 json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
   version "5.0.1"
