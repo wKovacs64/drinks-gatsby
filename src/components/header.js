@@ -94,6 +94,7 @@ class Header extends Component {
                 autoCorrect="off"
                 autoCapitalize="off"
                 spellCheck={false}
+                disabled={!showSearch}
                 ref={this.searchInput}
                 value={searchTerm}
                 onChange={this.handleSearchTermChange}
