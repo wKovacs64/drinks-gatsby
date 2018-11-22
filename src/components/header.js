@@ -21,7 +21,14 @@ class Header extends Component {
   };
 
   toggleSearch = () => {
-    this.setState(({ showSearch }) => ({ showSearch: !showSearch }));
+    this.setState(
+      ({ showSearch }) => ({ showSearch: !showSearch }),
+      () => {
+        if (this.state.showSearch) {
+          this.searchInput.current.focus();
+        }
+      },
+    );
     this.clearSearchTerm();
   };
 
