@@ -12,6 +12,8 @@ class Header extends Component {
     showSearch: false,
   };
 
+  searchButton = createRef();
+
   searchInput = createRef();
 
   clearSearchTerm = () => {
@@ -26,6 +28,8 @@ class Header extends Component {
       () => {
         if (this.state.showSearch) {
           this.searchInput.current.focus();
+        } else {
+          this.searchButton.current.focus();
         }
       },
     );
@@ -140,6 +144,7 @@ class Header extends Component {
                 `}
                 aria-label="Toggle Search"
                 type="button"
+                ref={this.searchButton}
                 onClick={this.toggleSearch}
               >
                 {showSearch ? <MdZoomOut size={32} /> : <MdSearch size={32} />}
