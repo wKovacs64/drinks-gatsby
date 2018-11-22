@@ -1,5 +1,12 @@
 # Change Log
 
+## Version 1.2.0 _(2018-11-22)_
+
+- Blur search input after pressing ESC ([8983b455][8983b455])
+- Disable search input when not shown ([5174038d][5174038d])
+- Focus the search input upon showing ([c7287b35][c7287b35])
+- Focus the search button upon hiding search input ([de8d16c3][de8d16c3])
+
 ## Version 1.1.2 _(2018-10-20)_
 
 - Fixed a "flash of empty content" issue related to `<noscript>` ([#12][#12])
@@ -32,3 +39,11 @@
 [e4261db4]:
   https://github.com/wKovacs64/drinks/commit/e4261db4998a9215b5f2e7e245b4933807c11aef
 [#12]: https://github.com/wKovacs64/drinks/pull/12
+[8983b455]:
+  https://github.com/wKovacs64/drinks/commit/8983b455969a8bcac44997698fc044204e64f52e
+[5174038d]:
+  https://github.com/wKovacs64/drinks/commit/5174038dac048f7deabc30682633067816846d32
+[c7287b35]:
+  https://github.com/wKovacs64/drinks/commit/c7287b352f6dc7156b150d959ada5c37ce21bb74
+[de8d16c3]:
+  https://github.com/wKovacs64/drinks/commit/de8d16c3dd541776133cd436a99c619bede73ae3
