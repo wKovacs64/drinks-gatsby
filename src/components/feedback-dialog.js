@@ -74,6 +74,7 @@ class FeedbackDialog extends Component {
         <form
           data-netlify="true"
           data-netlify-honeypot="terminator"
+          action="/feedback-sent/"
           name="drinks-feedback"
           method="post"
           className={css`

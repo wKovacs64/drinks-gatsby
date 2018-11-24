@@ -115,9 +115,10 @@ const Footer = ({ onFeedbackClick }) => (
     </footer>
     {/* Help for the Netlify bots as the real form is rendered on-demand */}
     <form
-      name="drinks-feedback"
       data-netlify="true"
       data-netlify-honeypot="terminator"
+      action="/feedback-sent/"
+      name="drinks-feedback"
       hidden
     >
       <input type="text" name="name" />
