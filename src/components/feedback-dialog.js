@@ -4,6 +4,7 @@ import { css } from 'react-emotion';
 import { Dialog } from '@reach/dialog';
 import VisuallyHidden from '@reach/visually-hidden';
 import '@reach/dialog/styles.css';
+import CloseIcon from "./close-icon";
 import mq from '../utils/mq';
 
 class FeedbackDialog extends Component {
@@ -68,7 +69,13 @@ class FeedbackDialog extends Component {
             onClick={onDismiss}
           >
             <VisuallyHidden>Close</VisuallyHidden>
-            <span aria-hidden>x</span>
+            <span aria-hidden>
+              <CloseIcon
+                className={css`
+                  color: #6d372a;
+                `}
+              />
+            </span>
           </button>
         </section>
         <form
