@@ -72,10 +72,10 @@ class FeedbackDialog extends Component {
           </button>
         </section>
         <form
-          netlify
-          netlify-honeypot="terminator"
+          data-netlify="true"
+          data-netlify-honeypot="terminator"
           name="drinks-feedback"
-          method="POST"
+          method="post"
           className={css`
             display: grid;
             grid-template-columns: repeat(2, 1fr);
