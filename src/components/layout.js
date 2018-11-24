@@ -29,17 +29,6 @@ injectGlobal`
 `;
 
 class Layout extends Component {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    onSearchTermChange: PropTypes.func,
-    withSearch: PropTypes.bool,
-  };
-
-  static defaultProps = {
-    onSearchTermChange: () => {},
-    withSearch: false,
-  };
-
   state = { feedbackOpen: false };
 
   handleFeedbackToggle = () => {
@@ -118,5 +107,16 @@ class Layout extends Component {
     );
   }
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+  onSearchTermChange: PropTypes.func,
+  withSearch: PropTypes.bool,
+};
+
+Layout.defaultProps = {
+  onSearchTermChange: () => {},
+  withSearch: false,
+};
 
 export default Layout;

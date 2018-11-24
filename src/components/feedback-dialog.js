@@ -4,20 +4,10 @@ import { css } from 'react-emotion';
 import { Dialog } from '@reach/dialog';
 import VisuallyHidden from '@reach/visually-hidden';
 import '@reach/dialog/styles.css';
-import CloseIcon from "./close-icon";
+import CloseIcon from './close-icon';
 import mq from '../utils/mq';
 
 class FeedbackDialog extends Component {
-  static propTypes = {
-    isOpen: PropTypes.bool,
-    onDismiss: PropTypes.func,
-  };
-
-  static defaultProps = {
-    isOpen: false,
-    onDismiss: () => {},
-  };
-
   state = {};
 
   render() {
@@ -171,5 +161,15 @@ class FeedbackDialog extends Component {
     );
   }
 }
+
+FeedbackDialog.propTypes = {
+  isOpen: PropTypes.bool,
+  onDismiss: PropTypes.func,
+};
+
+FeedbackDialog.defaultProps = {
+  isOpen: false,
+  onDismiss: () => {},
+};
 
 export default FeedbackDialog;
