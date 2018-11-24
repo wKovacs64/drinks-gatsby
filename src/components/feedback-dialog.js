@@ -138,6 +138,7 @@ class FeedbackDialog extends Component {
               grid-column: span 2;
               height: 4rem;
               border-style: none;
+              cursor: pointer;
               color: #eedebf;
               background-color: #6d372a;
               transition: color 0.3s ease, background-color 0.3s ease;
