@@ -72,15 +72,26 @@ class FeedbackDialog extends Component {
           </button>
         </section>
         <form
+          netlify
+          netlify-honeypot="terminator"
+          name="drinks-feedback"
+          method="POST"
           className={css`
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 2rem;
           `}
         >
+          <input type="hidden" name="form-name" value="drinks-feedback" />
+          <div hidden>
+            <input
+              type="text"
+              name="terminator"
+              aria-label="Are you the Terminator?"
+            />
+          </div>
           <input
             type="text"
-            id="feedback-name"
             name="name"
             placeholder="Name"
             aria-label="Name"
@@ -96,7 +107,6 @@ class FeedbackDialog extends Component {
           />
           <input
             type="email"
-            id="feedback-email"
             name="email"
             placeholder="Email"
             aria-label="Email"
@@ -112,7 +122,6 @@ class FeedbackDialog extends Component {
           />
           <textarea
             required
-            id="feedback-message"
             name="message"
             placeholder="What's up? (required)"
             aria-label="Message"
