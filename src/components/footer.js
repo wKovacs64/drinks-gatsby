@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import { FaGithub } from 'react-icons/fa';
 import mq from '../utils/mq';
@@ -16,28 +17,34 @@ const FooterLink = styled.a`
   }
 `;
 
-const Footer = () => (
+const Footer = ({ onFeedbackClick }) => (
   <footer
     className={css`
       display: grid;
       grid-gap: 2rem;
+      grid-template-areas:
+        'built-with built-with'
+        'feedback view-source';
       align-items: center;
-      justify-items: center;
+      justify-content: stretch;
       background-color: #111111;
       color: #cccccc;
       padding: 1rem;
       font-size: 1rem;
       ${mq.sm(css`
+        justify-content: center;
         font-size: 1.25rem;
-        grid-template-columns: repeat(2, minmax(max-content, 1fr));
-        justify-items: stretch;
       `)};
       ${mq.md(css`
         padding: 2rem;
       `)};
     `}
   >
-    <span>
+    <span
+      className={css`
+        grid-area: built-with;
+      `}
+    >
       Built with{' '}
       <span role="img" aria-label="booze">
         🥃
@@ -55,17 +62,46 @@ const Footer = () => (
         Emotion
       </FooterLink>
     </span>
+    <button
+      type="button"
+      onClick={onFeedbackClick}
+      className={css`
+        grid-area: feedback;
+        justify-self: start;
+        display: inline-block;
+        color: currentColor;
+        background-color: transparent;
+        border: 1px solid #cccccc;
+        cursor: pointer;
+        font-size: 1rem;
+        padding: 0.5rem;
+        white-space: nowrap;
+        transition: color 0.3s ease, border-color 0.3s ease;
+        &:hover {
+          color: #f4f4f4;
+          border-color: #f4f4f4;
+        }
+        &:active {
+          color: currentColor;
+          border-color: #cccccc;
+        }
+        ${mq.sm(css`
+          padding: 1rem;
+        `)}
+      `}
+    >
+      Send Feedback
+    </button>
     <a
       className={css`
+        grid-area: view-source;
+        justify-self: end;
         color: currentColor;
         text-decoration: none;
         transition: color 0.3s ease;
         &:hover {
           color: #f4f4f4;
         }
-        ${mq.sm(css`
-          justify-self: end;
-        `)};
       `}
       href="https://github.com/wKovacs64/drinks"
       rel="noopener noreferrer"
@@ -74,5 +110,13 @@ const Footer = () => (
     </a>
   </footer>
 );
+
+Footer.propTypes = {
+  onFeedbackClick: PropTypes.func,
+};
+
+Footer.defaultProps = {
+  onFeedbackClick: () => {},
+};
 
 export default Footer;

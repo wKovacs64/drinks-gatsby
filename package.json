@@ -26,6 +26,8 @@
   },
   "private": true,
   "dependencies": {
+    "@reach/dialog": "0.1.2",
+    "@reach/visually-hidden": "0.1.1",
     "@wkovacs64/normalize.css": "8.0.1",
     "dotenv": "6.1.0",
     "emotion": "9.2.12",
