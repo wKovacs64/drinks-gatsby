@@ -83,6 +83,7 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
         />
       </div>
       <input
+        required
         type="text"
         name="name"
         placeholder="Name"
@@ -98,6 +99,7 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
         `}
       />
       <input
+        required
         type="email"
         name="email"
         placeholder="Email"
@@ -115,7 +117,7 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
       <textarea
         required
         name="message"
-        placeholder="What's up? (required)"
+        placeholder="What's up?"
         aria-label="Message"
         rows={5}
         className={css`
