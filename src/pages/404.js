@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import { css } from 'react-emotion';
 import Layout from '../components/layout';
-import BrokenGlass from '../components/broken-glass';
+import BrokenGlassIcon from '../components/broken-glass-icon';
 import mq from '../utils/mq';
 
 const NotFoundPage = () => (
@@ -44,7 +44,7 @@ const NotFoundPage = () => (
       >
         Oops, this doesn&apos;t appear to be a tasty drink recipe!
       </p>
-      <BrokenGlass
+      <BrokenGlassIcon
         className={css`
           color: #d09e45;
           height: 20vh;
