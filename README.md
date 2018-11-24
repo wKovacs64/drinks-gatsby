@@ -49,6 +49,14 @@
    URL to trigger a rebuild whenever you update content in Contentful for silky
    smooth continuous deployment.
 
+   📩 **Feedback Form requires Netlify** 📩
+
+   The feedback form functionality is currently supported by [Netlify
+   Forms][netlify-forms], so if you want to deploy your own instance to a
+   different hosting platform, you'll need to configure your host to accept form
+   submissions to the root of your site, or reconfigure/remove the feedback form
+   entirely.
+
 [gatsby]: https://www.gatsbyjs.org/
 [react]: https://reactjs.org/
 [graphql]: https://graphql.org/
@@ -57,6 +65,7 @@
 [contentful]: https://www.contentful.com/
 [contentful-cli]: https://github.com/contentful/contentful-cli
 [netlify]: https://www.netlify.com/
+[netlify-forms]: https://www.netlify.com/docs/form-handling/
 [zeit-now]: https://zeit.co/now
 [surge.sh]: https://surge.sh/
 [deploy-image]: https://www.netlify.com/img/deploy/button.svg
