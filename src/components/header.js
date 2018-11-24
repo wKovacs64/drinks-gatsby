@@ -1,4 +1,4 @@
-import React, { Component, createRef } from 'react';
+import React, { Component, Fragment, createRef } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { css } from 'react-emotion';
@@ -94,7 +94,7 @@ class Header extends Component {
             </Link>
           </h1>
           {withSearch && (
-            <div className="js">
+            <Fragment>
               <input
                 id="search-input"
                 name="searchInput"
@@ -149,7 +149,7 @@ class Header extends Component {
               >
                 {showSearch ? <MdZoomOut size={32} /> : <MdSearch size={32} />}
               </button>
-            </div>
+            </Fragment>
           )}
         </header>
       </IconContext.Provider>

@@ -10,6 +10,7 @@ import FeedbackDialog from './feedback-dialog';
 import Header from './header';
 import Main from './main';
 import Footer from './footer';
+import mq from '../utils/mq';
 
 injectGlobal`
   @font-face {
@@ -64,9 +65,6 @@ class Layout extends Component {
                 data-version={siteMetadata.buildInfo.version}
               />
             </Helmet>
-            <noscript>
-              <style>{'.js { display: none; }'}</style>
-            </noscript>
             <FeedbackDialog
               isOpen={feedbackOpen}
               onDismiss={this.handleFeedbackToggle}
@@ -98,6 +96,21 @@ class Layout extends Component {
                 onSearchTermChange={onSearchTermChange}
                 withSearch={withSearch}
               />
+              <noscript>
+                <p
+                  className={css`
+                    color: #f4f4f4;
+                    margin-bottom: 0;
+                    padding: 1rem;
+                    ${mq.sm(css`
+                      padding: 0;
+                      text-align: center;
+                    `)}
+                  `}
+                >
+                  Please enable JavaScript for full site functionality.
+                </p>
+              </noscript>
               <Main>{children}</Main>
               <Footer onFeedbackClick={this.handleFeedbackToggle} />
             </div>
