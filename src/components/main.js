@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'react-emotion';
+import constrainWidth from '../styles/constrain-width';
 import mq from '../utils/mq';
 
 const Main = ({ className, children }) => (
@@ -11,15 +12,8 @@ const Main = ({ className, children }) => (
       ${mq.sm(css`
         align-self: center;
         padding: 2rem 0;
-        width: 26rem;
       `)};
-      ${mq.lg(css`
-        width: 100%;
-        max-width: 60rem;
-      `)};
-      ${mq.xl(css`
-        max-width: 80rem;
-      `)};
+      ${constrainWidth};
       ${className};
     `}
   >

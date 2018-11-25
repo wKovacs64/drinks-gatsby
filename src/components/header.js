@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import { css } from 'react-emotion';
 import { IconContext } from 'react-icons';
 import { MdSearch, MdZoomOut } from 'react-icons/md';
+import constrainWidth from '../styles/constrain-width';
 import mq from '../utils/mq';
 
 class Header extends Component {
@@ -79,16 +80,7 @@ class Header extends Component {
               align-items: center;
               flex-wrap: wrap;
               width: 100%;
-              ${mq.sm(css`
-                width: 26rem;
-              `)};
-              ${mq.lg(css`
-                width: 100%;
-                max-width: 60rem;
-              `)};
-              ${mq.xl(css`
-                max-width: 80rem;
-              `)};
+              ${constrainWidth};
             `}
           >
             <h1
