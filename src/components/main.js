@@ -7,13 +7,13 @@ const Main = ({ className, children }) => (
   <main
     className={css`
       flex: 1;
+      padding: 1rem 0;
       ${mq.sm(css`
         align-self: center;
-        padding: 0 0 2rem;
+        padding: 2rem 0;
         width: 26rem;
       `)};
       ${mq.lg(css`
-        padding: 0 2rem 2rem;
         width: 100%;
         max-width: 60rem;
       `)};

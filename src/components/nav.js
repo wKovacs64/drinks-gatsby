@@ -7,9 +7,11 @@ const Nav = ({ children, className }) => (
   <nav
     className={css`
       color: #eeeeee;
-      padding: 1rem;
+      padding: 0 1rem;
+      margin-bottom: 1rem;
       ${mq.sm(css`
-        padding: 2rem 0;
+        padding: 0;
+        margin-bottom: 2rem;
       `)};
       ${className};
     `}

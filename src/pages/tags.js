@@ -47,7 +47,7 @@ class TagsPage extends Component {
           className={css`
             display: grid;
             grid-gap: 1rem;
-            margin: 0 1rem 1rem;
+            margin: 0 1rem;
             ${mq.sm(css`
               grid-gap: 2rem;
               margin: 0;
