@@ -66,6 +66,7 @@ class Header extends Component {
             display: flex;
             flex-direction: column;
             align-items: center;
+            color: #cccccc;
             background-color: #111111;
             padding: 1rem;
             ${mq.md(css`
@@ -93,7 +94,7 @@ class Header extends Component {
               <Link
                 to="/"
                 className={css`
-                  color: #cccccc;
+                  color: currentColor;
                   text-decoration: none;
                   transition: color 0.3s ease;
                   &:hover {
@@ -142,7 +143,7 @@ class Header extends Component {
                 <button
                   className={css`
                     cursor: pointer;
-                    color: #cccccc;
+                    color: currentColor;
                     background-color: transparent;
                     border: none;
                     transition: color 0.3s ease;

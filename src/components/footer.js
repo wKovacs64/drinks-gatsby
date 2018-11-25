@@ -11,6 +11,7 @@ const Footer = ({ onFeedbackClick }) => (
       display: flex;
       flex-direction: column;
       align-items: center;
+      color: #cccccc;
       background-color: #111111;
       padding: 1rem;
       ${mq.md(css`
@@ -33,9 +34,9 @@ const Footer = ({ onFeedbackClick }) => (
         onClick={onFeedbackClick}
         className={css`
           display: inline-block;
-          color: #cccccc;
+          color: currentColor;
           background-color: transparent;
-          border: 1px solid #cccccc;
+          border: 1px solid currentColor;
           cursor: pointer;
           font-size: 1rem;
           padding: 0.5rem;
@@ -46,8 +47,8 @@ const Footer = ({ onFeedbackClick }) => (
             border-color: #f4f4f4;
           }
           &:active {
-            color: #cccccc;
-            border-color: #cccccc;
+            color: currentColor;
+            border-color: currentColor;
           }
           ${mq.md(css`
             padding: 1rem;
@@ -58,7 +59,7 @@ const Footer = ({ onFeedbackClick }) => (
       </button>
       <a
         className={css`
-          color: #cccccc;
+          color: currentColor;
           text-decoration: none;
           transition: color 0.3s ease;
           &:hover {
