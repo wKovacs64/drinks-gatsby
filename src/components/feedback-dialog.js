@@ -14,6 +14,7 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
     onDismiss={onDismiss}
     className={css`
       color: #6d372a;
+      max-width: 50rem;
       width: 100vw;
       ${mq.md(css`
         width: 75vw;
