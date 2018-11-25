@@ -120,7 +120,13 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
         name="message"
         placeholder="What's up?"
         aria-label="Message"
-        rows={5}
+        rows={
+          typeof window !== 'undefined' &&
+          window.matchMedia &&
+          window.matchMedia('(min-width: 992px)').matches
+            ? 10
+            : 5
+        }
         className={css`
           border: 2px solid rgba(0, 0, 0, 0.3);
           padding: 1rem;
