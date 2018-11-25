@@ -69,6 +69,21 @@ class Layout extends Component {
               isOpen={feedbackOpen}
               onDismiss={this.handleFeedbackToggle}
             />
+            {/*
+              Hidden skeleton version of the feedback from to help the Netlify
+              bots as the real form is rendered on-demand
+            */}
+            <form
+              data-netlify="true"
+              data-netlify-honeypot="terminator"
+              action="/feedback-sent/"
+              name="drinks-feedback"
+              hidden
+            >
+              <input type="text" name="name" />
+              <input type="email" name="email" />
+              <textarea name="message" />
+            </form>
             <div
               className={css`
                 display: flex;
