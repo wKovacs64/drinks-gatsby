@@ -7,44 +7,48 @@ import constrainWidth from '../styles/constrain-width';
 import mq from '../utils/mq';
 
 class Header extends Component {
-  state = {
+  static initialState = {
     searchTerm: '',
     showSearch: false,
   };
+
+  state = Header.initialState;
 
   searchButton = createRef();
 
   searchInput = createRef();
 
-  clearSearchTerm = () => {
-    this.setState({ searchTerm: '' }, () => {
-      this.props.onSearchTermChange('');
-    });
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.searchTerm !== this.state.searchTerm) {
+      this.props.onSearchTermChange(this.state.searchTerm);
+    }
+
+    if (!prevState.showSearch && this.state.showSearch) {
+      this.searchInput.current.focus();
+    } else if (prevState.showSearch && !this.state.showSearch) {
+      this.searchButton.current.focus();
+    }
+  }
+
+  resetSearch = () => {
+    this.setState(Header.initialState);
   };
 
   toggleSearch = () => {
-    this.setState(
-      ({ showSearch }) => ({ showSearch: !showSearch }),
-      () => {
-        if (this.state.showSearch) {
-          this.searchInput.current.focus();
-        } else {
-          this.searchButton.current.focus();
-        }
-      },
-    );
-    this.clearSearchTerm();
+    if (this.state.showSearch) {
+      this.resetSearch();
+    } else {
+      this.setState({ showSearch: true });
+    }
   };
 
   handleSearchTermChange = ({ target: { value: searchTerm } }) => {
     this.setState(() => ({ searchTerm }));
-    this.props.onSearchTermChange(searchTerm);
   };
 
   handleSearchTermKeydown = ({ keyCode }) => {
     if (keyCode === 27 /* ESC */) {
-      this.searchInput.current.blur();
-      this.toggleSearch();
+      this.resetSearch();
     }
   };
 
