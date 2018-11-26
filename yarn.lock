@@ -5983,10 +5983,10 @@ gatsby-source-contentful@2.0.15:
     lodash "^4.17.10"
     qs "^6.4.0"
 
-gatsby-source-filesystem@2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.8.tgz#0b84e2321673d3f68c43b4a3948a3819761fde84"
-  integrity sha512-WbWZ27JeoAHLSGxps4T4EzQFXCDz3IYS+Sc+dZ2xHukbRDMs7QGjDzBwkcMryPsKLY2o2muXk+CtALDExKCwsg==
+gatsby-source-filesystem@2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.9.tgz#793091c6f852d9b82b6184ec0056850bb288ccb0"
+  integrity sha512-gvgGdpJVEhcWGIaNxBUH6HO09Y/l4GjgwK+4xvD6QltCgEgk/Y19iPHPAbhlxm40cmnjnntKap9JsgnsO0bc3w==
   dependencies:
     "@babel/runtime" "^7.0.0"
     better-queue "^3.8.7"
