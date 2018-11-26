@@ -1,7 +1,8 @@
 import '@wkovacs64/normalize.css';
 import 'typeface-source-sans-pro';
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { IconContext } from 'react-icons';
 import Helmet from 'react-helmet';
 import { injectGlobal, css } from 'react-emotion';
 import { StaticQuery, graphql } from 'gatsby';
@@ -57,7 +58,13 @@ class Layout extends Component {
         `}
       >
         {({ site: { siteMetadata } }) => (
-          <Fragment>
+          <IconContext.Provider
+            value={{
+              className: css`
+                vertical-align: middle;
+              `,
+            }}
+          >
             <Helmet>
               <html
                 lang="en"
@@ -114,7 +121,7 @@ class Layout extends Component {
               <Main>{children}</Main>
               <Footer onFeedbackClick={this.handleFeedbackToggle} />
             </div>
-          </Fragment>
+          </IconContext.Provider>
         )}
       </StaticQuery>
     );

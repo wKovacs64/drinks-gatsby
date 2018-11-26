@@ -2,7 +2,6 @@ import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { css } from 'react-emotion';
-import { IconContext } from 'react-icons';
 import { MdSearch, MdZoomOut } from 'react-icons/md';
 import constrainWidth from '../styles/constrain-width';
 import mq from '../utils/mq';
@@ -54,119 +53,107 @@ class Header extends Component {
     const { searchTerm, showSearch } = this.state;
 
     return (
-      <IconContext.Provider
-        value={{
-          className: css`
-            vertical-align: middle;
-          `,
-        }}
+      <header
+        className={css`
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: #cccccc;
+          background-color: #111111;
+          padding: 1rem;
+          ${mq.md(css`
+            padding: 2rem;
+          `)};
+        `}
       >
-        <header
+        <section
           className={css`
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            color: #cccccc;
-            background-color: #111111;
-            padding: 1rem;
-            ${mq.md(css`
-              padding: 2rem;
-            `)};
+            flex-wrap: wrap;
+            width: 100%;
+            ${constrainWidth};
           `}
         >
-          <section
+          <h1
             className={css`
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              flex-wrap: wrap;
-              width: 100%;
-              ${constrainWidth};
+              font-weight: 300;
+              margin: 0;
+              padding: 0;
             `}
           >
-            <h1
+            <Link
+              to="/"
               className={css`
-                font-weight: 300;
-                margin: 0;
-                padding: 0;
+                color: currentColor;
+                text-decoration: none;
+                transition: color 0.3s ease;
+                &:hover {
+                  color: #f4f4f4;
+                }
               `}
             >
-              <Link
-                to="/"
+              {siteTitle}
+            </Link>
+          </h1>
+          {withSearch && (
+            <div>
+              <input
+                id="search-input"
+                name="searchInput"
+                aria-label="Search Term"
+                type="text"
+                placeholder="Search"
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck={false}
+                disabled={!showSearch}
+                ref={this.searchInput}
+                value={searchTerm}
+                onChange={this.handleSearchTermChange}
+                onKeyDown={this.handleSearchTermKeydown}
                 className={css`
+                  color: #f4f4f4;
+                  background-color: transparent;
+                  border-width: 0 0 1px;
+                  padding: 0 0 0.25rem 0;
+                  width: ${showSearch ? '30vw' : '0'};
+                  max-width: 8rem;
+                  transition: width 0.2s ease-in-out;
+                  ${mq.sm(css`
+                    width: ${showSearch ? '10rem' : '0'};
+                    max-width: unset;
+                  `)};
+                  ${mq.md(css`
+                    padding: 0 0 0.5rem 0;
+                    width: ${showSearch ? '12rem' : '0'};
+                  `)};
+                `}
+              />
+              <button
+                className={css`
+                  cursor: pointer;
                   color: currentColor;
-                  text-decoration: none;
+                  background-color: transparent;
+                  border: none;
                   transition: color 0.3s ease;
                   &:hover {
                     color: #f4f4f4;
                   }
                 `}
+                aria-label="Toggle Search"
+                type="button"
+                ref={this.searchButton}
+                onClick={this.toggleSearch}
               >
-                {siteTitle}
-              </Link>
-            </h1>
-            {withSearch && (
-              <div>
-                <input
-                  id="search-input"
-                  name="searchInput"
-                  aria-label="Search Term"
-                  type="text"
-                  placeholder="Search"
-                  autoComplete="off"
-                  autoCorrect="off"
-                  autoCapitalize="off"
-                  spellCheck={false}
-                  disabled={!showSearch}
-                  ref={this.searchInput}
-                  value={searchTerm}
-                  onChange={this.handleSearchTermChange}
-                  onKeyDown={this.handleSearchTermKeydown}
-                  className={css`
-                    color: #f4f4f4;
-                    background-color: transparent;
-                    border-width: 0 0 1px;
-                    padding: 0 0 0.25rem 0;
-                    width: ${showSearch ? '30vw' : '0'};
-                    max-width: 8rem;
-                    transition: width 0.2s ease-in-out;
-                    ${mq.sm(css`
-                      width: ${showSearch ? '10rem' : '0'};
-                      max-width: unset;
-                    `)};
-                    ${mq.md(css`
-                      padding: 0 0 0.5rem 0;
-                      width: ${showSearch ? '12rem' : '0'};
-                    `)};
-                  `}
-                />
-                <button
-                  className={css`
-                    cursor: pointer;
-                    color: currentColor;
-                    background-color: transparent;
-                    border: none;
-                    transition: color 0.3s ease;
-                    &:hover {
-                      color: #f4f4f4;
-                    }
-                  `}
-                  aria-label="Toggle Search"
-                  type="button"
-                  ref={this.searchButton}
-                  onClick={this.toggleSearch}
-                >
-                  {showSearch ? (
-                    <MdZoomOut size={32} />
-                  ) : (
-                    <MdSearch size={32} />
-                  )}
-                </button>
-              </div>
-            )}
-          </section>
-        </header>
-      </IconContext.Provider>
+                {showSearch ? <MdZoomOut size={32} /> : <MdSearch size={32} />}
+              </button>
+            </div>
+          )}
+        </section>
+      </header>
     );
   }
 }
