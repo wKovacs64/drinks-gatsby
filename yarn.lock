@@ -794,10 +794,37 @@
     "@emotion/utils" "0.11.1"
     "@emotion/weak-memoize" "0.2.2"
 
+"@emotion/core@10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.1.tgz#5cbd7507e87473c390478120cf16e0e328e4259f"
+  integrity sha512-Fbk+pqwdPCdm7oY6UuaJ9JNT+ig5bRLjlEwH20Uq5brrWvRc+NqI8PhcfK4jZul24etj45pFRSIoteaUD2H2jw==
+  dependencies:
+    "@emotion/cache" "10.0.0"
+    "@emotion/css" "10.0.0"
+    "@emotion/serialize" "0.11.0"
+    "@emotion/sheet" "0.9.2"
+    "@emotion/utils" "0.11.1"
+
+"@emotion/css@10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@emotion/css/-/css-10.0.0.tgz#aee814e8edee4ae9fa8e682abf2eb30f22cdb840"
+  integrity sha512-XvPKeXSnLhxJkMTKXZqd605rXRnUht/ncelbyhV0+MuojhLihH+/3oV4m5ltqhvFcnNpDrtqS2QjuMhUpmXxIw==
+  dependencies:
+    "@emotion/serialize" "0.11.0"
+    "@emotion/utils" "0.11.1"
+    babel-plugin-emotion "10.0.0"
+
 "@emotion/hash@0.7.1":
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.7.1.tgz#9833722341379fb7d67f06a4b00ab3c37913da53"
   integrity sha512-OYpa/Sg+2GDX+jibUfpZVn1YqSVRpYmTLF2eyAfrFTIJSbwyIrc+YscayoykvaOME/wV4BV0Sa0yqdMrgse6mA==
+
+"@emotion/is-prop-valid@0.7.2":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.7.2.tgz#bfff84765f39c352570ff537c5670dfdc90a1dbe"
+  integrity sha512-UCkzksTUib0aVnR5O7UxxDmlaUTEfQLRFBjC29z6FJ10Vg/P2T01iaq76I11katqmZjKHNVKJLH1nOvOY2E9Cw==
+  dependencies:
+    "@emotion/memoize" "0.7.1"
 
 "@emotion/memoize@0.7.1":
   version "0.7.1"
@@ -819,6 +846,24 @@
   version "0.9.2"
   resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-0.9.2.tgz#74e5c6b5e489a1ba30ab246ab5eedd96916487c4"
   integrity sha512-pVBLzIbC/QCHDKJF2E82V2H/W/B004mDFQZiyo/MSR+VC4pV5JLG0TF/zgQDFvP3fZL/5RTPGEmXlYJBMUuJ+A==
+
+"@emotion/styled-base@10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@emotion/styled-base/-/styled-base-10.0.1.tgz#751b5db7401b159e13f2b69165ff010ea43505cf"
+  integrity sha512-vCWNZ2LGL9aV2QFFOojypGyUFWKwmCYsLJ843QYImsQEMdfDgiTqKdnxDty4di1BftQY+vLiD2woR/mzB8lfZw==
+  dependencies:
+    "@emotion/is-prop-valid" "0.7.2"
+    "@emotion/serialize" "0.11.0"
+    "@emotion/utils" "0.11.1"
+    object-assign "^4.1.1"
+
+"@emotion/styled@10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-10.0.1.tgz#be7c57e69aa87f9e1158dbeb1894ee871de074c4"
+  integrity sha512-j1s4oUxAb8RRr8e3u+ygiZ/54Fb5d8vZl6WhoYRRw7SNxOhSUXs4HsEKSMOpP6MYizPYNIFiVm41RFT9QmXw4Q==
+  dependencies:
+    "@emotion/styled-base" "10.0.1"
+    babel-plugin-emotion "10.0.0"
 
 "@emotion/stylis@0.8.3":
   version "0.8.3"
@@ -10957,11 +11002,6 @@ react-dom@16.6.3:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.11.2"
-
-react-emotion@10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-10.0.0.tgz#03adf5a93f9dc41396401551566adf9668a2418e"
-  integrity sha512-HMEH1I0m4AxJzG31ii/g227WhR0RBlRdr2M4C0n7yg9s3SiAPGB7lxvc/EoE8ixU9PLeOlBOb/n0wo42tGu99Q==
 
 react-error-overlay@^3.0.0:
   version "3.0.0"
