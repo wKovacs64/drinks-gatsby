@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import mq from '../utils/mq';
 
 const Notes = ({ children }) => (
   <div
-    className={css`
+    css={css`
       h1,
       h2,
       h3 {

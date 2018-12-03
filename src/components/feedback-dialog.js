@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import { Dialog } from '@reach/dialog';
 import '@reach/dialog/styles.css';
 import VisuallyHidden from '@reach/visually-hidden';
@@ -14,7 +14,7 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
       role="dialog"
       isOpen={isOpen}
       onDismiss={onDismiss}
-      className={css`
+      css={css`
         color: #6d372a;
         max-width: 50rem;
         width: 100vw;
@@ -27,14 +27,14 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
       `}
     >
       <section
-        className={css`
+        css={css`
           display: flex;
           justify-content: space-between;
           margin-bottom: 2rem;
         `}
       >
         <h3
-          className={css`
+          css={css`
             margin: 0;
             letter-spacing: 0.1em;
             text-transform: uppercase;
@@ -46,7 +46,7 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
         </h3>
         <button
           type="button"
-          className={css`
+          css={css`
             background-color: transparent;
             border-style: none;
             cursor: pointer;
@@ -58,7 +58,7 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
           <VisuallyHidden>Close</VisuallyHidden>
           <span aria-hidden>
             <CloseIcon
-              className={css`
+              css={css`
                 color: #6d372a;
               `}
             />

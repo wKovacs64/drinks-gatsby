@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import { FaGithub } from 'react-icons/fa';
 import constrainWidth from '../styles/constrain-width';
 import mq from '../utils/mq';
 
 const Footer = ({ onFeedbackClick }) => (
   <footer
-    className={css`
+    css={css`
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -20,7 +20,7 @@ const Footer = ({ onFeedbackClick }) => (
     `}
   >
     <section
-      className={css`
+      css={css`
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -32,7 +32,7 @@ const Footer = ({ onFeedbackClick }) => (
       <button
         type="button"
         onClick={onFeedbackClick}
-        className={css`
+        css={css`
           display: inline-block;
           color: currentColor;
           background-color: transparent;
@@ -58,7 +58,7 @@ const Footer = ({ onFeedbackClick }) => (
         Send Feedback
       </button>
       <a
-        className={css`
+        css={css`
           color: currentColor;
           text-decoration: none;
           transition: color 0.3s ease;

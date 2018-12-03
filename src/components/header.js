@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import { MdSearch, MdZoomOut } from 'react-icons/md';
 import constrainWidth from '../styles/constrain-width';
 import mq from '../utils/mq';
@@ -58,7 +58,7 @@ class Header extends Component {
 
     return (
       <header
-        className={css`
+        css={css`
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -71,7 +71,7 @@ class Header extends Component {
         `}
       >
         <section
-          className={css`
+          css={css`
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -81,7 +81,7 @@ class Header extends Component {
           `}
         >
           <h1
-            className={css`
+            css={css`
               font-weight: 300;
               margin: 0;
               padding: 0;
@@ -89,7 +89,7 @@ class Header extends Component {
           >
             <Link
               to="/"
-              className={css`
+              css={css`
                 color: currentColor;
                 text-decoration: none;
                 transition: color 0.3s ease;
@@ -118,7 +118,7 @@ class Header extends Component {
                 value={searchTerm}
                 onChange={this.handleSearchTermChange}
                 onKeyDown={this.handleSearchTermKeydown}
-                className={css`
+                css={css`
                   color: #f4f4f4;
                   background-color: transparent;
                   border-width: 0 0 1px;
@@ -137,7 +137,7 @@ class Header extends Component {
                 `}
               />
               <button
-                className={css`
+                css={css`
                   cursor: pointer;
                   color: currentColor;
                   background-color: transparent;

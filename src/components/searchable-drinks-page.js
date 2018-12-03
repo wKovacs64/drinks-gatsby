@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import difference from 'lodash.difference';
 import get from 'lodash.get';
 import orderBy from 'lodash.orderby';
@@ -46,7 +46,7 @@ class SearchableDrinksPage extends Component {
           <DrinkList drinks={searchTerm ? filteredDrinks : sortedDrinks} />
         ) : (
           <span
-            className={css`
+            css={css`
               color: #eeeeee;
               font-size: 1.25rem;
               padding: 1rem;

@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import mq from '../utils/mq';
 
-const Tag = ({ children, className }) => (
+const Tag = ({ children, ...props }) => (
   <div
-    className={css`
+    css={css`
       min-width: 4rem;
       padding: 0.5rem;
       border-radius: 0.25rem;
@@ -24,8 +24,8 @@ const Tag = ({ children, className }) => (
         font-size: 1rem;
         font-weight: 300;
       `)};
-      ${className};
     `}
+    {...props}
   >
     {children}
   </div>
@@ -33,12 +33,10 @@ const Tag = ({ children, className }) => (
 
 Tag.propTypes = {
   children: PropTypes.string,
-  className: PropTypes.string,
 };
 
 Tag.defaultProps = {
   children: '',
-  className: '',
 };
 
 export default Tag;

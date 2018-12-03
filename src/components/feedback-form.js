@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import mq from '../utils/mq';
 
 const FeedbackForm = () => (
@@ -9,7 +9,7 @@ const FeedbackForm = () => (
     action="/feedback-sent/"
     name="drinks-feedback"
     method="post"
-    className={css`
+    css={css`
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 2rem;
@@ -29,7 +29,7 @@ const FeedbackForm = () => (
       name="name"
       placeholder="Name"
       aria-label="Name"
-      className={css`
+      css={css`
         border: 2px solid rgba(0, 0, 0, 0.3);
         height: 4rem;
         padding: 1rem;
@@ -45,7 +45,7 @@ const FeedbackForm = () => (
       name="email"
       placeholder="Email"
       aria-label="Email"
-      className={css`
+      css={css`
         border: 2px solid rgba(0, 0, 0, 0.3);
         height: 4rem;
         padding: 1rem;
@@ -67,7 +67,7 @@ const FeedbackForm = () => (
           ? 10
           : 5
       }
-      className={css`
+      css={css`
         border: 2px solid rgba(0, 0, 0, 0.3);
         padding: 1rem;
         grid-column: span 2;
@@ -75,7 +75,7 @@ const FeedbackForm = () => (
     />
     <button
       type="submit"
-      className={css`
+      css={css`
         grid-column: span 2;
         height: 4rem;
         border-style: none;
