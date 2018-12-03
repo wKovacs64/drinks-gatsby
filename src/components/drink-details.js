@@ -1,25 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import kebabCase from 'lodash.kebabcase';
 import Notes from './notes';
 import Tag from './tag';
 import mq from '../utils/mq';
 
-const DrinkDetails = ({ className, drink }) => (
+const DrinkDetails = ({ drink, ...props }) => (
   <section
-    className={css`
+    css={css`
       background-color: #eeeeee;
       padding: 2rem;
       font-size: 1.25rem;
-      ${className};
     `}
+    {...props}
   >
     {drink.notes && <Notes>{drink.notes.childMarkdownRemark.html}</Notes>}
     {drink.tags && (
       <div
-        className={css`
+        css={css`
           display: flex;
           flex-wrap: wrap;
           border-top: 1px dotted #cccccc;
@@ -33,7 +33,7 @@ const DrinkDetails = ({ className, drink }) => (
           <Link
             to={`/tags/${kebabCase(tag)}/`}
             key={tag}
-            className={css`
+            css={css`
               text-decoration: none;
               margin-top: 1rem;
               margin-left: 0;
@@ -53,7 +53,6 @@ const DrinkDetails = ({ className, drink }) => (
 );
 
 DrinkDetails.propTypes = {
-  className: PropTypes.string,
   drink: PropTypes.shape({
     title: PropTypes.string,
     image: PropTypes.shape({
@@ -68,10 +67,6 @@ DrinkDetails.propTypes = {
     }),
     tags: PropTypes.arrayOf(PropTypes.string),
   }).isRequired,
-};
-
-DrinkDetails.defaultProps = {
-  className: '',
 };
 
 export default DrinkDetails;

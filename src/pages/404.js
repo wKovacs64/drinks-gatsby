@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import Layout from '../components/layout';
 import BrokenGlassIcon from '../components/broken-glass-icon';
 import mq from '../utils/mq';
@@ -13,7 +13,7 @@ const NotFoundPage = () => (
       meta={[{ name: 'description', content: 'No drinks found.' }]}
     />
     <div
-      className={css`
+      css={css`
         color: #eeeeee;
         margin: 1rem;
         display: flex;
@@ -26,7 +26,7 @@ const NotFoundPage = () => (
       `}
     >
       <p
-        className={css`
+        css={css`
           font-weight: 400;
           font-size: 1.25rem;
           margin: 0;
@@ -45,7 +45,7 @@ const NotFoundPage = () => (
         Oops, this doesn&apos;t appear to be a tasty drink recipe!
       </p>
       <BrokenGlassIcon
-        className={css`
+        css={css`
           color: #d09e45;
           height: 20vh;
           width: 20vh;
@@ -54,7 +54,7 @@ const NotFoundPage = () => (
       />
       <Link
         to="/"
-        className={css`
+        css={css`
           padding-bottom: 0.25rem;
           color: currentColor;
           text-decoration: none;

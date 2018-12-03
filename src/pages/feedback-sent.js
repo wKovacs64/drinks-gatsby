@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import Layout from '../components/layout';
 import MessageIcon from '../components/message-icon';
 import mq from '../utils/mq';
@@ -13,7 +13,7 @@ const FeedbackSent = () => (
       meta={[{ name: 'description', content: 'Feedback sent!' }]}
     />
     <div
-      className={css`
+      css={css`
         color: #eeeeee;
         margin: 1rem;
         display: flex;
@@ -26,7 +26,7 @@ const FeedbackSent = () => (
       `}
     >
       <p
-        className={css`
+        css={css`
           font-weight: 400;
           font-size: 1.25rem;
           margin: 0;
@@ -45,7 +45,7 @@ const FeedbackSent = () => (
         Thanks for the feedback!
       </p>
       <MessageIcon
-        className={css`
+        css={css`
           color: #d09e45;
           height: 20vh;
           width: 20vh;
@@ -54,7 +54,7 @@ const FeedbackSent = () => (
       />
       <Link
         to="/"
-        className={css`
+        css={css`
           padding-bottom: 0.25rem;
           color: currentColor;
           text-decoration: none;

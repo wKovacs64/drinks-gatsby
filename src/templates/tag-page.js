@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import startCase from 'lodash.startcase';
 import Nav from '../components/nav';
 import NavDivider from '../components/nav-divider';
@@ -24,7 +24,7 @@ const TagPage = ({ pageContext: { tag }, data }) => (
       <NavDivider />
       {tag}
       <span
-        className={css`
+        css={css`
           margin-left: 0.5rem;
         `}
       >

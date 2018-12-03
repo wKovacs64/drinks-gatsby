@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import mq from '../utils/mq';
 
-const Nav = ({ children, className }) => (
+const Nav = ({ children, ...props }) => (
   <nav
-    className={css`
+    css={css`
       color: #eeeeee;
       padding: 0 1rem;
       margin-bottom: 1rem;
@@ -13,8 +13,8 @@ const Nav = ({ children, className }) => (
         padding: 0;
         margin-bottom: 2rem;
       `)};
-      ${className};
     `}
+    {...props}
   >
     {children}
   </nav>
@@ -22,12 +22,10 @@ const Nav = ({ children, className }) => (
 
 Nav.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 Nav.defaultProps = {
   children: null,
-  className: '',
 };
 
 export default Nav;

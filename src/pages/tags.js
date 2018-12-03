@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import kebabCase from 'lodash.kebabcase';
 import matchSorter from 'match-sorter';
 import Layout from '../components/layout';
@@ -44,7 +44,7 @@ class TagsPage extends Component {
           Tags
         </Nav>
         <div
-          className={css`
+          css={css`
             display: grid;
             grid-gap: 1rem;
             margin: 0 1rem;
@@ -66,12 +66,12 @@ class TagsPage extends Component {
               <Link
                 to={`/tags/${kebabCase(tag)}/`}
                 key={tag}
-                className={css`
+                css={css`
                   text-decoration: none;
                 `}
               >
                 <Tag
-                  className={css`
+                  css={css`
                     font-weight: 300;
                     font-size: 1.5rem;
                     padding: 1rem;
@@ -87,7 +87,7 @@ class TagsPage extends Component {
             ))
           ) : (
             <span
-              className={css`
+              css={css`
                 color: #eeeeee;
                 font-size: 1.25rem;
                 padding: 0;

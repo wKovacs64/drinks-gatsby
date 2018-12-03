@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import mq from '../utils/mq';
 
-const Glass = ({ children, className }) => (
+const Glass = ({ children, ...props }) => (
   <article
-    className={css`
+    css={css`
       color: #6d372a;
       border-color: #d09e45;
       border-width: 4px 0;
@@ -13,8 +13,8 @@ const Glass = ({ children, className }) => (
       ${mq.sm(css`
         border-width: 4px;
       `)};
-      ${className};
     `}
+    {...props}
   >
     {children}
   </article>
@@ -22,12 +22,10 @@ const Glass = ({ children, className }) => (
 
 Glass.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 Glass.defaultProps = {
   children: null,
-  className: '',
 };
 
 export default Glass;

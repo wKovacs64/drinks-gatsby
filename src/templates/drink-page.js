@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import get from 'lodash.get';
 import Layout from '../components/layout';
 import Nav from '../components/nav';
@@ -43,7 +43,7 @@ const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
       </Nav>
       <Glass>
         <DrinkSummary
-          className={css`
+          css={css`
             ${mq.lg(css`
               flex-direction: row;
             `)};

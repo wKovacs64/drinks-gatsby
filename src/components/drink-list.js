@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import Glass from './glass';
 import DrinkSummary from './drink-summary';
 import mq from '../utils/mq';
 
-const DrinkList = ({ className, drinks }) => (
+const DrinkList = ({ drinks, ...props }) => (
   <div
-    className={css`
+    css={css`
       display: grid;
       grid-gap: 1rem;
       ${mq.sm(css`
@@ -20,19 +20,19 @@ const DrinkList = ({ className, drinks }) => (
       ${mq.xl(css`
         grid-template-columns: repeat(3, 1fr);
       `)};
-      ${className};
     `}
+    {...props}
   >
     {drinks.map(drink => (
       <Link
         to={`/${drink.slug}/`}
         key={drink.slug}
-        className={css`
+        css={css`
           text-decoration: none;
         `}
       >
         <Glass
-          className={css`
+          css={css`
             height: 100%;
             transition: border-color 0.3s ease;
             &:hover,
@@ -49,7 +49,6 @@ const DrinkList = ({ className, drinks }) => (
 );
 
 DrinkList.propTypes = {
-  className: PropTypes.string,
   drinks: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
@@ -61,10 +60,6 @@ DrinkList.propTypes = {
       calories: PropTypes.number,
     }),
   ).isRequired,
-};
-
-DrinkList.defaultProps = {
-  className: '',
 };
 
 export default DrinkList;

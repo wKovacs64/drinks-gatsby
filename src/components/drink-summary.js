@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 import Img from 'gatsby-image';
 import mq from '../utils/mq';
 
-const DrinkSummary = ({ className, drink, stacked }) => (
+const DrinkSummary = ({ drink, stacked, ...props }) => (
   <StaticQuery
     query={graphql`
       {
@@ -21,16 +21,16 @@ const DrinkSummary = ({ className, drink, stacked }) => (
   >
     {({ file: { defaultImage } }) => (
       <section
-        className={css`
+        css={css`
           height: 100%;
           background-color: #eeeeee;
           display: flex;
           flex-direction: column;
-          ${className};
         `}
+        {...props}
       >
         <figure
-          className={css`
+          css={css`
             flex: 1;
             margin: 0;
             ${!drink.image && `background-color: #1a1a17`};
@@ -45,13 +45,13 @@ const DrinkSummary = ({ className, drink, stacked }) => (
           />
         </figure>
         <div
-          className={css`
+          css={css`
             flex: 1;
             display: flex;
           `}
         >
           <div
-            className={css`
+            css={css`
               flex: 1;
               padding: ${stacked ? '2rem 2rem 0 2rem' : '2rem'};
               display: flex;
@@ -59,7 +59,7 @@ const DrinkSummary = ({ className, drink, stacked }) => (
             `}
           >
             <h2
-              className={css`
+              css={css`
                 margin: 0;
                 text-transform: uppercase;
                 letter-spacing: 0.1em;
@@ -74,12 +74,12 @@ const DrinkSummary = ({ className, drink, stacked }) => (
               {drink.title}
             </h2>
             <div
-              className={css`
+              css={css`
                 flex: 1;
               `}
             >
               <ul
-                className={css`
+                css={css`
                   margin-top: 2rem;
                   margin-bottom: 2rem;
                   padding-left: 2rem;
@@ -93,7 +93,7 @@ const DrinkSummary = ({ className, drink, stacked }) => (
                 {drink.ingredients.map(ingredient => (
                   <li
                     key={ingredient}
-                    className={css`
+                    css={css`
                       margin-bottom: 0.5rem;
                     `}
                   >
@@ -103,7 +103,7 @@ const DrinkSummary = ({ className, drink, stacked }) => (
               </ul>
             </div>
             <div
-              className={css`
+              css={css`
                 text-align: right;
                 font-size: 1rem;
                 ${stacked &&
@@ -122,7 +122,6 @@ const DrinkSummary = ({ className, drink, stacked }) => (
 );
 
 DrinkSummary.propTypes = {
-  className: PropTypes.string,
   drink: PropTypes.shape({
     title: PropTypes.string,
     slug: PropTypes.string,
@@ -137,7 +136,6 @@ DrinkSummary.propTypes = {
 };
 
 DrinkSummary.defaultProps = {
-  className: '',
   stacked: false,
 };
 
