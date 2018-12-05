@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
-import difference from 'lodash.difference';
-import get from 'lodash.get';
 import orderBy from 'lodash.orderby';
 import matchSorter from 'match-sorter';
 import mq from '../utils/mq';
@@ -17,22 +15,15 @@ class SearchableDrinksPage extends Component {
   render() {
     const { children, drinks } = this.props;
     const { searchTerm } = this.state;
-    const containsSearchTerm = new RegExp(searchTerm, 'i');
 
-    const titleMatchedDrinks = matchSorter(drinks, searchTerm, {
-      keys: ['title'],
+    const filteredDrinks = matchSorter(drinks, searchTerm, {
+      keys: [
+        'title',
+        'ingredients',
+        'notes.childMarkdownRemark.rawMarkdownBody',
+      ],
+      threshold: matchSorter.rankings.CONTAINS,
     });
-    const otherMatchedDrinks = orderBy(
-      difference(drinks, titleMatchedDrinks).filter(
-        drink =>
-          containsSearchTerm.test(
-            get(drink, 'notes.childMarkdownRemark.rawMarkdownBody'),
-          ) || containsSearchTerm.test(drink.ingredients),
-      ),
-      ['rank', 'createdAt'],
-      ['desc', 'desc'],
-    );
-    const filteredDrinks = [...titleMatchedDrinks, ...otherMatchedDrinks];
     const sortedDrinks = orderBy(
       drinks,
       ['rank', 'createdAt'],
