@@ -45,7 +45,7 @@
     "gatsby-plugin-sharp": "2.0.14",
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-source-contentful": "2.0.18",
-    "gatsby-source-filesystem": "2.0.10",
+    "gatsby-source-filesystem": "2.0.11",
     "gatsby-transformer-remark": "2.1.15",
     "gatsby-transformer-sharp": "2.1.9",
     "git-current-commit": "1.1.0",
