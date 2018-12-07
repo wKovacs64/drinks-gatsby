@@ -55,8 +55,8 @@
     "lodash.startcase": "4.4.0",
     "match-sorter": "2.3.0",
     "prop-types": "15.6.2",
-    "react": "16.6.3",
-    "react-dom": "16.6.3",
+    "react": "16.7.0-alpha.2",
+    "react-dom": "16.7.0-alpha.2",
     "react-helmet": "5.2.0",
     "react-icons": "3.2.2",
     "typeface-source-sans-pro": "0.0.54"
@@ -70,6 +70,7 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-react": "7.11.1",
+    "eslint-plugin-react-hooks": "0.0.0",
     "husky": "1.2.0",
     "lint-staged": "8.1.0",
     "prettier": "1.15.3",
