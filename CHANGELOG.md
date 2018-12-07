@@ -1,5 +1,23 @@
 # Change Log
 
+## Version 2.0.0 _(2018-12-07)_
+
+- Added a warning rather than hiding elements when JavaScript is disabled
+- Refactored the layout to constrain the header and footer widths instead of
+  only the content
+- Updated emotion to v10 ([#15][#15], [d0c16028][d0c16028],
+  [528f3296][528f3296])
+- Refactored search/filter matching logic ([64cbf530][64cbf530])
+- Converted codebase to use React Hooks 🤠 ([#17][#17])
+
+##### Breaking Changes
+
+- Added a feedback form ([#14][#14])
+
+  _This feature requires that the project be hosted on Netlify, as it relies on
+  their [form handling][netlify-forms] technology. Previously, this project
+  could be deployed to any static site hosting platform._
+
 ## Version 1.2.0 _(2018-11-22)_
 
 - Blur search input after pressing ESC ([8983b455][8983b455])
@@ -47,3 +65,13 @@
   https://github.com/wKovacs64/drinks/commit/c7287b352f6dc7156b150d959ada5c37ce21bb74
 [de8d16c3]:
   https://github.com/wKovacs64/drinks/commit/de8d16c3dd541776133cd436a99c619bede73ae3
+[#14]: https://github.com/wKovacs64/drinks/pull/14
+[netlify-forms]: https://www.netlify.com/docs/form-handling/
+[#15]: https://github.com/wKovacs64/drinks/pull/15
+[d0c16028]:
+  https://github.com/wKovacs64/drinks/commit/d0c16028a9200faf2842be661ab1df0a219a7bfd
+[528f3296]:
+  https://github.com/wKovacs64/drinks/commit/528f329633724f1b06a61f2107a69168a8b7726a
+[64cbf530]:
+  https://github.com/wKovacs64/drinks/commit/64cbf530861839133199d79c8f93a05271eb05b9
+[#17]: https://github.com/wKovacs64/drinks/pull/17
