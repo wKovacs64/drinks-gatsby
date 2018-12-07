@@ -1,7 +1,7 @@
 {
   "name": "drinks",
   "version": "1.2.1-dev.0",
-  "description": "Static site to showcase your favorite cocktails",
+  "description": "Static site and PWA to showcase your favorite cocktails",
   "author": {
     "name": "Justin Hall",
     "email": "justin.r.hall@gmail.com"

@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Drinks 🥃</h1>
   <p>
-    <em>Static site to showcase your favorite cocktails</em>
+    <em>Static site and PWA to showcase your favorite cocktails</em>
   </p>
 </div>
 <hr>
