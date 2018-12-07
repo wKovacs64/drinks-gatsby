@@ -109,10 +109,10 @@ function Layout({ children, onSearchTermChange, withSearch }) {
                       color: #f4f4f4;
                       margin-bottom: 0;
                       padding: 1rem;
-                      ${mq.sm(css`
+                      ${mq.sm} {
                         padding: 0;
                         text-align: center;
-                      `)}
+                      }
                     `}
                   >
                     Please enable JavaScript for full site functionality.

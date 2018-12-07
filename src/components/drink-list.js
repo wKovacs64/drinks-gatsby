@@ -11,15 +11,15 @@ const DrinkList = ({ drinks, ...props }) => (
     css={css`
       display: grid;
       grid-gap: 1rem;
-      ${mq.sm(css`
+      ${mq.sm} {
         grid-gap: 2rem;
-      `)};
-      ${mq.lg(css`
+      }
+      ${mq.lg} {
         grid-template-columns: repeat(2, 1fr);
-      `)};
-      ${mq.xl(css`
+      }
+      ${mq.xl} {
         grid-template-columns: repeat(3, 1fr);
-      `)};
+      }
     `}
     {...props}
   >

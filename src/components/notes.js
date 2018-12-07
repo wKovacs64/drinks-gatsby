@@ -14,9 +14,9 @@ const Notes = ({ children }) => (
       }
       h1 {
         font-weight: 400;
-        ${mq.lg(css`
+        ${mq.lg} {
           font-size: 1.5rem;
-        `)};
+        }
       }
       h2 {
         font-weight: 400;

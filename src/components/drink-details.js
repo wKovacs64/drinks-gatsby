@@ -24,9 +24,9 @@ const DrinkDetails = ({ drink, ...props }) => (
           flex-wrap: wrap;
           border-top: 1px dotted #cccccc;
           padding-top: 1rem;
-          ${mq.lg(css`
+          ${mq.lg} {
             justify-content: flex-end;
-          `)};
+          }
         `}
       >
         {drink.tags.map(tag => (
@@ -38,10 +38,10 @@ const DrinkDetails = ({ drink, ...props }) => (
               margin-top: 1rem;
               margin-left: 0;
               margin-right: 1rem;
-              ${mq.lg(css`
+              ${mq.lg} {
                 margin-left: 1rem;
                 margin-right: 0;
-              `)};
+              }
             `}
           >
             <Tag>{tag}</Tag>

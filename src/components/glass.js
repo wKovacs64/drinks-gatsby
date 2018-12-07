@@ -10,9 +10,9 @@ const Glass = ({ children, ...props }) => (
       border-color: #d09e45;
       border-width: 4px 0;
       border-style: double;
-      ${mq.sm(css`
+      ${mq.sm} {
         border-width: 4px;
-      `)};
+      }
     `}
     {...props}
   >

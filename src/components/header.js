@@ -62,9 +62,9 @@ function Header({ onSearchTermChange, siteTitle, withSearch }) {
         color: #cccccc;
         background-color: #111111;
         padding: 1rem;
-        ${mq.md(css`
+        ${mq.md} {
           padding: 2rem;
-        `)};
+        }
       `}
     >
       <section
@@ -123,14 +123,14 @@ function Header({ onSearchTermChange, siteTitle, withSearch }) {
                 width: ${showSearch ? '30vw' : '0'};
                 max-width: 8rem;
                 transition: width 0.2s ease-in-out;
-                ${mq.sm(css`
+                ${mq.sm} {
                   width: ${showSearch ? '10rem' : '0'};
                   max-width: unset;
-                `)};
-                ${mq.md(css`
+                }
+                ${mq.md} {
                   padding: 0 0 0.5rem 0;
                   width: ${showSearch ? '12rem' : '0'};
-                `)};
+                }
               `}
             />
             <button

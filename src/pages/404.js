@@ -20,9 +20,9 @@ const NotFoundPage = () => (
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        ${mq.md(css`
+        ${mq.md} {
           margin: 2rem 0 0;
-        `)};
+        }
       `}
     >
       <p
@@ -32,14 +32,14 @@ const NotFoundPage = () => (
           margin: 0;
           max-width: 23ch;
           text-align: center;
-          ${mq.md(css`
+          ${mq.md} {
             font-weight: 300;
             font-size: 1.5rem;
-          `)};
-          ${mq.xl(css`
+          }
+          ${mq.xl} {
             font-weight: 300;
             font-size: 2.25rem;
-          `)};
+          }
         `}
       >
         Oops, this doesn&apos;t appear to be a tasty drink recipe!
@@ -66,9 +66,9 @@ const NotFoundPage = () => (
             border-color: #f4f4f4;
             box-shadow: inset 0 -2px 0 0 #f4f4f4;
           }
-          ${mq.md(css`
+          ${mq.md} {
             font-size: 1.25rem;
-          `)};
+          }
         `}
       >
         Back to Drinks

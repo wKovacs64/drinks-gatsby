@@ -41,17 +41,17 @@ function TagsPage({
           display: grid;
           grid-gap: 1rem;
           margin: 0 1rem;
-          ${mq.sm(css`
+          ${mq.sm} {
             grid-gap: 2rem;
             margin: 0;
-          `)};
-          ${mq.lg(css`
+          }
+          ${mq.lg} {
             grid-gap: 2rem;
             grid-template-columns: repeat(2, 1fr);
-          `)};
-          ${mq.xl(css`
+          }
+          ${mq.xl} {
             grid-template-columns: repeat(3, 1fr);
-          `)};
+          }
         `}
       >
         {filteredTags.length ? (
@@ -68,10 +68,10 @@ function TagsPage({
                   font-weight: 300;
                   font-size: 1.5rem;
                   padding: 1rem;
-                  ${mq.lg(css`
+                  ${mq.lg} {
                     font-size: 2.25rem;
                     padding: 1.5rem;
-                  `)};
+                  }
                 `}
               >
                 {tag}

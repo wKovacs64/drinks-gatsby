@@ -9,10 +9,10 @@ const Main = ({ children, ...props }) => (
     css={css`
       flex: 1;
       padding: 1rem 0;
-      ${mq.sm(css`
+      ${mq.sm} {
         align-self: center;
         padding: 2rem 0;
-      `)};
+      }
       ${constrainWidth};
     `}
     {...props}

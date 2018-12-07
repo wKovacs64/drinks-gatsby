@@ -14,9 +14,9 @@ const Footer = ({ onFeedbackClick }) => (
       color: #cccccc;
       background-color: #111111;
       padding: 1rem;
-      ${mq.md(css`
+      ${mq.md} {
         padding: 2rem;
-      `)};
+      }
     `}
   >
     <section
@@ -50,9 +50,9 @@ const Footer = ({ onFeedbackClick }) => (
             color: currentColor;
             border-color: currentColor;
           }
-          ${mq.md(css`
+          ${mq.md} {
             padding: 1rem;
-          `)}
+          }
         `}
       >
         Send Feedback

@@ -44,9 +44,9 @@ const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
       <Glass>
         <DrinkSummary
           css={css`
-            ${mq.lg(css`
+            ${mq.lg} {
               flex-direction: row;
-            `)};
+            }
           `}
           drink={drink}
           stacked

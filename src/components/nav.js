@@ -9,10 +9,10 @@ const Nav = ({ children, ...props }) => (
       color: #eeeeee;
       padding: 0 1rem;
       margin-bottom: 1rem;
-      ${mq.sm(css`
+      ${mq.sm} {
         padding: 0;
         margin-bottom: 2rem;
-      `)};
+      }
     `}
     {...props}
   >

@@ -20,10 +20,10 @@ const Tag = ({ children, ...props }) => (
         color: #6d372a;
         background-color: #eedebf;
       }
-      ${mq.lg(css`
+      ${mq.lg} {
         font-size: 1rem;
         font-weight: 300;
-      `)};
+      }
     `}
     {...props}
   >

@@ -65,10 +65,9 @@ const DrinkSummary = ({ drink, stacked, ...props }) => (
                 letter-spacing: 0.1em;
                 font-weight: 400;
                 font-size: 1.5rem;
-                ${stacked &&
-                  mq.xl(css`
-                    font-size: 2.25rem;
-                  `)};
+                ${mq.xl} {
+                  font-size: ${stacked && '2.25rem'};
+                }
               `}
             >
               {drink.title}
@@ -84,10 +83,9 @@ const DrinkSummary = ({ drink, stacked, ...props }) => (
                   margin-bottom: 2rem;
                   padding-left: 2rem;
                   font-size: 1.25rem;
-                  ${stacked &&
-                    mq.xl(css`
-                      font-size: 1.5rem;
-                    `)};
+                  ${mq.xl} {
+                    font-size: ${stacked && '1.5rem'};
+                  }
                 `}
               >
                 {drink.ingredients.map(ingredient => (
@@ -105,11 +103,7 @@ const DrinkSummary = ({ drink, stacked, ...props }) => (
             <div
               css={css`
                 text-align: right;
-                font-size: 1rem;
-                ${stacked &&
-                  mq.xl(css`
-                    font-size: 1.25rem;
-                  `)};
+                font-size: ${stacked ? '1.25rem' : '1rem'};
               `}
             >
               {drink.calories ? <span>{drink.calories} cal</span> : ''}

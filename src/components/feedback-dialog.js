@@ -18,12 +18,12 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
         color: #6d372a;
         max-width: 50rem;
         width: 100vw;
-        ${mq.md(css`
+        ${mq.md} {
           width: 75vw;
-        `)};
-        ${mq.lg(css`
+        }
+        ${mq.lg} {
           width: 50vw;
-        `)};
+        }
       `}
     >
       <section

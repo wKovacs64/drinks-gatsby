@@ -31,9 +31,9 @@ function SearchableDrinksPage({ children, drinks }) {
             color: #eeeeee;
             font-size: 1.25rem;
             padding: 1rem;
-            ${mq.sm(css`
+            ${mq.sm} {
               padding: 2rem 0;
-            `)};
+            }
           `}
         >
           No drinks found.

@@ -34,9 +34,9 @@ const FeedbackForm = () => (
         height: 4rem;
         padding: 1rem;
         grid-column: span 2;
-        ${mq.sm(css`
+        ${mq.sm} {
           grid-column: span 1;
-        `)}
+        }
       `}
     />
     <input
@@ -50,9 +50,9 @@ const FeedbackForm = () => (
         height: 4rem;
         padding: 1rem;
         grid-column: span 2;
-        ${mq.sm(css`
+        ${mq.sm} {
           grid-column: span 1;
-        `)}
+        }
       `}
     />
     <textarea
@@ -92,9 +92,9 @@ const FeedbackForm = () => (
         text-transform: uppercase;
         font-weight: 400;
         font-size: 1rem;
-        ${mq.lg(css`
+        ${mq.lg} {
           font-size: 1.25rem;
-        `)};
+        }
       `}
     >
       Send
