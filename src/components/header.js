@@ -90,7 +90,8 @@ function Header({ onSearchTermChange, siteTitle, withSearch }) {
               color: currentColor;
               text-decoration: none;
               transition: color 0.3s ease;
-              &:hover {
+              &:hover,
+              &:focus {
                 color: #f4f4f4;
               }
             `}
@@ -140,7 +141,8 @@ function Header({ onSearchTermChange, siteTitle, withSearch }) {
                 background-color: transparent;
                 border: none;
                 transition: color 0.3s ease;
-                &:hover {
+                &:hover,
+                &:focus {
                   color: #f4f4f4;
                 }
               `}
