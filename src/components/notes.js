@@ -28,8 +28,10 @@ const Notes = ({ children }) => (
         color: currentColor;
         text-decoration: none;
         border-bottom: 1px solid #d09e45;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        &:hover {
+        transition: 0.3s ease;
+        transition-property: border-color, box-shadow;
+        &:hover,
+        &:focus {
           border-color: #a62304;
           box-shadow: inset 0 -2px 0 0 #a62304;
         }
