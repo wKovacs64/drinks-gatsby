@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import kebabCase from 'lodash.kebabcase';
 import Notes from './notes';
+import TagLink from './tag-link';
 import Tag from './tag';
 import mq from '../utils/mq';
 
@@ -30,11 +30,10 @@ const DrinkDetails = ({ drink, ...props }) => (
         `}
       >
         {drink.tags.map(tag => (
-          <Link
+          <TagLink
             to={`/tags/${kebabCase(tag)}/`}
             key={tag}
             css={css`
-              text-decoration: none;
               margin-top: 1rem;
               margin-left: 0;
               margin-right: 1rem;
@@ -45,7 +44,7 @@ const DrinkDetails = ({ drink, ...props }) => (
             `}
           >
             <Tag>{tag}</Tag>
-          </Link>
+          </TagLink>
         ))}
       </div>
     )}

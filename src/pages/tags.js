@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
 import kebabCase from 'lodash.kebabcase';
 import matchSorter from 'match-sorter';
@@ -9,6 +9,7 @@ import Layout from '../components/layout';
 import Nav from '../components/nav';
 import NavLink from '../components/nav-link';
 import NavDivider from '../components/nav-divider';
+import TagLink from '../components/tag-link';
 import Tag from '../components/tag';
 import mq from '../utils/mq';
 
@@ -56,13 +57,7 @@ function TagsPage({
       >
         {filteredTags.length ? (
           filteredTags.map(tag => (
-            <Link
-              to={`/tags/${kebabCase(tag)}/`}
-              key={tag}
-              css={css`
-                text-decoration: none;
-              `}
-            >
+            <TagLink to={`/tags/${kebabCase(tag)}/`} key={tag}>
               <Tag
                 css={css`
                   font-weight: 300;
@@ -76,7 +71,7 @@ function TagsPage({
               >
                 {tag}
               </Tag>
-            </Link>
+            </TagLink>
           ))
         ) : (
           <span
