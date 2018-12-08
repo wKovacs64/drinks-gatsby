@@ -41,14 +41,12 @@ const Footer = ({ onFeedbackClick }) => (
           font-size: 1rem;
           padding: 0.5rem;
           white-space: nowrap;
-          transition: color 0.3s ease, border-color 0.3s ease;
-          &:hover {
+          transition: 0.3s ease;
+          transition-property: color, border-color;
+          &:hover,
+          &:focus {
             color: #f4f4f4;
             border-color: #f4f4f4;
-          }
-          &:active {
-            color: currentColor;
-            border-color: currentColor;
           }
           ${mq.md} {
             padding: 1rem;
@@ -62,7 +60,8 @@ const Footer = ({ onFeedbackClick }) => (
           color: currentColor;
           text-decoration: none;
           transition: color 0.3s ease;
-          &:hover {
+          &:hover,
+          &:focus {
             color: #f4f4f4;
           }
         `}
