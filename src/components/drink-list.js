@@ -35,8 +35,7 @@ const DrinkList = ({ drinks, ...props }) => (
           css={css`
             height: 100%;
             transition: border-color 0.3s ease;
-            &:hover,
-            &:focus {
+            &:hover {
               border-color: #a62304;
             }
           `}
