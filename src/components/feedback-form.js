@@ -82,11 +82,14 @@ const FeedbackForm = () => (
         cursor: pointer;
         color: #eedebf;
         background-color: #6d372a;
-        transition: color 0.3s ease, background-color 0.3s ease;
+        border: 1px solid transparent;
+        transition: 0.3s ease;
+        transition-property: color, background-color, border-color;
         &:hover,
         &:focus {
           color: #6d372a;
           background-color: #eedebf;
+          border-color: currentColor;
         }
         letter-spacing: 0.1em;
         text-transform: uppercase;
