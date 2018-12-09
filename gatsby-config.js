@@ -1,6 +1,6 @@
-const contentfulConfig = require('./src/utils/contentful');
-const siteConfig = require('./src/utils/site');
-const buildInfo = require('./src/utils/build-info');
+const contentfulConfig = require('./src/config/contentful');
+const siteConfig = require('./src/config/site');
+const buildInfo = require('./src/config/build-info');
 
 module.exports = {
   siteMetadata: {
