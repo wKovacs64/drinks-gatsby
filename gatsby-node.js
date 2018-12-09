@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require('path');
-const kebabCase = require('lodash.kebabcase');
+const kebabCase = require('lodash/kebabCase');
 
 const drinkPage = path.resolve('./src/templates/drink-page.js');
 const tagPage = path.resolve('./src/templates/tag-page.js');

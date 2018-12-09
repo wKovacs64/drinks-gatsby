@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
-import kebabCase from 'lodash.kebabcase';
+import kebabCase from 'lodash/kebabCase';
 import Notes from './notes';
 import TagLink from './tag-link';
 import Tag from './tag';

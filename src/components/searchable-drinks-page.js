@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
-import orderBy from 'lodash.orderby';
+import orderBy from 'lodash/orderBy';
 import matchSorter from 'match-sorter';
 import mq from '../utils/mq';
 import Layout from './layout';

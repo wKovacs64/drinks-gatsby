@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
-import kebabCase from 'lodash.kebabcase';
+import kebabCase from 'lodash/kebabCase';
 import matchSorter from 'match-sorter';
 import Layout from '../components/layout';
 import Nav from '../components/nav';

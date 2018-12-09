@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
-import startCase from 'lodash.startcase';
+import startCase from 'lodash/startCase';
 import Nav from '../components/nav';
 import NavDivider from '../components/nav-divider';
 import NavLink from '../components/nav-link';
