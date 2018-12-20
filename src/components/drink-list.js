@@ -34,10 +34,13 @@ const DrinkList = ({ drinks, ...props }) => (
         <Glass
           css={css`
             height: 100%;
-            transition: border-color 0.3s ease;
+            transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition-property: border-color, transform, box-shadow;
             a:focus &, /* inside a focused <a> */
             &:hover {
               border-color: #a62304;
+              transform: translateY(-8px);
+              box-shadow: rgb(166, 35, 4) 0px 8px 16px;
             }
           `}
         >
