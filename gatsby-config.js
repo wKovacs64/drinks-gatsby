@@ -49,13 +49,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-plugin-nprogress',
-      options: {
-        color: '#137752',
-        showSpinner: false,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: siteConfig.title,
