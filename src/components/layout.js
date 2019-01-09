@@ -63,6 +63,9 @@ function Layout({ children, onSearchTermChange, withSearch }) {
                       'segoe ui', arial, sans-serif;
                     font-weight: 300;
                   }
+                  #gatsby-noscript {
+                    display: none;
+                  }
                 `}
               />
               <Helmet>
