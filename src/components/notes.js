@@ -43,6 +43,7 @@ const Notes = ({ children }) => (
         margin: 1.25rem 0;
       }
     `}
+    // eslint-disable-next-line react/no-danger
     dangerouslySetInnerHTML={{
       __html: children,
     }}
