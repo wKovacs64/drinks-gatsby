@@ -1,5 +1,10 @@
 # Change Log
 
+## Version 2.1.0 _(2019-02-02)_
+
+- Added some hover effects
+- Modified some styles
+
 ## Version 2.0.0 _(2018-12-07)_
 
 - Added a warning rather than hiding elements when JavaScript is disabled
