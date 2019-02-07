@@ -1173,10 +1173,10 @@
     "@webassemblyjs/wast-parser" "1.7.11"
     "@xtuc/long" "4.2.1"
 
-"@wkovacs64/eslint-config-react@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@wkovacs64/eslint-config-react/-/eslint-config-react-1.0.0.tgz#beca29645907cf1084e19e091a23fc666f09db43"
-  integrity sha512-MGw7hB1cy8xXUEzyvqdimmVZMw74iTkbZ3Fqpx0p58X+APjQH5pvtYu+bT44r09yK+Y+Me+n52bE7CepL0P5pw==
+"@wkovacs64/eslint-config-react@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@wkovacs64/eslint-config-react/-/eslint-config-react-1.0.2.tgz#3dc72742d26b414aa1abec136098f0a2e5712773"
+  integrity sha512-jxYDimFXyetRThpn8fZMiDDBbeh5CUw0nve0s9Pane4iQtYVYBqKSUo2riGvTkGUQdoMuszQXuCLyh0yUi4VGg==
   dependencies:
     "@wkovacs64/eslint-config" "3.0.0"
 

@@ -57,7 +57,7 @@
     "typeface-source-sans-pro": "0.0.54"
   },
   "devDependencies": {
-    "@wkovacs64/eslint-config-react": "1.0.0",
+    "@wkovacs64/eslint-config-react": "1.0.2",
     "babel-eslint": "10.0.1",
     "eslint": "5.13.0",
     "eslint-config-airbnb": "17.1.0",
