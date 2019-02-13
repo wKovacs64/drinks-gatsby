@@ -49,7 +49,7 @@
     "git-current-commit": "1.1.0",
     "lodash": "4.17.11",
     "match-sorter": "2.3.0",
-    "prop-types": "15.7.1",
+    "prop-types": "15.7.2",
     "react": "16.8.1",
     "react-dom": "16.8.1",
     "react-helmet": "5.2.0",
