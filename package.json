@@ -57,7 +57,7 @@
     "typeface-source-sans-pro": "0.0.54"
   },
   "devDependencies": {
-    "@wkovacs64/eslint-config-react": "2.0.1",
+    "@wkovacs64/eslint-config-react": "2.1.0",
     "eslint": "5.14.1",
     "eslint-plugin-emotion": "10.0.7",
     "eslint-plugin-import": "2.16.0",
