@@ -1,5 +1,9 @@
 # Change Log
 
+## Version 2.1.1 _(2019-03-02)_
+
+- Upgraded dependencies for performance improvements and bug fixes
+
 ## Version 2.1.0 _(2019-02-02)_
 
 - Added some hover effects
