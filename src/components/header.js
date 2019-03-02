@@ -21,14 +21,11 @@ function Header({ onSearchTermChange, siteTitle, withSearch }) {
     focusOnHide: searchButton,
   });
 
-  useEffect(
-    () => {
-      if (searchTerm !== previousSearchTerm) {
-        onSearchTermChange(searchTerm);
-      }
-    },
-    [previousSearchTerm, searchTerm],
-  );
+  useEffect(() => {
+    if (searchTerm !== previousSearchTerm) {
+      onSearchTermChange(searchTerm);
+    }
+  }, [previousSearchTerm, searchTerm, onSearchTermChange]);
 
   function resetSearch() {
     setSearchTerm('');
