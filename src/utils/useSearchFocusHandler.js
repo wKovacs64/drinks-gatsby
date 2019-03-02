@@ -9,46 +9,43 @@ function invalidArgument(param) {
 function useSearchFocusHandler({ isShowing, focusOnShow, focusOnHide }) {
   const firstRun = useRef(true);
 
-  useEffect(
-    () => {
-      // Make sure the targets are refs
-      if (!has.call(focusOnShow, 'current')) {
-        throw new Error(invalidArgument`focusOnShow`);
-      }
-      if (!has.call(focusOnHide, 'current')) {
-        throw new Error(invalidArgument`focusOnHide`);
-      }
+  useEffect(() => {
+    // Make sure the targets are refs
+    if (!has.call(focusOnShow, 'current')) {
+      throw new Error(invalidArgument`focusOnShow`);
+    }
+    if (!has.call(focusOnHide, 'current')) {
+      throw new Error(invalidArgument`focusOnHide`);
+    }
 
-      // Don't mess with focus the first time this effect runs (e.g. on initial
-      // page load)
-      if (firstRun.current) {
-        firstRun.current = false;
-        return;
-      }
+    // Don't mess with focus the first time this effect runs (e.g. on initial
+    // page load)
+    if (firstRun.current) {
+      firstRun.current = false;
+      return;
+    }
 
-      // Make sure the refs are attached to focusable elements
-      if (
-        !focusOnShow.current ||
-        typeof focusOnShow.current.focus !== 'function'
-      ) {
-        throw new Error(invalidArgument`focusOnShow`);
-      }
-      if (
-        !focusOnHide.current ||
-        typeof focusOnHide.current.focus !== 'function'
-      ) {
-        throw new Error(invalidArgument`focusOnHide`);
-      }
+    // Make sure the refs are attached to focusable elements
+    if (
+      !focusOnShow.current ||
+      typeof focusOnShow.current.focus !== 'function'
+    ) {
+      throw new Error(invalidArgument`focusOnShow`);
+    }
+    if (
+      !focusOnHide.current ||
+      typeof focusOnHide.current.focus !== 'function'
+    ) {
+      throw new Error(invalidArgument`focusOnHide`);
+    }
 
-      // Focus the appropriate element
-      if (isShowing) {
-        focusOnShow.current.focus();
-      } else {
-        focusOnHide.current.focus();
-      }
-    },
-    [isShowing, focusOnShow, focusOnHide],
-  );
+    // Focus the appropriate element
+    if (isShowing) {
+      focusOnShow.current.focus();
+    } else {
+      focusOnHide.current.focus();
+    }
+  }, [isShowing, focusOnShow, focusOnHide]);
 }
 
 export default useSearchFocusHandler;
