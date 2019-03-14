@@ -33,7 +33,7 @@
     "@reach/visually-hidden": "0.1.2",
     "@wkovacs64/normalize.css": "8.0.1",
     "dotenv": "7.0.0",
-    "gatsby": "2.1.33",
+    "gatsby": "2.1.34",
     "gatsby-image": "2.0.33",
     "gatsby-plugin-emotion": "4.0.6",
     "gatsby-plugin-manifest": "2.0.24",
