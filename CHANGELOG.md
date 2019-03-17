@@ -1,15 +1,24 @@
 # Change Log
 
-## Version 2.1.1 _(2019-03-02)_
+The changelog is automatically updated using
+[semantic-release](https://github.com/semantic-release/semantic-release). You
+can see it on the [releases page](../../releases).
+
+---
+
+<details>
+<summary>Historical Change Log</summary>
+
+#### Version 2.1.1 _(2019-03-02)_
 
 - Upgraded dependencies for performance improvements and bug fixes
 
-## Version 2.1.0 _(2019-02-02)_
+#### Version 2.1.0 _(2019-02-02)_
 
 - Added some hover effects
 - Modified some styles
 
-## Version 2.0.0 _(2018-12-07)_
+#### Version 2.0.0 _(2018-12-07)_
 
 - Added a warning rather than hiding elements when JavaScript is disabled
 - Refactored the layout to constrain the header and footer widths instead of
@@ -27,39 +36,41 @@
   their [form handling][netlify-forms] technology. Previously, this project
   could be deployed to any static site hosting platform._
 
-## Version 1.2.0 _(2018-11-22)_
+#### Version 1.2.0 _(2018-11-22)_
 
 - Blur search input after pressing ESC ([8983b455][8983b455])
 - Disable search input when not shown ([5174038d][5174038d])
 - Focus the search input upon showing ([c7287b35][c7287b35])
 - Focus the search button upon hiding search input ([de8d16c3][de8d16c3])
 
-## Version 1.1.2 _(2018-10-20)_
+#### Version 1.1.2 _(2018-10-20)_
 
 - Fixed a "flash of empty content" issue related to `<noscript>` ([#12][#12])
 
-## Version 1.1.1 _(2018-10-04)_
+#### Version 1.1.1 _(2018-10-04)_
 
 - Updated page generation process to append trailing slashes to the page path
   ([e4261db4][e4261db4])
 
-## Version 1.1.0 _(2018-10-03)_
+#### Version 1.1.0 _(2018-10-03)_
 
 - Added vertical spacing around list items in drink notes ([#10][#10])
 - Restructured footer to show GitHub link on mobile ([#11][#11])
 
-## Version 1.0.2 _(2018-09-27)_
+#### Version 1.0.2 _(2018-09-27)_
 
 - Fixed issue with the 404 page redirecting to append `?no-cache=1`
 
-## Version 1.0.1 _(2018-09-17)_
+#### Version 1.0.1 _(2018-09-17)_
 
 - Fixed `Content-Security-Policy` HTTP header by adding `connect-src` directive
   to account for Gatsby image handling changes
 
-## Version 1.0.0 _(2018-09-17)_
+#### Version 1.0.0 _(2018-09-17)_
 
 - Initial release
+
+</details>
 
 [#10]: https://github.com/wKovacs64/drinks/pull/10
 [#11]: https://github.com/wKovacs64/drinks/pull/11
