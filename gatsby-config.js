@@ -10,7 +10,6 @@ module.exports = {
     imageUrl: siteConfig.imageUrl,
     buildInfo: {
       commit: buildInfo.commit,
-      version: buildInfo.version,
     },
   },
   plugins: [

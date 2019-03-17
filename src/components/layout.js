@@ -29,7 +29,6 @@ function Layout({ children, onSearchTermChange, withSearch }) {
               title
               buildInfo {
                 commit
-                version
               }
             }
           }
@@ -69,11 +68,7 @@ function Layout({ children, onSearchTermChange, withSearch }) {
                 `}
               />
               <Helmet>
-                <html
-                  lang="en"
-                  data-commit={siteMetadata.buildInfo.commit}
-                  data-version={siteMetadata.buildInfo.version}
-                />
+                <html lang="en" data-commit={siteMetadata.buildInfo.commit} />
               </Helmet>
               <FeedbackDialog
                 isOpen={feedbackOpen}
