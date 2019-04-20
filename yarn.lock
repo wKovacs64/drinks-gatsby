@@ -1261,21 +1261,21 @@
   resolved "https://registry.yarnpkg.com/@reach/component-component/-/component-component-0.1.3.tgz#5d156319572dc38995b246f81878bc2577c517e5"
   integrity sha512-a1USH7L3bEfDdPN4iNZGvMEFuBfkdG+QNybeyDv8RloVFgZYRoM+KGXyy2KOfEnTUM8QWDRSROwaL3+ts5Angg==
 
-"@reach/dialog@0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.2.1.tgz#539ba758e6fc9d953c7c88391042ca78194257e1"
-  integrity sha512-3hR9POUAdmovLjFDCpYbuQnQ+shS83TrQcgJgFD2UMDCrO3Ml2pha7YQZp3gk9EzlXDIXpo4MO5oSI289eZY/w==
+"@reach/dialog@0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.2.2.tgz#49f3bf34a1eab7f522e78b4c1df175b11c889ac5"
+  integrity sha512-6YJXY7+zLzJeNTfR0NGTyvGqht7vUuFGuS/27XuVpaLA1sD1L3j+gM5RFx4u01o/5ZZndEeYgqORA0N+Vnb+xQ==
   dependencies:
     "@reach/component-component" "^0.1.3"
-    "@reach/portal" "^0.1.3"
+    "@reach/portal" "^0.2.0"
     "@reach/utils" "^0.2.0"
     react-focus-lock "^1.17.7"
     react-remove-scroll "^1.0.2"
 
-"@reach/portal@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.1.3.tgz#31d820f31bbab73570d5b5a449e2b0fa6457802f"
-  integrity sha512-yDcu5XZWfWKmKvbOs/uS7vITPVFXmn+XY5V6YcGhlz20KgwG+aJX2c7yvYzO++Zr0qvmtQCmxA4EGEciqIys6g==
+"@reach/portal@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.2.0.tgz#668a6d47ff749d81c2c6804c58c42323b31ac4fe"
+  integrity sha512-d+4m9LACj3uShSKsMDjKuR1Pw54lzYCh1h6kOvfkpdgLqOZEk/8RvjDCWLvQzvPJIgzCWVAA/Db55xDgOaOYQA==
   dependencies:
     "@reach/component-component" "^0.1.3"
 
