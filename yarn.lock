@@ -1261,10 +1261,10 @@
   resolved "https://registry.yarnpkg.com/@reach/component-component/-/component-component-0.1.3.tgz#5d156319572dc38995b246f81878bc2577c517e5"
   integrity sha512-a1USH7L3bEfDdPN4iNZGvMEFuBfkdG+QNybeyDv8RloVFgZYRoM+KGXyy2KOfEnTUM8QWDRSROwaL3+ts5Angg==
 
-"@reach/dialog@0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.2.2.tgz#49f3bf34a1eab7f522e78b4c1df175b11c889ac5"
-  integrity sha512-6YJXY7+zLzJeNTfR0NGTyvGqht7vUuFGuS/27XuVpaLA1sD1L3j+gM5RFx4u01o/5ZZndEeYgqORA0N+Vnb+xQ==
+"@reach/dialog@0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.2.3.tgz#92d402c9173872f2bb6fb9a2faa7da3780e9c3b9"
+  integrity sha512-kSqgtFt8tPxFPspBIE53duvJegECY/q6OypkWo2pER9zw2GBB4S6LFw0ljw9/4lPDWh2hJbabzhmXLLd+815dQ==
   dependencies:
     "@reach/component-component" "^0.1.3"
     "@reach/portal" "^0.2.0"
