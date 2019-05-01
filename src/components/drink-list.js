@@ -39,8 +39,10 @@ const DrinkList = ({ drinks, ...props }) => (
             a:focus &, /* inside a focused <a> */
             &:hover {
               border-color: #a62304;
-              transform: translateY(-8px);
               box-shadow: rgb(166, 35, 4) 0px 8px 16px;
+              ${mq.lg} {
+                transform: translateY(-8px);
+              }
             }
           `}
         >
