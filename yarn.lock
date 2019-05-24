@@ -6309,10 +6309,10 @@ gatsby-cli@^2.6.2:
     ink "^2.0.5"
     ink-spinner "^3.0.1"
 
-gatsby-image@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.1.0.tgz#81a68c619f1cc2f23d153899a84c048764fa73ac"
-  integrity sha512-AK0jFWkK/vG8/Ce2COwuNho/3XSV2Zn0y+FUweDj+Tvffjs+lGOhiVxDUODY8flKCO+Bz1UCfO0HcpkVH9Sg0Q==
+gatsby-image@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.1.1.tgz#bbaca556dd90083fbc59d492807d12fb06435c42"
+  integrity sha512-MPmFDyF7Sj8yycMcA0ngFSHSDvO0PU6Flini3tDz58v1GOcyD9Ks8asaYaEhdZaauPfIKfXmun32G+QMtwaotw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     object-fit-images "^3.2.4"
@@ -6327,10 +6327,10 @@ gatsby-link@^2.1.1:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-plugin-emotion@4.0.6:
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-4.0.6.tgz#5f496df66b2640874fcb073e4f2d8a2a1a4632da"
-  integrity sha512-cBCGVdNkULlrYMPsrCVDKrCxiKpZq4PL9n5qzQ538FWmg+XqBhQKWaH8dALwEzoDS5GyHXQy1hI7XHoWmDBJAQ==
+gatsby-plugin-emotion@4.0.7:
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-4.0.7.tgz#370c6a723a2aef0d88d837361aeea6ac6e6b4598"
+  integrity sha512-U9rJNQ/IdX92l4EvjGMoh3sNy2oW2G7Ae6KK+TETal6cRFG8K3toq338FbC/1z/2w+vPcTS074pjkhAxYxmTkA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@emotion/babel-preset-css-prop" "^10.0.5"
@@ -6387,10 +6387,10 @@ gatsby-plugin-react-helmet@3.0.12:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-sharp@2.1.0, gatsby-plugin-sharp@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.1.0.tgz#d943276cf6a67b886e8e705b9c30630db3c33c8e"
-  integrity sha512-4mUBWbjQEHGcQJ7RJv45GVEA4jfhAt4XCcRemK4WRiunmv9hV03qLKTaElAvNkvttpP6CqJCRKmYz36VnJRzSQ==
+gatsby-plugin-sharp@2.1.1, gatsby-plugin-sharp@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.1.1.tgz#a282ead8575466d0ee01e88ff65f7b32838c800a"
+  integrity sha512-KPBygBMHgx3MIFUjKmcBsZOAKsiWbNPE+ATrZWcbthIv0tlrYQ0vlcmnx+yKDKoxZuBffixlC8d8RZn3YjtBpw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
@@ -6428,10 +6428,10 @@ gatsby-remark-external-links@0.0.4:
     unist-util-find "^1.0.1"
     unist-util-visit "^1.1.3"
 
-gatsby-source-contentful@2.0.62:
-  version "2.0.62"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.62.tgz#9293db5dd3c501f32176c53cb8750b8375d519dd"
-  integrity sha512-Z8mKH5SwDGn552BeTL8J2ZFWV8WnB9DjIvL0Jvi0mK/ehKOfa3+F2zsjfmavt5jUZ4uXx0nzSKkKDwdaVT0QSQ==
+gatsby-source-contentful@2.0.63:
+  version "2.0.63"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.0.63.tgz#934d1343e88bdcecd298685a6ec7eb070feaabba"
+  integrity sha512-osiVmHuWh4oJse3iHZ/KNmFYE6hE2w5FfDGeSG8W8L2BJTbQ7FdZb7B4U5HTDVcxPNrWI2JaASBcDCbvrJau5g==
   dependencies:
     "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
@@ -6441,7 +6441,7 @@ gatsby-source-contentful@2.0.62:
     contentful "^6.1.0"
     deep-map "^1.5.0"
     fs-extra "^4.0.2"
-    gatsby-plugin-sharp "^2.1.0"
+    gatsby-plugin-sharp "^2.1.1"
     gatsby-source-filesystem "^2.0.37"
     is-online "^7.0.0"
     joi "^14.0.0"
