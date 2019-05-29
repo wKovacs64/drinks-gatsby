@@ -48,7 +48,7 @@
     "gatsby-plugin-react-helmet": "3.0.12",
     "gatsby-plugin-sharp": "2.1.2",
     "gatsby-remark-external-links": "0.0.4",
-    "gatsby-source-contentful": "2.0.64",
+    "gatsby-source-contentful": "2.0.65",
     "gatsby-source-filesystem": "2.0.37",
     "gatsby-transformer-remark": "2.3.12",
     "gatsby-transformer-sharp": "2.1.20",
