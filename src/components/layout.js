@@ -53,7 +53,6 @@ function Layout({ children, onSearchTermChange, withSearch }) {
                   }
                   html {
                     background-color: #242424;
-                    overflow-y: scroll;
                   }
                   body {
                     font-family: 'Source Sans Pro', -apple-system,
@@ -61,6 +60,15 @@ function Layout({ children, onSearchTermChange, withSearch }) {
                       'helvetica neue', helvetica, ubuntu, roboto, noto,
                       'segoe ui', arial, sans-serif;
                     font-weight: 300;
+                  }
+                  /*
+                   * HACK: abuse specificity to force styles overridden by
+                   * @reach/dialog -> react-remove-scroll -> react-remove-scroll-bar
+                   * to avoid a content jump when showing the feedback form.
+                   */
+                  html > body {
+                    overflow-y: scroll !important;
+                    margin: 0 !important;
                   }
                   #gatsby-noscript {
                     display: none;
