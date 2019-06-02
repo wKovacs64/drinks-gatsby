@@ -73,9 +73,12 @@ function Layout({ children, onSearchTermChange, withSearch }) {
               }
             `}
           />
-          <Helmet>
-            <html lang="en" data-commit={siteMetadata.buildInfo.commit} />
-          </Helmet>
+          <Helmet
+            htmlAttributes={{
+              lang: 'en',
+              'data-commit': siteMetadata.buildInfo.commit,
+            }}
+          />
           <FeedbackDialog
             isOpen={feedbackOpen}
             onDismiss={handleFeedbackToggle}
