@@ -9394,10 +9394,10 @@ marked@^0.6.0:
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.6.1.tgz#a63addde477bca9613028de4b2bc3629e53a0562"
   integrity sha512-+H0L3ibcWhAZE02SKMqmvYsErLo4EAVJxu5h3bHBBDvvjeWXtl92rGUSBYHL2++5Y+RSNgl8dYOAXcYe7lp1fA==
 
-match-sorter@3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/match-sorter/-/match-sorter-3.0.1.tgz#db789ea4d5c16fe195edbaba226219a6fb6beb78"
-  integrity sha512-ie+dQOh8cQu7Mjm295gzE0D7fdOxno3ldDR1fhpKi2k/cPAsUB9vGxzA/iOZsbgEfCjp2FEJ9k1i6Psm01QlmA==
+match-sorter@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/match-sorter/-/match-sorter-3.1.0.tgz#d894415393b44cf50683af368f907fea57d31f55"
+  integrity sha512-iUh6P7e13ZcocKqOWMwPLOPkwfsiyQEP466/8hPzHkdGxHsaEB3gFKSXrgEOt+Or0rhVXAYBzjL1+jPaXBQKAw==
   dependencies:
     remove-accents "0.4.2"
 
