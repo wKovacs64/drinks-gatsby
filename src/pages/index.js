@@ -71,6 +71,8 @@ IndexPage.propTypes = {
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
         title: PropTypes.string,
+        description: PropTypes.string,
+        imageUrl: PropTypes.string,
       }),
     }),
     allContentfulDrink: PropTypes.shape({
