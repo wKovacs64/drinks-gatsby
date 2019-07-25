@@ -1,18 +1,42 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@0.0.9
+  node: circleci/node@1.1.4
+
+defaults: &defaults
+  executor:
+    name: node/default
+    tag: lts
 
 jobs:
-  build:
-    docker:
-      - image: circleci/node
+  test:
+    <<: *defaults
     steps:
       - checkout
-      - node/install-package-manager:
-          yarn: true
+      - node/install-yarn
       - node/with-cache:
           steps:
             - run: yarn install --frozen-lockfile
             - run: yarn validate
-            - run: yarn semantic-release
+            - persist_to_workspace:
+                root: ~/
+                paths:
+                  - project
+  release:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run: yarn semantic-release
+
+workflows:
+  version: 2
+  test_and_release:
+    jobs:
+      - test
+      - release:
+          requires:
+            - test
+          filters:
+            branches:
+              only: master
