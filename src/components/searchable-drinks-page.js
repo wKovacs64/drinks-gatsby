@@ -6,6 +6,7 @@ import matchSorter from 'match-sorter';
 import mq from '../utils/mq';
 import Layout from './layout';
 import DrinkList from './drink-list';
+import AnimateOnTransition from './animate-on-transition';
 
 function SearchableDrinksPage({ children, drinks }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -24,7 +25,9 @@ function SearchableDrinksPage({ children, drinks }) {
     <Layout withSearch onSearchTermChange={handleSearchTermChange}>
       {children}
       {filteredDrinks.length ? (
-        <DrinkList drinks={searchTerm ? filteredDrinks : sortedDrinks} />
+        <AnimateOnTransition>
+          <DrinkList drinks={searchTerm ? filteredDrinks : sortedDrinks} />
+        </AnimateOnTransition>
       ) : (
         <span
           css={css`

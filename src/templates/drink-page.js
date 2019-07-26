@@ -11,6 +11,7 @@ import NavLink from '../components/nav-link';
 import Glass from '../components/glass';
 import DrinkSummary from '../components/drink-summary';
 import DrinkDetails from '../components/drink-details';
+import AnimateOnTransition from '../components/animate-on-transition';
 import mq from '../utils/mq';
 
 const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
@@ -41,18 +42,20 @@ const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
         <NavDivider />
         {drink.title}
       </Nav>
-      <Glass>
-        <DrinkSummary
-          css={css`
-            ${mq.lg} {
-              flex-direction: row;
-            }
-          `}
-          drink={drink}
-          stacked
-        />
-        <DrinkDetails drink={drink} />
-      </Glass>
+      <AnimateOnTransition>
+        <Glass>
+          <DrinkSummary
+            css={css`
+              ${mq.lg} {
+                flex-direction: row;
+              }
+            `}
+            drink={drink}
+            stacked
+          />
+          <DrinkDetails drink={drink} />
+        </Glass>
+      </AnimateOnTransition>
     </Layout>
   );
 };

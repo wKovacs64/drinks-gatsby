@@ -39,6 +39,7 @@
     "@reach/visually-hidden": "0.1.4",
     "@wkovacs64/normalize.css": "8.0.1",
     "dotenv": "8.0.0",
+    "framer-motion": "1.3.0",
     "gatsby": "2.13.41",
     "gatsby-image": "2.2.7",
     "gatsby-plugin-emotion": "4.1.2",
@@ -47,6 +48,7 @@
     "gatsby-plugin-offline": "2.2.4",
     "gatsby-plugin-react-helmet": "3.1.2",
     "gatsby-plugin-sharp": "2.2.9",
+    "gatsby-plugin-transition-link": "1.12.4",
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-source-contentful": "2.1.15",
     "gatsby-source-filesystem": "2.1.6",
@@ -63,6 +65,7 @@
     "typeface-source-sans-pro": "0.0.75"
   },
   "devDependencies": {
+    "@babel/core": "7.5.5",
     "@commitlint/cli": "8.1.0",
     "@commitlint/config-conventional": "8.1.0",
     "commitizen": "4.0.3",
