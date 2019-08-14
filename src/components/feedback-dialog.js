@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import { Dialog } from '@reach/dialog';
@@ -9,7 +9,7 @@ import FeedbackForm, { FeedbackFormSkeleton } from './feedback-form';
 import mq from '../utils/mq';
 
 const FeedbackDialog = ({ isOpen, onDismiss }) => (
-  <Fragment>
+  <>
     <Dialog
       role="dialog"
       isOpen={isOpen}
@@ -72,7 +72,7 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
       the real form (inside the dialog) is rendered on-demand
     */}
     <FeedbackFormSkeleton hidden />
-  </Fragment>
+  </>
 );
 
 FeedbackDialog.propTypes = {
