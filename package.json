@@ -33,7 +33,7 @@
   },
   "private": true,
   "dependencies": {
-    "@emotion/core": "10.0.15",
+    "@emotion/core": "10.0.16",
     "@emotion/styled": "10.0.15",
     "@reach/dialog": "0.2.9",
     "@reach/visually-hidden": "0.1.4",
