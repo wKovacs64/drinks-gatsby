@@ -38,7 +38,7 @@
     "@reach/dialog": "0.2.9",
     "@reach/visually-hidden": "0.1.4",
     "@wkovacs64/normalize.css": "8.0.1",
-    "dotenv": "8.0.0",
+    "dotenv": "8.1.0",
     "gatsby": "2.13.67",
     "gatsby-image": "2.2.8",
     "gatsby-plugin-emotion": "4.1.2",
