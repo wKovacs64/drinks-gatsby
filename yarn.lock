@@ -7309,10 +7309,10 @@ gatsby-remark-external-links@0.0.4:
     unist-util-find "^1.0.1"
     unist-util-visit "^1.1.3"
 
-gatsby-source-contentful@2.1.28:
-  version "2.1.28"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.28.tgz#0c95b5a4fc90ba8ad159c70ac97b2d7f3c51aa22"
-  integrity sha512-47CUTiOHQpx0IsNEfrOHIMAUqwRs0bkHr+nlGuEKC64zycuCS6Ipk5Mz5VmJDSBOCWaXIV0FOzqP9T7BKBVjYw==
+gatsby-source-contentful@2.1.29:
+  version "2.1.29"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.29.tgz#75870d574e76755c645e5a6e0f2ac39ecd2a66c2"
+  integrity sha512-0bp2mlCrWa2lsx4qDkM8+lTqk2wgMIiKsiSuhAvBcbAG62pD3YVhVXG71ZYvNonc3gPvruZGwpnPCu9GtDh+Dw==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@hapi/joi" "^15.1.1"
@@ -7324,16 +7324,16 @@ gatsby-source-contentful@2.1.28:
     deep-map "^1.5.0"
     fs-extra "^8.1.0"
     gatsby-plugin-sharp "^2.2.18"
-    gatsby-source-filesystem "^2.1.17"
+    gatsby-source-filesystem "^2.1.18"
     is-online "^8.2.0"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.15"
     qs "^6.8.0"
 
-gatsby-source-filesystem@2.1.17, gatsby-source-filesystem@^2.1.17:
-  version "2.1.17"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.17.tgz#160a4ad106a24466cf9db8232eac2cfc4efe4569"
-  integrity sha512-pi/Tteg7zhc98D4noJEkPcgM0nHH0McCPSucycJS4Sw3dVCj2upBwWxaqUIaia5avYoklndMry4LViTUkr0YUg==
+gatsby-source-filesystem@2.1.18, gatsby-source-filesystem@^2.1.18:
+  version "2.1.18"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.18.tgz#fcf80c62f243f4bfdb5ff4b17e8b0a79ace3730d"
+  integrity sha512-+LHqeDsK61F1BKiH1QGUNhZBH33tQVqB/iRw4AfKf/IlhfsJo5TzpzouAQv3aZXVj+5L05MSLmP9negHPGerag==
   dependencies:
     "@babel/runtime" "^7.5.5"
     better-queue "^3.8.10"
