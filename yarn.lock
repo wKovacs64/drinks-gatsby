@@ -7387,10 +7387,10 @@ gatsby-remark-external-links@0.0.4:
     unist-util-find "^1.0.1"
     unist-util-visit "^1.1.3"
 
-gatsby-source-contentful@2.1.34:
-  version "2.1.34"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.34.tgz#2aa60209eebe0ad5c9c93283a785621d77aaddd2"
-  integrity sha512-UYr605j+BzlykbaX9ud6wHcJe53gYLVb3c/5Mj9QttgCiBjvnDgSgdr9zUoWiC7BWhse5ZTN81vl7QtJpeG+Zw==
+gatsby-source-contentful@2.1.35:
+  version "2.1.35"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.1.35.tgz#52debffa0a57371a03869dcb92525c59bd81af2f"
+  integrity sha512-xQcmrr+0RiUt5GuJ6xVP8hN8ZlbTOfJqOuTExe78MdcP923MJrAt8GSrvNOaJzt5Lf2R+6AgBoyBpBw2m7Y4kg==
   dependencies:
     "@babel/runtime" "^7.6.0"
     "@hapi/joi" "^15.1.1"
