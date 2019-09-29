@@ -64,6 +64,13 @@ DrinkList.propTypes = {
       }),
       ingredients: PropTypes.arrayOf(PropTypes.string),
       calories: PropTypes.number,
+      rank: PropTypes.number,
+      createdAt: PropTypes.string,
+      notes: PropTypes.shape({
+        childMarkdownRemark: PropTypes.shape({
+          rawMarkdownBody: PropTypes.string,
+        }),
+      }),
     }),
   ).isRequired,
 };

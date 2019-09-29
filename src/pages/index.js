@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import Layout from '../components/layout';
 import Nav from '../components/nav';
-import SearchableDrinksPage from '../components/searchable-drinks-page';
+import DrinkList from '../components/drink-list';
+import sortDrinks from '../utils/sort-drinks';
 
 const IndexPage = ({
   data: {
@@ -11,7 +13,7 @@ const IndexPage = ({
     allContentfulDrink: { edges },
   },
 }) => (
-  <SearchableDrinksPage drinks={edges.map(({ node }) => node)}>
+  <Layout>
     <Helmet
       title={siteMetadata.title}
       meta={[
@@ -29,7 +31,8 @@ const IndexPage = ({
       ]}
     />
     <Nav>All Drinks</Nav>
-  </SearchableDrinksPage>
+    <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
+  </Layout>
 );
 
 export const query = graphql`

@@ -17,6 +17,7 @@
 
 ## Run your own:
 
+1. Create a new app and index at [Algolia][algolia].
 1. Create a new space, content management token, and content delivery (access)
    token at [Contentful][contentful].
 1. Clone this repo and change to the directory.
@@ -53,6 +54,7 @@
 [graphql]: https://graphql.org/
 [emotion]: https://emotion.sh/
 [grid]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+[algolia]: https://www.algolia.com
 [contentful]: https://www.contentful.com/
 [contentful-cli]: https://github.com/contentful/contentful-cli
 [netlify]: https://www.netlify.com/

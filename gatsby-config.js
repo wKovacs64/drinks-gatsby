@@ -1,3 +1,6 @@
+require('./config/dotenv');
+
+const algoliaConfig = require('./config/algolia');
 const contentfulConfig = require('./config/contentful');
 const siteConfig = require('./config/site');
 const buildInfo = require('./config/build-info');
@@ -24,6 +27,16 @@ module.exports = {
             'Expect-CT: enforce, max-age=3600',
           ],
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-algolia',
+      options: {
+        appId: algoliaConfig.appId,
+        apiKey: algoliaConfig.adminKey,
+        indexName: algoliaConfig.indexName,
+        queries: algoliaConfig.queries,
+        chunkSize: algoliaConfig.chunkSize,
       },
     },
     'gatsby-plugin-react-helmet',
