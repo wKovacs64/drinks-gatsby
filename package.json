@@ -54,7 +54,7 @@
     "gatsby-transformer-sharp": "2.2.19",
     "git-current-commit": "1.1.0",
     "lodash": "4.17.15",
-    "match-sorter": "4.0.1",
+    "match-sorter": "4.0.2",
     "prop-types": "15.7.2",
     "react": "16.10.1",
     "react-dom": "16.10.1",
