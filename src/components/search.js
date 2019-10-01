@@ -111,6 +111,13 @@ const Hits = connectHits(({ hits, drinks }) => {
 const SearchBox = connectSearchBox(
   ({ refine, searchTerm, onSearchTermChange }) => {
     const debouncedRefine = React.useCallback(debounce(refine, 350), [refine]);
+    const inputRef = React.useRef(null);
+
+    React.useEffect(() => {
+      if (inputRef.current && searchTerm === '') {
+        inputRef.current.focus();
+      }
+    }, [searchTerm]);
 
     const handleSearchTermChange = ({ target: { value } }) => {
       onSearchTermChange(value);
@@ -126,6 +133,7 @@ const SearchBox = connectSearchBox(
         `}
       >
         <input
+          ref={inputRef}
           name="search"
           aria-label="Search"
           placeholder="Search all drinks..."
