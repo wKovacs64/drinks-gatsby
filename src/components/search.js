@@ -14,6 +14,7 @@ import { appId, indexName, searchKey } from '../../config/algolia';
 import mq from '../utils/mq';
 import DrinkList from './drink-list';
 import BrokenGlassIcon from './broken-glass-icon';
+import AlgoliaIcon from './algolia-icon';
 
 const NoDrinksFound = () => (
   <section
@@ -78,6 +79,30 @@ const SearchBox = connectSearchBox(
           margin-bottom: 2rem;
         `}
       >
+        <a
+          href="https://www.algolia.com"
+          title="Search by Algolia"
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+        >
+          <AlgoliaIcon
+            aria-label="Search by Algolia"
+            css={css`
+              background-color: white;
+              height: 2rem;
+              width: 2rem;
+              padding: 0.5rem;
+              transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+              transition-property: height, width, padding;
+              a:focus &, /* inside a focused <a> */
+              &:hover {
+                height: 2.5rem;
+                width: 2.5rem;
+                padding: 0.25rem;
+              }
+            `}
+          />
+        </a>
         <input
           ref={inputRef}
           name="search"
