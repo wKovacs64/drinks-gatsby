@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import VisuallyHidden from '@reach/visually-hidden';
 import { MdArrowUpward, MdClear } from 'react-icons/md';
@@ -15,59 +14,6 @@ import { appId, indexName, searchKey } from '../../config/algolia';
 import mq from '../utils/mq';
 import DrinkList from './drink-list';
 import BrokenGlassIcon from './broken-glass-icon';
-
-const Hit = ({ objectID, title, imagePreviewSrc }) => (
-  <Link
-    aria-label={title}
-    to={`/${objectID}/`}
-    css={css`
-      color: currentColor;
-      cursor: pointer;
-      border: 2px solid transparent;
-      text-decoration: none;
-      :hover,
-      :focus {
-        border-color: currentColor;
-      }
-    `}
-  >
-    <article
-      css={css`
-        display: flex;
-        align-items: center;
-      `}
-    >
-      <img
-        alt="" // decorative image
-        src={`https:${imagePreviewSrc}`}
-        css={css`
-          margin-right: 1rem;
-        `}
-      />
-      <h3
-        css={css`
-          margin: 0;
-          font-weight: 400;
-          ${mq.md} {
-            font-size: 1.5rem;
-          }
-          ${mq.lg} {
-            font-weight: 300;
-            font-size: 2rem;
-          }
-        `}
-      >
-        {title}
-      </h3>
-    </article>
-  </Link>
-);
-
-Hit.propTypes = {
-  objectID: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  imagePreviewSrc: PropTypes.string.isRequired,
-};
 
 const NoDrinksFound = () => (
   <section
