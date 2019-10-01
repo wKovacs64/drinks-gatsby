@@ -66,7 +66,8 @@ const Footer = ({ onFeedbackClick }) => (
           }
         `}
         href="https://github.com/wKovacs64/drinks"
-        rel="noopener noreferrer"
+        target="_blank"
+        rel="nofollow noopener noreferrer"
       >
         <FaGithub aria-label="View source on GitHub" size={32} />
       </a>
