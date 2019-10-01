@@ -1,3 +1,6 @@
+require('./config/dotenv');
+
+const algoliaConfig = require('./config/algolia');
 const contentfulConfig = require('./config/contentful');
 const siteConfig = require('./config/site');
 const buildInfo = require('./config/build-info');
@@ -18,12 +21,22 @@ module.exports = {
       options: {
         headers: {
           '/*': [
-            "Content-Security-Policy: default-src 'self'; connect-src 'self' https://images.ctfassets.net/; img-src data: https:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; worker-src 'self'",
+            "Content-Security-Policy: default-src 'self'; connect-src 'self' https://images.ctfassets.net/ https://*.algolianet.com; img-src data: https:; script-src 'self' 'unsafe-inline' https://*.algolianet.com; style-src 'self' 'unsafe-inline'; worker-src 'self'",
             "Feature-Policy: geolocation 'none'; camera 'none'; microphone 'none'; speaker 'none'; payment 'none'; usb 'none'",
             'Referrer-Policy: no-referrer-when-downgrade',
             'Expect-CT: enforce, max-age=3600',
           ],
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-algolia',
+      options: {
+        appId: algoliaConfig.appId,
+        apiKey: algoliaConfig.adminKey,
+        indexName: algoliaConfig.indexName,
+        queries: algoliaConfig.queries,
+        chunkSize: algoliaConfig.chunkSize,
       },
     },
     'gatsby-plugin-react-helmet',

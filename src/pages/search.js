@@ -1,49 +1,49 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import { css } from '@emotion/core';
-import startCase from 'lodash/startCase';
+import Helmet from 'react-helmet';
 import Layout from '../components/layout';
-import Nav from '../components/nav';
-import NavDivider from '../components/nav-divider';
-import NavLink from '../components/nav-link';
-import DrinkList from '../components/drink-list';
-import sortDrinks from '../utils/sort-drinks';
+import Search from '../components/search';
 
-const TagPage = ({
-  pageContext: { tag },
+const SearchPage = ({
   data: {
-    allContentfulDrink: { edges, totalCount },
+    allContentfulDrink: { edges },
   },
-}) => (
-  <Layout>
-    <Helmet
-      title={startCase(`${tag} drinks`)}
-      meta={[{ name: 'description', content: `Drinks using ${tag}` }]}
-    />
-    <Nav>
-      <NavLink to="/">All Drinks</NavLink>
-      <NavDivider />
-      <NavLink to="/tags/">Tags</NavLink>
-      <NavDivider />
-      {tag}
-      <span
-        css={css`
-          margin-left: 0.5rem;
-        `}
-      >
-        ( {totalCount} )
-      </span>
-    </Nav>
-    <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
-  </Layout>
-);
+}) => {
+  const [searchTerm, setSearchTerm] = React.useState('');
+
+  React.useEffect(() => {
+    const handleEsc = ({ keyCode }) => {
+      if (keyCode === 27 /* ESC */) {
+        setSearchTerm('');
+      }
+    };
+
+    window.addEventListener('keydown', handleEsc);
+
+    return () => {
+      window.removeEventListener('keydown', handleEsc);
+    };
+  }, []);
+
+  return (
+    <Layout>
+      <Helmet
+        title="Search Drinks"
+        meta={[{ name: 'description', content: 'Search Drinks' }]}
+      />
+      <Search
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        drinks={edges.map(({ node }) => node)}
+      />
+    </Layout>
+  );
+};
 
 export const query = graphql`
-  query($tag: String!) {
-    allContentfulDrink(filter: { tags: { glob: $tag } }) {
-      totalCount
+  query {
+    allContentfulDrink {
       edges {
         node {
           title
@@ -68,13 +68,9 @@ export const query = graphql`
   }
 `;
 
-TagPage.propTypes = {
-  pageContext: PropTypes.shape({
-    tag: PropTypes.string,
-  }).isRequired,
+SearchPage.propTypes = {
   data: PropTypes.shape({
     allContentfulDrink: PropTypes.shape({
-      totalCount: PropTypes.number,
       edges: PropTypes.arrayOf(
         PropTypes.shape({
           node: PropTypes.shape({
@@ -99,4 +95,4 @@ TagPage.propTypes = {
   }).isRequired,
 };
 
-export default TagPage;
+export default SearchPage;

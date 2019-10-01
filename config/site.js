@@ -1,7 +1,3 @@
-const dotenv = require('dotenv');
-
-dotenv.config();
-
 const title = process.env.SITE_TITLE;
 const description = process.env.SITE_DESCRIPTION;
 const imageUrl = process.env.SITE_IMAGE_URL;

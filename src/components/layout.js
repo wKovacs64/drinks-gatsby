@@ -13,7 +13,7 @@ import Main from './main';
 import Footer from './footer';
 import mq from '../utils/mq';
 
-function Layout({ children, onSearchTermChange, withSearch }) {
+const Layout = ({ children }) => {
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const {
     site: { siteMetadata },
@@ -105,11 +105,7 @@ function Layout({ children, onSearchTermChange, withSearch }) {
               }
             `}
           >
-            <Header
-              siteTitle={siteMetadata.title}
-              onSearchTermChange={onSearchTermChange}
-              withSearch={withSearch}
-            />
+            <Header siteTitle={siteMetadata.title} />
             <noscript>
               <p
                 css={css`
@@ -132,17 +128,10 @@ function Layout({ children, onSearchTermChange, withSearch }) {
       )}
     </ClassNames>
   );
-}
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  onSearchTermChange: PropTypes.func,
-  withSearch: PropTypes.bool,
-};
-
-Layout.defaultProps = {
-  onSearchTermChange: () => {},
-  withSearch: false,
 };
 
 export default Layout;
