@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
+import focusStyles from '../styles/focus';
 
 const TagLink = styled(Link)`
   text-decoration: none;
@@ -15,6 +16,7 @@ const TagLink = styled(Link)`
     background-color: #eedebf;
     border-color: currentColor;
   }
+  ${focusStyles};
 `;
 
 export default TagLink;

@@ -29,6 +29,7 @@ const DrinkList = ({ drinks, ...props }) => (
         to={`/${drink.slug}/`}
         key={drink.slug}
         css={css`
+          outline: none;
           text-decoration: none;
         `}
       >

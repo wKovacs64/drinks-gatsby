@@ -6,16 +6,17 @@ import styled from '@emotion/styled';
 import VisuallyHidden from '@reach/visually-hidden';
 import { MdSearch } from 'react-icons/md';
 import constrainWidth from '../styles/constrain-width';
+import focusStyles from '../styles/focus';
 import mq from '../utils/mq';
 
 const HeaderLink = styled(Link)`
   color: currentColor;
   text-decoration: none;
-  transition: color 0.3s ease;
   &:hover,
   &:focus {
     color: #f4f4f4;
   }
+  ${focusStyles};
 `;
 
 const Header = ({ siteTitle }) => (
