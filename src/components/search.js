@@ -12,6 +12,7 @@ import {
 import debounce from 'lodash/debounce';
 import { appId, indexName, searchKey } from '../../config/algolia';
 import mq from '../utils/mq';
+import { focusStyles } from '../styles';
 import DrinkList from './drink-list';
 import BrokenGlassIcon from './broken-glass-icon';
 import AlgoliaIcon from './algolia-icon';
@@ -75,6 +76,7 @@ const SearchBox = connectSearchBox(
       <div
         css={css`
           display: flex;
+          background-color: white;
           height: 3rem;
           margin-bottom: 2rem;
         `}
@@ -84,21 +86,20 @@ const SearchBox = connectSearchBox(
           title="Search by Algolia"
           target="_blank"
           rel="nofollow noopener noreferrer"
+          css={css`
+            ${focusStyles};
+          `}
         >
           <AlgoliaIcon
             aria-label="Search by Algolia"
             css={css`
-              background-color: white;
               height: 2rem;
               width: 2rem;
               padding: 0.5rem;
-              transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-              transition-property: height, width, padding;
-              a:focus &, /* inside a focused <a> */
+              opacity: 0.9;
+              a:focus &, /* inside a focused a */
               &:hover {
-                height: 2.5rem;
-                width: 2.5rem;
-                padding: 0.25rem;
+                opacity: 1;
               }
             `}
           />
@@ -120,6 +121,10 @@ const SearchBox = connectSearchBox(
             border: none;
             padding: 1rem;
             width: 100%;
+            /* horizontal margin to account for 3px box-shadow on focus */
+            margin-left: 3px;
+            margin-right: 3px;
+            ${focusStyles};
           `}
         />
         <button
@@ -133,6 +138,7 @@ const SearchBox = connectSearchBox(
               color: #6d372a;
               background-color: #eedebf;
             }
+            ${focusStyles};
           `}
           type="button"
           onClick={() => onSearchTermChange('')}
