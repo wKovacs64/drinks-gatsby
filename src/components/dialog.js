@@ -4,7 +4,8 @@ import { css } from '@emotion/core';
 import { Dialog as ReachDialog } from '@reach/dialog';
 import '@reach/dialog/styles.css';
 import VisuallyHidden from '@reach/visually-hidden';
-import CloseIcon from './close-icon';
+import { MdClear } from 'react-icons/md';
+import { focusStyles } from '../styles';
 import mq from '../utils/mq';
 
 const Dialog = ({ title, isOpen, onDismiss, children }) => (
@@ -45,24 +46,23 @@ const Dialog = ({ title, isOpen, onDismiss, children }) => (
         </h3>
       )}
       <button
-        type="button"
         css={css`
           background-color: transparent;
-          border-style: none;
+          border: none;
           cursor: pointer;
-          font-weight: 400;
-          font-size: 1.25rem;
+          padding: 0;
+          opacity: 0.8;
+          &:hover,
+          &:focus {
+            opacity: 1;
+          }
+          ${focusStyles};
         `}
+        type="button"
         onClick={onDismiss}
       >
-        <VisuallyHidden>Close</VisuallyHidden>
-        <span aria-hidden>
-          <CloseIcon
-            css={css`
-              color: #6d372a;
-            `}
-          />
-        </span>
+        <VisuallyHidden>Clear</VisuallyHidden>
+        <MdClear color="#6d372a" aria-hidden size={32} />
       </button>
     </section>
     {children}

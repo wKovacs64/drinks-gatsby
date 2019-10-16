@@ -1,6 +1,7 @@
 import React from 'react';
 import { css, Global } from '@emotion/core';
 import mq from '../utils/mq';
+import { focusStyles } from '../styles';
 
 const FeedbackForm = () => (
   <>
@@ -47,6 +48,7 @@ const FeedbackForm = () => (
           ${mq.sm} {
             grid-column: span 1;
           }
+          ${focusStyles};
         `}
       />
       <input
@@ -63,6 +65,7 @@ const FeedbackForm = () => (
           ${mq.sm} {
             grid-column: span 1;
           }
+          ${focusStyles};
         `}
       />
       <textarea
@@ -81,6 +84,7 @@ const FeedbackForm = () => (
           border: 2px solid rgba(0, 0, 0, 0.3);
           padding: 1rem;
           grid-column: span 2;
+          ${focusStyles};
         `}
       />
       <button
@@ -101,6 +105,7 @@ const FeedbackForm = () => (
             background-color: #eedebf;
             border-color: currentColor;
           }
+          ${focusStyles};
           letter-spacing: 0.1em;
           text-transform: uppercase;
           font-weight: 400;
