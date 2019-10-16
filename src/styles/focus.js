@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 
-export const focusStyles = css`
+export const focus = css`
   &:focus {
     transition: 0.1s ease;
     transition-property: color, background-color, border-color, box-shadow;

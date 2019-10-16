@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import { FaGithub } from 'react-icons/fa';
 import mq from '../utils/mq';
-import { constrainWidth, focusStyles } from '../styles';
+import { constrainWidth, focus } from '../styles';
 
 const Footer = ({ onFeedbackClick }) => (
   <footer
@@ -46,7 +46,7 @@ const Footer = ({ onFeedbackClick }) => (
             color: #f4f4f4;
             border-color: #f4f4f4;
           }
-          ${focusStyles};
+          ${focus};
           ${mq.md} {
             padding: 1rem;
           }
@@ -62,7 +62,7 @@ const Footer = ({ onFeedbackClick }) => (
           &:focus {
             color: #f4f4f4;
           }
-          ${focusStyles};
+          ${focus};
         `}
         href="https://github.com/wKovacs64/drinks"
         target="_blank"

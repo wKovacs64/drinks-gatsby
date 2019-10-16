@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import mq from '../utils/mq';
-import { focusStyles } from '../styles';
+import { focus } from '../styles';
 
 const Notes = ({ children }) => (
   <div
@@ -33,7 +33,7 @@ const Notes = ({ children }) => (
         &:focus {
           border-color: #a62304;
         }
-        ${focusStyles};
+        ${focus};
       }
       ul {
         list-style-type: square;

@@ -12,7 +12,7 @@ import {
 import debounce from 'lodash/debounce';
 import { appId, indexName, searchKey } from '../../config/algolia';
 import mq from '../utils/mq';
-import { focusStyles } from '../styles';
+import { focus } from '../styles';
 import DrinkList from './drink-list';
 import BrokenGlassIcon from './broken-glass-icon';
 import AlgoliaIcon from './algolia-icon';
@@ -87,7 +87,7 @@ const SearchBox = connectSearchBox(
           target="_blank"
           rel="nofollow noopener noreferrer"
           css={css`
-            ${focusStyles};
+            ${focus};
           `}
         >
           <AlgoliaIcon
@@ -124,7 +124,7 @@ const SearchBox = connectSearchBox(
             /* horizontal margin to account for 3px box-shadow on focus */
             margin-left: 3px;
             margin-right: 3px;
-            ${focusStyles};
+            ${focus};
           `}
         />
         <button
@@ -138,7 +138,7 @@ const SearchBox = connectSearchBox(
               color: #6d372a;
               background-color: #eedebf;
             }
-            ${focusStyles};
+            ${focus};
           `}
           type="button"
           onClick={() => onSearchTermChange('')}

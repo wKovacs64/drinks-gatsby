@@ -5,7 +5,7 @@ import { Dialog as ReachDialog } from '@reach/dialog';
 import '@reach/dialog/styles.css';
 import VisuallyHidden from '@reach/visually-hidden';
 import { MdClear } from 'react-icons/md';
-import { focusStyles } from '../styles';
+import { focus } from '../styles';
 import mq from '../utils/mq';
 
 const Dialog = ({ title, isOpen, onDismiss, children }) => (
@@ -56,7 +56,7 @@ const Dialog = ({ title, isOpen, onDismiss, children }) => (
           &:focus {
             opacity: 1;
           }
-          ${focusStyles};
+          ${focus};
         `}
         type="button"
         onClick={onDismiss}

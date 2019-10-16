@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import VisuallyHidden from '@reach/visually-hidden';
 import { MdSearch } from 'react-icons/md';
 import mq from '../utils/mq';
-import { constrainWidth, focusStyles } from '../styles';
+import { constrainWidth, focus } from '../styles';
 
 const HeaderLink = styled(Link)`
   color: currentColor;
@@ -15,7 +15,7 @@ const HeaderLink = styled(Link)`
   &:focus {
     color: #f4f4f4;
   }
-  ${focusStyles};
+  ${focus};
 `;
 
 const Header = ({ siteTitle }) => (
