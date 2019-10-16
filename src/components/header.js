@@ -5,9 +5,8 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import VisuallyHidden from '@reach/visually-hidden';
 import { MdSearch } from 'react-icons/md';
-import constrainWidth from '../styles/constrain-width';
-import focusStyles from '../styles/focus';
 import mq from '../utils/mq';
+import { constrainWidth, focusStyles } from '../styles';
 
 const HeaderLink = styled(Link)`
   color: currentColor;

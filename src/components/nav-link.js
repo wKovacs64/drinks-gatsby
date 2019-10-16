@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
-import focusStyles from '../styles/focus';
+import { focusStyles } from '../styles';
 
 export default styled(Link)`
   padding-bottom: 0.25rem;

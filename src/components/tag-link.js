@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
-import focusStyles from '../styles/focus';
+import { focusStyles } from '../styles';
 
 const TagLink = styled(Link)`
   text-decoration: none;
