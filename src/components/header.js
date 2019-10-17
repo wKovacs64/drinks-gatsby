@@ -5,17 +5,17 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import VisuallyHidden from '@reach/visually-hidden';
 import { MdSearch } from 'react-icons/md';
-import constrainWidth from '../styles/constrain-width';
 import mq from '../utils/mq';
+import { constrainWidth, focus } from '../styles';
 
 const HeaderLink = styled(Link)`
   color: currentColor;
   text-decoration: none;
-  transition: color 0.3s ease;
   &:hover,
   &:focus {
     color: #f4f4f4;
   }
+  ${focus};
 `;
 
 const Header = ({ siteTitle }) => (

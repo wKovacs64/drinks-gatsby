@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
-import constrainWidth from '../styles/constrain-width';
 import mq from '../utils/mq';
+import { constrainWidth } from '../styles';
 
 const Main = ({ children, ...props }) => (
   <main

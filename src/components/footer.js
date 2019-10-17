@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import { FaGithub } from 'react-icons/fa';
-import constrainWidth from '../styles/constrain-width';
 import mq from '../utils/mq';
+import { constrainWidth, focus } from '../styles';
 
 const Footer = ({ onFeedbackClick }) => (
   <footer
@@ -41,13 +41,12 @@ const Footer = ({ onFeedbackClick }) => (
           font-size: 1rem;
           padding: 0.5rem;
           white-space: nowrap;
-          transition: 0.3s ease;
-          transition-property: color, border-color;
           &:hover,
           &:focus {
             color: #f4f4f4;
             border-color: #f4f4f4;
           }
+          ${focus};
           ${mq.md} {
             padding: 1rem;
           }
@@ -59,11 +58,11 @@ const Footer = ({ onFeedbackClick }) => (
         css={css`
           color: currentColor;
           text-decoration: none;
-          transition: color 0.3s ease;
           &:hover,
           &:focus {
             color: #f4f4f4;
           }
+          ${focus};
         `}
         href="https://github.com/wKovacs64/drinks"
         target="_blank"
