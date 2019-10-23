@@ -40,7 +40,7 @@
     "@wkovacs64/normalize.css": "8.0.1",
     "algoliasearch": "3.35.1",
     "dotenv": "8.2.0",
-    "gatsby": "2.17.1",
+    "gatsby": "2.17.2",
     "gatsby-image": "2.2.29",
     "gatsby-plugin-algolia": "0.3.4",
     "gatsby-plugin-emotion": "4.1.12",
