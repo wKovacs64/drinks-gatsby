@@ -69,7 +69,7 @@
     "@commitlint/config-conventional": "8.2.0",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
-    "eslint": "6.5.1",
+    "eslint": "6.6.0",
     "eslint-plugin-emotion": "10.0.14",
     "eslint-plugin-wkovacs64": "2.0.3",
     "husky": "3.0.9",
