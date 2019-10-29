@@ -11,6 +11,7 @@
 - [Gatsby][gatsby] (static site generator for [React][react], powered by
   [GraphQL][graphql])
 - [Contentful][contentful] (headless CMS)
+- [Algolia][algolia] (search)
 - [Netlify][netlify] (hosting, form handling, and continuous deployment)
 - [Emotion][emotion] (CSS-in-JS)
 - [CSS Grid Layout][grid]
@@ -54,9 +55,9 @@
 [graphql]: https://graphql.org/
 [emotion]: https://emotion.sh/
 [grid]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
-[algolia]: https://www.algolia.com
 [contentful]: https://www.contentful.com/
 [contentful-cli]: https://github.com/contentful/contentful-cli
+[algolia]: https://www.algolia.com
 [netlify]: https://www.netlify.com/
 [deploy-image]: https://www.netlify.com/img/deploy/button.svg
 [deploy-link]:
