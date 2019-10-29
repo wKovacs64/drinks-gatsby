@@ -8,9 +8,15 @@ import { MdClear } from 'react-icons/md';
 import { focus } from '../styles';
 import mq from '../utils/mq';
 
-const Dialog = ({ title, isOpen, onDismiss, children }) => (
+const Dialog = ({
+  'aria-label': ariaLabel,
+  title,
+  isOpen,
+  onDismiss,
+  children,
+}) => (
   <ReachDialog
-    role="dialog"
+    aria-label={ariaLabel}
     isOpen={isOpen}
     onDismiss={onDismiss}
     css={css`
@@ -70,6 +76,7 @@ const Dialog = ({ title, isOpen, onDismiss, children }) => (
 );
 
 Dialog.propTypes = {
+  'aria-label': PropTypes.string.isRequired,
   title: PropTypes.string,
   isOpen: PropTypes.bool.isRequired,
   onDismiss: PropTypes.func,

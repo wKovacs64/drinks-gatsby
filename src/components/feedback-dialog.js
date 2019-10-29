@@ -5,7 +5,12 @@ import FeedbackForm, { FeedbackFormSkeleton } from './feedback-form';
 
 const FeedbackDialog = ({ isOpen, onDismiss }) => (
   <>
-    <Dialog title="Feedback" isOpen={isOpen} onDismiss={onDismiss}>
+    <Dialog
+      aria-label="Feedback"
+      title="Feedback"
+      isOpen={isOpen}
+      onDismiss={onDismiss}
+    >
       <FeedbackForm />
     </Dialog>
     {/*
