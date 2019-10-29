@@ -9,7 +9,19 @@ const kebabCase = require('lodash/kebabCase');
 const drinkPage = path.resolve('./src/templates/drink-page.js');
 const tagPage = path.resolve('./src/templates/tag-page.js');
 
-module.exports.createPages = async ({ graphql, actions: { createPage } }) => {
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  if (stage.startsWith('develop')) {
+    actions.setWebpackConfig({
+      resolve: {
+        alias: {
+          'react-dom': '@hot-loader/react-dom',
+        },
+      },
+    });
+  }
+};
+
+exports.createPages = async ({ graphql, actions: { createPage } }) => {
   (await graphql(`
     {
       allContentfulDrink {
