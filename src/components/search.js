@@ -180,7 +180,9 @@ const NoSearchTerm = () => (
 );
 
 const Search = ({ searchTerm, setSearchTerm, drinks }) => {
-  const searchClient = algoliasearch(appId, searchKey);
+  const searchClient = algoliasearch(appId, searchKey, {
+    _useRequestCache: true,
+  });
 
   return (
     <InstantSearch indexName={indexName} searchClient={searchClient}>
