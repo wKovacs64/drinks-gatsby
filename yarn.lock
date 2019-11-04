@@ -1857,10 +1857,10 @@
   dependencies:
     prop-types "^15.7.2"
 
-"@reach/dialog@0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.5.0.tgz#65157bc0e2828536d9f19722800eb7251e054dc9"
-  integrity sha512-El4GzOJfkdP34vuw53ESXXooydutuJbBpB/GAYTMCXqlVAAqDfIoZ+ycrSd4A853V2SpsEw/82RQ0lX8NQKrcA==
+"@reach/dialog@0.5.3":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.5.3.tgz#45596201062db1cbf2274e19cc684a79b5638c78"
+  integrity sha512-oG2I0vemf4OzSBF0QFFAqgBTEenNafj1zc0ry8h/Mn5XWpsN4R9yQzNZzf9wqlnAwtxEOnt2lsiQ1fLL61BPjw==
   dependencies:
     "@reach/portal" "^0.5.0"
     "@reach/utils" "^0.5.0"
