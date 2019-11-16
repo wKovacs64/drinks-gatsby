@@ -36,7 +36,7 @@
     "@emotion/core": "10.0.22",
     "@emotion/styled": "10.0.23",
     "@reach/dialog": "0.6.1",
-    "@reach/visually-hidden": "0.5.0",
+    "@reach/visually-hidden": "0.6.1",
     "@wkovacs64/normalize.css": "8.0.1",
     "algoliasearch": "3.35.1",
     "dotenv": "8.2.0",
