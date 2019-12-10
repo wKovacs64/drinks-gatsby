@@ -52,7 +52,7 @@
     "gatsby-remark-external-links": "0.0.4",
     "gatsby-source-contentful": "2.1.69",
     "gatsby-source-filesystem": "2.1.42",
-    "gatsby-transformer-remark": "2.6.41",
+    "gatsby-transformer-remark": "2.6.42",
     "gatsby-transformer-sharp": "2.3.9",
     "git-current-commit": "1.1.0",
     "lodash": "4.17.15",
