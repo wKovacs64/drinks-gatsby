@@ -65,7 +65,7 @@
     "typeface-source-sans-pro": "0.0.75"
   },
   "devDependencies": {
-    "@commitlint/cli": "8.3.4",
+    "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
     "@hot-loader/react-dom": "16.11.0",
     "commitizen": "4.0.3",
