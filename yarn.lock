@@ -1723,10 +1723,10 @@
   resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.7.3.tgz#b387aeeb7d3e10da361fd1c07f0392935730c25d"
   integrity sha512-7TZ2PQYeDHc/D9iT8wN6OL9AGlhfk3SvFmyF6H6EiuDeOZ+oJ5xivk5KQcS1h/HVNs226bcIGqpXltcdTiUMtw==
 
-"@reach/visually-hidden@0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.7.2.tgz#fb499a96e2c98734eabada6b37ef4ed78b43ab8f"
-  integrity sha512-/MTMVwjMX0ERmEvZ07L/Uk8A4/HW4u1kZrGyesxhEVOYaGzx8Zm1ker6iiMyQdZldR6HPU82on9CJGpHaIjGEA==
+"@reach/visually-hidden@0.7.3":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.7.3.tgz#cb2b51ce8dcd7da980a2cb4581057298dc6e2e10"
+  integrity sha512-1WNbl1OEr923R36zopBpFODhknoUzY6EtFQYp2nApf8pn2LKyrK2hgQlfl+KOKISuzXgTNoSWTGDtW6glGPA8g==
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
