@@ -1691,21 +1691,21 @@
     string-width "^2.0.0"
     strip-ansi "^3"
 
-"@reach/dialog@0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.7.3.tgz#a42ee1b74d61a09e1e61c5d00adae1a19045a0ee"
-  integrity sha512-2GegrOTPhgihHtkDp95r/GoZx5qoPokPfZxPOF0G0mgaM5YM+yfGX+Nl4h6Z/XmKWVLZRGOTEFT8eTvc913wqA==
+"@reach/dialog@0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.7.4.tgz#60927fbe4e65fe0e7684f8fa1f1b155385cfb5ce"
+  integrity sha512-KKvInRkRSj6TALsKlEVHhWwT6CZAmtGDNG606COMwveEAqXXolQm3dWgIz5H7atUR6rj++f/wOYBAQYZyEfelQ==
   dependencies:
-    "@reach/portal" "^0.7.3"
-    "@reach/utils" "^0.7.3"
+    "@reach/portal" "^0.7.4"
+    "@reach/utils" "^0.7.4"
     prop-types "^15.7.2"
     react-focus-lock "^2.2.1"
     react-remove-scroll "^2.2.0"
 
-"@reach/portal@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.7.3.tgz#6120abf36207bab702d7528e784c9c0e60459903"
-  integrity sha512-kpXoCgY4dku1fy9JdqSX/u+fbvqx5YX420wdEmBY8mnguEtbCEI9uanVMUdfN9dnKO7ZvSqs33edYVYYCVKa9A==
+"@reach/portal@^0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.7.4.tgz#6e182f9061ba52dc6a5e460516b4aedf8623103f"
+  integrity sha512-yI/UUtErNfb3RbWRMfJW1BTJGjE07/OjVONU8qJ65E28rsnLlwk5UDnWeDPvwIpOixXhUaUI5Bk1HEHDqAOa1w==
 
 "@reach/router@^1.2.1":
   version "1.2.1"
@@ -1718,10 +1718,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@reach/utils@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.7.3.tgz#b387aeeb7d3e10da361fd1c07f0392935730c25d"
-  integrity sha512-7TZ2PQYeDHc/D9iT8wN6OL9AGlhfk3SvFmyF6H6EiuDeOZ+oJ5xivk5KQcS1h/HVNs226bcIGqpXltcdTiUMtw==
+"@reach/utils@^0.7.4":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.7.4.tgz#cdd0cff8c57445ce9c2b11204e6a62868f1093a1"
+  integrity sha512-RFhWmeaEfcu+xATfGPH4yjTlgD01ek0D8bVhtP4CgCqV2gnyS0KLAlWshzlAlSrBvr7zmpkA5QZJ1g43vFBSww==
 
 "@reach/visually-hidden@0.7.3":
   version "0.7.3"
