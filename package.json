@@ -35,7 +35,7 @@
   "dependencies": {
     "@emotion/core": "10.0.27",
     "@emotion/styled": "10.0.27",
-    "@reach/dialog": "0.8.3",
+    "@reach/dialog": "0.8.4",
     "@reach/visually-hidden": "0.8.2",
     "@wkovacs64/normalize.css": "8.0.1",
     "algoliasearch": "4.0.2",

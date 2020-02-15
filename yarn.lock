@@ -1795,13 +1795,13 @@
     string-width "^2.0.0"
     strip-ansi "^3"
 
-"@reach/dialog@0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.8.3.tgz#e9f57e8d7c4fd97c76029d5af80657ea2b444015"
-  integrity sha512-n1HMezZOEo6YsT2m1ULOzzdsSL33anZZaAWYgJdtt2W8MAkIjKK8BJstsCMfpC6eSX6UiESPx5M2DDs/4DhvPg==
+"@reach/dialog@0.8.4":
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.8.4.tgz#b6a5f1eda67a8b5848a8e3fab49e4158c95770a1"
+  integrity sha512-7GVG0CjaDcgjp4LaJnyZ7taUCk2AzJRsnMFoijlQ+o0+ImEc7qjOVhoRTLtlzQoUPhBSQBiAb2S4c+4SQy7M4A==
   dependencies:
     "@reach/portal" "^0.8.2"
-    "@reach/utils" "^0.8.3"
+    "@reach/utils" "^0.8.4"
     prop-types "^15.7.2"
     react-focus-lock "^2.2.1"
     react-remove-scroll "^2.2.0"
@@ -1824,10 +1824,10 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@reach/utils@^0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.8.3.tgz#42ad74e0ce8df36818e3afd971ccf019f7065d36"
-  integrity sha512-ri2BNRvQbb27OWyLqpHkMi+pVz4MXZYPhEYc9M0AWHeVyjRjscIV7YlQ4AuqEczHaW/Y1QqDLWd0zJKVtK8b2w==
+"@reach/utils@^0.8.4":
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.8.4.tgz#c5045637401beff8fa5e8e278fafc5af226c2fee"
+  integrity sha512-RZq5Y5K5+CakM5zzecNypP28U60/9sm3PraZznCsfcB/O3+3O0kgg5X+a7IHD3GnRqJVYTzAjA6sral6kPYLKQ==
   dependencies:
     tslib "^1.10.0"
     warning "^4.0.3"
