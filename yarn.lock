@@ -1795,22 +1795,22 @@
     string-width "^2.0.0"
     strip-ansi "^3"
 
-"@reach/dialog@0.8.4":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.8.4.tgz#b6a5f1eda67a8b5848a8e3fab49e4158c95770a1"
-  integrity sha512-7GVG0CjaDcgjp4LaJnyZ7taUCk2AzJRsnMFoijlQ+o0+ImEc7qjOVhoRTLtlzQoUPhBSQBiAb2S4c+4SQy7M4A==
+"@reach/dialog@0.8.5":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.8.5.tgz#e6768897656b3322159ff0e3cb839124f4a9c6c2"
+  integrity sha512-2PqYVTKwGWGGA0O5wc/2+KBsBTqNxbO2P/fW0KWVH6expfDMr5TtBTiHxeF9VS8KmAlSFn2OrUXDIAXozL0zuQ==
   dependencies:
-    "@reach/portal" "^0.8.2"
-    "@reach/utils" "^0.8.4"
+    "@reach/portal" "^0.8.5"
+    "@reach/utils" "^0.8.5"
     prop-types "^15.7.2"
     react-focus-lock "^2.2.1"
     react-remove-scroll "^2.2.0"
     tslib "^1.10.0"
 
-"@reach/portal@^0.8.2":
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.8.2.tgz#7b00910eade9d17a7c141d7923e663a1a5ff8f95"
-  integrity sha512-IXOse/oHYoNQgDB2YqRSx4dKTWQv+JJNWTtGz9tGALF8ePbyNY3tq5zp5bsJIYTV1oL5j/m8PBaM2HSBU4mZRA==
+"@reach/portal@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.8.5.tgz#586e8686e9ba34368b1df3fc9a84c3ef923dd2d3"
+  integrity sha512-YRQgItjxw6DznndN4T3YS6Ikuq+FPZg8fekXeM1feuQSnMlAtEAyYVaMhpAKSD65+Yc9Zu0Utfxp5ji+wO+FLg==
   dependencies:
     tslib "^1.10.0"
 
@@ -1824,10 +1824,10 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@reach/utils@^0.8.4":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.8.4.tgz#c5045637401beff8fa5e8e278fafc5af226c2fee"
-  integrity sha512-RZq5Y5K5+CakM5zzecNypP28U60/9sm3PraZznCsfcB/O3+3O0kgg5X+a7IHD3GnRqJVYTzAjA6sral6kPYLKQ==
+"@reach/utils@^0.8.5":
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.8.5.tgz#6675d6f81054c8dce1b9d535280b0e3c5174fe7d"
+  integrity sha512-nc84exIqBa+EohJPBFjePQP88dBAP4l+tChxwWszzZ+R6tTtSgOg40WyQ5EjPYJFbltnbZIbASHefcEBrFxqng==
   dependencies:
     tslib "^1.10.0"
     warning "^4.0.3"
