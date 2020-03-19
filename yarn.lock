@@ -1759,10 +1759,10 @@
     lodash.debounce "^4.0.8"
     react-dev-utils "^9.1.0"
 
-"@reach/dialog@0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.9.0.tgz#aecd82d1e8ff1749e913409a8721865914ffc66f"
-  integrity sha512-Z36euv6TEtGsAUhzygmaaM8dal3kttkcf53HZnxJw/S5CsclvNk8MVm7XyYdUwIjzuYmOc0CuwOgZ77fYiuPig==
+"@reach/dialog@0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.9.1.tgz#683daf9be621d8a4e7cde2bc0ca545cf6935224c"
+  integrity sha512-UR959q6d5LEeB2OSRhPwRtIW3C7UVXdgxayP1F5+IUW4YlcpC25/FQm86dj8CC1fR7Sgs6z14nF2sIY5l05HxQ==
   dependencies:
     "@reach/portal" "^0.9.0"
     "@reach/utils" "^0.9.0"
