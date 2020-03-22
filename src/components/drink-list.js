@@ -23,7 +23,7 @@ const DrinkList = ({ drinks, ...props }) => (
     `}
     {...props}
   >
-    {drinks.map(drink => (
+    {drinks.map((drink) => (
       <Link
         aria-label={drink.title}
         to={`/${drink.slug}/`}

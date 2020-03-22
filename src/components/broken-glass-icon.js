@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BrokenGlassIcon = props => (
+const BrokenGlassIcon = (props) => (
   <svg
     fill="currentColor"
     viewBox="0 0 612 612"

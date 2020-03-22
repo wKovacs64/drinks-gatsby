@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AlgoliaIcon = props => (
+const AlgoliaIcon = (props) => (
   <svg viewBox="0 0 50 50" width="1em" height="1em" {...props}>
     <g fill="none">
       <path

@@ -25,7 +25,7 @@ const TagList = ({ tags }) => (
       }
     `}
   >
-    {tags.map(tag => (
+    {tags.map((tag) => (
       <TagLink to={`/tags/${kebabCase(tag)}/`} key={tag}>
         <Tag
           css={css`

@@ -89,7 +89,7 @@ const DrinkSummary = ({ drink, stacked, ...props }) => {
                 }
               `}
             >
-              {drink.ingredients.map(ingredient => (
+              {drink.ingredients.map((ingredient) => (
                 <li
                   key={ingredient}
                   css={css`

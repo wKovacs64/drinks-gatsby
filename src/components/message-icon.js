@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MessageIcon = props => (
+const MessageIcon = (props) => (
   <svg
     fill="currentColor"
     viewBox="0 0 181.556 181.556"

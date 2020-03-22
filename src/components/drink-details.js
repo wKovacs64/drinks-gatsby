@@ -29,7 +29,7 @@ const DrinkDetails = ({ drink, ...props }) => (
           }
         `}
       >
-        {drink.tags.map(tag => (
+        {drink.tags.map((tag) => (
           <TagLink
             to={`/tags/${kebabCase(tag)}/`}
             key={tag}

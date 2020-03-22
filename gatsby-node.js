@@ -22,17 +22,19 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 };
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
-  (await graphql(`
-    {
-      allContentfulDrink {
-        edges {
-          node {
-            slug
+  (
+    await graphql(`
+      {
+        allContentfulDrink {
+          edges {
+            node {
+              slug
+            }
           }
         }
       }
-    }
-  `)).data.allContentfulDrink.edges.forEach(({ node: { slug } }) => {
+    `)
+  ).data.allContentfulDrink.edges.forEach(({ node: { slug } }) => {
     createPage({
       path: `${slug}/`,
       component: drinkPage,
@@ -40,15 +42,17 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     });
   });
 
-  (await graphql(`
-    {
-      allContentfulDrink {
-        group(field: tags) {
-          fieldValue
+  (
+    await graphql(`
+      {
+        allContentfulDrink {
+          group(field: tags) {
+            fieldValue
+          }
         }
       }
-    }
-  `)).data.allContentfulDrink.group.forEach(({ fieldValue: tag }) => {
+    `)
+  ).data.allContentfulDrink.group.forEach(({ fieldValue: tag }) => {
     createPage({
       path: `/tags/${kebabCase(tag)}/`,
       component: tagPage,

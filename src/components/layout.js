@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
   `);
 
   function handleFeedbackToggle() {
-    setFeedbackOpen(open => !open);
+    setFeedbackOpen((open) => !open);
   }
 
   return (

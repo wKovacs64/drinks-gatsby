@@ -123,7 +123,7 @@ const FeedbackForm = () => (
 
 // Skeleton version of the feedback form to help the Netlify bots as the real
 // form (inside the dialog) is rendered on-demand
-const FeedbackFormSkeleton = props => (
+const FeedbackFormSkeleton = (props) => (
   <form
     data-netlify="true"
     data-netlify-honeypot="terminator"

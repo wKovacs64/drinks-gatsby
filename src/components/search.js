@@ -47,8 +47,8 @@ const NoDrinksFound = () => (
 
 const Hits = connectHits(({ hits, drinks }) => {
   if (hits.length) {
-    const matchingDrinks = hits.map(hit =>
-      drinks.find(drink => drink.slug === hit.objectID),
+    const matchingDrinks = hits.map((hit) =>
+      drinks.find((drink) => drink.slug === hit.objectID),
     );
     return <DrinkList drinks={matchingDrinks} />;
   }
