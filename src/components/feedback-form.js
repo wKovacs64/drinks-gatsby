@@ -4,7 +4,7 @@ import mq from '../utils/mq';
 import { focus } from '../styles';
 
 const FeedbackForm = () => (
-  <>
+  <React.Fragment>
     <Global
       // Remove Firefox styling of invalid form inputs
       styles={css`
@@ -118,7 +118,7 @@ const FeedbackForm = () => (
         Send
       </button>
     </form>
-  </>
+  </React.Fragment>
 );
 
 // Skeleton version of the feedback form to help the Netlify bots as the real

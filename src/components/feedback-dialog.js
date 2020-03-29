@@ -4,7 +4,7 @@ import Dialog from './dialog';
 import FeedbackForm, { FeedbackFormSkeleton } from './feedback-form';
 
 const FeedbackDialog = ({ isOpen, onDismiss }) => (
-  <>
+  <React.Fragment>
     <Dialog
       aria-label="Feedback"
       title="Feedback"
@@ -18,7 +18,7 @@ const FeedbackDialog = ({ isOpen, onDismiss }) => (
       the real form (inside the dialog) is rendered on-demand
     */}
     <FeedbackFormSkeleton hidden />
-  </>
+  </React.Fragment>
 );
 
 FeedbackDialog.propTypes = {
