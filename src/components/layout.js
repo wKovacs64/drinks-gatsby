@@ -3,7 +3,7 @@ import 'typeface-source-sans-pro';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { IconContext } from 'react-icons';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { css, Global, ClassNames } from '@emotion/core';
 import { useStaticQuery, graphql } from 'gatsby';
 import backgroundImage from '../images/background.jpg';
