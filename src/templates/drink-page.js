@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
 import get from 'lodash/get';
