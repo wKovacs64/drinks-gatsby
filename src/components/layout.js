@@ -6,7 +6,6 @@ import { IconContext } from 'react-icons';
 import { Helmet } from 'react-helmet';
 import { css, Global, ClassNames } from '@emotion/core';
 import { useStaticQuery, graphql } from 'gatsby';
-import backgroundImage from '../images/background.jpg';
 import FeedbackDialog from './feedback-dialog';
 import Header from './header';
 import Main from './main';
@@ -17,6 +16,9 @@ const Layout = ({ children }) => {
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const {
     site: { siteMetadata },
+    file: {
+      childImageSharp: { bgImageSm, bgImageLg },
+    },
   } = useStaticQuery(graphql`
     {
       site {
@@ -24,6 +26,16 @@ const Layout = ({ children }) => {
           title
           buildInfo {
             commit
+          }
+        }
+      }
+      file(relativePath: { eq: "background.jpg" }) {
+        childImageSharp {
+          bgImageSm: fixed(width: 768) {
+            ...GatsbyImageSharpFixed
+          }
+          bgImageLg: fixed(width: 2078) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -52,6 +64,14 @@ const Layout = ({ children }) => {
               }
               html {
                 background-color: #242424;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+                background-image: url(${bgImageSm.src});
+                ${mq.lg} {
+                  background-image: url(${bgImageLg.src});
+                }
               }
               body {
                 font-family: 'Source Sans Pro', -apple-system,
@@ -88,21 +108,6 @@ const Layout = ({ children }) => {
               display: flex;
               flex-direction: column;
               min-height: 100vh;
-              position: relative;
-              &::after {
-                content: '';
-                background-image: url(${backgroundImage});
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-attachment: fixed;
-                background-position: center;
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                z-index: -1;
-              }
             `}
           >
             <Header siteTitle={siteMetadata.title} />
