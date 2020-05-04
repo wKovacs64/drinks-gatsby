@@ -62,7 +62,7 @@
     "react-helmet": "6.0.0",
     "react-icons": "3.10.0",
     "react-instantsearch-dom": "6.4.0",
-    "typeface-source-sans-pro": "1.1.5"
+    "typeface-source-sans-pro": "0.0.75"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
