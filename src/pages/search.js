@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 import Search from '../components/search';
 
 const SearchPage = ({
@@ -10,6 +10,9 @@ const SearchPage = ({
     allContentfulDrink: { edges },
   },
 }) => {
+  const title = 'Search Drinks';
+  const description = 'Search all drinks by ingredient or description';
+
   const [searchTerm, setSearchTerm] = React.useState('');
 
   React.useEffect(() => {
@@ -28,10 +31,7 @@ const SearchPage = ({
 
   return (
     <Layout>
-      <Helmet
-        title="Search Drinks"
-        meta={[{ name: 'description', content: 'Search Drinks' }]}
-      />
+      <SEO title={title} description={description} />
       <Search
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}

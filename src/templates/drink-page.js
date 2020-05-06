@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 import Nav from '../components/nav';
 import NavDivider from '../components/nav-divider';
 import NavLink from '../components/nav-link';
@@ -13,27 +13,19 @@ import DrinkDetails from '../components/drink-details';
 import mq from '../utils/mq';
 
 const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
+  const { title } = drink;
   const description = drink.ingredients.join(', ');
-  const socialImageUrlSrc = drink?.image?.fixed?.src;
-  const socialImageUrl = socialImageUrlSrc && `https:${socialImageUrlSrc}`;
+  const socialImageUrl = `https:${drink.image.fixed.src}`;
+  // TODO: add image alt to Contentful drink model?
+  const socialImageAlt = `${title} in a glass`;
 
   return (
     <Layout>
-      <Helmet
-        title={drink.title}
-        meta={[
-          { name: 'description', content: description },
-          { property: 'og:type', content: 'website' },
-          { property: 'og:title', content: drink.title },
-          { property: 'og:description', content: description },
-          socialImageUrl && { property: 'og:image', content: socialImageUrl },
-          socialImageUrl && { property: 'og:image:alt', content: drink.title },
-          { name: 'twitter:card', content: 'summary_large_image' },
-          { name: 'twitter:title', content: drink.title },
-          { name: 'twitter:description', content: description },
-          socialImageUrl && { name: 'twitter:image', content: socialImageUrl },
-          socialImageUrl && { name: 'twitter:image:alt', content: drink.title },
-        ].filter(Boolean)}
+      <SEO
+        title={title}
+        description={description}
+        socialImageUrl={socialImageUrl}
+        socialImageAlt={socialImageAlt}
       />
       <Nav>
         <NavLink to="/">All Drinks</NavLink>

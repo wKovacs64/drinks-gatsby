@@ -11,6 +11,8 @@ module.exports = {
     description: siteConfig.description,
     // this will be used for the og:image meta tag content value
     imageUrl: siteConfig.imageUrl,
+    // this will be used for the og:image:alt meta tag content value
+    imageAlt: siteConfig.imageAlt,
     buildInfo: {
       commit: buildInfo.commit,
     },
