@@ -1,3 +1,6 @@
+[context.production]
+  YARN_VERSION = "1.22.4"
+
 [build]
   command = "yarn build"
   publish = "public"
