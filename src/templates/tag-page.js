@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
 import startCase from 'lodash/startCase';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 import Nav from '../components/nav';
 import NavDivider from '../components/nav-divider';
 import NavLink from '../components/nav-link';
@@ -16,29 +16,31 @@ const TagPage = ({
   data: {
     allContentfulDrink: { edges, totalCount },
   },
-}) => (
-  <Layout>
-    <Helmet
-      title={startCase(`${tag} drinks`)}
-      meta={[{ name: 'description', content: `Drinks using ${tag}` }]}
-    />
-    <Nav>
-      <NavLink to="/">All Drinks</NavLink>
-      <NavDivider />
-      <NavLink to="/tags/">Tags</NavLink>
-      <NavDivider />
-      {tag}
-      <span
-        css={css`
-          margin-left: 0.5rem;
-        `}
-      >
-        ( {totalCount} )
-      </span>
-    </Nav>
-    <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
-  </Layout>
-);
+}) => {
+  const title = `Drinks with ${startCase(tag)}`;
+  const description = `All drinks containing ${tag}`;
+
+  return (
+    <Layout>
+      <SEO title={title} description={description} />
+      <Nav>
+        <NavLink to="/">All Drinks</NavLink>
+        <NavDivider />
+        <NavLink to="/tags/">Tags</NavLink>
+        <NavDivider />
+        {tag}
+        <span
+          css={css`
+            margin-left: 0.5rem;
+          `}
+        >
+          ( {totalCount} )
+        </span>
+      </Nav>
+      <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
+    </Layout>
+  );
+};
 
 export const query = graphql`
   query($tag: String!) {
