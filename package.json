@@ -18,7 +18,7 @@
     "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "clean": "gatsby clean",
     "cm": "git-cz",
-    "develop": "gatsby develop",
+    "develop": "cross-env GATSBY_HOT_LOADER=fast-refresh gatsby develop",
     "format": "prettier --write \"**/*.{js,ts,tsx,html,json,md,yml,yaml}\"",
     "lint": "eslint --ext \".js,.ts,.tsx\" .",
     "preserve": "yarn build",
@@ -67,7 +67,6 @@
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
-    "@hot-loader/react-dom": "16.13.0",
     "@wkovacs64/prettier-config": "3.0.0",
     "commitizen": "4.1.2",
     "cross-env": "7.0.2",
