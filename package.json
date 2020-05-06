@@ -15,7 +15,7 @@
     "url": "https://github.com/wKovacs64/drinks/issues"
   },
   "scripts": {
-    "build": "gatsby build",
+    "build": "cross-env GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "clean": "gatsby clean",
     "cm": "git-cz",
     "develop": "gatsby develop",
@@ -70,6 +70,7 @@
     "@hot-loader/react-dom": "16.13.0",
     "@wkovacs64/prettier-config": "3.0.0",
     "commitizen": "4.1.2",
+    "cross-env": "7.0.2",
     "cz-conventional-changelog": "3.2.0",
     "eslint": "6.8.0",
     "eslint-plugin-emotion": "10.0.27",
