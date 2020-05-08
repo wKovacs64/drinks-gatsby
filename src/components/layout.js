@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import { IconContext } from 'react-icons';
 import { Helmet } from 'react-helmet';
 import { css, Global, ClassNames } from '@emotion/core';
+import { SkipNavLink, SkipNavContent } from '@reach/skip-nav';
+import '@reach/skip-nav/styles.css';
 import { useStaticQuery, graphql } from 'gatsby';
 import FeedbackDialog from './feedback-dialog';
 import Header from './header';
@@ -103,6 +105,7 @@ const Layout = ({ children }) => {
             isOpen={feedbackOpen}
             onDismiss={handleFeedbackToggle}
           />
+          <SkipNavLink />
           <div
             css={css`
               display: flex;
@@ -126,7 +129,10 @@ const Layout = ({ children }) => {
                 Please enable JavaScript for full site functionality.
               </p>
             </noscript>
-            <Main>{children}</Main>
+            <Main>
+              <SkipNavContent />
+              {children}
+            </Main>
             <Footer onFeedbackClick={handleFeedbackToggle} />
           </div>
         </IconContext.Provider>
