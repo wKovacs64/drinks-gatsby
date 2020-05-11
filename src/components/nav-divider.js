@@ -7,6 +7,7 @@ const NavDivider = (props) => (
       margin: 0 1rem;
     `}
     {...props}
+    aria-hidden
   >
     ⇒
   </span>
