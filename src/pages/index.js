@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { SkipNavContent } from '@reach/skip-nav';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Nav from '../components/nav';
@@ -16,6 +17,7 @@ const IndexPage = ({
     <Layout>
       <SEO />
       <Nav>All Drinks</Nav>
+      <SkipNavContent />
       <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
     </Layout>
   );

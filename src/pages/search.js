@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { SkipNavContent } from '@reach/skip-nav';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Search from '../components/search';
@@ -32,6 +33,7 @@ const SearchPage = ({
   return (
     <Layout>
       <SEO title={title} description={description} />
+      <SkipNavContent />
       <Search
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}

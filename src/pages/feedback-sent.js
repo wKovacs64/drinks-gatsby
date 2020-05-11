@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import { css } from '@emotion/core';
+import { SkipNavContent } from '@reach/skip-nav';
 import Layout from '../components/layout';
 import MessageIcon from '../components/message-icon';
 import mq from '../utils/mq';
@@ -12,6 +13,7 @@ const FeedbackSent = () => (
       title="Feedback sent!"
       meta={[{ name: 'description', content: 'Feedback sent!' }]}
     />
+    <SkipNavContent />
     <div
       css={css`
         color: #eeeeee;
