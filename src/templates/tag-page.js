@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
+import { SkipNavContent } from '@reach/skip-nav';
 import startCase from 'lodash/startCase';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -37,6 +38,7 @@ const TagPage = ({
           ( {totalCount} )
         </span>
       </Nav>
+      <SkipNavContent />
       <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
     </Layout>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { SkipNavContent } from '@reach/skip-nav';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Nav from '../components/nav';
@@ -24,6 +25,7 @@ const TagsPage = ({
         <NavDivider />
         Tags
       </Nav>
+      <SkipNavContent />
       <TagList tags={group.map(({ fieldValue }) => fieldValue)} />
     </Layout>
   );
