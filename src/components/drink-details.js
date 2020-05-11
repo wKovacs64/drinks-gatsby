@@ -31,6 +31,7 @@ const DrinkDetails = ({ drink, ...props }) => (
       >
         {drink.tags.map((tag) => (
           <TagLink
+            aria-label={`Find all drinks containing ${tag}`}
             to={`/tags/${kebabCase(tag)}/`}
             key={tag}
             css={css`
