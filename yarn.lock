@@ -2116,22 +2116,13 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@reach/skip-nav@0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@reach/skip-nav/-/skip-nav-0.10.1.tgz#495db95e03fba3baa53300e3606211d389c0fd3a"
-  integrity sha512-F2/lm43GwD+hNqdRmN3bYLPEN1j/lq2m/wxiQSnNFmeYcLAcizxIbv21WhcFUv7RxIjcNa4WVSs2uX2PEUPWSg==
+"@reach/skip-nav@0.10.2":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@reach/skip-nav/-/skip-nav-0.10.2.tgz#35fbfb8a905b87db405315b1fe3bebdabc1c0d46"
+  integrity sha512-qg0ljczD97Ad6qXghnNxpUEKxsANZE+pKDdHeVQHsOOrY45y3WYL36aAyezJPHFKv21dpujlzMhQzYoigz5Pow==
   dependencies:
-    "@reach/utils" "^0.10.1"
-    tslib "^1.11.1"
-
-"@reach/utils@^0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.10.1.tgz#ee0283f81e161db4126a943b5c908a69f6a66d7e"
-  integrity sha512-YzwZWVK+rSiUATNVtK7H2/ZkT/GhNKmkRjnj3hnVhSYLGxY9uQdfc+npetOqkh4hTAOXiErDa64ybVClR3h0TA==
-  dependencies:
-    "@types/warning" "^3.0.0"
-    tslib "^1.11.1"
-    warning "^4.0.3"
+    "@reach/utils" "^0.10.2"
+    tslib "^1.11.2"
 
 "@reach/utils@^0.10.2":
   version "0.10.2"
