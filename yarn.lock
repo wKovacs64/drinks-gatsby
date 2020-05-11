@@ -2133,12 +2133,12 @@
     tslib "^1.11.2"
     warning "^4.0.3"
 
-"@reach/visually-hidden@0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.10.1.tgz#f57f059c9662ec9e66d30f5e4d88a4dcd06480a1"
-  integrity sha512-X62KLq58f5oG6k6WZMiUj/Dwjm7pEyuApzsYF9sjaZy4fRh8ji+pzzlV8AaDFw/IQMDg6tBwr2tX0SyyMSJs9g==
+"@reach/visually-hidden@0.10.2":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@reach/visually-hidden/-/visually-hidden-0.10.2.tgz#cbe391c78be2139be9583bae5666ab58eb82f682"
+  integrity sha512-RWC2CZsEB6sUOMnBCiuemyesMVNOOKJP53j4RgbdaJ2zGFL6N+bh/E5bfZnAiVhjJ0G0laViE9s7iROaRWNFew==
   dependencies:
-    tslib "^1.11.1"
+    tslib "^1.11.2"
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -17939,11 +17939,6 @@ tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.3:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
-
-tslib@^1.11.1:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
-  integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
 
 tslib@^1.11.2:
   version "1.11.2"
