@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import Glass from './glass';
 import DrinkSummary from './drink-summary';
-import mq from '../utils/mq';
+import { mq } from '../utils';
 
 const DrinkList = ({ drinks, ...props }) => (
   <div

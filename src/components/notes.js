@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
-import mq from '../utils/mq';
 import { focus } from '../styles';
+import { mq } from '../utils';
 
 const Notes = ({ children }) => (
   <div

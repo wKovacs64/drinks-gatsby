@@ -5,7 +5,7 @@ import kebabCase from 'lodash/kebabCase';
 import Notes from './notes';
 import TagLink from './tag-link';
 import Tag from './tag';
-import mq from '../utils/mq';
+import { mq } from '../utils';
 
 const DrinkDetails = ({ drink, ...props }) => (
   <section

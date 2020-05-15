@@ -11,8 +11,8 @@ import {
 } from 'react-instantsearch-dom';
 import debounce from 'lodash/debounce';
 import { appId, indexName, searchKey } from '../../config/algolia';
-import mq from '../utils/mq';
 import { focus } from '../styles';
+import { mq } from '../utils';
 import DrinkList from './drink-list';
 import BrokenGlassIcon from './broken-glass-icon';
 import AlgoliaIcon from './algolia-icon';

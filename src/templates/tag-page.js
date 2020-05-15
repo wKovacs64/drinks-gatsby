@@ -10,7 +10,7 @@ import Nav from '../components/nav';
 import NavDivider from '../components/nav-divider';
 import NavLink from '../components/nav-link';
 import DrinkList from '../components/drink-list';
-import sortDrinks from '../utils/sort-drinks';
+import { sortDrinks } from '../utils';
 
 const TagPage = ({
   pageContext: { tag },

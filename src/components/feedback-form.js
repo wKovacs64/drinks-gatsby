@@ -1,7 +1,7 @@
 import React from 'react';
 import { css, Global } from '@emotion/core';
-import mq from '../utils/mq';
 import { focus } from '../styles';
+import { mq } from '../utils';
 
 const FeedbackForm = () => (
   <React.Fragment>

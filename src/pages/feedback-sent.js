@@ -5,7 +5,7 @@ import { css } from '@emotion/core';
 import { SkipNavContent } from '@reach/skip-nav';
 import Layout from '../components/layout';
 import MessageIcon from '../components/message-icon';
-import mq from '../utils/mq';
+import { mq } from '../utils';
 
 const FeedbackSent = () => (
   <Layout>

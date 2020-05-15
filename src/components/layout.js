@@ -12,7 +12,7 @@ import FeedbackDialog from './feedback-dialog';
 import Header from './header';
 import Main from './main';
 import Footer from './footer';
-import mq from '../utils/mq';
+import { mq } from '../utils';
 
 const Layout = ({ children }) => {
   const [feedbackOpen, setFeedbackOpen] = useState(false);

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import { FaGithub } from 'react-icons/fa';
-import mq from '../utils/mq';
 import { constrainWidth, focus } from '../styles';
+import { mq } from '../utils';
 
 const Footer = ({ onFeedbackClick }) => (
   <footer

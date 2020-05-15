@@ -6,7 +6,7 @@ import '@reach/dialog/styles.css';
 import VisuallyHidden from '@reach/visually-hidden';
 import { MdClear } from 'react-icons/md';
 import { focus } from '../styles';
-import mq from '../utils/mq';
+import { mq } from '../utils';
 
 const Dialog = ({
   'aria-label': ariaLabel,

@@ -11,7 +11,7 @@ import NavLink from '../components/nav-link';
 import Glass from '../components/glass';
 import DrinkSummary from '../components/drink-summary';
 import DrinkDetails from '../components/drink-details';
-import mq from '../utils/mq';
+import { mq } from '../utils';
 
 const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
   const { title } = drink;

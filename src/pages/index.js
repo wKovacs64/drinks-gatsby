@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Nav from '../components/nav';
 import DrinkList from '../components/drink-list';
-import sortDrinks from '../utils/sort-drinks';
+import { sortDrinks } from '../utils';
 
 const IndexPage = ({
   data: {

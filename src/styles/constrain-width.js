@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import mq from '../utils/mq';
+import { mq } from '../utils';
 
 export const constrainWidth = css`
   ${mq.sm} {

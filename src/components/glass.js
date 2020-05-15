@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
-import mq from '../utils/mq';
+import { mq } from '../utils';
 
 const Glass = ({ children, ...props }) => (
   <article

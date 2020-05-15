@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { css } from '@emotion/core';
 import Img from 'gatsby-image';
-import mq from '../utils/mq';
+import { mq } from '../utils';
 
 const DrinkSummary = ({ drink, stacked, ...props }) => {
   const {

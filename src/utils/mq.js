@@ -6,9 +6,10 @@ const breakpoints = {
   xl: 1200, // extra large desktops
 };
 
-const mq = Object.entries(breakpoints).reduce((accumulator, [label, bp]) => {
-  accumulator[label] = `@media (min-width: ${bp}px)`;
-  return accumulator;
-}, {});
-
-export default mq;
+export const mq = Object.entries(breakpoints).reduce(
+  (accumulator, [label, bp]) => {
+    accumulator[label] = `@media (min-width: ${bp}px)`;
+    return accumulator;
+  },
+  {},
+);
