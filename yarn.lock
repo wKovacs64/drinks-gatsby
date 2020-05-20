@@ -8320,10 +8320,10 @@ gatsby-remark-external-links@0.0.4:
     unist-util-find "^1.0.1"
     unist-util-visit "^1.1.3"
 
-gatsby-source-contentful@2.3.10:
-  version "2.3.10"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.3.10.tgz#286df08d43dbeb41c35047f526237e1de926ece7"
-  integrity sha512-pPOUylJ7U7EWvbhSSY4OCN+tgrwyKAiQgGfmoI/aCVLn1MX2nZxpBHd5bg8E0lYkXEVBPQ1hMNzOPnmzOIj1vA==
+gatsby-source-contentful@2.3.11:
+  version "2.3.11"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.3.11.tgz#60a655b8cd0fb0dd465981db90758845bda800bb"
+  integrity sha512-pEv4uK0mqivvvLB/M1HnslFQsbD2UgtoPYN0d1gR/bRO5ZqzyLCAW+8tX1o+rfkkHlNdxxLVb+OIOaZgqjqdlw==
   dependencies:
     "@babel/runtime" "^7.9.6"
     "@contentful/rich-text-types" "^13.4.0"
@@ -8427,10 +8427,10 @@ gatsby-transformer-sharp@2.5.3:
     semver "^5.7.1"
     sharp "^0.25.1"
 
-gatsby@2.22.3:
-  version "2.22.3"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.22.3.tgz#f9e757f8a7fa4590306350405acf33389b53fba4"
-  integrity sha512-bYBbg1I8vY2R+VhMddmlYMZxQ1V4ygVJAM72u3JrEKhUy7cghsQ6rCI5V9O9almZZnoFmPwSePSaj2GuTbmMuw==
+gatsby@2.22.4:
+  version "2.22.4"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.22.4.tgz#57e66e9929970a5030befb86b18c90f92f6c0683"
+  integrity sha512-4j+pj2lYaPc2ToMD5flaWf9YbBut2HcK7DvEKZvwvAlyLeZ0SKEWyLcl3usUaCPcAw4Y5Zr9NOgp3IuePKutFA==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@babel/core" "^7.9.6"
