@@ -35,7 +35,7 @@
   "dependencies": {
     "@emotion/core": "10.0.28",
     "@emotion/styled": "10.0.27",
-    "@reach/dialog": "0.10.2",
+    "@reach/dialog": "0.10.3",
     "@reach/skip-nav": "0.10.2",
     "@reach/visually-hidden": "0.10.2",
     "@wkovacs64/normalize.css": "8.0.1",
