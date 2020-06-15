@@ -2628,6 +2628,18 @@
     react-remove-scroll "^2.3.0"
     tslib "^1.11.2"
 
+"@reach/dialog@0.10.4":
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.10.4.tgz#ac5b74a447def32151255c0464c26130b4d2b1eb"
+  integrity sha512-R7eoasp7p+tm1ma85/WgX7PG9X59O4I7/xPtn+Y0rxGXEPTmtjB/CkcLqaIcdGPmpoSPyFacEkrqB01iHwDSRA==
+  dependencies:
+    "@reach/portal" "0.10.4"
+    "@reach/utils" "0.10.4"
+    prop-types "^15.7.2"
+    react-focus-lock "^2.3.1"
+    react-remove-scroll "^2.3.0"
+    tslib "^2.0.0"
+
 "@reach/menu-button@0.10.3":
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/@reach/menu-button/-/menu-button-0.10.3.tgz#6e72cd122e16f28c4b15a140f329be256adc72c8"
@@ -2655,6 +2667,14 @@
     "@reach/utils" "^0.10.3"
     tabbable "^4.0.0"
     tslib "^1.11.2"
+
+"@reach/portal@0.10.4":
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.10.4.tgz#388b16c1285bf4ad357285dfcbb02b73bf6efe39"
+  integrity sha512-7qkG+l6yvFlafbKW36lG5PzJnRJHEj/KZa9DyNNibojmWd6Z1wUzy34LsMldlvY7v2OMl35SR0iLooiyrtQIww==
+  dependencies:
+    "@reach/utils" "0.10.4"
+    tslib "^2.0.0"
 
 "@reach/portal@^0.10.3":
   version "0.10.3"
@@ -2715,6 +2735,15 @@
     "@reach/visually-hidden" "^0.10.2"
     prop-types "^15.7.2"
     tslib "^1.11.2"
+
+"@reach/utils@0.10.4":
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.10.4.tgz#164ea50910db2d1015505a10fac6a48e7b3c54e7"
+  integrity sha512-eQ7T/5yPE5VMThBOst+7bDQvsa+4z8IH+CMBnT06jUithLCed70pxS0YJVV/4rqV7/PmYwUgSrQOKQLmW6CMcg==
+  dependencies:
+    "@types/warning" "^3.0.0"
+    tslib "^2.0.0"
+    warning "^4.0.3"
 
 "@reach/utils@^0.10.3":
   version "0.10.3"
@@ -19501,7 +19530,7 @@ tslib@^1.11.2:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.2.tgz#9c79d83272c9a7aaf166f73915c9667ecdde3cc9"
   integrity sha512-tTSkux6IGPnUGUd1XAZHcpu85MOkIl5zX49pO+jfsie3eP0B6pyhOlLXm3cAC6T7s+euSDDUUV+Acop5WmtkVg==
 
-tslib@~2.0.0:
+tslib@^2.0.0, tslib@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.0.tgz#18d13fc2dce04051e20f074cc8387fd8089ce4f3"
   integrity sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
