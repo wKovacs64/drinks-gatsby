@@ -10,12 +10,18 @@ import { sortDrinks } from '../utils';
 
 const IndexPage = ({
   data: {
+    site: { siteMetadata },
     allContentfulDrink: { edges },
   },
 }) => {
   return (
     <Layout>
-      <SEO />
+      <SEO
+        title={siteMetadata.title}
+        description={siteMetadata.description}
+        socialImageUrl={siteMetadata.imageUrl}
+        socialImageAlt={siteMetadata.imageAlt}
+      />
       <Nav>All Drinks</Nav>
       <SkipNavContent />
       <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
@@ -25,6 +31,14 @@ const IndexPage = ({
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+        description
+        imageUrl
+        imageAlt
+      }
+    }
     allContentfulDrink {
       edges {
         node {
@@ -52,6 +66,14 @@ export const query = graphql`
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string,
+        description: PropTypes.string,
+        imageUrl: PropTypes.string,
+        imageAlt: PropTypes.string,
+      }),
+    }).isRequired,
     allContentfulDrink: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({

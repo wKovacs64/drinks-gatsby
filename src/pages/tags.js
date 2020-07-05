@@ -11,6 +11,7 @@ import TagList from '../components/tag-list';
 
 const TagsPage = ({
   data: {
+    site: { siteMetadata },
     allContentfulDrink: { group },
   },
 }) => {
@@ -19,7 +20,12 @@ const TagsPage = ({
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <SEO
+        title={title}
+        description={description}
+        socialImageUrl={siteMetadata.imageUrl}
+        socialImageAlt={siteMetadata.imageAlt}
+      />
       <Nav>
         <NavLink to="/">All Drinks</NavLink>
         <NavDivider />
@@ -33,6 +39,12 @@ const TagsPage = ({
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        imageUrl
+        imageAlt
+      }
+    }
     allContentfulDrink {
       group(field: tags) {
         fieldValue
@@ -43,6 +55,12 @@ export const query = graphql`
 
 TagsPage.propTypes = {
   data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        imageUrl: PropTypes.string,
+        imageAlt: PropTypes.string,
+      }),
+    }).isRequired,
     allContentfulDrink: PropTypes.shape({
       group: PropTypes.arrayOf(
         PropTypes.shape({

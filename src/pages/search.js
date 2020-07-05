@@ -8,6 +8,7 @@ import Search from '../components/search';
 
 const SearchPage = ({
   data: {
+    site: { siteMetadata },
     allContentfulDrink: { edges },
   },
 }) => {
@@ -32,7 +33,12 @@ const SearchPage = ({
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <SEO
+        title={title}
+        description={description}
+        socialImageUrl={siteMetadata.imageUrl}
+        socialImageAlt={siteMetadata.imageAlt}
+      />
       <SkipNavContent />
       <Search
         searchTerm={searchTerm}
@@ -45,6 +51,12 @@ const SearchPage = ({
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        imageUrl
+        imageAlt
+      }
+    }
     allContentfulDrink {
       edges {
         node {
@@ -72,6 +84,12 @@ export const query = graphql`
 
 SearchPage.propTypes = {
   data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        imageUrl: PropTypes.string,
+        imageAlt: PropTypes.string,
+      }),
+    }).isRequired,
     allContentfulDrink: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({

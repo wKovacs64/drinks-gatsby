@@ -15,6 +15,7 @@ import { sortDrinks } from '../utils';
 const TagPage = ({
   pageContext: { tag },
   data: {
+    site: { siteMetadata },
     allContentfulDrink: { edges, totalCount },
   },
 }) => {
@@ -23,7 +24,12 @@ const TagPage = ({
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <SEO
+        title={title}
+        description={description}
+        socialImageUrl={siteMetadata.imageUrl}
+        socialImageAlt={siteMetadata.imageAlt}
+      />
       <Nav>
         <NavLink to="/">All Drinks</NavLink>
         <NavDivider />
@@ -46,6 +52,12 @@ const TagPage = ({
 
 export const query = graphql`
   query($tag: String!) {
+    site {
+      siteMetadata {
+        imageUrl
+        imageAlt
+      }
+    }
     allContentfulDrink(filter: { tags: { glob: $tag } }) {
       totalCount
       edges {
@@ -77,6 +89,12 @@ TagPage.propTypes = {
     tag: PropTypes.string,
   }).isRequired,
   data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        imageUrl: PropTypes.string,
+        imageAlt: PropTypes.string,
+      }),
+    }).isRequired,
     allContentfulDrink: PropTypes.shape({
       totalCount: PropTypes.number,
       edges: PropTypes.arrayOf(
