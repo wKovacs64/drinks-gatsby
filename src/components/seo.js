@@ -1,34 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
-const SEO = ({
-  title: pageTitle,
-  description: pageDescription,
-  socialImageUrl,
-  socialImageAlt,
-}) => {
-  const {
-    site: { siteMetadata },
-  } = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          title
-          description
-          imageUrl
-          imageAlt
-        }
-      }
-    }
-  `);
-
-  const title = pageTitle || siteMetadata.title;
-  const description = pageDescription || siteMetadata.description;
-  const imageUrl = socialImageUrl || siteMetadata.imageUrl;
-  const imageAlt = socialImageAlt || siteMetadata.imageAlt;
-
+const SEO = ({ title, description, socialImageUrl, socialImageAlt }) => {
   return (
     <Helmet
       title={title}
@@ -37,13 +11,13 @@ const SEO = ({
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: title },
         { property: 'og:description', content: description },
-        { property: 'og:image', content: imageUrl },
-        { property: 'og:image:alt', content: imageAlt },
+        { property: 'og:image', content: socialImageUrl },
+        { property: 'og:image:alt', content: socialImageAlt },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: title },
         { name: 'twitter:description', content: description },
-        { name: 'twitter:image', content: imageUrl },
-        { name: 'twitter:image:alt', content: imageAlt },
+        { name: 'twitter:image', content: socialImageUrl },
+        { name: 'twitter:image:alt', content: socialImageAlt },
       ]}
     />
   );
