@@ -1,12 +1,9 @@
-import '@wkovacs64/normalize.css';
-import 'typeface-source-sans-pro';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { IconContext } from 'react-icons';
 import { Helmet } from 'react-helmet';
 import { css, Global, ClassNames } from '@emotion/core';
 import { SkipNavLink } from '@reach/skip-nav';
-import '@reach/skip-nav/styles.css';
 import { useStaticQuery, graphql } from 'gatsby';
 import FeedbackDialog from './feedback-dialog';
 import Header from './header';
