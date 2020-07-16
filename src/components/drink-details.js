@@ -7,50 +7,52 @@ import TagLink from './tag-link';
 import Tag from './tag';
 import { mq } from '../utils';
 
-const DrinkDetails = ({ drink, ...props }) => (
-  <section
-    css={css`
-      background-color: #eeeeee;
-      padding: 2rem;
-      font-size: 1.25rem;
-    `}
-    {...props}
-  >
-    {drink.notes && <Notes>{drink.notes.childMarkdownRemark.html}</Notes>}
-    {drink.tags && (
-      <div
-        css={css`
-          display: flex;
-          flex-wrap: wrap;
-          border-top: 1px dotted #cccccc;
-          padding-top: 1rem;
-          ${mq.lg} {
-            justify-content: flex-end;
-          }
-        `}
-      >
-        {drink.tags.map((tag) => (
-          <TagLink
-            aria-label={`Find all drinks containing ${tag}`}
-            to={`/tags/${kebabCase(tag)}/`}
-            key={tag}
-            css={css`
-              margin-top: 1rem;
-              margin-left: 0;
-              margin-right: 1rem;
-              ${mq.lg} {
-                margin-left: 1rem;
-                margin-right: 0;
-              }
-            `}
-          >
-            <Tag>{tag}</Tag>
-          </TagLink>
-        ))}
-      </div>
-    )}
-  </section>
-);
+function DrinkDetails({ drink, ...props }) {
+  return (
+    <section
+      css={css`
+        background-color: #eeeeee;
+        padding: 2rem;
+        font-size: 1.25rem;
+      `}
+      {...props}
+    >
+      {drink.notes && <Notes>{drink.notes.childMarkdownRemark.html}</Notes>}
+      {drink.tags && (
+        <div
+          css={css`
+            display: flex;
+            flex-wrap: wrap;
+            border-top: 1px dotted #cccccc;
+            padding-top: 1rem;
+            ${mq.lg} {
+              justify-content: flex-end;
+            }
+          `}
+        >
+          {drink.tags.map((tag) => (
+            <TagLink
+              aria-label={`Find all drinks containing ${tag}`}
+              to={`/tags/${kebabCase(tag)}/`}
+              key={tag}
+              css={css`
+                margin-top: 1rem;
+                margin-left: 0;
+                margin-right: 1rem;
+                ${mq.lg} {
+                  margin-left: 1rem;
+                  margin-right: 0;
+                }
+              `}
+            >
+              <Tag>{tag}</Tag>
+            </TagLink>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
 
 DrinkDetails.propTypes = {
   drink: PropTypes.shape({

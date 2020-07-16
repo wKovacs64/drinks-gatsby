@@ -12,13 +12,13 @@ import NavLink from '../components/nav-link';
 import DrinkList from '../components/drink-list';
 import { sortDrinks } from '../utils';
 
-const TagPage = ({
+function TagPage({
   pageContext: { tag },
   data: {
     site: { siteMetadata },
     allContentfulDrink: { edges, totalCount },
   },
-}) => {
+}) {
   const title = `Drinks with ${startCase(tag)}`;
   const description = `All drinks containing ${tag}`;
 
@@ -48,7 +48,7 @@ const TagPage = ({
       <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
     </Layout>
   );
-};
+}
 
 export const query = graphql`
   query($tag: String!) {

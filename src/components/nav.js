@@ -3,30 +3,32 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import { mq } from '../utils';
 
-const Nav = ({ children, ...props }) => (
-  <nav
-    css={css`
-      color: #eeeeee;
-      padding: 0 1rem;
-      margin-bottom: 1rem;
-      ${mq.sm} {
-        padding: 0;
-        margin-bottom: 2rem;
-      }
-    `}
-    {...props}
-  >
-    <ul
+function Nav({ children, ...props }) {
+  return (
+    <nav
       css={css`
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
+        color: #eeeeee;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+        ${mq.sm} {
+          padding: 0;
+          margin-bottom: 2rem;
+        }
       `}
+      {...props}
     >
-      {children}
-    </ul>
-  </nav>
-);
+      <ul
+        css={css`
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+        `}
+      >
+        {children}
+      </ul>
+    </nav>
+  );
+}
 
 Nav.propTypes = {
   children: PropTypes.node,

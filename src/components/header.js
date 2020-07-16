@@ -18,46 +18,48 @@ const HeaderLink = styled(Link)`
   ${focus};
 `;
 
-const Header = ({ siteTitle }) => (
-  <header
-    css={css`
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #cccccc;
-      background-color: #111111;
-      padding: 1rem;
-      ${mq.md} {
-        padding: 2rem;
-      }
-    `}
-  >
-    <section
+function Header({ siteTitle }) {
+  return (
+    <header
       css={css`
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        flex-wrap: wrap;
-        width: 100%;
-        ${constrainWidth};
+        color: #cccccc;
+        background-color: #111111;
+        padding: 1rem;
+        ${mq.md} {
+          padding: 2rem;
+        }
       `}
     >
-      <h1
+      <section
         css={css`
-          font-weight: 300;
-          margin: 0;
-          padding: 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          width: 100%;
+          ${constrainWidth};
         `}
       >
-        <HeaderLink to="/">{siteTitle}</HeaderLink>
-      </h1>
-      <HeaderLink to="/search/">
-        <VisuallyHidden>Search</VisuallyHidden>
-        <MdSearch aria-hidden size={32} />
-      </HeaderLink>
-    </section>
-  </header>
-);
+        <h1
+          css={css`
+            font-weight: 300;
+            margin: 0;
+            padding: 0;
+          `}
+        >
+          <HeaderLink to="/">{siteTitle}</HeaderLink>
+        </h1>
+        <HeaderLink to="/search/">
+          <VisuallyHidden>Search</VisuallyHidden>
+          <MdSearch aria-hidden size={32} />
+        </HeaderLink>
+      </section>
+    </header>
+  );
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string.isRequired,

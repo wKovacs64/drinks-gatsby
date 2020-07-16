@@ -8,12 +8,12 @@ import Nav from '../components/nav';
 import DrinkList from '../components/drink-list';
 import { sortDrinks } from '../utils';
 
-const IndexPage = ({
+function IndexPage({
   data: {
     site: { siteMetadata },
     allContentfulDrink: { edges },
   },
-}) => {
+}) {
   return (
     <Layout>
       <SEO
@@ -27,7 +27,7 @@ const IndexPage = ({
       <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
     </Layout>
   );
-};
+}
 
 export const query = graphql`
   query {

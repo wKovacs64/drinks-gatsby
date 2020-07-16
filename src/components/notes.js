@@ -4,50 +4,52 @@ import { css } from '@emotion/core';
 import { focus } from '../styles';
 import { mq } from '../utils';
 
-const Notes = ({ children }) => (
-  <div
-    css={css`
-      h1,
-      h2,
-      h3 {
-        margin-top: 0;
-        font-size: inherit;
-      }
-      h1 {
-        font-weight: 400;
-        ${mq.lg} {
-          font-size: 1.5rem;
+function Notes({ children }) {
+  return (
+    <div
+      css={css`
+        h1,
+        h2,
+        h3 {
+          margin-top: 0;
+          font-size: inherit;
         }
-      }
-      h2 {
-        font-weight: 400;
-      }
-      h3 {
-        font-weight: 300;
-      }
-      a {
-        color: currentColor;
-        text-decoration: none;
-        border-bottom: 1px solid #d09e45;
-        &:hover,
-        &:focus {
-          border-color: #a62304;
+        h1 {
+          font-weight: 400;
+          ${mq.lg} {
+            font-size: 1.5rem;
+          }
         }
-        ${focus};
-      }
-      ul {
-        list-style-type: square;
-      }
-      ul li {
-        margin: 1.25rem 0;
-      }
-    `}
-    // eslint-disable-next-line react/no-danger
-    dangerouslySetInnerHTML={{
-      __html: children,
-    }}
-  />
-);
+        h2 {
+          font-weight: 400;
+        }
+        h3 {
+          font-weight: 300;
+        }
+        a {
+          color: currentColor;
+          text-decoration: none;
+          border-bottom: 1px solid #d09e45;
+          &:hover,
+          &:focus {
+            border-color: #a62304;
+          }
+          ${focus};
+        }
+        ul {
+          list-style-type: square;
+        }
+        ul li {
+          margin: 1.25rem 0;
+        }
+      `}
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{
+        __html: children,
+      }}
+    />
+  );
+}
 
 Notes.propTypes = {
   children: PropTypes.string,

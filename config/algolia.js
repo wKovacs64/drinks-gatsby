@@ -19,11 +19,13 @@ if (!adminKey) {
   throw new Error('ALGOLIA_ADMIN_KEY must be provided.');
 }
 
-const flattenNode = ({ notes, image, ...node }) => ({
-  ...node,
-  notes: notes.childMarkdownRemark.rawMarkdownBody,
-  imagePreviewSrc: image.fixed.src,
-});
+function flattenNode({ notes, image, ...node }) {
+  return {
+    ...node,
+    notes: notes.childMarkdownRemark.rawMarkdownBody,
+    imagePreviewSrc: image.fixed.src,
+  };
+}
 
 const queries = [
   {

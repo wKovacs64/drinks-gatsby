@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import { Link } from 'gatsby';
 import { focus } from '../styles';
 
-const NavLink = (props) => {
+function NavLink(props) {
   return (
     <li
       css={css`
@@ -27,6 +27,6 @@ const NavLink = (props) => {
       />
     </li>
   );
-};
+}
 
 export default NavLink;
