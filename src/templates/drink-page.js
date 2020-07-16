@@ -13,7 +13,7 @@ import DrinkSummary from '../components/drink-summary';
 import DrinkDetails from '../components/drink-details';
 import { mq } from '../utils';
 
-const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
+function DrinkPage({ data: { contentfulDrink: drink } }) {
   const { title } = drink;
   const description = drink.ingredients.join(', ');
   const socialImageUrl = `https:${drink.image.fixed.src}`;
@@ -48,7 +48,7 @@ const DrinkPage = ({ data: { contentfulDrink: drink } }) => {
       </Glass>
     </Layout>
   );
-};
+}
 
 export const query = graphql`
   query($slug: String!) {

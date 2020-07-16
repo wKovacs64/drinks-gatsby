@@ -8,72 +8,74 @@ import { MdClear } from 'react-icons/md';
 import { focus } from '../styles';
 import { mq } from '../utils';
 
-const Dialog = ({
+function Dialog({
   'aria-label': ariaLabel,
   title,
   isOpen,
   onDismiss,
   children,
-}) => (
-  <ReachDialog
-    aria-label={ariaLabel}
-    isOpen={isOpen}
-    onDismiss={onDismiss}
-    css={css`
-      color: #6d372a;
-      max-width: 50rem;
-      width: 100vw;
-      ${mq.md} {
-        width: 75vw;
-      }
-      ${mq.lg} {
-        width: 50vw;
-      }
-    `}
-  >
-    <section
+}) {
+  return (
+    <ReachDialog
+      aria-label={ariaLabel}
+      isOpen={isOpen}
+      onDismiss={onDismiss}
       css={css`
-        display: flex;
-        justify-content: ${title ? 'space-between' : 'flex-end'};
-        margin-bottom: 2rem;
+        color: #6d372a;
+        max-width: 50rem;
+        width: 100vw;
+        ${mq.md} {
+          width: 75vw;
+        }
+        ${mq.lg} {
+          width: 50vw;
+        }
       `}
     >
-      {title && (
-        <h3
-          css={css`
-            margin: 0;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            font-weight: 400;
-            font-size: 1.25rem;
-          `}
-        >
-          {title}
-        </h3>
-      )}
-      <button
+      <section
         css={css`
-          background-color: transparent;
-          border: none;
-          cursor: pointer;
-          padding: 0;
-          opacity: 0.8;
-          &:hover,
-          &:focus {
-            opacity: 1;
-          }
-          ${focus};
+          display: flex;
+          justify-content: ${title ? 'space-between' : 'flex-end'};
+          margin-bottom: 2rem;
         `}
-        type="button"
-        onClick={onDismiss}
       >
-        <VisuallyHidden>Clear</VisuallyHidden>
-        <MdClear color="#6d372a" aria-hidden size={32} />
-      </button>
-    </section>
-    {children}
-  </ReachDialog>
-);
+        {title && (
+          <h3
+            css={css`
+              margin: 0;
+              letter-spacing: 0.1em;
+              text-transform: uppercase;
+              font-weight: 400;
+              font-size: 1.25rem;
+            `}
+          >
+            {title}
+          </h3>
+        )}
+        <button
+          css={css`
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            opacity: 0.8;
+            &:hover,
+            &:focus {
+              opacity: 1;
+            }
+            ${focus};
+          `}
+          type="button"
+          onClick={onDismiss}
+        >
+          <VisuallyHidden>Clear</VisuallyHidden>
+          <MdClear color="#6d372a" aria-hidden size={32} />
+        </button>
+      </section>
+      {children}
+    </ReachDialog>
+  );
+}
 
 Dialog.propTypes = {
   'aria-label': PropTypes.string.isRequired,

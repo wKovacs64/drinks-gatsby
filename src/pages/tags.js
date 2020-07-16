@@ -9,12 +9,12 @@ import NavLink from '../components/nav-link';
 import NavDivider from '../components/nav-divider';
 import TagList from '../components/tag-list';
 
-const TagsPage = ({
+function TagsPage({
   data: {
     site: { siteMetadata },
     allContentfulDrink: { group },
   },
-}) => {
+}) {
   const title = 'Ingredient Tags';
   const description = 'Discover drinks by ingredient';
 
@@ -35,7 +35,7 @@ const TagsPage = ({
       <TagList tags={group.map(({ fieldValue }) => fieldValue)} />
     </Layout>
   );
-};
+}
 
 export const query = graphql`
   query {

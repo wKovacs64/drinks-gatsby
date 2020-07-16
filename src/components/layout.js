@@ -11,7 +11,7 @@ import Main from './main';
 import Footer from './footer';
 import { mq } from '../utils';
 
-const Layout = ({ children }) => {
+function Layout({ children }) {
   const [feedbackOpen, setFeedbackOpen] = useState(false);
   const {
     site: { siteMetadata },
@@ -133,7 +133,7 @@ const Layout = ({ children }) => {
       )}
     </ClassNames>
   );
-};
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

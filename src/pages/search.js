@@ -6,23 +6,23 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Search from '../components/search';
 
-const SearchPage = ({
+function SearchPage({
   data: {
     site: { siteMetadata },
     allContentfulDrink: { edges },
   },
-}) => {
+}) {
   const title = 'Search Drinks';
   const description = 'Search all drinks by ingredient or description';
 
   const [searchTerm, setSearchTerm] = React.useState('');
 
   React.useEffect(() => {
-    const handleEsc = ({ keyCode }) => {
+    function handleEsc({ keyCode }) {
       if (keyCode === 27 /* ESC */) {
         setSearchTerm('');
       }
-    };
+    }
 
     window.addEventListener('keydown', handleEsc);
 
@@ -47,7 +47,7 @@ const SearchPage = ({
       />
     </Layout>
   );
-};
+}
 
 export const query = graphql`
   query {

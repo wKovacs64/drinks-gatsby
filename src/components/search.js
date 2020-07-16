@@ -17,33 +17,35 @@ import DrinkList from './drink-list';
 import BrokenGlassIcon from './broken-glass-icon';
 import AlgoliaIcon from './algolia-icon';
 
-const NoDrinksFound = () => (
-  <section
-    css={css`
-      text-align: center;
-    `}
-  >
-    <BrokenGlassIcon
-      aria-label="Broken Glass"
+function NoDrinksFound() {
+  return (
+    <section
       css={css`
-        color: #d09e45;
-        height: 20vh;
-        width: 20vh;
-        margin: 10vh 0;
-      `}
-    />
-    <p
-      css={css`
-        color: #eeeeee;
-        ${mq.md} {
-          font-size: 1.25rem;
-        }
+        text-align: center;
       `}
     >
-      No matching drinks found.
-    </p>
-  </section>
-);
+      <BrokenGlassIcon
+        aria-label="Broken Glass"
+        css={css`
+          color: #d09e45;
+          height: 20vh;
+          width: 20vh;
+          margin: 10vh 0;
+        `}
+      />
+      <p
+        css={css`
+          color: #eeeeee;
+          ${mq.md} {
+            font-size: 1.25rem;
+          }
+        `}
+      >
+        No matching drinks found.
+      </p>
+    </section>
+  );
+}
 
 const Hits = connectHits(({ hits, drinks }) => {
   if (hits.length) {
@@ -67,10 +69,10 @@ const SearchBox = connectSearchBox(
       }
     }, [searchTerm]);
 
-    const handleSearchTermChange = ({ target: { value } }) => {
+    function handleSearchTermChange({ target: { value } }) {
       onSearchTermChange(value);
       debouncedRefine(value);
-    };
+    }
 
     return (
       <div
@@ -151,35 +153,37 @@ const SearchBox = connectSearchBox(
   },
 );
 
-const NoSearchTerm = () => (
-  <section
-    css={css`
-      text-align: center;
-    `}
-  >
-    <MdArrowUpward
-      aria-label="Arrow Pointing Up"
+function NoSearchTerm() {
+  return (
+    <section
       css={css`
-        color: #d09e45;
-        height: 20vh;
-        width: 20vh;
-        margin: 10vh 0;
-      `}
-    />
-    <p
-      css={css`
-        color: #eeeeee;
-        ${mq.md} {
-          font-size: 1.25rem;
-        }
+        text-align: center;
       `}
     >
-      Search all drinks by ingredient or description!
-    </p>
-  </section>
-);
+      <MdArrowUpward
+        aria-label="Arrow Pointing Up"
+        css={css`
+          color: #d09e45;
+          height: 20vh;
+          width: 20vh;
+          margin: 10vh 0;
+        `}
+      />
+      <p
+        css={css`
+          color: #eeeeee;
+          ${mq.md} {
+            font-size: 1.25rem;
+          }
+        `}
+      >
+        Search all drinks by ingredient or description!
+      </p>
+    </section>
+  );
+}
 
-const Search = ({ searchTerm, setSearchTerm, drinks }) => {
+function Search({ searchTerm, setSearchTerm, drinks }) {
   const searchClient = algoliasearch(appId, searchKey, {
     _useRequestCache: true,
   });
@@ -190,7 +194,7 @@ const Search = ({ searchTerm, setSearchTerm, drinks }) => {
       {searchTerm ? <Hits drinks={drinks} /> : <NoSearchTerm />}
     </InstantSearch>
   );
-};
+}
 
 Search.propTypes = {
   searchTerm: PropTypes.string.isRequired,

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
-const SEO = ({ title, description, socialImageUrl, socialImageAlt }) => {
+function SEO({ title, description, socialImageUrl, socialImageAlt }) {
   return (
     <Helmet
       title={title}
@@ -21,7 +21,7 @@ const SEO = ({ title, description, socialImageUrl, socialImageAlt }) => {
       ]}
     />
   );
-};
+}
 
 SEO.propTypes = {
   title: PropTypes.string,

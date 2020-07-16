@@ -5,7 +5,7 @@ import { css } from '@emotion/core';
 import Img from 'gatsby-image';
 import { mq } from '../utils';
 
-const DrinkSummary = ({ drink, stacked, ...props }) => {
+function DrinkSummary({ drink, stacked, ...props }) {
   const {
     file: { defaultImage },
   } = useStaticQuery(graphql`
@@ -113,7 +113,7 @@ const DrinkSummary = ({ drink, stacked, ...props }) => {
       </div>
     </section>
   );
-};
+}
 
 DrinkSummary.propTypes = {
   drink: PropTypes.shape({
