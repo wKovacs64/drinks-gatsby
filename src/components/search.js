@@ -2,20 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import VisuallyHidden from '@reach/visually-hidden';
-import { MdArrowUpward, MdClear } from 'react-icons/md';
+import { MdArrowUpward, MdChevronRight } from 'react-icons/md';
 import algoliasearch from 'algoliasearch/lite';
 import {
   InstantSearch,
   connectSearchBox,
+  // connectStateResults,
   connectHits,
 } from 'react-instantsearch-dom';
-import debounce from 'lodash/debounce';
 import { appId, indexName, searchKey } from '../../config/algolia';
 import { focus } from '../styles';
 import { mq } from '../utils';
 import DrinkList from './drink-list';
 import BrokenGlassIcon from './broken-glass-icon';
 import AlgoliaIcon from './algolia-icon';
+
+const searchClient = algoliasearch(appId, searchKey, {
+  _useRequestCache: true,
+});
 
 function NoDrinksFound() {
   return (
@@ -58,30 +62,49 @@ const Hits = connectHits(({ hits, drinks }) => {
   return <NoDrinksFound />;
 });
 
-const SearchBox = connectSearchBox(
-  ({ refine, searchTerm, onSearchTermChange }) => {
-    const debouncedRefine = React.useCallback(debounce(refine, 350), [refine]);
+const SearchForm = connectSearchBox(
+  ({ refine, searchTerm, searchInputValue, setSearchInputValue, onSubmit }) => {
     const inputRef = React.useRef(null);
 
     React.useEffect(() => {
-      if (inputRef.current && searchTerm === '') {
+      function handleEsc({ keyCode }) {
+        if (keyCode === 27 /* ESC */) {
+          setSearchInputValue('');
+        }
+      }
+
+      window.addEventListener('keydown', handleEsc);
+
+      return () => {
+        window.removeEventListener('keydown', handleEsc);
+      };
+    }, [setSearchInputValue]);
+
+    React.useEffect(() => {
+      if (inputRef.current && searchInputValue === '') {
         inputRef.current.focus();
       }
-    }, [searchTerm]);
+    }, [searchInputValue]);
 
-    function handleSearchTermChange({ target: { value } }) {
-      onSearchTermChange(value);
-      debouncedRefine(value);
+    React.useEffect(() => {
+      if (searchTerm && searchTerm !== '') {
+        refine(searchTerm);
+      }
+    }, [refine, searchTerm]);
+
+    function handleSearchInputValueChange(event) {
+      setSearchInputValue(event.target.value);
     }
 
     return (
-      <div
+      <form
         css={css`
           display: flex;
           background-color: white;
           height: 3rem;
           margin-bottom: 2rem;
         `}
+        onSubmit={onSubmit}
       >
         <a
           href="https://www.algolia.com"
@@ -108,8 +131,9 @@ const SearchBox = connectSearchBox(
         </a>
         <input
           ref={inputRef}
-          name="search"
-          aria-label="Search"
+          id="searchTerm"
+          name="searchTerm"
+          aria-label="Search Term"
           placeholder="Search all drinks..."
           type="text"
           // eslint-disable-next-line jsx-a11y/no-autofocus
@@ -117,8 +141,8 @@ const SearchBox = connectSearchBox(
           autoCapitalize="off"
           autoComplete="off"
           autoCorrect="off"
-          onChange={handleSearchTermChange}
-          value={searchTerm}
+          onChange={handleSearchInputValueChange}
+          value={searchInputValue}
           css={css`
             border: none;
             padding: 1rem;
@@ -142,13 +166,13 @@ const SearchBox = connectSearchBox(
             }
             ${focus};
           `}
-          type="button"
-          onClick={() => onSearchTermChange('')}
+          title="Search"
+          type="submit"
         >
-          <VisuallyHidden>Clear</VisuallyHidden>
-          <MdClear aria-hidden size={32} />
+          <VisuallyHidden>Search</VisuallyHidden>
+          <MdChevronRight aria-hidden size={32} />
         </button>
-      </div>
+      </form>
     );
   },
 );
@@ -183,14 +207,35 @@ function NoSearchTerm() {
   );
 }
 
-function Search({ searchTerm, setSearchTerm, drinks }) {
-  const searchClient = algoliasearch(appId, searchKey, {
-    _useRequestCache: true,
-  });
+// function Searching() {
+//   return null;
+// }
 
+// const SearchResults = connectStateResults(
+//   ({ searching, searchTerm, drinks }) => {
+//     console.log('searching:', searching);
+//     if (!searchTerm) return <NoSearchTerm />;
+//     if (searching) return <Searching />;
+//     return <Hits drinks={drinks} />;
+//   },
+// );
+
+function Search({
+  searchTerm,
+  searchInputValue,
+  setSearchInputValue,
+  onSubmit,
+  drinks,
+}) {
   return (
     <InstantSearch indexName={indexName} searchClient={searchClient}>
-      <SearchBox searchTerm={searchTerm} onSearchTermChange={setSearchTerm} />
+      <SearchForm
+        searchTerm={searchTerm}
+        searchInputValue={searchInputValue}
+        setSearchInputValue={setSearchInputValue}
+        onSubmit={onSubmit}
+      />
+      {/* <SearchResults searchTerm={searchTerm} drinks={drinks} /> */}
       {searchTerm ? <Hits drinks={drinks} /> : <NoSearchTerm />}
     </InstantSearch>
   );
@@ -198,7 +243,9 @@ function Search({ searchTerm, setSearchTerm, drinks }) {
 
 Search.propTypes = {
   searchTerm: PropTypes.string.isRequired,
-  setSearchTerm: PropTypes.func.isRequired,
+  searchInputValue: PropTypes.string.isRequired,
+  setSearchInputValue: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
   drinks: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
