@@ -39,6 +39,7 @@
     "@reach/skip-nav": "0.10.5",
     "@reach/visually-hidden": "0.10.4",
     "@wkovacs64/normalize.css": "8.0.1",
+    "@xstate/react": "0.8.1",
     "algoliasearch": "4.3.0",
     "dotenv": "8.2.0",
     "gatsby": "2.24.4",
@@ -63,8 +64,8 @@
     "react-dom": "16.13.1",
     "react-helmet": "6.1.0",
     "react-icons": "3.10.0",
-    "react-instantsearch-dom": "6.6.0",
-    "typeface-source-sans-pro": "0.0.75"
+    "typeface-source-sans-pro": "0.0.75",
+    "xstate": "4.11.0"
   },
   "devDependencies": {
     "@commitlint/cli": "9.1.1",

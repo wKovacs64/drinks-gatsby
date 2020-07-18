@@ -31,8 +31,7 @@ function SearchPage({
     setSearchInputValue(searchTerm);
   }, [searchTerm]);
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function handleSubmit() {
     if (searchInputValue) {
       navigate(
         `?${queryString.stringify(
