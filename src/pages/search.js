@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { SkipNavContent } from '@reach/skip-nav';
+import queryString from 'query-string';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Search from '../components/search';
@@ -11,25 +12,35 @@ function SearchPage({
     site: { siteMetadata },
     allContentfulDrink: { edges },
   },
+  location,
+  navigate,
 }) {
   const title = 'Search Drinks';
   const description = 'Search all drinks by ingredient or description';
 
   const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchInputValue, setSearchInputValue] = React.useState('');
 
+  // sync searchTerm to query string value from location on route change
   React.useEffect(() => {
-    function handleEsc({ keyCode }) {
-      if (keyCode === 27 /* ESC */) {
-        setSearchTerm('');
-      }
+    setSearchTerm(queryString.parse(location.search).searchTerm || '');
+  }, [location.search]);
+
+  // sync local input value to searchTerm on route change
+  React.useEffect(() => {
+    setSearchInputValue(searchTerm);
+  }, [searchTerm]);
+
+  function handleSubmit() {
+    if (searchInputValue) {
+      navigate(
+        `?${queryString.stringify(
+          { searchTerm: searchInputValue },
+          { encode: true },
+        )}`,
+      );
     }
-
-    window.addEventListener('keydown', handleEsc);
-
-    return () => {
-      window.removeEventListener('keydown', handleEsc);
-    };
-  }, []);
+  }
 
   return (
     <Layout>
@@ -42,7 +53,9 @@ function SearchPage({
       <SkipNavContent />
       <Search
         searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
+        searchInputValue={searchInputValue}
+        setSearchInputValue={setSearchInputValue}
+        onSubmit={handleSubmit}
         drinks={edges.map(({ node }) => node)}
       />
     </Layout>
@@ -113,6 +126,8 @@ SearchPage.propTypes = {
       ),
     }),
   }).isRequired,
+  location: PropTypes.shape().isRequired,
+  navigate: PropTypes.func.isRequired,
 };
 
 export default SearchPage;
