@@ -23,7 +23,7 @@ function SearchPage({
 
   // sync searchTerm to query string value from location on route change
   React.useEffect(() => {
-    setSearchTerm(queryString.parse(location.search).searchTerm || '');
+    setSearchTerm(queryString.parse(location.search).q || '');
   }, [location.search]);
 
   // sync local input value to searchTerm on route change
@@ -34,10 +34,7 @@ function SearchPage({
   function handleSubmit() {
     if (searchInputValue) {
       navigate(
-        `?${queryString.stringify(
-          { searchTerm: searchInputValue },
-          { encode: true },
-        )}`,
+        `?${queryString.stringify({ q: searchInputValue }, { encode: true })}`,
       );
     }
   }
