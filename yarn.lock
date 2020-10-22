@@ -9233,13 +9233,6 @@ gatsby-plugin-typescript@^2.4.24:
     "@babel/runtime" "^7.11.2"
     babel-plugin-remove-graphql-queries "^2.9.20"
 
-gatsby-plugin-utils@^0.2.35:
-  version "0.2.35"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-0.2.35.tgz#6f2e885a88705b19c996d51411eed545f94f0163"
-  integrity sha512-vs0Tj/bCW7jzFnS/5vLstB+7fov6UhYD3uBswmi5vM8E1oDCPnjHKwxKIRW43WkADcGjurzhCMJ08LgPEIMDPg==
-  dependencies:
-    joi "^17.2.1"
-
 gatsby-plugin-utils@^0.2.39:
   version "0.2.39"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-0.2.39.tgz#aa0c5e9469977b476884d53fe97b28fd771f2a78"
@@ -9354,10 +9347,10 @@ gatsby-remark-external-links@0.0.4:
     unist-util-find "^1.0.1"
     unist-util-visit "^1.1.3"
 
-gatsby-source-contentful@2.3.56:
-  version "2.3.56"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-2.3.56.tgz#17b2b3af84ff06a61b1dde37f7fe9da3def9a7a9"
-  integrity sha512-E2t0U9p5vg/qgdEQodTzIFDlOohjMg+uzmQEhA4ZB6/jahkdOwYEHxYsXVF0/UQmDVKx016wYY3ECMLo1nodvQ==
+gatsby-source-contentful@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-3.0.3.tgz#bd8bf5202dded18963cfe5120552b91a291d883c"
+  integrity sha512-0Ju8O3B+m8ZWAlX9at/2JlvI0U1gzy7BzrWXUH2jTU4au6iF1Hd+LCv2/IlraLDqqGs5NCIa10oBmKQ5ECjZqQ==
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@contentful/rich-text-types" "^14.1.1"
@@ -9369,7 +9362,7 @@ gatsby-source-contentful@2.3.56:
     contentful "^7.14.7"
     fs-extra "^9.0.1"
     gatsby-core-utils "^1.3.23"
-    gatsby-plugin-utils "^0.2.35"
+    gatsby-plugin-utils "^0.2.39"
     gatsby-source-filesystem "^2.3.35"
     is-online "^8.5.0"
     json-stringify-safe "^5.0.1"
