@@ -52,7 +52,7 @@
     "gatsby-plugin-react-helmet": "3.3.14",
     "gatsby-plugin-sharp": "2.6.43",
     "gatsby-remark-external-links": "0.0.4",
-    "gatsby-source-contentful": "2.3.56",
+    "gatsby-source-contentful": "3.0.3",
     "gatsby-source-filesystem": "2.3.35",
     "gatsby-transformer-remark": "2.8.46",
     "gatsby-transformer-sharp": "2.5.19",
