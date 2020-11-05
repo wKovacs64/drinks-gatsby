@@ -65,7 +65,7 @@
     "react-helmet": "6.1.0",
     "react-icons": "3.11.0",
     "typeface-source-sans-pro": "0.0.75",
-    "xstate": "4.13.0"
+    "xstate": "4.14.0"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
