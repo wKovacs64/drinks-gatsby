@@ -1,5 +1,3 @@
-import React from 'react';
-
 function MessageIcon(props) {
   return (
     <svg

@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { css, Global } from '@emotion/react';
 import { focus } from '../styles';
 import { mq } from '../utils';

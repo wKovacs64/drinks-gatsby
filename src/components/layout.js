@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import { IconContext } from 'react-icons';
 import { Helmet } from 'react-helmet';
@@ -12,7 +12,7 @@ import Footer from './footer';
 import { mq } from '../utils';
 
 function Layout({ children }) {
-  const [feedbackOpen, setFeedbackOpen] = useState(false);
+  const [feedbackOpen, setFeedbackOpen] = React.useState(false);
   const {
     site: { siteMetadata },
     file: {

@@ -1,5 +1,3 @@
-import React from 'react';
-
 function AlgoliaIcon(props) {
   return (
     <svg viewBox="0 0 50 50" width="1em" height="1em" {...props}>
