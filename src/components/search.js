@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import VisuallyHidden from '@reach/visually-hidden';
 import { MdArrowUpward, MdChevronRight, MdSearch } from 'react-icons/md';
 import algoliasearch from 'algoliasearch/lite';

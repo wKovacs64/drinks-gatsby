@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { SkipNavContent } from '@reach/skip-nav';
 import startCase from 'lodash/startCase';
 import Layout from '../components/layout';
