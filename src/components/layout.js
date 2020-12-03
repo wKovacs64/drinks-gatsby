@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { IconContext } from 'react-icons';
 import { Helmet } from 'react-helmet';
-import { css, Global, ClassNames } from '@emotion/core';
+import { css, Global, ClassNames } from '@emotion/react';
 import { SkipNavLink } from '@reach/skip-nav';
 import { useStaticQuery, graphql } from 'gatsby';
 import FeedbackDialog from './feedback-dialog';

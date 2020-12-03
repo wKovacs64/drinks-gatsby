@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { mq } from '../utils';
 
 export const constrainWidth = css`
