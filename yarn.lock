@@ -1776,6 +1776,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/source-sans-pro@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/source-sans-pro/-/source-sans-pro-4.0.1.tgz#12b99fa5fd3605a31512921c897053868011cf91"
+  integrity sha512-TepgEYwAmhPnGIaC2oJjZ8rPyms/NY2tyiWMP7b1VsA6y8Yayxk/ahjj3sDTKvrTOtBjxy/WCTeVAoeEedNzPA==
+
 "@graphql-tools/delegate@^6.2.4":
   version "6.2.4"
   resolved "https://registry.yarnpkg.com/@graphql-tools/delegate/-/delegate-6.2.4.tgz#db553b63eb9512d5eb5bbfdfcd8cb1e2b534699c"
@@ -8742,11 +8747,6 @@ follow-redirects@^1.0.0, follow-redirects@^1.10.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
   integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
-
-fontsource-source-sans-pro@3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/fontsource-source-sans-pro/-/fontsource-source-sans-pro-3.1.5.tgz#575edceadf0e68603c1c74b087f4423738cce2f9"
-  integrity sha512-DQDvGj/txs8wcXoym1Ji4EropFphA9mfAP4CgYPOIGvZ3OieP8QQjUlZv9Razy7CmWVvAa6GbOXKbahYfjVs+w==
 
 for-each@^0.3.2:
   version "0.3.3"
