@@ -65,7 +65,7 @@
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
     "react-icons": "4.1.0",
-    "xstate": "4.15.3"
+    "xstate": "4.15.4"
   },
   "devDependencies": {
     "@commitlint/cli": "11.0.0",
