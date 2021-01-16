@@ -71,7 +71,7 @@
     "@commitlint/cli": "11.0.0",
     "@commitlint/config-conventional": "11.0.0",
     "@wkovacs64/prettier-config": "3.0.0",
-    "commitizen": "4.2.2",
+    "commitizen": "4.2.3",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "7.17.0",
