@@ -27,6 +27,7 @@ module.exports = {
             'Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()',
             'Referrer-Policy: no-referrer-when-downgrade',
             'Expect-CT: enforce, max-age=3600',
+            'Strict-Transport-Security: max-age=63072000; includeSubDomains; preload',
           ],
         },
       },
