@@ -146,7 +146,7 @@ Hits.propTypes = {
       title: PropTypes.string,
       slug: PropTypes.string,
       image: PropTypes.shape({
-        fluid: PropTypes.shape(),
+        gatsbyImageData: PropTypes.shape(),
       }),
       ingredients: PropTypes.arrayOf(PropTypes.string),
       calories: PropTypes.number,
@@ -347,7 +347,7 @@ SearchResults.propTypes = {
       title: PropTypes.string,
       slug: PropTypes.string,
       image: PropTypes.shape({
-        fluid: PropTypes.shape(),
+        gatsbyImageData: PropTypes.shape(),
       }),
       ingredients: PropTypes.arrayOf(PropTypes.string),
       calories: PropTypes.number,
@@ -412,7 +412,7 @@ Search.propTypes = {
       title: PropTypes.string,
       slug: PropTypes.string,
       image: PropTypes.shape({
-        fluid: PropTypes.shape(),
+        gatsbyImageData: PropTypes.shape(),
       }),
       ingredients: PropTypes.arrayOf(PropTypes.string),
       calories: PropTypes.number,

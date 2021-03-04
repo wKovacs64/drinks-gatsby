@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import { css, Global, ClassNames } from '@emotion/react';
 import { SkipNavLink } from '@reach/skip-nav';
 import { useStaticQuery, graphql } from 'gatsby';
+import { getSrc } from 'gatsby-plugin-image';
 import FeedbackDialog from './feedback-dialog';
 import Header from './header';
 import Main from './main';
@@ -30,12 +31,8 @@ function Layout({ children }) {
       }
       file(relativePath: { eq: "background.jpg" }) {
         childImageSharp {
-          bgImageSm: fixed(width: 768) {
-            ...GatsbyImageSharpFixed
-          }
-          bgImageLg: fixed(width: 2078) {
-            ...GatsbyImageSharpFixed
-          }
+          bgImageSm: gatsbyImageData(width: 768, layout: FIXED)
+          bgImageLg: gatsbyImageData(width: 2078, layout: FIXED)
         }
       }
     }
@@ -67,9 +64,9 @@ function Layout({ children }) {
                 background-size: cover;
                 background-attachment: fixed;
                 background-position: center;
-                background-image: url(${bgImageSm.src});
+                background-image: url(${getSrc(bgImageSm)});
                 ${mq.lg} {
-                  background-image: url(${bgImageLg.src});
+                  background-image: url(${getSrc(bgImageLg)});
                 }
               }
               body {

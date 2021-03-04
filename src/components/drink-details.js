@@ -57,7 +57,7 @@ DrinkDetails.propTypes = {
   drink: PropTypes.shape({
     title: PropTypes.string,
     image: PropTypes.shape({
-      fluid: PropTypes.shape(),
+      gatsbyImageData: PropTypes.shape(),
     }),
     ingredients: PropTypes.arrayOf(PropTypes.string),
     calories: PropTypes.number,

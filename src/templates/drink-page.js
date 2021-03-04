@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { getSrc } from 'gatsby-plugin-image';
 import { css } from '@emotion/react';
 import { SkipNavContent } from '@reach/skip-nav';
 import Layout from '../components/layout';
@@ -15,7 +16,7 @@ import { mq } from '../utils';
 function DrinkPage({ data: { contentfulDrink: drink } }) {
   const { title } = drink;
   const description = drink.ingredients.join(', ');
-  const socialImageUrl = `https:${drink.image.fixed.src}`;
+  const socialImageUrl = `https:${getSrc(drink.image.socialGatsbyImageData)}`;
   // TODO: add image alt to Contentful drink model?
   const socialImageAlt = `${title} in a glass`;
 
@@ -54,12 +55,12 @@ export const query = graphql`
     contentfulDrink(slug: { eq: $slug }) {
       title
       image {
-        fluid {
-          ...GatsbyContentfulFluid_withWebp
-        }
-        fixed(width: 1200, height: 630) {
-          src
-        }
+        gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 1)
+        socialGatsbyImageData: gatsbyImageData(
+          layout: FIXED
+          width: 1200
+          height: 630
+        )
       }
       ingredients
       calories
@@ -78,10 +79,8 @@ DrinkPage.propTypes = {
     contentfulDrink: PropTypes.shape({
       title: PropTypes.string,
       image: PropTypes.shape({
-        fluid: PropTypes.shape(),
-        fixed: PropTypes.shape({
-          src: PropTypes.string,
-        }),
+        gatsbyImageData: PropTypes.shape(),
+        socialGatsbyImageData: PropTypes.shape(),
       }),
       ingredients: PropTypes.arrayOf(PropTypes.string),
       calories: PropTypes.number,

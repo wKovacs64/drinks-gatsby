@@ -1,24 +1,9 @@
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
 import { css } from '@emotion/react';
-import Img from 'gatsby-image';
+import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 import { mq } from '../utils';
 
 function DrinkSummary({ drink, stacked, ...props }) {
-  const {
-    file: { defaultImage },
-  } = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "icon.png" }) {
-        defaultImage: childImageSharp {
-          fluid(quality: 80) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <section
       css={css`
@@ -36,13 +21,16 @@ function DrinkSummary({ drink, stacked, ...props }) {
           ${!drink.image && `background-color: #1a1a17`};
         `}
       >
-        <Img
-          alt={drink.title}
-          fluid={{
-            ...(drink.image ? drink.image.fluid : defaultImage.fluid),
-            aspectRatio: 1,
-          }}
-        />
+        {drink.image ? (
+          <GatsbyImage image={drink.image.gatsbyImageData} alt={drink.title} />
+        ) : (
+          <StaticImage
+            src="../images/icon.png"
+            quality={80}
+            layout="fullWidth"
+            alt={drink.title}
+          />
+        )}
       </figure>
       <div
         css={css`
@@ -119,7 +107,7 @@ DrinkSummary.propTypes = {
     title: PropTypes.string,
     slug: PropTypes.string,
     image: PropTypes.shape({
-      fluid: PropTypes.shape(),
+      gatsbyImageData: PropTypes.shape(),
     }),
     ingredients: PropTypes.arrayOf(PropTypes.string),
     calories: PropTypes.number,
