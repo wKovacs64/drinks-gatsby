@@ -61,6 +61,7 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -79,7 +80,6 @@ module.exports = {
   ],
   flags: {
     FAST_DEV: true,
-    FAST_REFRESH: true,
     PRESERVE_WEBPACK_CACHE: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
   },

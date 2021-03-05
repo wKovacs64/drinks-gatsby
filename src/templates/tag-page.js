@@ -64,9 +64,11 @@ export const query = graphql`
           title
           slug
           image {
-            fluid {
-              ...GatsbyContentfulFluid_withWebp
-            }
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              aspectRatio: 1
+              placeholder: BLURRED
+            )
           }
           ingredients
           calories
@@ -102,7 +104,7 @@ TagPage.propTypes = {
             title: PropTypes.string,
             slug: PropTypes.string,
             image: PropTypes.shape({
-              fluid: PropTypes.shape(),
+              gatsbyImageData: PropTypes.shape(),
             }),
             ingredients: PropTypes.arrayOf(PropTypes.string),
             calories: PropTypes.number,

@@ -1,3 +1,5 @@
+const { getSrc } = require('gatsby-plugin-image');
+
 const appId = process.env.GATSBY_ALGOLIA_APP_ID;
 const indexName = process.env.GATSBY_ALGOLIA_INDEX_NAME;
 const searchKey = process.env.GATSBY_ALGOLIA_SEARCH_KEY;
@@ -23,7 +25,7 @@ function flattenNode({ notes, image, ...node }) {
   return {
     ...node,
     notes: notes.childMarkdownRemark.rawMarkdownBody,
-    imagePreviewSrc: image.fixed.src,
+    imagePreviewSrc: getSrc(image.gatsbyImageData),
   };
 }
 
@@ -43,9 +45,7 @@ const queries = [
             }
             createdAt
             image {
-              fixed(height: 80, width: 80) {
-                src
-              }
+              gatsbyImageData(layout: FIXED, height: 80, width: 80)
             }
           }
         }
