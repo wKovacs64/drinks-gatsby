@@ -64,7 +64,11 @@ export const query = graphql`
           title
           slug
           image {
-            gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 1)
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              aspectRatio: 1
+              placeholder: BLURRED
+            )
           }
           ingredients
           calories

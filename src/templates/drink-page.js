@@ -55,7 +55,11 @@ export const query = graphql`
     contentfulDrink(slug: { eq: $slug }) {
       title
       image {
-        gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 1)
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          aspectRatio: 1
+          placeholder: BLURRED
+        )
         socialGatsbyImageData: gatsbyImageData(
           layout: FIXED
           width: 1200
