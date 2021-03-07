@@ -21,7 +21,9 @@ function IndexPage({
         socialImageUrl={siteMetadata.imageUrl}
         socialImageAlt={siteMetadata.imageAlt}
       />
-      <Nav>All Drinks</Nav>
+      <Nav>
+        <li>All Drinks</li>
+      </Nav>
       <SkipNavContent />
       <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
     </Layout>
