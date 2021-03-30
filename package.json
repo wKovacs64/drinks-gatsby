@@ -46,7 +46,7 @@
     "algoliasearch": "4.8.6",
     "dotenv": "8.2.0",
     "gatsby": "3.1.2",
-    "gatsby-plugin-algolia": "0.17.0",
+    "gatsby-plugin-algolia": "0.18.0",
     "gatsby-plugin-emotion": "6.1.0",
     "gatsby-plugin-image": "1.1.2",
     "gatsby-plugin-manifest": "3.1.0",
