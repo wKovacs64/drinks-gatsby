@@ -8703,10 +8703,10 @@ gatsby-page-utils@^1.2.0:
     lodash "^4.17.21"
     micromatch "^4.0.2"
 
-gatsby-plugin-algolia@0.18.0:
-  version "0.18.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-algolia/-/gatsby-plugin-algolia-0.18.0.tgz#81a3477a9a384c694cce357a21af649b7c707872"
-  integrity sha512-RKIqSrU860hH5cfqQRAfiC0QIY/WLiwBwkQ6EBikOtYvcHarbBrnC9L22bYBjp9zKi9tTklz6MhWFb6I52+EMg==
+gatsby-plugin-algolia@0.18.1:
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-algolia/-/gatsby-plugin-algolia-0.18.1.tgz#fd76a4d1b7dc5178d881cd31f20b6febf98710bf"
+  integrity sha512-sq1t3GN/+zPZfQ8CM9D+c2OItQaZXB1/CxLk17z5Owjbp4sXDZahuhtJTZrm73LPv90C2g7JZobzSX3ks4YNeQ==
   dependencies:
     algoliasearch "^3.24.5"
     deep-equal "^2.0.5"
