@@ -44,7 +44,7 @@
     "@wkovacs64/normalize.css": "8.0.3",
     "@xstate/react": "1.3.3",
     "algoliasearch": "4.9.1",
-    "dotenv": "9.0.2",
+    "dotenv": "10.0.0",
     "gatsby": "3.5.1",
     "gatsby-plugin-algolia": "0.20.0",
     "gatsby-plugin-emotion": "6.5.0",
