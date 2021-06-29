@@ -45,7 +45,7 @@
     "@xstate/react": "1.4.0",
     "algoliasearch": "4.10.2",
     "dotenv": "10.0.0",
-    "gatsby": "3.8.0",
+    "gatsby": "3.8.1",
     "gatsby-plugin-algolia": "0.20.1",
     "gatsby-plugin-emotion": "6.8.0",
     "gatsby-plugin-image": "1.8.0",
