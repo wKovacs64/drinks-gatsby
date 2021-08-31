@@ -42,7 +42,7 @@
     "@reach/skip-nav": "0.16.0",
     "@reach/visually-hidden": "0.16.0",
     "@wkovacs64/normalize.css": "8.0.3",
-    "@xstate/react": "1.6.0",
+    "@xstate/react": "1.6.1",
     "algoliasearch": "4.10.5",
     "dotenv": "10.0.0",
     "gatsby": "3.12.1",
