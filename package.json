@@ -43,7 +43,7 @@
     "@reach/visually-hidden": "0.16.0",
     "@wkovacs64/normalize.css": "8.0.3",
     "@xstate/react": "1.6.1",
-    "algoliasearch": "4.10.5",
+    "algoliasearch": "4.11.0",
     "dotenv": "10.0.0",
     "gatsby": "3.14.3",
     "gatsby-plugin-algolia": "0.22.2",
