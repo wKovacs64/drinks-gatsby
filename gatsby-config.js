@@ -80,7 +80,7 @@ module.exports = {
   ],
   flags: {
     FAST_DEV: true,
-    PRESERVE_WEBPACK_CACHE: true,
+    PARALLEL_SOURCING: true,
     PRESERVE_FILE_DOWNLOAD_CACHE: true,
   },
 };
