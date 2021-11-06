@@ -15,7 +15,7 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
-      - run: yarn validate
+      - run: yarn lint
       - persist_to_workspace:
           root: ~/
           paths:
