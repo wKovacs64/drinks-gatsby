@@ -17,6 +17,8 @@ module.exports = {
       commit: buildInfo.commit,
     },
   },
+  jsxRuntime: 'automatic',
+  jsxImportSource: '@emotion/react',
   plugins: [
     {
       resolve: 'gatsby-plugin-netlify',
