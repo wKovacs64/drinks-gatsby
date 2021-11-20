@@ -46,6 +46,7 @@ function Layout({ children }) {
     <ClassNames>
       {({ css: classNameFromCss }) => (
         <IconContext.Provider
+          // eslint-disable-next-line react/jsx-no-constructed-context-values
           value={{
             className: classNameFromCss`
               vertical-align: middle;
