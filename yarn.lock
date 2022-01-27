@@ -1816,10 +1816,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/source-sans-pro@4.5.1":
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/source-sans-pro/-/source-sans-pro-4.5.1.tgz#9c4f2b6061d38cd85e89fde21893e23b8a7f227c"
-  integrity sha512-JYEldSfnqxoDVUL6QgqT8Fiyjh0p7WlKcqKNevzDylpWabdejVRyFzPhTk2ZceKZd02KEOaL+K462U6u0/PQiA==
+"@fontsource/source-sans-pro@4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/source-sans-pro/-/source-sans-pro-4.5.2.tgz#3c6cccb29e24d784b851cc6914cd9a5f967f8f3b"
+  integrity sha512-uN2iIKDbpHpGZjUT+/kkwS67MPDn2tfFXBCkHjzu7JQPA6kIHZeOyKseshvZ/pyrCYqnAL9cAot5Nygt08/HRQ==
 
 "@gar/promisify@^1.0.1":
   version "1.1.2"

@@ -37,7 +37,7 @@
   "dependencies": {
     "@emotion/react": "11.7.1",
     "@emotion/styled": "11.6.0",
-    "@fontsource/source-sans-pro": "4.5.1",
+    "@fontsource/source-sans-pro": "4.5.2",
     "@reach/dialog": "0.16.2",
     "@reach/skip-nav": "0.16.0",
     "@reach/visually-hidden": "0.16.0",
