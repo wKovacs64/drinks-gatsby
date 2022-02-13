@@ -70,8 +70,8 @@
     "xstate": "4.30.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "16.1.0",
-    "@commitlint/config-conventional": "16.0.0",
+    "@commitlint/cli": "16.2.1",
+    "@commitlint/config-conventional": "16.2.1",
     "@wkovacs64/prettier-config": "3.0.0",
     "babel-preset-gatsby": "2.7.0",
     "commitizen": "4.2.4",
