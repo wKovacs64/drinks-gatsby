@@ -8238,10 +8238,10 @@ gatsby-sharp@^0.3.0:
     "@types/sharp" "^0.29.5"
     sharp "^0.30.1"
 
-gatsby-source-contentful@7.7.0:
-  version "7.7.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-7.7.0.tgz#8165f2df5d2b52cd9aaf9a1821a6c0957b696aa0"
-  integrity sha512-QB/aJWfpyWZc5xVr2BGXoc6MIDMATjPdqUOKkeK9K8DIC0D8SqZqho7ccKAcxokS9uPfiL6mW5V46I6QdYUmnQ==
+gatsby-source-contentful@7.7.1:
+  version "7.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-7.7.1.tgz#5e8ba32fc9b3edd3b163da30e4a969e423141a93"
+  integrity sha512-gjFC50xIwFI3KzfhftSeqvhqAs61M/XWyVoxDNfqS2LyhBzfgaK9bROx7n9ByLSbyFslYtlRTPNodsXfHfcfUw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@contentful/rich-text-react-renderer" "^14.1.3"
