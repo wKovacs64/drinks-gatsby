@@ -35,7 +35,7 @@
   },
   "private": true,
   "dependencies": {
-    "@emotion/react": "11.8.1",
+    "@emotion/react": "11.8.2",
     "@emotion/styled": "11.8.1",
     "@fontsource/source-sans-pro": "4.5.3",
     "@reach/dialog": "0.16.2",
