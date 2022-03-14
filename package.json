@@ -86,7 +86,7 @@
     "semantic-release": "19.0.2"
   },
   "resolutions": {
-    "eslint-plugin-react": "7.29.3",
+    "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.3.0"
   }
 }
