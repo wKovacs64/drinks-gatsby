@@ -26,9 +26,11 @@ function TagsPage({
         socialImageAlt={siteMetadata.imageAlt}
       />
       <Nav>
-        <NavLink to="/">All Drinks</NavLink>
-        <NavDivider />
-        Tags
+        <ul>
+          <NavLink to="/">All Drinks</NavLink>
+          <NavDivider />
+          <li className="inline">Tags</li>
+        </ul>
       </Nav>
       <SkipNavContent />
       <TagList tags={group.map(({ fieldValue }) => fieldValue)} />

@@ -1,31 +1,22 @@
-import { css } from '@emotion/react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import { focus } from '../styles';
 
-function NavLink(props) {
+function NavLink({ children, to }) {
   return (
-    <li
-      css={css`
-        display: inline;
-      `}
-    >
+    <li className="inline">
       <Link
-        css={css`
-          padding-bottom: 0.25rem;
-          color: currentColor;
-          text-decoration: none;
-          border-bottom-style: dotted;
-          border-bottom-width: 1px;
-          &:hover,
-          &:focus {
-            border-bottom-style: solid;
-          }
-          ${focus};
-        `}
-        {...props}
-      />
+        className="border-b border-dotted pb-1 transition ease-default hover:border-solid focus:border-solid focus-visible:outline-none focus-visible:ring"
+        to={to}
+      >
+        {children}
+      </Link>
     </li>
   );
 }
+
+NavLink.propTypes = {
+  children: PropTypes.node.isRequired,
+  to: PropTypes.string.isRequired,
+};
 
 export default NavLink;

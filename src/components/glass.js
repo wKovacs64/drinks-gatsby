@@ -1,20 +1,13 @@
 import PropTypes from 'prop-types';
-import { css } from '@emotion/react';
-import { mq } from '../utils';
+import clsx from 'clsx';
 
-function Glass({ children, ...props }) {
+function Glass({ children, className }) {
   return (
     <article
-      css={css`
-        color: #6d372a;
-        border-color: #d09e45;
-        border-width: 4px 0;
-        border-style: double;
-        ${mq.sm} {
-          border-width: 4px;
-        }
-      `}
-      {...props}
+      className={clsx(
+        'border-y-4 border-double border-burnt-orange text-maroon sm:border-x-4',
+        className,
+      )}
     >
       {children}
     </article>
@@ -23,10 +16,12 @@ function Glass({ children, ...props }) {
 
 Glass.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 Glass.defaultProps = {
   children: null,
+  className: '',
 };
 
 export default Glass;

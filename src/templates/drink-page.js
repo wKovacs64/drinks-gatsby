@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { getSrc } from 'gatsby-plugin-image';
-import { css } from '@emotion/react';
 import { SkipNavContent } from '@reach/skip-nav';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -11,7 +10,6 @@ import NavLink from '../components/nav-link';
 import Glass from '../components/glass';
 import DrinkSummary from '../components/drink-summary';
 import DrinkDetails from '../components/drink-details';
-import { mq } from '../utils';
 
 function DrinkPage({ data: { contentfulDrink: drink } }) {
   const { title } = drink;
@@ -29,21 +27,15 @@ function DrinkPage({ data: { contentfulDrink: drink } }) {
         socialImageAlt={socialImageAlt}
       />
       <Nav>
-        <NavLink to="/">All Drinks</NavLink>
-        <NavDivider />
-        {drink.title}
+        <ul>
+          <NavLink to="/">All Drinks</NavLink>
+          <NavDivider />
+          <li className="inline">{drink.title}</li>
+        </ul>
       </Nav>
       <SkipNavContent />
       <Glass>
-        <DrinkSummary
-          css={css`
-            ${mq.lg} {
-              flex-direction: row;
-            }
-          `}
-          drink={drink}
-          stacked
-        />
+        <DrinkSummary className="lg:flex-row" drink={drink} stacked />
         <DrinkDetails drink={drink} />
       </Glass>
     </Layout>
@@ -51,7 +43,7 @@ function DrinkPage({ data: { contentfulDrink: drink } }) {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     contentfulDrink(slug: { eq: $slug }) {
       title
       image {

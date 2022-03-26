@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
-import { css } from '@emotion/react';
+import clsx from 'clsx';
 import { Dialog as ReachDialog } from '@reach/dialog';
 import '@reach/dialog/styles.css';
 import VisuallyHidden from '@reach/visually-hidden';
 import { MdClear } from 'react-icons/md';
-import { focus } from '../styles';
-import { mq } from '../utils';
 
 function Dialog({
   'aria-label': ariaLabel,
@@ -19,56 +17,21 @@ function Dialog({
       aria-label={ariaLabel}
       isOpen={isOpen}
       onDismiss={onDismiss}
-      css={css`
-        color: #6d372a;
-        max-width: 50rem;
-        width: 100vw;
-        ${mq.md} {
-          width: 75vw;
-        }
-        ${mq.lg} {
-          width: 50vw;
-        }
-      `}
+      className="!w-screen max-w-3xl text-maroon md:!w-[75vw] lg:!w-[50vw]"
     >
       <section
-        css={css`
-          display: flex;
-          justify-content: ${title ? 'space-between' : 'flex-end'};
-          margin-bottom: 2rem;
-        `}
+        className={clsx('mb-8 flex', title ? 'justify-between' : 'justify-end')}
       >
         {title && (
-          <h3
-            css={css`
-              margin: 0;
-              letter-spacing: 0.1em;
-              text-transform: uppercase;
-              font-weight: 400;
-              font-size: 1.25rem;
-            `}
-          >
-            {title}
-          </h3>
+          <h3 className="text-xl uppercase tracking-widest">{title}</h3>
         )}
         <button
-          css={css`
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            padding: 0;
-            opacity: 0.8;
-            &:hover,
-            &:focus {
-              opacity: 1;
-            }
-            ${focus};
-          `}
+          className="opacity-80 transition ease-default hover:opacity-100 focus:opacity-100 focus:outline-none focus:ring"
           type="button"
           onClick={onDismiss}
         >
           <VisuallyHidden>Clear</VisuallyHidden>
-          <MdClear color="#6d372a" aria-hidden size={32} />
+          <MdClear aria-hidden size={32} />
         </button>
       </section>
       {children}

@@ -13,7 +13,7 @@
 - [Contentful][contentful] (headless CMS)
 - [Algolia][algolia] (search)
 - [Netlify][netlify] (hosting, form handling, and continuous deployment)
-- [Emotion][emotion] (CSS-in-JS)
+- [Tailwind CSS][tailwind] (CSS)
 - [CSS Grid Layout][grid]
 
 ## Run your own:
@@ -53,7 +53,7 @@
 [gatsby]: https://www.gatsbyjs.org/
 [react]: https://reactjs.org/
 [graphql]: https://graphql.org/
-[emotion]: https://emotion.sh/
+[tailwind]: https://tailwindcss.com/
 [grid]: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
 [contentful]: https://www.contentful.com/
 [contentful-cli]: https://github.com/contentful/contentful-cli

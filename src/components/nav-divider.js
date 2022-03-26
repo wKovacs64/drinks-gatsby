@@ -1,14 +1,6 @@
-import { css } from '@emotion/react';
-
-function NavDivider(props) {
+function NavDivider() {
   return (
-    <span
-      css={css`
-        margin: 0 1rem;
-      `}
-      {...props}
-      aria-hidden
-    >
+    <span className="mx-4" aria-hidden>
       ⇒
     </span>
   );

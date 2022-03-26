@@ -1,50 +1,25 @@
 import PropTypes from 'prop-types';
-import { css } from '@emotion/react';
 import kebabCase from 'lodash/kebabCase';
 import Notes from './notes';
 import TagLink from './tag-link';
 import Tag from './tag';
-import { mq } from '../utils';
 
-function DrinkDetails({ drink, ...props }) {
+function DrinkDetails({ drink }) {
   return (
-    <section
-      css={css`
-        background-color: #eeeeee;
-        padding: 2rem;
-        font-size: 1.25rem;
-      `}
-      {...props}
-    >
+    <section className="bg-gray-100 p-8 text-xl leading-tight xl:leading-snug">
       {drink.notes && <Notes>{drink.notes.childMarkdownRemark.html}</Notes>}
       {drink.tags && (
-        <div
-          css={css`
-            display: flex;
-            flex-wrap: wrap;
-            border-top: 1px dotted #cccccc;
-            padding-top: 1rem;
-            ${mq.lg} {
-              justify-content: flex-end;
-            }
-          `}
-        >
+        <div className="flex flex-wrap border-t border-dotted border-t-stone-300 pt-4 lg:justify-end">
           {drink.tags.map((tag) => (
             <TagLink
+              className="mt-4 mr-4 ml-0 leading-tight lg:ml-4 lg:mr-0"
               aria-label={`Find all drinks containing ${tag}`}
               to={`/tags/${kebabCase(tag)}/`}
               key={tag}
-              css={css`
-                margin-top: 1rem;
-                margin-left: 0;
-                margin-right: 1rem;
-                ${mq.lg} {
-                  margin-left: 1rem;
-                  margin-right: 0;
-                }
-              `}
             >
-              <Tag>{tag}</Tag>
+              <Tag className="p-2 text-sm font-normal leading-tight lg:text-base lg:font-light lg:leading-tight">
+                {tag}
+              </Tag>
             </TagLink>
           ))}
         </div>

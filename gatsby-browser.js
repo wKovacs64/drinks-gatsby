@@ -4,5 +4,5 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 import '@fontsource/source-sans-pro/latin.css';
-import '@wkovacs64/normalize.css';
 import '@reach/skip-nav/styles.css';
+import './src/styles/global.css';

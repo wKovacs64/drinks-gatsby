@@ -1,22 +1,25 @@
 import { Link } from 'gatsby';
-import styled from '@emotion/styled';
-import { focus } from '../styles';
+import PropTypes from 'prop-types';
+import clsx from 'clsx';
 
-const TagLink = styled(Link)`
-  text-decoration: none;
-  color: #eedebf;
-  background-color: #6d372a;
-  border-radius: 0.25rem;
-  border: 1px solid transparent;
-  transition: 0.3s ease;
-  transition-property: color, background-color, border-color;
-  &:hover,
-  &:focus {
-    color: #6d372a;
-    background-color: #eedebf;
-    border-color: currentColor;
-  }
-  ${focus};
-`;
+function TagLink({ className, ...props }) {
+  return (
+    <Link
+      className={clsx(
+        'rounded border border-solid border-transparent bg-maroon text-cream no-underline transition-colors ease-default hover:border-current hover:bg-cream hover:text-maroon focus-visible:border-current focus-visible:bg-cream focus-visible:text-maroon focus-visible:outline-none focus-visible:ring',
+        className,
+      )}
+      {...props}
+    />
+  );
+}
+
+TagLink.propTypes = {
+  className: PropTypes.string,
+};
+
+TagLink.defaultProps = {
+  className: '',
+};
 
 export default TagLink;

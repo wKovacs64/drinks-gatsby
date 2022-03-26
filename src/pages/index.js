@@ -22,7 +22,9 @@ function IndexPage({
         socialImageAlt={siteMetadata.imageAlt}
       />
       <Nav>
-        <li>All Drinks</li>
+        <ul>
+          <li>All Drinks</li>
+        </ul>
       </Nav>
       <SkipNavContent />
       <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
