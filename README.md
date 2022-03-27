@@ -13,7 +13,7 @@
 - [Contentful][contentful] (headless CMS)
 - [Algolia][algolia] (search)
 - [Netlify][netlify] (hosting, form handling, and continuous deployment)
-- [Tailwind CSS][tailwind] (CSS)
+- [Tailwind CSS][tailwind]
 - [CSS Grid Layout][grid]
 
 ## Run your own:
