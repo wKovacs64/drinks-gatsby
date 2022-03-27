@@ -1,45 +1,17 @@
 import PropTypes from 'prop-types';
-import { css } from '@emotion/react';
 import kebabCase from 'lodash/kebabCase';
-import { mq } from '../utils';
 import TagLink from './tag-link';
 import Tag from './tag';
 
 function TagList({ tags }) {
   return (
     <div
-      css={css`
-        display: grid;
-        grid-gap: 1rem;
-        margin: 0 1rem;
-        ${mq.sm} {
-          grid-gap: 2rem;
-          margin: 0;
-        }
-        ${mq.lg} {
-          grid-gap: 2rem;
-          grid-template-columns: repeat(2, 1fr);
-        }
-        ${mq.xl} {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      `}
+      // TODO: this needs work, particularly wrt horizontal margins
+      className="mx-4 grid gap-4 sm:mx-0 sm:gap-8 lg:grid-cols-2 xl:grid-cols-3"
     >
       {tags.map((tag) => (
         <TagLink to={`/tags/${kebabCase(tag)}/`} key={tag}>
-          <Tag
-            css={css`
-              font-weight: 300;
-              font-size: 1.5rem;
-              padding: 1rem;
-              ${mq.lg} {
-                font-size: 2.25rem;
-                padding: 1.5rem;
-              }
-            `}
-          >
-            {tag}
-          </Tag>
+          <Tag className="p-4 text-2xl lg:p-6 lg:text-4xl">{tag}</Tag>
         </TagLink>
       ))}
     </div>

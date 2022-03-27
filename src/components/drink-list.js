@@ -1,53 +1,19 @@
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import { css } from '@emotion/react';
 import Glass from './glass';
 import DrinkSummary from './drink-summary';
-import { mq } from '../utils';
 
-function DrinkList({ drinks, ...props }) {
+function DrinkList({ drinks }) {
   return (
-    <div
-      css={css`
-        display: grid;
-        grid-gap: 1rem;
-        ${mq.sm} {
-          grid-gap: 2rem;
-        }
-        ${mq.lg} {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        ${mq.xl} {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      `}
-      {...props}
-    >
+    <div className="grid gap-4 sm:gap-8 lg:grid-cols-2 xl:grid-cols-3">
       {drinks.map((drink) => (
         <Link
           aria-label={drink.title}
           to={`/${drink.slug}/`}
           key={drink.slug}
-          css={css`
-            outline: none;
-            text-decoration: none;
-          `}
+          className="group focus-visible:outline-none"
         >
-          <Glass
-            css={css`
-              height: 100%;
-              transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-              transition-property: border-color, transform, box-shadow;
-              a:focus &, /* inside a focused <a> */
-              &:hover {
-                border-color: #a62304;
-                box-shadow: rgb(166, 35, 4) 0px 8px 16px;
-                ${mq.lg} {
-                  transform: translateY(-8px);
-                }
-              }
-            `}
-          >
+          <Glass className="h-full transition group-hover:border-orange-800 group-hover:shadow-lg group-hover:shadow-orange-800 group-focus:border-orange-800 group-focus:shadow-lg group-focus:shadow-orange-800 lg:group-hover:-translate-y-2 lg:group-focus:-translate-y-2">
             <DrinkSummary drink={drink} />
           </Glass>
         </Link>

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { css } from '@emotion/react';
 import { SkipNavContent } from '@reach/skip-nav';
 import startCase from 'lodash/startCase';
 import Layout from '../components/layout';
@@ -30,18 +29,14 @@ function TagPage({
         socialImageAlt={siteMetadata.imageAlt}
       />
       <Nav>
-        <NavLink to="/">All Drinks</NavLink>
-        <NavDivider />
-        <NavLink to="/tags/">Tags</NavLink>
-        <NavDivider />
-        {tag}
-        <span
-          css={css`
-            margin-left: 0.5rem;
-          `}
-        >
-          ( {totalCount} )
-        </span>
+        <ul>
+          <NavLink to="/">All Drinks</NavLink>
+          <NavDivider />
+          <NavLink to="/tags/">Tags</NavLink>
+          <NavDivider />
+          <li className="inline">{tag}</li>
+          <li className="ml-2 inline">( {totalCount} )</li>
+        </ul>
       </Nav>
       <SkipNavContent />
       <DrinkList drinks={sortDrinks(edges.map(({ node }) => node))} />
@@ -50,7 +45,7 @@ function TagPage({
 }
 
 export const query = graphql`
-  query($tag: String!) {
+  query ($tag: String!) {
     site {
       siteMetadata {
         imageUrl

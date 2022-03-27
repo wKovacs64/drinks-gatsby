@@ -1,14 +1,11 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/react';
 import VisuallyHidden from '@reach/visually-hidden';
 import { MdArrowUpward, MdChevronRight, MdSearch } from 'react-icons/md';
 import algoliasearch from 'algoliasearch/lite';
 import { assign, createMachine } from 'xstate';
 import { useMachine } from '@xstate/react';
 import { appId, indexName, searchKey } from '../../config/algolia';
-import { focus } from '../styles';
-import { mq } from '../utils';
 import DrinkList from './drink-list';
 import BrokenGlassIcon from './broken-glass-icon';
 import AlgoliaIcon from './algolia-icon';
@@ -103,30 +100,12 @@ const searchMachine = createMachine(
 
 function NoDrinksFound() {
   return (
-    <section
-      css={css`
-        text-align: center;
-      `}
-    >
+    <section className="text-center">
       <BrokenGlassIcon
         aria-label="Broken Glass"
-        css={css`
-          color: #d09e45;
-          height: 20vh;
-          width: 20vh;
-          margin: 10vh 0;
-        `}
+        className="my-[10vh] inline h-[20vh] w-[20vh] text-burnt-orange"
       />
-      <p
-        css={css`
-          color: #eeeeee;
-          ${mq.md} {
-            font-size: 1.25rem;
-          }
-        `}
-      >
-        No matching drinks found.
-      </p>
+      <p className="my-5 text-gray-100 md:text-xl">No matching drinks found.</p>
     </section>
   );
 }
@@ -189,36 +168,17 @@ function SearchForm({ searchInputValue, setSearchInputValue, onSubmit }) {
   }
 
   return (
-    <form
-      css={css`
-        display: flex;
-        background-color: white;
-        height: 3rem;
-        margin-bottom: 2rem;
-      `}
-      onSubmit={onSubmit}
-    >
+    <form className="mb-8 flex h-12 bg-white" onSubmit={onSubmit}>
       <a
         href="https://www.algolia.com"
         title="Search by Algolia"
         target="_blank"
         rel="nofollow noopener noreferrer"
-        css={css`
-          ${focus};
-        `}
+        className="group p-2 transition-shadow ease-default focus-visible:outline-none focus-visible:ring"
       >
         <AlgoliaIcon
           aria-label="Search by Algolia"
-          css={css`
-            height: 2rem;
-            width: 2rem;
-            padding: 0.5rem;
-            opacity: 0.9;
-            a:focus &, /* inside a focused a */
-            &:hover {
-              opacity: 1;
-            }
-          `}
+          className="h-8 w-8 opacity-90 group-hover:opacity-100 group-focus-visible:opacity-100"
         />
       </a>
       <input
@@ -235,29 +195,11 @@ function SearchForm({ searchInputValue, setSearchInputValue, onSubmit }) {
         autoCorrect="off"
         onChange={handleSearchInputValueChange}
         value={searchInputValue}
-        css={css`
-          border: none;
-          padding: 1rem;
-          width: 100%;
-          /* horizontal margin to account for 3px box-shadow on focus */
-          margin-left: 3px;
-          margin-right: 3px;
-          ${focus};
-        `}
+        // horizontal margin to account for 3px box-shadow on focus
+        className="mx-[3px] w-full p-4 transition-shadow ease-default placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring"
       />
       <button
-        css={css`
-          border: none;
-          cursor: pointer;
-          color: #eedebf;
-          background-color: #6d372a;
-          &:hover,
-          &:focus {
-            color: #6d372a;
-            background-color: #eedebf;
-          }
-          ${focus};
-        `}
+        className="bg-maroon px-2 text-cream transition-shadow ease-default hover:bg-cream hover:text-maroon focus-visible:bg-cream focus-visible:text-maroon focus-visible:outline-none focus-visible:ring"
         title="Search"
         type="submit"
       >
@@ -276,28 +218,12 @@ SearchForm.propTypes = {
 
 function NoSearchTerm() {
   return (
-    <section
-      css={css`
-        text-align: center;
-      `}
-    >
+    <section className="text-center">
       <MdArrowUpward
         aria-label="Arrow Pointing Up"
-        css={css`
-          color: #d09e45;
-          height: 20vh;
-          width: 20vh;
-          margin: 10vh 0;
-        `}
+        className="my-[10vh] inline h-[20vh] w-[20vh] text-burnt-orange"
       />
-      <p
-        css={css`
-          color: #eeeeee;
-          ${mq.md} {
-            font-size: 1.25rem;
-          }
-        `}
-      >
+      <p className="my-5 text-gray-100 md:text-xl">
         Search all drinks by ingredient or description!
       </p>
     </section>
@@ -306,30 +232,12 @@ function NoSearchTerm() {
 
 function Searching() {
   return (
-    <section
-      css={css`
-        text-align: center;
-      `}
-    >
+    <section className="text-center">
       <MdSearch
         aria-label="Magnifying Glass"
-        css={css`
-          color: #d09e45;
-          height: 20vh;
-          width: 20vh;
-          margin: 10vh 0;
-        `}
+        className="my-[10vh] inline h-[20vh] w-[20vh] text-burnt-orange"
       />
-      <p
-        css={css`
-          color: #eeeeee;
-          ${mq.md} {
-            font-size: 1.25rem;
-          }
-        `}
-      >
-        Searching . . .
-      </p>
+      <p className="my-5 text-gray-100 md:text-xl">Searching . . .</p>
     </section>
   );
 }

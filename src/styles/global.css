@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: local('Source Sans Pro');
+}
+
+:not(output):-moz-ui-invalid,
+:not(output):-moz-ui-invalid:-moz-focusring {
+  box-shadow: none;
+}
+
+html {
+  line-height: theme('lineHeight.tight');
+  background-color: theme('colors.neutral.800');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url('/background-768-a271a.jpg');
+}
+
+@media (min-width: 1024px) {
+  html {
+    background-image: url('/background-2078-664d1.jpg');
+  }
+}
+
+body {
+  /* TODO: apply font-* classes to body instead */
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto,
+    'segoe ui', arial, sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: theme('fontWeight.normal');
+}
+
+/*
+ * HACK: abuse specificity to force styles overridden by
+ * @reach/dialog -> react-remove-scroll -> react-remove-scroll-bar
+ * to avoid a content jump when showing the feedback form.
+ */
+html > body {
+  overflow-y: scroll !important;
+  margin: 0 !important;
+}
+
+#gatsby-noscript {
+  display: none;
+}

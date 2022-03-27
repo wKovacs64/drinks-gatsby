@@ -1,0 +1,37 @@
+[data-drink-notes] h1,
+[data-drink-notes] h2,
+[data-drink-notes] h3,
+[data-drink-notes] h4,
+[data-drink-notes] h5,
+[data-drink-notes] h6 {
+  margin-bottom: theme('spacing.4');
+}
+
+[data-drink-notes] a {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: theme('colors.orange.400');
+}
+
+[data-drink-notes] a:hover,
+[data-drink-notes] a:focus {
+  border-bottom-color: theme('colors.yellow.900');
+  /* TODO: refactor @apply out? */
+  @apply transition-shadow ease-default focus-visible:outline-none focus-visible:ring;
+}
+
+[data-drink-notes] ul {
+  list-style-type: square;
+  line-height: theme('lineHeight.tight');
+  margin-left: theme('spacing.4');
+  padding-left: theme('spacing.4');
+}
+
+[data-drink-notes] ul li {
+  margin-bottom: theme('spacing.5');
+}
+
+[data-drink-notes] p {
+  margin-top: theme('spacing.5');
+  margin-bottom: theme('spacing.5');
+}

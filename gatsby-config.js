@@ -18,7 +18,6 @@ module.exports = {
     },
   },
   jsxRuntime: 'automatic',
-  jsxImportSource: '@emotion/react',
   plugins: [
     {
       resolve: 'gatsby-plugin-netlify',
@@ -45,7 +44,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-emotion',
+    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,

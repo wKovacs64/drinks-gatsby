@@ -1,24 +1,9 @@
 import PropTypes from 'prop-types';
-import { css } from '@emotion/react';
-import { mq } from '../utils';
+import clsx from 'clsx';
 
-function Tag({ children, ...props }) {
+function Tag({ children, className }) {
   return (
-    <div
-      css={css`
-        min-width: 4rem;
-        padding: 0.5rem;
-        text-align: center;
-        text-transform: lowercase;
-        font-size: 0.875rem;
-        font-weight: 400;
-        ${mq.lg} {
-          font-size: 1rem;
-          font-weight: 300;
-        }
-      `}
-      {...props}
-    >
+    <div className={clsx('min-w-[4rem] text-center lowercase', className)}>
       {children}
     </div>
   );
@@ -26,10 +11,12 @@ function Tag({ children, ...props }) {
 
 Tag.propTypes = {
   children: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Tag.defaultProps = {
   children: '',
+  className: '',
 };
 
 export default Tag;
