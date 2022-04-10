@@ -23,9 +23,9 @@
     "lint": "cross-env NODE_ENV=test eslint --ext \".js,.jsx,.ts,.tsx\" .",
     "husky:install": "husky install",
     "prepare": "npm run --silent husky:install",
-    "preserve": "yarn build",
+    "preserve": "npm run build",
     "serve": "gatsby serve",
-    "test": "yarn lint",
+    "test": "npm run lint",
     "validate": "npm-run-all --silent --parallel lint build"
   },
   "config": {
