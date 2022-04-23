@@ -19,7 +19,7 @@
     "clean": "gatsby clean",
     "cm": "git-cz",
     "dev": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,html,css,json,md,mdx,yml,yaml}\"",
+    "format": "prettier --write .",
     "lint": "cross-env NODE_ENV=test eslint --ext \".js,.jsx,.ts,.tsx\" .",
     "husky:install": "husky install",
     "prepare": "npm run --silent husky:install",
