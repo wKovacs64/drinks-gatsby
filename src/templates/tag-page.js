@@ -63,7 +63,7 @@ export const query = graphql`
               layout: FULL_WIDTH
               aspectRatio: 1
               placeholder: BLURRED
-              breakpoints: [576, 768, 992, 1200]
+              breakpoints: [320, 400, 420, 460]
             )
           }
           ingredients
