@@ -26,7 +26,7 @@ module.exports = {
           '/*': [
             "Content-Security-Policy: base-uri 'none'; frame-ancestors 'none'; form-action 'self'; default-src 'self'; connect-src 'self' https://images.ctfassets.net/ https://*.algolianet.com https://*.algolia.net; img-src data: https:; object-src 'none'; script-src 'self' 'unsafe-inline' https://*.algolianet.com; style-src 'self' 'unsafe-inline'; worker-src 'self'",
             'Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()',
-            'Referrer-Policy: no-referrer-when-downgrade',
+            'Referrer-Policy: strict-origin-when-cross-origin',
             'Expect-CT: enforce, max-age=3600',
             'Strict-Transport-Security: max-age=63072000; includeSubDomains; preload',
           ],
