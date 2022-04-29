@@ -44,7 +44,7 @@
     "autoprefixer": "10.4.5",
     "clsx": "1.1.1",
     "dotenv": "16.0.0",
-    "gatsby": "4.13.0",
+    "gatsby": "4.13.1",
     "gatsby-plugin-algolia": "0.26.0",
     "gatsby-plugin-image": "2.13.0",
     "gatsby-plugin-manifest": "4.13.0",
