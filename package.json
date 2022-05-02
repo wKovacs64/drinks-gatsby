@@ -41,7 +41,7 @@
     "@reach/visually-hidden": "0.17.0",
     "@xstate/react": "3.0.0",
     "algoliasearch": "4.13.0",
-    "autoprefixer": "10.4.5",
+    "autoprefixer": "10.4.6",
     "clsx": "1.1.1",
     "dotenv": "16.0.0",
     "gatsby": "4.13.1",
