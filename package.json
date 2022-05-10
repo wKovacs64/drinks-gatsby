@@ -43,7 +43,7 @@
     "algoliasearch": "4.13.0",
     "autoprefixer": "10.4.7",
     "clsx": "1.1.1",
-    "dotenv": "16.0.0",
+    "dotenv": "16.0.1",
     "gatsby": "4.14.0",
     "gatsby-plugin-algolia": "0.26.0",
     "gatsby-plugin-image": "2.14.0",
