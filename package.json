@@ -35,7 +35,7 @@
   },
   "private": true,
   "dependencies": {
-    "@fontsource/source-sans-pro": "4.5.9",
+    "@fontsource/source-sans-pro": "4.5.10",
     "@reach/dialog": "0.17.0",
     "@reach/skip-nav": "0.17.0",
     "@reach/visually-hidden": "0.17.0",
