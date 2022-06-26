@@ -12,7 +12,7 @@
         "id": "drink",
         "type": "ContentType",
         "createdAt": "2018-07-21T23:17:04.149Z",
-        "updatedAt": "2018-08-11T15:17:39.059Z",
+        "updatedAt": "2022-05-30T03:15:34.856Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -20,6 +20,9 @@
             "linkType": "Environment"
           }
         },
+        "publishedVersion": 37,
+        "publishedAt": "2022-05-30T03:15:34.856Z",
+        "firstPublishedAt": "2018-07-21T23:17:04.608Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -34,18 +37,15 @@
             "id": "redacted"
           }
         },
-        "publishedCounter": 18,
-        "version": 36,
+        "publishedCounter": 19,
+        "version": 38,
         "publishedBy": {
           "sys": {
             "type": "Link",
             "linkType": "User",
             "id": "redacted"
           }
-        },
-        "publishedVersion": 35,
-        "firstPublishedAt": "2018-07-21T23:17:04.608Z",
-        "publishedAt": "2018-08-11T15:17:39.059Z"
+        }
       },
       "displayField": "title",
       "name": "Drink",
@@ -112,7 +112,7 @@
           "name": "Calories",
           "type": "Integer",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false
@@ -122,7 +122,7 @@
           "name": "Image",
           "type": "Link",
           "localized": false,
-          "required": false,
+          "required": true,
           "validations": [],
           "disabled": false,
           "omitted": false,
@@ -145,12 +145,16 @@
           "localized": false,
           "required": true,
           "validations": [],
+          "defaultValue": {
+            "en-US": 0
+          },
           "disabled": false,
           "omitted": false
         }
       ]
     }
   ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
@@ -163,7 +167,7 @@
             "linkType": "Space"
           }
         },
-        "version": 36,
+        "version": 43,
         "createdAt": "2018-07-21T23:17:04.840Z",
         "createdBy": {
           "sys": {
@@ -172,7 +176,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2018-08-11T15:17:39.682Z",
+        "updatedAt": "2022-05-30T03:15:35.557Z",
         "updatedBy": {
           "sys": {
             "id": "redacted",
@@ -195,56 +199,96 @@
           }
         }
       },
+      "sidebar": [
+        {
+          "settings": {},
+          "widgetId": "publication-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {},
+          "widgetId": "content-preview-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {},
+          "widgetId": "incoming-links-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {},
+          "widgetId": "translation-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {},
+          "widgetId": "versions-widget",
+          "widgetNamespace": "sidebar-builtin"
+        },
+        {
+          "settings": {},
+          "widgetId": "users-widget",
+          "widgetNamespace": "sidebar-builtin"
+        }
+      ],
       "controls": [
         {
           "fieldId": "title",
           "settings": {
             "helpText": "The name of the drink"
           },
-          "widgetId": "singleLine"
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "slug",
           "settings": {
             "helpText": "Unique slug"
           },
-          "widgetId": "slugEditor"
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "ingredients",
           "settings": {
             "helpText": "Ingredients and measurements (e.g. 1 oz. bourbon)"
           },
-          "widgetId": "listInput"
+          "widgetId": "listInput",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "tags",
           "settings": {
             "helpText": "Ingredient names are a good choice here (e.g. bourbon)"
           },
-          "widgetId": "tagEditor"
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "calories",
-          "widgetId": "numberEditor"
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "image",
-          "widgetId": "assetLinkEditor"
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "notes",
           "settings": {
             "helpText": "This field may contain a description, additional crafting instructions, variations, an origin story, etc."
           },
-          "widgetId": "markdown"
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
         },
         {
           "fieldId": "rank",
           "settings": {
             "helpText": "Used to override the order in which drinks appear (higher numbers will be shown first) - enter 0 for unranked"
           },
-          "widgetId": "numberEditor"
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
         }
       ]
     }
@@ -273,7 +317,8 @@
           "sys": {
             "type": "Link",
             "linkType": "Environment",
-            "id": "master"
+            "id": "master",
+            "uuid": "redacted"
           }
         },
         "createdBy": {
