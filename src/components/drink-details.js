@@ -7,8 +7,10 @@ import Tag from './tag';
 function DrinkDetails({ drink }) {
   return (
     <section className="bg-gray-100 p-8 text-xl leading-tight xl:leading-snug">
-      {drink.notes && <Notes>{drink.notes.childMarkdownRemark.html}</Notes>}
-      {drink.tags && (
+      {drink.notes ? (
+        <Notes>{drink.notes.childMarkdownRemark.html}</Notes>
+      ) : null}
+      {drink.tags ? (
         <div className="flex flex-wrap border-t border-dotted border-t-stone-300 pt-4 lg:justify-end">
           {drink.tags.map((tag) => (
             <TagLink
@@ -23,7 +25,7 @@ function DrinkDetails({ drink }) {
             </TagLink>
           ))}
         </div>
-      )}
+      ) : null}
     </section>
   );
 }

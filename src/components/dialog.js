@@ -22,9 +22,9 @@ function Dialog({
       <section
         className={clsx('mb-8 flex', title ? 'justify-between' : 'justify-end')}
       >
-        {title && (
+        {title ? (
           <h3 className="text-xl uppercase tracking-widest">{title}</h3>
-        )}
+        ) : null}
         <button
           className="opacity-80 transition ease-default hover:opacity-100 focus:opacity-100 focus:outline-none focus:ring"
           type="button"
