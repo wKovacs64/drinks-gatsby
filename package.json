@@ -17,7 +17,6 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "gatsby clean",
-    "cm": "git-cz",
     "dev": "gatsby develop",
     "format": "prettier --cache --write .",
     "lint": "eslint .",
@@ -25,8 +24,7 @@
     "prepare": "npm run --silent husky:install",
     "preserve": "npm run build",
     "serve": "gatsby serve",
-    "test": "npm run lint",
-    "validate": "npm-run-all --silent --parallel lint build"
+    "test": "npm run lint"
   },
   "config": {
     "commitizen": {
